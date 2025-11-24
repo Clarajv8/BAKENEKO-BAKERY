@@ -27,13 +27,19 @@ ul { list-style: none; }
 .nav-links a { font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
 .nav-links a:hover { color: var(--accent-red); }
 
+/* --- TEXTURA DE PAPEL (Toque Ukiyo-e) --- */
+.noise-overlay {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: url('https://grainy-gradients.vercel.app/noise.svg'); /* Ruido svg sutil */
+    opacity: 0.08; pointer-events: none; z-index: 9999;
+}
+
 /* --- HERO SECTION --- */
-.hero-section {
+/* .hero-section {
     height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;
-    /* Usa un degradado hasta que tengas la imagen de fondo */
     background: linear-gradient(rgba(43,43,69,0.3), rgba(43,43,69,0.3)), url('../assets/images/hero-bg.jpg');
     background-size: cover; background-position: center; color: var(--bg-cream);
-}
+} */
 .hero-content h1 { font-family: var(--font-heading); font-size: 4rem; margin-bottom: 1rem; line-height: 1.1; }
 .hero-content .japanese-text { font-size: 1.2rem; letter-spacing: 5px; margin-bottom: 1rem; opacity: 0.9; }
 .btn-primary {
@@ -42,6 +48,82 @@ ul { list-style: none; }
     font-weight: 700; transition: transform 0.3s, background 0.3s;
 }
 .btn-primary:hover { background: #b03a27; transform: translateY(-3px); }
+
+/* --- HERO PARALLAX (Scrollytelling) --- */
+.parallax-container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 10px; /* La clave del efecto 3D */
+    position: relative;
+    /* Ocultamos la barra de scroll de este contenedor específico si molesta */
+    scrollbar-width: none; 
+}
+
+.parallax-layer {
+    position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+    display: flex; justify-content: center; align-items: center;
+    background-size: cover; background-position: center; background-repeat: no-repeat;
+}
+
+/* Capa Fondo: Se mueve lento (lejos) */
+.layer-back {
+    transform: translateZ(-10px) scale(2);
+    z-index: -1;
+    /* Pon aquí tu imagen de fondo (Cielo, Montañas) */
+    background-image: url('../assets/images/hero-bg-mountains.jpg');
+}
+
+/* Capa Media: Se mueve velocidad media */
+.layer-mid {
+    transform: translateZ(-5px) scale(1.5);
+    z-index: -1;
+    /* Pon aquí nubes o elementos decorativos con fondo transparente PNG */
+    background-image: url('../assets/images/hero-clouds.png');
+    pointer-events: none;
+}
+
+/* Capa Frente: Se mueve normal (Texto y Gato) */
+.layer-front {
+    transform: translateZ(0);
+    z-index: 1;
+    /* Si tienes una ilustración del gato con fondo transparente, ponla aquí como img o background */
+}
+
+/* --- ANIMACIONES SCROLL REVEAL --- */
+/* Estado inicial: invisible y desplazado hacia abajo */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1); /* Curva 'suave' y elegante */
+}
+
+/* Estado activo: visible y en su sitio */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animación de flotación para tarjetas (Toque fantasmal) */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.product-card:hover .card-img {
+    /* Al pasar el mouse, la imagen "flota" un poco */
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Ajuste del botón para que destaque más en el parallax */
+.hero-content {
+    background: rgba(43, 43, 69, 0.3); /* Fondo oscuro sutil para leer texto */
+    padding: 3rem;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    border: 1px solid rgba(255,255,255,0.1);
+}
 
 /* --- SECCIONES GENERALES --- */
 .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: 4rem 0; }

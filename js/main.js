@@ -177,3 +177,38 @@ window.onclick = (event) => {
 
 // Inicializar la web cargando todos los productos
 renderProducts();
+
+// --- SCROLL REVEAL ANIMATION ---
+// 1. Configurar el Observador
+const observerOptions = {
+    root: null, // viewport
+    threshold: 0.15, // Se activa cuando el 15% del elemento es visible
+    rootMargin: "0px"
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Cuando el elemento entra en pantalla, añadimos la clase 'active'
+            entry.target.classList.add('active');
+            // Dejamos de observar (para que no se anime otra vez al subir)
+            observer.unobserve(entry.target); 
+        }
+    });
+}, observerOptions);
+
+// 2. Seleccionar todos los elementos con la clase .reveal
+document.querySelectorAll('.reveal').forEach((section) => {
+    observer.observe(section);
+});
+
+// --- EFECTO PARALLAX SUAVE EN NAVEGACIÓN ---
+// Esto hace que al hacer click en "Menú", el scroll sea suave
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});

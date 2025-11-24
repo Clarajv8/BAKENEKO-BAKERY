@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    <div class="noise-overlay"></div>
     <nav class="navbar">
         <div class="logo">Bakeneko<span class="highlight">Bakery</span></div>
         <ul class="nav-links">
@@ -20,16 +20,22 @@
         <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
     </nav>
 
-    <header id="hero" class="hero-section">
-        <div class="hero-content">
-            <h2 class="japanese-text">化け猫ベーカリー</h2>
-            <h1>El Refugio de los <br>Espíritus Dulces</h1>
-            <p>Donde la pastelería tradicional se encuentra con el folclore olvidado.</p>
-            <a href="#menu" class="btn-primary">Descubrir los Sellos</a>
+    <header id="hero" class="parallax-container">
+        <div class="parallax-layer layer-back"></div>
+        
+        <div class="parallax-layer layer-mid"></div>
+        
+        <div class="parallax-layer layer-front">
+            <div class="hero-content">
+                <h2 class="japanese-text">化け猫ベーカリー</h2>
+                <h1>El Refugio de los <br>Espíritus Dulces</h1>
+                <p>Cruza el umbral entre dos mundos.</p>
+                <a href="#menu" class="btn-primary">Descubrir los Sellos</a>
+            </div>
         </div>
     </header>
 
-    <section id="concept" class="concept-section">
+    <section id="concept" class="concept-section reveal">
         <div class="container">
             <div class="concept-text">
                 <h3>Una invitacion al otro mundo</h3>
@@ -42,7 +48,7 @@
         </div>
     </section>
 
-    <section id="menu" class="menu-section">
+    <section id="menu" class="menu-section reveal">
         <div class="container">
             <div class="section-title">
                 <h2>Catálogo de Hechizos</h2>
