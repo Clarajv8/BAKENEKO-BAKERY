@@ -3,104 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cafetería Rescate - TFG</title>
+    <title>Bakeneko Bakery | Wagashi Sobrenatural</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <h1>Cafetería Rescate</h1>
-        <button id="theme-toggle">Cambiar Tema</button>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#menu">Menú</a></li>
-                <li><a href="#impacto">Nuestra Misión</a></li>
-                <li><a href="#galeria">Galería</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
+
+    <nav class="navbar">
+        <div class="logo">Bakeneko<span class="highlight">Bakery</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#concept">La Leyenda</a></li>
+            <li><a href="#menu">Menú Yokai</a></li>
+        </ul>
+        <div class="cart-icon">🛒 <span id="cart-count">0</span></div>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <div class="hero-content">
+            <h2 class="japanese-text">化け猫ベーカリー</h2>
+            <h1>El Refugio de los <br>Espíritus Dulces</h1>
+            <p>Donde la pastelería tradicional se encuentra con el folclore olvidado.</p>
+            <a href="#menu" class="btn-primary">Descubrir los Sellos</a>
+        </div>
     </header>
 
-    <section id="inicio">
-        <h2>Bienvenidos a Cafetería Rescate</h2>
-        <p>Disfruta de un café con propósito. Cada taza apoya la concienciación sobre los animales rescatados del tráfico ilegal. ¡Únete a nuestra causa!</p>
-    </section>
-
-    <section id="menu">
-        <h2>Nuestro Menú</h2>
-        <div class="menu-container">
-            <div class="menu-item" data-description="Un espresso elaborado con granos sostenibles, nombrado en honor a los jaguares rescatados.">
-                <h3>Jaguar Espresso</h3>
-                <p>Café intenso que rinde homenaje a la fuerza de los animales libres.</p>
-                <span>$2.50</span>
+    <section id="concept" class="concept-section">
+        <div class="container">
+            <div class="concept-text">
+                <h3>Una invitacion al otro mundo</h3>
+                <p>Cada Wagashi que horneamos no es solo un dulce; es un talismán. Inspirados en las leyendas del <em>Ukiyo-e</em>, nuestros postres están custodiados por el espíritu del <strong>Bakeneko</strong>.</p>
+                <p>Desde los clásicos reconfortantes hasta los secretos más profundos de Japón, prueba la historia.</p>
             </div>
-            <div class="menu-item" data-description="Cappuccino cremoso inspirado en las plumas del guacamayo, con un toque de cacao orgánico.">
-                <h3>Guacamayo Cappuccino</h3>
-                <p>Espuma suave con cacao, evocando la libertad de las aves rescatadas.</p>
-                <span>$3.00</span>
-            </div>
-            <div class="menu-item" data-description="Pastel vegano de cacao, creado para apoyar nuestra misión de proteger a los animales.">
-                <h3>Pastel Tortuga</h3>
-                <p>Delicia vegana que celebra la resistencia de las tortugas rescatadas.</p>
-                <span>$4.00</span>
-            </div>
-            <div class="menu-item" data-description="Infusión de hierbas silvestres, inspirada en los bosques que los animales rescatados llaman hogar.">
-                <h3>Té Selvático</h3>
-                <p>Refrescante bebida natural, servida fría o caliente.</p>
-                <span>$2.80</span>
+            <div class="concept-image-placeholder">
+                [Ilustración: El Bakeneko amasando]
             </div>
         </div>
     </section>
 
-    <section id="impacto">
-        <h2>Nuestra Misión</h2>
-        <p>En Cafetería Rescate, donamos el 10% de cada compra a organizaciones que luchan contra el tráfico ilegal de animales. Cada sorbo cuenta.</p>
-        <div class="impact-stats">
-            <div class="stat" data-info="Más de 1 millón de animales son víctimas del tráfico ilegal cada año.">
-                <h3>1M+</h3>
-                <p>Animales traficados anualmente</p>
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Catálogo de Hechizos</h2>
+                <p>Elige tu guardián</p>
             </div>
-            <div class="stat" data-info="Apoyamos a refugios que cuidan a animales rescatados, como jaguares y aves exóticas.">
-                <h3>50+</h3>
-                <p>Refugios apoyados</p>
+            
+            <div class="tabs">
+                <button class="tab-btn active" onclick="filterProducts('all')">Todos</button>
+                <button class="tab-btn" onclick="filterProducts('clasicos')">Los Clásicos</button>
+                <button class="tab-btn" onclick="filterProducts('exoticos')">Los Secretos</button>
             </div>
-            <div class="stat" data-info="Nuestros clientes han ayudado a financiar programas de rehabilitación y liberación.">
-                <h3>1000+</h3>
-                <p>Animales rehabilitados</p>
-            </div>
+
+            <div class="product-grid" id="product-container">
+                </div>
         </div>
     </section>
 
-    <section id="galeria">
-        <h2>Galería</h2>
-        <div class="gallery-container">
-            <img src="https://via.placeholder.com/300x200" alt="Jaguar rescatado">
-            <img src="https://via.placeholder.com/300x200" alt="Cafetería Rescate interior">
-            <img src="https://via.placeholder.com/300x200" alt="Guacamayo en libertad">
-            <img src="https://via.placeholder.com/300x200" alt="Taller de concienciación">
-        </div>
-    </section>
-
-    <section id="contacto">
-        <h2>Contacto</h2>
-        <p>Visítanos en: Av. de la Selva 123, Ciudad</p>
-        <p>Email: contacto@cafeteriarescate.com</p>
-        <p>Teléfono: +34 987 654 321</p>
-    </section>
-
-    <footer>
-        <p>&copy; 2025 Cafetería Rescate. Por un mundo sin tráfico de animales.</p>
-    </footer>
-
-    <!-- Modal -->
-    <div id="menu-modal" class="modal">
+    <div id="product-modal" class="modal">
         <div class="modal-content">
-            <span id="close-modal" class="close">&times;</span>
-            <h3 id="modal-title"></h3>
-            <p id="modal-description"></p>
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <div class="modal-image" id="modal-img"></div>
+                <div class="modal-info">
+                    <h3 id="modal-yokai">Yokai Name</h3>
+                    <h2 id="modal-title">Product Name</h2>
+                    <p id="modal-desc" class="description">Description...</p>
+                    <div class="modal-lore">
+                        <h4>La Leyenda:</h4>
+                        <p id="modal-myth">Myth text...</p>
+                    </div>
+                    <p class="price" id="modal-price">€0.00</p>
+                    <button class="btn-primary" onclick="addToCart()">Añadir al Pedido</button>
+                </div>
+            </div>
         </div>
     </div>
 
-    <script src="js/script.js"></script>
+    <footer>
+        <p>&copy; 2024 Bakeneko Bakery. TFG Diseño Gráfico. Proyecto Ficticio.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
