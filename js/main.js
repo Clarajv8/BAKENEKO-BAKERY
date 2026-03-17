@@ -1,10 +1,10 @@
 // Base de datos de productos (Simulada)
 const products = [
-    // --- LOS CLÁSICOS ---
-{
+    // --- LOS POSTRES (Wagashi) ---
+    {
         id: 1,
         name: "Dorayaki",
-        category: "clasicos",
+        category: "postres",
         yokai: "Tanuki",
         price: 3.50,
         desc: "Dos bizcochos esponjosos de miel rellenos de pasta dulce de judía roja (anko).",
@@ -14,7 +14,7 @@ const products = [
     {
         id: 2,
         name: "Mochi Daifuku",
-        category: "clasicos",
+        category: "postres",
         yokai: "Kitsune (Zorro)",
         price: 3.80,
         desc: "Suave pastel de arroz glutinoso espolvoreado, escondiendo un corazón dulce.",
@@ -24,19 +24,17 @@ const products = [
     {
         id: 3,
         name: "Dango Tricolor",
-        category: "clasicos",
+        category: "postres",
         yokai: "Bakeneko (Los 3 Gatos)",
         price: 3.00,
         desc: "Brocheta de tres bolitas dulces de masa de arroz: cerezo, vainilla y té verde.",
         myth: "Tres esferas perfectas que representan a tres pequeños gatos traviesos jugando en equilibrio sobre una rama durante el festival de la primavera (Hanami).",
         img: "assets/images/dango-bakeneko.jpg"
     },
-
-    // --- LOS SECRETOS (Más exóticos/texturas diferentes) ---
     {
         id: 4,
         name: "Kuzumochi",
-        category: "exoticos",
+        category: "postres",
         yokai: "Kappa",
         price: 4.50,
         desc: "Cubos translúcidos de almidón de Kuzu, servidos con polvo de soja y miel negra.",
@@ -46,7 +44,7 @@ const products = [
     {
         id: 5,
         name: "Yokan Nocturno",
-        category: "exoticos",
+        category: "postres",
         yokai: "Umibozu",
         price: 4.20,
         desc: "Bloque denso y elegante de gelatina oscura de agar-agar con castaña dorada.",
@@ -56,12 +54,44 @@ const products = [
     {
         id: 6,
         name: "Nerikiri de Camelia",
-        category: "exoticos",
+        category: "postres",
         yokai: "Yuki-Onna",
         price: 5.50,
         desc: "Arte comestible. Pasta de judía blanca esculpida a mano con forma de flor estacional.",
         myth: "Tan bello, pálido y delicado como la Mujer de las Nieves (Yuki-Onna). Un postre que captura una belleza fría, elegante y efímera que se deshace al probarlo.",
         img: "assets/images/nerikiri-yukionna.jpg"
+    },
+
+    // --- LOS VINOS (Maridaje) ---
+    {
+        id: 7,
+        name: "Vino Tinto 'Sangre de Oni'",
+        category: "vinos",
+        yokai: "Shuten-Dōji (Rey Demonio)",
+        price: 18.00,
+        desc: "Vino tinto roble, robusto e intenso, con notas de frutos rojos oscuros, ciruela y especias.",
+        myth: "Shuten-Dōji, el rey de los Oni (demonios), era temido por su fuerza y su sed insaciable de vino. Esta botella de tinto captura su intensidad: un trago cálido y poderoso que despierta el espíritu nocturno.",
+        img: "assets/images/vino-tinto-oni.jpg"
+    },
+    {
+        id: 8,
+        name: "Vino Blanco 'Lágrimas de Ningyo'",
+        category: "vinos",
+        yokai: "Ningyo (Sirena Japonesa)",
+        price: 16.50,
+        desc: "Vino blanco joven y afrutado, con destellos cítricos, notas florales y una acidez refrescante.",
+        myth: "Las leyendas cuentan que beber de las lágrimas de una Ningyo concede la juventud eterna. Este blanco cristalino y puro es perfecto para limpiar el paladar, aportando una frescura mítica e inolvidable.",
+        img: "assets/images/vino-blanco-ningyo.jpg"
+    },
+    {
+        id: 9,
+        name: "Umeshu 'El Sueño del Kodama'",
+        category: "vinos",
+        yokai: "Kodama (Espíritu del Bosque)",
+        price: 22.00,
+        desc: "Licor de ciruela japonesa (Umeshu), dulce, denso y macerado pacientemente con notas amaderadas.",
+        myth: "Los Kodama son los guardianes de los árboles más antiguos. Este vino de ciruela encierra la calma y la dulzura de un bosque centenario. El maridaje perfecto para acompañar la suavidad de un Mochi.",
+        img: "assets/images/vino-umeshu-kodama.jpg"
     }
 ];
 
