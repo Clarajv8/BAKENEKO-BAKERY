@@ -1,106 +1,67 @@
 // Base de datos de productos (Simulada)
 const products = [
     // --- LOS CLÁSICOS ---
-    {
+{
         id: 1,
-        name: "Mochi Daifuku",
-        category: "clasicos",
-        yokai: "Kitsune (Zorro)",
-        price: 3.50,
-        desc: "Pastel de arroz glutinoso relleno de anko suave y fresas frescas.",
-        myth: "Se dice que el Kitsune cambia de forma para engañar a los viajeros. Este mochi suave esconde una sorpresa dulce en su interior, tan astuto como el zorro.",
-        img: "assets/images/mochi-kitsune.jpg" // Asegúrate de tener esta imagen o cambiar la ruta
-    },
-    {
-        id: 2,
         name: "Dorayaki",
         category: "clasicos",
         yokai: "Tanuki",
-        price: 3.00,
-        desc: "Dos bizcochos esponjosos de miel rellenos de pasta de judía roja.",
-        myth: "El Tanuki, con su gran barriga, ama los festines. Este dulce redondo y lleno rinde homenaje a su apetito insaciable y su carácter jovial.",
-        img: "assets/images/dorayaki-tanuki.jpg"
+        price: 3.50,
+        desc: "Dos bizcochos esponjosos de miel rellenos de pasta dulce de judía roja (anko).",
+        myth: "El Tanuki es un espíritu del bosque famoso por su gran barriga y su amor por los festines. Este dulce redondo y reconfortante rinde homenaje a su apetito insaciable y su carácter jovial.",
+        img: "assets/images/dorayaki-tanuki.jpg" 
+    },
+    {
+        id: 2,
+        name: "Mochi Daifuku",
+        category: "clasicos",
+        yokai: "Kitsune (Zorro)",
+        price: 3.80,
+        desc: "Suave pastel de arroz glutinoso espolvoreado, escondiendo un corazón dulce.",
+        myth: "Se dice que el místico zorro Kitsune cambia de forma para engañar a los viajeros. Este mochi, suave y pálido por fuera, esconde una sorpresa en su interior, tan astuto y elegante como él.",
+        img: "assets/images/mochi-kitsune.jpg"
     },
     {
         id: 3,
-        name: "Taiyaki",
-        category: "clasicos",
-        yokai: "Nekomata",
-        price: 4.00,
-        desc: "Gofre tradicional con forma de besugo, relleno de crema pastelera.",
-        myth: "La ironía suprema: un gato monstruo de dos colas custodiando un pez. Cómelo antes de que el Nekomata decida que es suyo.",
-        img: "assets/images/taiyaki-nekomata.jpg"
-    },
-    {
-        id: 4,
         name: "Dango Tricolor",
         category: "clasicos",
-        yokai: "Tsukumogami",
-        price: 2.50,
-        desc: "Brocheta de tres bolitas de masa de arroz: matcha, vainilla y sakura.",
-        myth: "Como los objetos que cobran vida, estas tres esferas parecen pequeños espíritus jugando en equilibrio.",
-        img: "assets/images/dango-tsuku.jpg"
+        yokai: "Bakeneko (Los 3 Gatos)",
+        price: 3.00,
+        desc: "Brocheta de tres bolitas dulces de masa de arroz: cerezo, vainilla y té verde.",
+        myth: "Tres esferas perfectas que representan a tres pequeños gatos traviesos jugando en equilibrio sobre una rama durante el festival de la primavera (Hanami).",
+        img: "assets/images/dango-bakeneko.jpg"
     },
+
+    // --- LOS SECRETOS (Más exóticos/texturas diferentes) ---
     {
-        id: 5,
-        name: "Matcha Kasutera",
-        category: "clasicos",
-        yokai: "Tengu",
-        price: 4.50,
-        desc: "Bizcocho Castella noble infundido con té matcha de Kioto.",
-        myth: "El Tengu gobierna las montañas y los bosques. Este sabor terroso y elevado es digno de su abanico de plumas.",
-        img: "assets/images/kasutera-tengu.jpg"
-    },
-    // --- LOS EXÓTICOS ---
-    {
-        id: 6,
+        id: 4,
         name: "Kuzumochi",
         category: "exoticos",
         yokai: "Kappa",
-        price: 5.00,
-        desc: "Pastel transparente de almidón de Kuzu, servido con kinako y miel negra.",
-        myth: "Fresco y acuoso como el río donde vive el Kappa. Un postre que se desliza, refrescante y misterioso.",
+        price: 4.50,
+        desc: "Cubos translúcidos de almidón de Kuzu, servidos con polvo de soja y miel negra.",
+        myth: "Fresco, acuoso y transparente como el río donde habita el misterioso Kappa. Un postre que se desliza en el paladar, refrescante y profundamente arraigado a la naturaleza.",
         img: "assets/images/kuzumochi-kappa.jpg"
     },
     {
-        id: 7,
-        name: "Monaka",
-        category: "exoticos",
-        yokai: "Karakasa",
-        price: 3.80,
-        desc: "Obleas crujientes de arroz rellenas de mermelada de yuzu.",
-        myth: "Como la sombrilla cíclope que se abre, estas obleas crujientes protegen un interior suave y sorprendente.",
-        img: "assets/images/monaka-karakasa.jpg"
-    },
-    {
-        id: 8,
-        name: "Nerikiri",
-        category: "exoticos",
-        yokai: "Yuki-onna",
-        price: 6.00,
-        desc: "Arte comestible. Pasta de judía blanca esculpida a mano con formas estacionales.",
-        myth: "Tan bello y pálido como la Mujer de las Nieves. Un postre que captura una belleza fría y efímera.",
-        img: "assets/images/nerikiri-yuki.jpg"
-    },
-    {
-        id: 9,
+        id: 5,
         name: "Yokan Nocturno",
         category: "exoticos",
         yokai: "Umibozu",
         price: 4.20,
-        desc: "Bloque denso de gelatina de agar-agar y judía negra.",
-        myth: "Oscuro y profundo como el océano del Umibozu. Un sabor intenso para los valientes que miran al abismo.",
+        desc: "Bloque denso y elegante de gelatina oscura de agar-agar con castaña dorada.",
+        myth: "Oscuro, denso y profundo como el océano donde emerge el gigante Umibozu. Un sabor intenso y adulto para quienes no temen mirar hacia el abismo dulce.",
         img: "assets/images/yokan-umibozu.jpg"
     },
     {
-        id: 10,
-        name: "Sakuramochi",
+        id: 6,
+        name: "Nerikiri de Camelia",
         category: "exoticos",
-        yokai: "Zashiki-warashi",
-        price: 3.50,
-        desc: "Mochi rosa envuelto en hoja de cerezo encurtida (comestible).",
-        myth: "El espíritu infantil que trae prosperidad al hogar. Un sabor floral que anuncia la primavera y la buena suerte.",
-        img: "assets/images/sakura-zashiki.jpg"
+        yokai: "Yuki-Onna",
+        price: 5.50,
+        desc: "Arte comestible. Pasta de judía blanca esculpida a mano con forma de flor estacional.",
+        myth: "Tan bello, pálido y delicado como la Mujer de las Nieves (Yuki-Onna). Un postre que captura una belleza fría, elegante y efímera que se deshace al probarlo.",
+        img: "assets/images/nerikiri-yukionna.jpg"
     }
 ];
 
@@ -211,4 +172,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             behavior: 'smooth'
         });
     });
+});
+
+// --- LÓGICA DEL ORÁCULO (Gamificación) ---
+const spinBtn = document.getElementById('spin-btn');
+const runesContainer = document.getElementById('runes-container');
+
+spinBtn.addEventListener('click', () => {
+    // 1. Desactivar el botón para que no hagan doble click
+    spinBtn.disabled = true;
+    spinBtn.innerText = "Los espíritus deciden...";
+    
+    // 2. Activar la animación de las letras japonesas
+    runesContainer.classList.add('spinning');
+
+    // 3. Crear el suspense (esperamos 2 segundos)
+    setTimeout(() => {
+        // Elegir un postre aleatorio del array 'products'
+        const randomElement = products[Math.floor(Math.random() * products.length)];
+        
+        // Detener animación y resetear botón
+        runesContainer.classList.remove('spinning');
+        spinBtn.disabled = false;
+        spinBtn.innerText = "Volver a Consultar";
+
+        // Abrir el modal que ya tienes programado con el producto ganador
+        openModal(randomElement.id);
+        
+    }, 2000); // 2000 milisegundos = 2 segundos de intriga
 });

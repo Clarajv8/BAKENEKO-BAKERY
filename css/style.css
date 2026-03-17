@@ -191,3 +191,71 @@ ul { list-style: none; }
     .modal-body { flex-direction: column; }
     .modal-image { height: 250px; }
 }
+
+/* --- ORÁCULO / RULETA --- */
+.oracle-section {
+    background-color: var(--text-indigo); /* Fondo oscuro para contrastar */
+    color: var(--bg-cream);
+    padding: 2rem 0;
+}
+
+.oracle-box {
+    border: 2px solid var(--accent-gold);
+    border-radius: 20px;
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background: radial-gradient(circle, rgba(43,43,69,1) 0%, rgba(20,20,35,1) 100%);
+}
+
+.oracle-content h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--accent-gold);
+    margin-bottom: 1rem;
+}
+
+.oracle-runes {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    font-size: 2rem;
+    color: var(--accent-red);
+    margin: 2rem 0;
+    opacity: 0.5;
+}
+
+/* Animación cuando está "pensando" */
+.oracle-runes.spinning span {
+    animation: flash 0.5s infinite alternate;
+}
+.oracle-runes.spinning span:nth-child(2) { animation-delay: 0.1s; }
+.oracle-runes.spinning span:nth-child(3) { animation-delay: 0.2s; }
+.oracle-runes.spinning span:nth-child(4) { animation-delay: 0.3s; }
+
+@keyframes flash {
+    0% { opacity: 0.2; transform: scale(1); }
+    100% { opacity: 1; transform: scale(1.2); text-shadow: 0 0 10px var(--accent-red); }
+}
+
+.btn-oracle {
+    background: transparent;
+    color: var(--accent-gold);
+    border: 2px solid var(--accent-gold);
+    padding: 1rem 3rem;
+    border-radius: 50px;
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-oracle:hover {
+    background: var(--accent-gold);
+    color: var(--text-indigo);
+    box-shadow: 0 0 20px rgba(197, 160, 101, 0.4);
+}
