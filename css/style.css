@@ -35,11 +35,6 @@ ul { list-style: none; }
 }
 
 /* --- HERO SECTION --- */
-/* .hero-section {
-    height: 90vh; display: flex; align-items: center; justify-content: center; text-align: center;
-    background: linear-gradient(rgba(43,43,69,0.3), rgba(43,43,69,0.3)), url('../assets/images/hero-bg.jpg');
-    background-size: cover; background-position: center; color: var(--bg-cream);
-} */
 .hero-content h1 { font-family: var(--font-heading); font-size: 4rem; margin-bottom: 1rem; line-height: 1.1; }
 .hero-content .japanese-text { font-size: 1.2rem; letter-spacing: 5px; margin-bottom: 1rem; opacity: 0.9; }
 .btn-primary {
