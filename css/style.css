@@ -466,6 +466,64 @@ body {
 .oracle-runes.spinning span:nth-child(3) { animation-delay: 0.2s; }
 .oracle-runes.spinning span:nth-child(4) { animation-delay: 0.3s; }
 
+/* --- Banner de Colaboración (Kizuna) --- */
+.collab-banner {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 4rem auto;
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--c-gold);
+    border-radius: 15px;
+    background: rgba(197, 163, 101, 0.05); /* Un dorado muy, muy suave */
+    position: relative;
+    overflow: hidden;
+}
+
+/* Pequeño detalle decorativo en las esquinas */
+.collab-banner::before, .collab-banner::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--c-gold);
+    opacity: 0.5;
+}
+.collab-banner::before { top: 10px; left: 10px; border-right: none; border-bottom: none; }
+.collab-banner::after { bottom: 10px; right: 10px; border-left: none; border-top: none; }
+
+.collab-subtitle {
+    font-family: var(--f-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--c-vermilion);
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+
+.collab-title {
+    font-family: var(--f-serif);
+    font-size: 2.2rem;
+    color: var(--c-indigo);
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.x-mark {
+    color: var(--c-gold);
+    font-weight: 300;
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+}
+
+.collab-banner p {
+    font-family: var(--f-sans);
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
 @keyframes flash {
     0% { opacity: 0.2; transform: scale(1); }
     100% { opacity: 1; transform: scale(1.2); text-shadow: 0 0 15px var(--c-vermilion); }

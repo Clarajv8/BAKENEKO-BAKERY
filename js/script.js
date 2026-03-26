@@ -3,14 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
     /* =========================================
        1. DATA & TRANSLATION SYSTEM (ES / EN / JP)
        ========================================= */
-    const translations = {
+const translations = {
         es: {
             cart: "Cesta", pretitle: "Portal al Reino Yokai", subtitle: "El Refugio de los Espíritus Dulces",
             cta: "Entrar al Portal", introTitle: "Dulzura Entre Mundos",
             introText: "No horneamos para el hambre del cuerpo, sino para los antojos del alma. Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna y la quietud antigua.",
             collectionTitle: "La Colección", addToCart: "Añadir a la Cesta",
             oracleTitle: "El Oráculo del Bakeneko", oracleDesc: "¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.", oracleBtn: "Consultar al Oráculo",
-            tabAll: "El Grimorio Completo", tabDesserts: "Postres Yokai", tabWines: "Vinos Espirituales"
+            tabAll: "El Grimorio Completo", tabDesserts: "Postres Yokai", tabWines: "Vinos Espirituales",
+            collabSub: "Colaboración Exclusiva", collabDesc: "El equilibrio perfecto entre el Wagashi tradicional y la enología premium. Un maridaje de leyenda diseñado para despertar a los espíritus."
         },
         en: {
             cart: "Cart", pretitle: "Gateway to the Yokai Realm", subtitle: "Sanctuary of Sweet Spirits",
@@ -18,7 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
             introText: "We do not bake for the body's hunger, but for the soul's cravings. Guided by the Bakeneko, our sweets bridge the gap between modern rush and ancient stillness.",
             collectionTitle: "The Collection", addToCart: "Add to Cart",
             oracleTitle: "The Bakeneko Oracle", oracleDesc: "In doubt? Let fate choose the spirit your soul needs today.", oracleBtn: "Consult the Oracle",
-            tabAll: "The Complete Grimoire", tabDesserts: "Yokai Sweets", tabWines: "Spiritual Wines"
+            tabAll: "The Complete Grimoire", tabDesserts: "Yokai Sweets", tabWines: "Spiritual Wines",
+            collabSub: "Exclusive Collaboration", collabDesc: "The perfect balance between traditional Wagashi and premium oenology. A legendary pairing designed to awaken the spirits."
         },
         jp: {
             cart: "カート", pretitle: "妖怪のレルムへの入り口", subtitle: "甘い精霊の聖域",
@@ -26,7 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
             introText: "私たちは体の飢えのためではなく、魂の渇望のために焼きます。化け猫に導かれ、私たちのスイーツは現代の慌ただしさと古代の静けさの間の架け橋となります。",
             collectionTitle: "コレクション", addToCart: "カートに追加",
             oracleTitle: "化け猫の神託", oracleDesc: "迷っていますか？今日あなたの魂が必要とする精霊を運命に選ばせましょう。", oracleBtn: "神託を伺う",
-            tabAll: "完全な魔導書", tabDesserts: "妖怪のスイーツ", tabWines: "霊的なワイン"
+            tabAll: "完全な魔導書", tabDesserts: "妖怪のスイーツ", tabWines: "霊的なワイン",
+            collabSub: "特別コラボレーション", collabDesc: "伝統的な和菓子と高級ワインの完璧なバランス。精霊を目覚めさせるためにデザインされた伝説のペアリング。"
         }
     };
 
@@ -68,23 +71,24 @@ document.addEventListener("DOMContentLoaded", () => {
             jp: { name: "椿の練り切り", desc: "食べられる芸術。雪女のように美しく、青白く、繊細です。冷たく儚い美しさを捉えています。" },
             class: "Yuki-Onna", img: "assets/images/nerikiri-yukionna.jpg"
         },
+       // --- VINOS BODEGAS KIZUNA ---
         p7: {
-            es: { name: "Vino Sangre de Oni", desc: "Tinto roble robusto. El rey de los demonios, Shuten-Dōji, era temido por su sed insaciable de vino." },
-            en: { name: "Oni's Blood Wine", desc: "Robust oak red. The demon king, Shuten-Dōji, was feared for his insatiable thirst for wine." },
-            jp: { name: "鬼の血ワイン", desc: "力強いオーク赤ワイン。鬼の王、酒呑童子は尽きることのないワインへの渇望で恐れられていました。" },
-            class: "Shuten-Dōji", img: "assets/images/vino-tinto-oni.jpg"
+            es: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 6°C. El elixir de la Ningyo (Sirena), ideal para acompañar cortes de pescado crudo, Sashimi y preparaciones con Wasabi. 12,5% Vol." },
+            en: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 6°C. The elixir of the Ningyo (Mermaid), ideal for raw fish, Sashimi, and Wasabi preparations. 12.5% Vol." },
+            jp: { name: "ソーヴィニヨン・ブラン 'The Raw'", desc: "ペネデス原産地呼称。Kizunaワイナリー。6°Cで提供。人魚の霊薬。刺身やわさびの料理に最適です。アルコール度数12.5%。" },
+            class: "Ningyo (Sirena)", img: "assets/images/vino-theraw.jpg"
         },
         p8: {
-            es: { name: "Lágrimas de Ningyo", desc: "Blanco joven y afrutado. Las leyendas cuentan que beber las lágrimas de esta sirena concede juventud eterna." },
-            en: { name: "Ningyo's Tears", desc: "Young and fruity white. Legends say drinking this mermaid's tears grants eternal youth." },
-            jp: { name: "人魚の涙", desc: "若々しくフルーティーな白。この人魚の涙を飲むと永遠の若さが得られるという伝説があります。" },
-            class: "Ningyo", img: "assets/images/vino-blanco-ningyo.jpg"
+            es: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 14°C. El fuego del Shuten-Dōji. Maridaje óptimo para carnes a la brasa, Yakitori, anguila (Unagi) y salsas Teriyaki. 14% Vol." },
+            en: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 14°C. The fire of Shuten-Dōji. Optimal pairing for grilled meats, Yakitori, eel (Unagi), and Teriyaki sauces. 14% Vol." },
+            jp: { name: "ガルナッチャ・ティンタ 'The Grill'", desc: "ペネデス原産地呼称。Kizunaワイナリー。14°Cで提供。酒呑童子の炎。焼き鳥、うなぎ、照り焼きソースに最適です。アルコール度数14%。" },
+            class: "Shuten-Dōji (Oni)", img: "assets/images/vino-thegrill.jpg"
         },
         p9: {
-            es: { name: "El Sueño del Kodama", desc: "Licor de ciruela (Umeshu) que encierra la calma y la dulzura de un bosque centenario protegido por los Kodama." },
-            en: { name: "Kodama's Dream", desc: "Plum liquor (Umeshu) that encapsulates the calm and sweetness of a centuries-old forest protected by the Kodama." },
-            jp: { name: "木霊の夢", desc: "木霊に守られた何百年もの歴史を持つ森の穏やかさと甘さを閉じ込めた梅酒。" },
-            class: "Kodama", img: "assets/images/vino-umeshu-kodama.jpg"
+            es: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Método Tradicional. Bodegas Kizuna. Servir a 5°C. La celebración del Kitsune. Estructura perfecta para Tempura, frituras y caldos ricos en Umami. 12% Vol." },
+            en: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Traditional Method. Kizuna Wineries. Serve at 5°C. The Kitsune's celebration. Perfect structure for Tempura, fried foods, and Umami-rich broths. 12% Vol." },
+            jp: { name: "カヴァ・ブリュット 'The Umami'", desc: "カヴァ原産地呼称。伝統的製法。Kizunaワイナリー。5°Cで提供。狐の祝い。天ぷら、揚げ物、旨味豊かなスープに最適です。アルコール度数12%。" },
+            class: "Kitsune (Zorro)", img: "assets/images/vino-theumami.jpg"
         }
     };
 
