@@ -466,30 +466,6 @@ body {
 .oracle-runes.spinning span:nth-child(3) { animation-delay: 0.2s; }
 .oracle-runes.spinning span:nth-child(4) { animation-delay: 0.3s; }
 
-/* --- Banner de Colaboración (Kizuna) --- */
-.collab-banner {
-    text-align: center;
-    max-width: 650px;
-    margin: 0 auto 4rem auto;
-    padding: 2.5rem 2rem;
-    border: 1px solid var(--c-gold);
-    border-radius: 15px;
-    background: rgba(197, 163, 101, 0.05); /* Un dorado muy, muy suave */
-    position: relative;
-    overflow: hidden;
-}
-
-/* Pequeño detalle decorativo en las esquinas */
-.collab-banner::before, .collab-banner::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--c-gold);
-    opacity: 0.5;
-}
-.collab-banner::before { top: 10px; left: 10px; border-right: none; border-bottom: none; }
-.collab-banner::after { bottom: 10px; right: 10px; border-left: none; border-top: none; }
 
 .collab-subtitle {
     font-family: var(--f-sans);
@@ -517,12 +493,87 @@ body {
     font-size: 1.8rem;
 }
 
-.collab-banner p {
-    font-family: var(--f-sans);
-    font-size: 1rem;
-    color: #555;
-    line-height: 1.6;
+/* --- Banner Colaboración (Estilo Street / Marquee) --- */
+.collab-marquee-wrapper {
+    position: relative;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%); /* Truco para romper el contenedor y ocupar toda la pantalla */
+    background: var(--c-vermilion); /* Rojo impactante */
+    color: var(--c-cream);
+    padding: 12px 0;
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+    border-top: 3px solid var(--c-indigo);
+    border-bottom: 3px solid var(--c-indigo);
+    transform: rotate(-2deg); /* El toque rebelde streetwear */
+    z-index: 50;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: opacity 0.4s ease, transform 0.4s ease;
 }
+
+/* Cuando se cierra, desaparece suavemente */
+.collab-marquee-wrapper.hidden {
+    opacity: 0;
+    transform: translateY(-20px) rotate(-2deg);
+    pointer-events: none;
+}
+
+.collab-marquee {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+}
+
+.marquee-content {
+    display: flex;
+    /* 15s es la velocidad. Cámbialo si quieres que vaya más rápido o lento */
+    animation: scroll-marquee 15s linear infinite; 
+    font-family: var(--f-sans);
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+}
+
+.marquee-content span {
+    padding: 0 2rem;
+}
+
+@keyframes scroll-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Se mueve al 50% para hacer el bucle perfecto */
+}
+
+/* Botón de cerrar la cinta */
+.close-collab {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--c-indigo);
+    color: var(--c-cream);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 60;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.close-collab:hover {
+    background: var(--c-cream);
+    color: var(--c-vermilion);
+    transform: translateY(-50%) scale(1.1);
+}
+
+
 
 @keyframes flash {
     0% { opacity: 0.2; transform: scale(1); }

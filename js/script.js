@@ -11,7 +11,7 @@ const translations = {
             collectionTitle: "La Colección", addToCart: "Añadir a la Cesta",
             oracleTitle: "El Oráculo del Bakeneko", oracleDesc: "¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.", oracleBtn: "Consultar al Oráculo",
             tabAll: "El Grimorio Completo", tabDesserts: "Postres Yokai", tabWines: "Vinos Espirituales",
-            collabSub: "Colaboración Exclusiva", collabDesc: "El equilibrio perfecto entre el Wagashi tradicional y la enología premium. Un maridaje de leyenda diseñado para despertar a los espíritus."
+            collabSub: "Colaboración Exclusiva", collabDesc: "El equilibrio perfecto entre el Wagashi tradicional y la enología premium. Un maridaje de leyenda diseñado para despertar a los espíritus.", collabMarquee: "✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO "
         },
         en: {
             cart: "Cart", pretitle: "Gateway to the Yokai Realm", subtitle: "Sanctuary of Sweet Spirits",
@@ -20,7 +20,7 @@ const translations = {
             collectionTitle: "The Collection", addToCart: "Add to Cart",
             oracleTitle: "The Bakeneko Oracle", oracleDesc: "In doubt? Let fate choose the spirit your soul needs today.", oracleBtn: "Consult the Oracle",
             tabAll: "The Complete Grimoire", tabDesserts: "Yokai Sweets", tabWines: "Spiritual Wines",
-            collabSub: "Exclusive Collaboration", collabDesc: "The perfect balance between traditional Wagashi and premium oenology. A legendary pairing designed to awaken the spirits."
+            collabSub: "Exclusive Collaboration", collabDesc: "The perfect balance between traditional Wagashi and premium oenology. A legendary pairing designed to awaken the spirits.", collabMarquee: "✦ BAKENEKO × BODEGAS KIZUNA ✦ EXCLUSIVE PAIRING DROP "
         },
         jp: {
             cart: "カート", pretitle: "妖怪のレルムへの入り口", subtitle: "甘い精霊の聖域",
@@ -29,7 +29,7 @@ const translations = {
             collectionTitle: "コレクション", addToCart: "カートに追加",
             oracleTitle: "化け猫の神託", oracleDesc: "迷っていますか？今日あなたの魂が必要とする精霊を運命に選ばせましょう。", oracleBtn: "神託を伺う",
             tabAll: "完全な魔導書", tabDesserts: "妖怪のスイーツ", tabWines: "霊的なワイン",
-            collabSub: "特別コラボレーション", collabDesc: "伝統的な和菓子と高級ワインの完璧なバランス。精霊を目覚めさせるためにデザインされた伝説のペアリング。"
+            collabSub: "特別コラボレーション", collabDesc: "伝統的な和菓子と高級ワインの完璧なバランス。精霊を目覚めさせるためにデザインされた伝説のペアリング。", collabMarquee: "✦ 化け猫 × KIZUNAワイナリー ✦ 特別なペアリング "
         }
     };
 
@@ -259,5 +259,25 @@ const translations = {
             
         }, 2000);
     });
+
+    /* =========================================
+       5. BANNER COLABORACIÓN (CERRAR CINTA)
+       ========================================= */
+    const collabBanner = document.getElementById('collab-banner');
+    const closeCollabBtn = document.getElementById('close-collab');
+
+    if (collabBanner && closeCollabBtn) {
+        closeCollabBtn.addEventListener('click', () => {
+            // Añadimos la clase para que haga la animación de desaparecer
+            collabBanner.classList.add('hidden');
+            
+            // Esperamos a que acabe la animación (400ms) y lo borramos del espacio
+            setTimeout(() => {
+                collabBanner.style.display = 'none';
+                // Si GSAP está cargado, le decimos que recalcule el tamaño de la página
+                if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+            }, 400);
+        });
+    }
 
 });
