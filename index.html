@@ -1,201 +1,337 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bakeneko Bakery | Neo-Ukiyo-e Sweets</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Zen+Kaku+Gothic+New:wght@300;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <div class="noise-overlay"></div>
-
-    <button id="lang-toggle" class="lang-btn">ES / EN / JP</button>
-
-    <nav class="main-nav">
-        <div class="logo">化け猫 <span class="sub">Bakery</span></div>
-        <div class="cart-trigger">
-            <span class="cart-text" data-i18n="cart">Cesta</span>
-            <div class="cart-dot"></div>
-        </div>
-    </nav>
-
-    <main id="smooth-wrapper">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bakeneko Bakery | Neo-Ukiyo-e Sweets</title>
         
-        <header class="hero-section">
-            <div class="hero-bg parallax-layer" data-speed="0.2"></div>
-            <div class="hero-mid parallax-layer" data-speed="0.5">
-                <div class="spirit-orb orb-1"></div>
-                <div class="spirit-orb orb-2"></div>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Zen+Kaku+Gothic+New:wght@300;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div class="noise-overlay"></div>
+
+        <button id="lang-toggle" class="lang-btn">ES / EN / JP</button>
+
+        <nav class="main-nav">
+            <div class="logo">化け猫 <span class="sub">Bakery</span></div>
+            <div class="cart-trigger">
+                <span class="cart-text" data-i18n="cart">Cesta</span>
+                <div class="cart-dot"></div>
+            </div>
+        </nav>
+
+        <main id="smooth-wrapper">
+            
+            <header class="hero-section">
+                <div class="hero-bg parallax-layer" data-speed="0.2"></div>
+                <div class="hero-mid parallax-layer" data-speed="0.5">
+                    <div class="spirit-orb orb-1"></div>
+                    <div class="spirit-orb orb-2"></div>
+                </div>
+                
+                <div class="hero-content parallax-layer" data-speed="1">
+                    <p class="pre-title" data-i18n="pretitle">Portal al Reino Yokai</p>
+                    <h1 class="hero-title">Bakeneko<br>Bakery</h1>
+                    <p class="sub-title" data-i18n="subtitle">El Refugio de los Espíritus Dulces</p>
+                    <button class="cta-btn" data-i18n="cta">Entrar al Portal</button>
+                </div>
+            </header>
+
+            <section class="intro-section">
+                <div class="container">
+                    <div class="manifesto-text reveal-text">
+                        <span class="kanji-accent">伝説</span>
+                        <h2 data-i18n="introTitle">Dulzura Entre Mundos</h2>
+                        <p data-i18n="introText">
+                            No horneamos para el hambre del cuerpo, sino para los antojos del alma. 
+                            Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna 
+                            y la quietud antigua.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="oracle-section">
+                <div class="container">
+                    <div class="oracle-box">
+                        <div class="oracle-content">
+                            <h2 data-i18n="oracleTitle">El Oráculo del Bakeneko</h2>
+                            <p data-i18n="oracleDesc">¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.</p>
+                            <div class="oracle-runes" id="runes-container">
+                                <span>火</span><span>水</span><span>木</span><span>金</span><span>土</span>
+                            </div>
+                            <button id="spin-btn" class="cta-btn oracle-btn" data-i18n="oracleBtn">Consultar al Oráculo</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="collection-section">
+                <div class="container">
+                    <div class="section-header reveal-text">
+                        <h3 data-i18n="collectionTitle">La Colección</h3>
+                    </div>
+                    
+                    <div class="tabs">
+                        <button class="tab-btn active" data-filter="all" data-i18n="tabAll">El Grimorio Completo</button>
+                        <button class="tab-btn" data-filter="postre" data-i18n="tabDesserts">Postres Yokai</button>
+                        <button class="tab-btn" data-filter="vino" data-i18n="tabWines">Vinos Espirituales</button>
+                    </div>
+
+                    <div class="collab-marquee-wrapper" id="collab-banner">
+                        <button class="close-collab" id="close-collab" aria-label="Cerrar banner">×</button>
+                        <div class="collab-marquee">
+                            <div class="marquee-content">
+                                <span data-i18n="collabMarquee">✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO </span>
+                                <span data-i18n="collabMarquee">✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO </span>
+                                <span data-i18n="collabMarquee">✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO </span>
+                                <span data-i18n="collabMarquee">✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-grid">
+                        <article class="product-card" data-id="p1" data-category="postre">
+                            <div class="card-visual">
+                                <div class="ink-mask"><img src="assets/images/dorayaki-tanuki.jpg" alt="Dorayaki" class="product-img"></div>
+                                <div class="stamp-seal">狸</div>
+                                
+                                <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
+                                
+                            </div>
+                            <div class="card-info"><h4 data-i18n-product="name">Dorayaki</h4><span class="type">Tanuki</span></div>
+                        </article>
+
+                        <article class="product-card" data-id="p2" data-category="postre">
+                            <div class="card-visual">
+                                <div class="ink-mask"><img src="assets/images/mochi-kitsune.jpg" alt="Mochi" class="product-img"></div>
+                                <div class="stamp-seal">狐</div>
+                                <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
+                            </div>
+                            <div class="card-info"><h4 data-i18n-product="name">Mochi Daifuku</h4><span class="type">Kitsune</span></div>
+                        </article>
+
+                        <article class="product-card" data-id="p3" data-category="postre">
+                            <div class="card-visual">
+                                <div class="ink-mask"><img src="assets/images/dango-bakeneko.jpg" alt="Dango" class="product-img"></div>
+                                <div class="stamp-seal">猫</div>
+                                <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
+                            </div>
+                            <div class="card-info"><h4 data-i18n-product="name">Dango Tricolor</h4><span class="type">Bakeneko</span></div>
+                        </article>
+
+                        <article class="product-card" data-id="p4" data-category="postre">
+                            <div class="card-visual">
+                                <div class="ink-mask"><img src="assets/images/kuzumochi-kappa.jpg" alt="Kuzumochi" class="product-img"></div>
+                                <div class="stamp-seal">河</div>
+                                <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
+                            </div>
+                            <div class="card-info"><h4 data-i18n-product="name">Kuzumochi</h4><span class="type">Kappa</span></div>
+                        </article>
+
+                        <article class="product-card" data-id="p5" data-category="postre">
+                            <div class="card-visual">
+                                <div class="ink-mask"><img src="assets/images/yokan-umibozu.jpg" alt="Yokan" class="product-img"></div>
+                                <div class="stamp-seal">海</div>
+                                <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
+                            </div>
+                            <div class="card-info"><h4 data-i18n-product="name">Yokan Nocturno</h4><span class="type">Umibozu</span></div>
+                        </article>
+
+                        <article class="product-card" data-id="p6" data-category="postre">
+                            <div class="card-visual">
+                                <div class="ink-mask"><img src="assets/images/nerikiri-yukionna.jpg" alt="Nerikiri" class="product-img"></div>
+                                <div class="stamp-seal">雪</div>
+                                <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
+                            </div>
+                            <div class="card-info"><h4 data-i18n-product="name">Nerikiri de Camelia</h4><span class="type">Yuki-Onna</span></div>
+                        </article>
+
+                        <div class="product-grid">
+                        <article class="product-card" data-id="p7" data-category="vino">
+                            <div class="card-visual">
+                                <div class="ink-mask"><img src="assets/images/vino-theraw.jpg" alt="Vino Blanco" class="product-img"></div>
+                                <div class="stamp-seal">魚</div>
+                                <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
+                            </div>
+                            <div class="card-info"><h4 data-i18n-product="name">Sauvignon Blanc 'The Raw'</h4><span class="type">Ningyo</span></div>
+                        </article>
+
+                        <article class="product-card" data-id="p8" data-category="vino">
+                            <div class="card-visual">
+                                <div class="ink-mask"><img src="assets/images/vino-thegrill.jpg" alt="Vino Tinto" class="product-img"></div>
+                                <div class="stamp-seal">鬼</div>
+                                <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
+                            </div>
+                            <div class="card-info"><h4 data-i18n-product="name">Garnacha Tinta 'The Grill'</h4><span class="type">Shuten-Dōji</span></div>
+                        </article>
+
+                        <article class="product-card" data-id="p9" data-category="vino">
+                            <div class="card-visual">
+                                <div class="ink-mask"><img src="assets/images/vino-theumami.jpg" alt="Cava" class="product-img"></div>
+                                <div class="stamp-seal">狐</div>
+                                <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
+                            </div>
+                            <div class="card-info"><h4 data-i18n-product="name">Cava Brut Nature 'The Umami'</h4><span class="type">Kitsune</span></div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="main-footer">
+                <p>© 2024 Bakeneko Bakery. TFG Proyecto Ficticio.</p>
+            </footer>
+
+        </main>
+        <button class="chatbot-trigger" id="chatbot-trigger" aria-label="Abrir Asistente">
+        <span class="bot-icon">猫</span> </button>
+
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chat-header">
+                <div class="chat-title">
+                    <span class="bot-avatar">猫</span>
+                    <div>
+                        <h4>Espíritu Bakeneko</h4>
+                        <span class="bot-status">Guardián del Grimorio</span>
+                    </div>
+                </div>
+                <button class="close-chat" id="close-chat">×</button>
             </div>
             
-            <div class="hero-content parallax-layer" data-speed="1">
-                <p class="pre-title" data-i18n="pretitle">Portal al Reino Yokai</p>
-                <h1 class="hero-title">Bakeneko<br>Bakery</h1>
-                <p class="sub-title" data-i18n="subtitle">El Refugio de los Espíritus Dulces</p>
-                <button class="cta-btn" data-i18n="cta">Entrar al Portal</button>
-            </div>
-        </header>
-
-        <section class="intro-section">
-            <div class="container">
-                <div class="manifesto-text reveal-text">
-                    <span class="kanji-accent">伝説</span>
-                    <h2 data-i18n="introTitle">Dulzura Entre Mundos</h2>
-                    <p data-i18n="introText">
-                        No horneamos para el hambre del cuerpo, sino para los antojos del alma. 
-                        Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna 
-                        y la quietud antigua.
-                    </p>
+            <div class="chat-messages" id="chat-messages">
                 </div>
-            </div>
-        </section>
-
-        <section class="oracle-section">
-            <div class="container">
-                <div class="oracle-box">
-                    <div class="oracle-content">
-                        <h2 data-i18n="oracleTitle">El Oráculo del Bakeneko</h2>
-                        <p data-i18n="oracleDesc">¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.</p>
-                        <div class="oracle-runes" id="runes-container">
-                            <span>火</span><span>水</span><span>木</span><span>金</span><span>土</span>
-                        </div>
-                        <button id="spin-btn" class="cta-btn oracle-btn" data-i18n="oracleBtn">Consultar al Oráculo</button>
-                    </div>
+            
+            <div class="chat-options" id="chat-options">
                 </div>
-            </div>
-        </section>
+        </div>
 
-        <section class="collection-section">
-            <div class="container">
-                <div class="section-header reveal-text">
-                    <h3 data-i18n="collectionTitle">La Colección</h3>
+        <div class="modal-overlay">
+            <div class="modal-content">
+                <button class="close-modal">×</button>
+                <div class="modal-image-stage">
+                    <img id="active-image" src="" alt="Producto Bakeneko" class="modal-main-img">
                 </div>
-                
-                <div class="tabs">
-                    <button class="tab-btn active" data-filter="all" data-i18n="tabAll">El Grimorio Completo</button>
-                    <button class="tab-btn" data-filter="postre" data-i18n="tabDesserts">Postres Yokai</button>
-                    <button class="tab-btn" data-filter="vino" data-i18n="tabWines">Vinos Espirituales</button>
+                <div class="modal-text">
+                    <span class="modal-yokai-class"></span>
+                    <h2 class="modal-title"></h2>
+                    <p class="modal-desc"></p>
+                    <button class="add-cart-btn" data-i18n="addToCart">Añadir / Add</button>
                 </div>
-
-                <div class="collab-marquee-wrapper" id="collab-banner">
-                    <button class="close-collab" id="close-collab" aria-label="Cerrar banner">×</button>
-                    <div class="collab-marquee">
-                        <div class="marquee-content">
-                            <span data-i18n="collabMarquee">✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO </span>
-                            <span data-i18n="collabMarquee">✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO </span>
-                            <span data-i18n="collabMarquee">✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO </span>
-                            <span data-i18n="collabMarquee">✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO </span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="product-grid">
-                    <article class="product-card" data-id="p1" data-category="postre">
-                        <div class="card-visual">
-                            <div class="ink-mask"><img src="assets/images/dorayaki-tanuki.jpg" alt="Dorayaki" class="product-img"></div>
-                            <div class="stamp-seal">狸</div>
-                        </div>
-                        <div class="card-info"><h4 data-i18n-product="name">Dorayaki</h4><span class="type">Tanuki</span></div>
-                    </article>
-
-                    <article class="product-card" data-id="p2" data-category="postre">
-                        <div class="card-visual">
-                            <div class="ink-mask"><img src="assets/images/mochi-kitsune.jpg" alt="Mochi" class="product-img"></div>
-                            <div class="stamp-seal">狐</div>
-                        </div>
-                        <div class="card-info"><h4 data-i18n-product="name">Mochi Daifuku</h4><span class="type">Kitsune</span></div>
-                    </article>
-
-                    <article class="product-card" data-id="p3" data-category="postre">
-                        <div class="card-visual">
-                            <div class="ink-mask"><img src="assets/images/dango-bakeneko.jpg" alt="Dango" class="product-img"></div>
-                            <div class="stamp-seal">猫</div>
-                        </div>
-                        <div class="card-info"><h4 data-i18n-product="name">Dango Tricolor</h4><span class="type">Bakeneko</span></div>
-                    </article>
-
-                    <article class="product-card" data-id="p4" data-category="postre">
-                        <div class="card-visual">
-                            <div class="ink-mask"><img src="assets/images/kuzumochi-kappa.jpg" alt="Kuzumochi" class="product-img"></div>
-                            <div class="stamp-seal">河</div>
-                        </div>
-                        <div class="card-info"><h4 data-i18n-product="name">Kuzumochi</h4><span class="type">Kappa</span></div>
-                    </article>
-
-                    <article class="product-card" data-id="p5" data-category="postre">
-                        <div class="card-visual">
-                            <div class="ink-mask"><img src="assets/images/yokan-umibozu.jpg" alt="Yokan" class="product-img"></div>
-                            <div class="stamp-seal">海</div>
-                        </div>
-                        <div class="card-info"><h4 data-i18n-product="name">Yokan Nocturno</h4><span class="type">Umibozu</span></div>
-                    </article>
-
-                    <article class="product-card" data-id="p6" data-category="postre">
-                        <div class="card-visual">
-                            <div class="ink-mask"><img src="assets/images/nerikiri-yukionna.jpg" alt="Nerikiri" class="product-img"></div>
-                            <div class="stamp-seal">雪</div>
-                        </div>
-                        <div class="card-info"><h4 data-i18n-product="name">Nerikiri de Camelia</h4><span class="type">Yuki-Onna</span></div>
-                    </article>
-
-                    <div class="product-grid">
-                    <article class="product-card" data-id="p7" data-category="vino">
-                        <div class="card-visual">
-                            <div class="ink-mask"><img src="assets/images/vino-theraw.jpg" alt="Vino Blanco" class="product-img"></div>
-                            <div class="stamp-seal">魚</div>
-                        </div>
-                        <div class="card-info"><h4 data-i18n-product="name">Sauvignon Blanc 'The Raw'</h4><span class="type">Ningyo</span></div>
-                    </article>
-
-                    <article class="product-card" data-id="p8" data-category="vino">
-                        <div class="card-visual">
-                            <div class="ink-mask"><img src="assets/images/vino-thegrill.jpg" alt="Vino Tinto" class="product-img"></div>
-                            <div class="stamp-seal">鬼</div>
-                        </div>
-                        <div class="card-info"><h4 data-i18n-product="name">Garnacha Tinta 'The Grill'</h4><span class="type">Shuten-Dōji</span></div>
-                    </article>
-
-                    <article class="product-card" data-id="p9" data-category="vino">
-                        <div class="card-visual">
-                            <div class="ink-mask"><img src="assets/images/vino-theumami.jpg" alt="Cava" class="product-img"></div>
-                            <div class="stamp-seal">狐</div>
-                        </div>
-                        <div class="card-info"><h4 data-i18n-product="name">Cava Brut Nature 'The Umami'</h4><span class="type">Kitsune</span></div>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <footer class="main-footer">
-            <p>© 2024 Bakeneko Bakery. TFG Proyecto Ficticio.</p>
-        </footer>
-
-    </main>
-
-    <div class="modal-overlay">
-        <div class="modal-content">
-            <button class="close-modal">×</button>
-            <div class="modal-image-stage">
-                <img id="active-image" src="" alt="Producto Bakeneko" class="modal-main-img">
-            </div>
-            <div class="modal-text">
-                <span class="modal-yokai-class"></span>
-                <h2 class="modal-title"></h2>
-                <p class="modal-desc"></p>
-                <button class="add-cart-btn" data-i18n="addToCart">Añadir / Add</button>
             </div>
         </div>
-    </div>
+        <div class="cart-overlay" id="cart-overlay"></div>
+        <aside class="cart-drawer" id="cart-drawer">
+            <div class="cart-header">
+                <h2 data-i18n="cartTitle">Tu Selección</h2>
+                <button class="close-cart" id="close-cart" aria-label="Cerrar cesta">×</button>
+            </div>
+            
+            <div class="cart-items" id="cart-items" data-lenis-prevent>
+                </div>
+            
+            <div class="cart-footer">
+                <div class="cart-total-row">
+                    <span data-i18n="cartTotal">Total Ritual:</span>
+                    <span class="cart-total-price" id="cart-total">0.00€</span>
+                </div>
+                <button class="cta-btn checkout-btn" data-i18n="cartCheckout">Completar Invocación</button>
+            </div>
+        </aside>
 
-    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-    <script src="js/script.js"></script>
-</body>
+        <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script> 
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+    <div class="checkout-page hidden" id="checkout-page">
+        <header class="checkout-header">
+            <h2 class="logo">化け猫 <span>Bakery</span></h2>
+            <button class="text-btn" id="return-to-store" data-i18n="returnStore">← Volver al Grimorio</button>
+        </header>
+
+        <div class="checkout-container" id="checkout-content">
+            <div class="checkout-form-col">
+                <h2 data-i18n="checkoutTitle">Sellar el Pacto</h2>
+                <p class="checkout-subtitle" data-i18n="checkoutSub">Prepara tu ofrenda para recibir los elixires y wagashi.</p>
+                
+                <form id="checkout-form" class="checkout-form">
+                    <div class="form-section">
+                        <h3 data-i18n="checkoutShipping">1. Destino del Ritual</h3>
+                        <div class="input-group">
+                            <input type="text" id="chk-name" required placeholder=" ">
+                            <label for="chk-name" data-i18n="chkName">Nombre del Mortal</label>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="chk-address" required placeholder=" ">
+                            <label for="chk-address" data-i18n="chkAddress">Dirección Completa (Calle, Número, Piso)</label>
+                            <span class="error-msg" id="address-error">La dirección terrenal parece incompleta. Faltan datos.</span>
+                        </div>
+                        <div class="input-group">
+                            <select id="chk-zone" required>
+                                <option value="" disabled selected data-i18n="selectZone">Selecciona tu Reino...</option>
+                                <option value="5">Península Ibérica (+5.00€)</option>
+                                <option value="10">Islas y Ultramar (+10.00€)</option>
+                                <option value="0">Reino Yokai (Envío Mágico Gratuito)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-section">
+                        <h3 data-i18n="checkoutPayment">2. Ofrenda de Intercambio (Pago Seguro)</h3>
+                        <div class="input-group">
+                            <input type="text" id="chk-card" required placeholder=" " maxlength="19">
+                            <label for="chk-card" data-i18n="chkCard">Runas de la Tarjeta</label>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-group">
+                                <input type="text" id="chk-exp" required placeholder=" " maxlength="5">
+                                <label for="chk-exp" data-i18n="chkExp">Caducidad (MM/AA)</label>
+                            </div>
+                            <div class="input-group">
+                                <input type="password" id="chk-cvv" required placeholder=" " maxlength="4">
+                                <label for="chk-cvv">CVV</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="cta-btn submit-btn" id="submit-checkout">
+                        <span data-i18n="chkSubmit">Confirmar Invocación</span> — <span id="chk-btn-total">0.00€</span>
+                    </button>
+                </form>
+            </div>
+
+            <div class="checkout-summary-col">
+                <h3 data-i18n="summaryTitle">Resumen de Invocación</h3>
+                <div class="summary-items" id="summary-items">
+                    </div>
+                
+                <div class="summary-totals">
+                    <div class="total-line">
+                        <span data-i18n="summarySub">Subtotal</span>
+                        <span id="summary-subtotal">0.00€</span>
+                    </div>
+                    <div class="total-line">
+                        <span data-i18n="summaryShip">Envío (Portal)</span>
+                        <span id="summary-shipping">--</span>
+                    </div>
+                    <div class="total-line grand-total">
+                        <span data-i18n="summaryTotal">Total Ritual</span>
+                        <span id="summary-total">0.00€</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="checkout-success hidden" id="checkout-success">
+            <div class="success-seal">契</div> 
+            <h2 data-i18n="successTitle">Pacto Sellado</h2>
+            <p data-i18n="successText">Los espíritus han aceptado tu ofrenda. Tu pedido está cruzando el portal.</p>
+            <button class="cta-btn" id="back-to-realm-success" data-i18n="backToRealm">Volver al Reino</button>
+        </div>
+    </div>
 </html>
