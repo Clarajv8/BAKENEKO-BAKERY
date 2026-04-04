@@ -1,57 +1,79 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sellar el Pacto | Bakeneko Bakery</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Zen+Kaku+Gothic+New:wght@300;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sellar el Pacto | Bakeneko Bakery</title>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Zen+Kaku+Gothic+New:wght@300;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
 
-    <header class="checkout-header">
-        <h2 class="logo">化け猫 <span>Bakery</span></h2>
-        <a href="index.html" class="text-btn" id="return-to-store">← Volver al Grimorio</a>
-    </header>
+        <header class="checkout-header">
+            <h2 class="logo">化け猫 <span>Bakery</span></h2>
+            <a href="index.html" class="text-btn" id="txt-return">← Volver al Grimorio</a>
+        </header>
 
-    <div class="checkout-container">
-        <div class="checkout-form-col">
-            <h2 id="txt-title">Sellar el Pacto</h2>
-            <p class="checkout-subtitle" id="txt-subtitle">Prepara tu ofrenda para recibir los elixires y wagashi.</p>
-            
-            <form id="checkout-form" class="checkout-form">
+        <div class="checkout-container">
+            <div class="checkout-form-col">
+                <h2 id="txt-title">Sellar el Pacto</h2>
+                <p class="checkout-subtitle" id="txt-subtitle">Prepara tu ofrenda para recibir los elixires y wagashi.</p>
+                
+                <form id="checkout-form" class="checkout-form">
                 <div class="form-section">
                     <h3 id="txt-ship-title">1. Destino del Ritual</h3>
                     <div class="input-group">
                         <input type="text" id="chk-name" required placeholder=" ">
                         <label for="chk-name" id="txt-name">Nombre del Mortal</label>
                     </div>
+                    
+                    <div class="input-group">
+                        <input type="email" id="chk-email" required placeholder=" " pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$">
+                        <label for="chk-email" id="txt-email">Correo Electrónico (Para el Pergamino)</label>
+                        <span class="error-msg" id="email-error">El formato de las runas (correo) es incorrecto.</span>
+                    </div>
+                    
                     <div class="input-group">
                         <input type="text" id="chk-address" required placeholder=" ">
                         <label for="chk-address" id="txt-address">Dirección Completa (Calle, Número, Piso)</label>
                         <span class="error-msg" id="address-error">La dirección terrenal parece incompleta.</span>
                     </div>
-                   <div class="input-group">
-                        <select id="chk-zone" required>
-                            <option value="" disabled selected id="txt-zone">Selecciona tu tipo de envío...</option>
-                            <option value="5" id="txt-ship-opt1">Envío Estándar (48-72h) - +5.00€</option>
-                            <option value="8" id="txt-ship-opt2">Envío Exprés Frío (24h) - +8.00€</option>
-                            <option value="15" id="txt-ship-opt3">Islas e Internacional - +15.00€</option>
-                        </select>
+                    
+                    <div class="form-row">
+                        <div class="input-group">
+                            <input type="text" id="chk-zip" required placeholder=" " maxlength="10">
+                            <label for="chk-zip" id="txt-zip">Código Postal</label>
+                        </div>
+                        <div class="input-group">
+                            <select id="chk-zone" required>
+                                <option value="" disabled selected id="txt-zone">Selecciona tu tipo de envío...</option>
+                                <option value="5" id="txt-ship-opt1">Envío Frío Estándar (48-72h) - +5.00€</option>
+                                <option value="8" id="txt-ship-opt2">Envío Frío Exprés (24h) - +8.00€</option>
+                                <option value="15" id="txt-ship-opt3">Islas e Internacional (Frío) - +15.00€</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="form-section">
                     <h3 id="txt-pay-title">2. Ofrenda de Intercambio (Pago Seguro)</h3>
+                    
+                    <div class="input-group">
+                        <input type="text" id="chk-card-name" required placeholder=" ">
+                        <label for="chk-card-name" id="txt-card-name">Titular de la Tarjeta</label>
+                    </div>
+                    
                     <div class="input-group">
                         <input type="text" id="chk-card" required placeholder=" " maxlength="19">
                         <label for="chk-card" id="txt-card">Runas de la Tarjeta</label>
                     </div>
+                    
                     <div class="form-row">
                         <div class="input-group">
                             <input type="text" id="chk-exp" required placeholder=" " maxlength="5">
                             <label for="chk-exp" id="txt-exp">Caducidad (MM/AA)</label>
+                            <span class="error-msg" id="exp-error">Las runas han caducado o son inválidas.</span>
                         </div>
                         <div class="input-group">
                             <input type="password" id="chk-cvv" required placeholder=" " maxlength="4">
@@ -59,42 +81,42 @@
                         </div>
                     </div>
                 </div>
-                
-                <button type="submit" class="submit-btn" id="submit-checkout">
-                    <span id="txt-submit">Confirmar Invocación</span> — <span id="chk-btn-total">0.00€</span>
-                </button>
-            </form>
-        </div>
+                    
+                    <button type="submit" class="submit-btn" id="submit-checkout">
+                        <span id="txt-submit">Confirmar Invocación</span> — <span id="chk-btn-total">0.00€</span>
+                    </button>
+                </form>
+            </div>
 
-        <div class="checkout-summary-col">
-            <h3 id="txt-summary-title">Resumen de Invocación</h3>
-            <div class="summary-items" id="summary-items">
-                </div>
-            
-            <div class="summary-totals">
-                <div class="total-line">
-                    <span id="txt-subtotal">Subtotal</span>
-                    <span id="summary-subtotal">0.00€</span>
-                </div>
-                <div class="total-line">
-                    <span id="txt-shipping">Envío (Portal)</span>
-                    <span id="summary-shipping">--</span>
-                </div>
-                <div class="total-line grand-total">
-                    <span id="txt-total">Total Ritual</span>
-                    <span id="summary-total">0.00€</span>
+            <div class="checkout-summary-col">
+                <h3 id="txt-summary-title">Resumen de Invocación</h3>
+                <div class="summary-items" id="summary-items">
+                    </div>
+                
+                <div class="summary-totals">
+                    <div class="total-line">
+                        <span id="txt-subtotal">Subtotal</span>
+                        <span id="summary-subtotal">0.00€</span>
+                    </div>
+                    <div class="total-line">
+                        <span id="txt-shipping">Envío (Portal)</span>
+                        <span id="summary-shipping">--</span>
+                    </div>
+                    <div class="total-line grand-total">
+                        <span id="txt-total">Total Ritual</span>
+                        <span id="summary-total">0.00€</span>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="checkout-success-overlay" id="checkout-success">
-        <div class="success-seal">契</div> 
-        <h2 id="txt-success-title">Pacto Sellado</h2>
-        <p id="txt-success-desc">Los espíritus han aceptado tu ofrenda. Tu pedido está cruzando el portal.</p>
-        <button class="checkout-back-btn" id="back-to-realm">Volver al Reino</button>
-    </div>
+        <div class="checkout-success-overlay" id="checkout-success">
+            <div class="success-seal">契</div> 
+            <h2 id="txt-success-title">Pacto Sellado</h2>
+            <p id="txt-success-desc">Los espíritus han aceptado tu ofrenda. Tu pedido está cruzando el portal.</p>
+            <button class="checkout-back-btn" id="back-to-realm">Volver al Reino</button>
+        </div>
 
-    <script src="js/checkout.js"></script>
-</body>
+        <script src="js/checkout.js"></script>
+    </body>
 </html>

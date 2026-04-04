@@ -382,6 +382,18 @@ body {
     z-index: 10;
 }
 
+.modal-allergens {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed rgba(197, 163, 101, 0.4);
+    font-family: var(--f-sans);
+    font-size: 0.85rem;
+    color: #888;
+}
+.modal-allergens strong {
+    color: var(--c-vermilion);
+}
+
 /* --- Footer --- */
 .main-footer {
     text-align: center;
@@ -979,7 +991,6 @@ body {
 .close-chat { background: none; border: none; color: var(--c-cream); font-size: 1.8rem; cursor: pointer; line-height: 1; transition: color 0.3s; }
 .close-chat:hover { color: var(--c-vermilion); }
 
-/* Área de Mensajes */
 .chat-messages {
     flex: 1;
     padding: 1.5rem;
@@ -988,6 +999,16 @@ body {
     flex-direction: column;
     gap: 1rem;
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm10 10l10 10H0L10 10z' fill='%231a2639' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+    
+    /* --- NUEVO: Evitar rebote y ocultar barra de scroll --- */
+    overscroll-behavior: contain; /* Evita que el scroll salte al fondo al llegar al límite */
+    scrollbar-width: none; /* Oculta la barra en Firefox */
+    -ms-overflow-style: none; /* Oculta la barra en Internet Explorer/Edge antiguo */
+}
+
+/* Oculta la barra en Chrome, Safari y el nuevo Edge */
+.chat-messages::-webkit-scrollbar {
+    display: none;
 }
 
 /* Burbujas de Diálogo */

@@ -5,112 +5,107 @@ document.addEventListener("DOMContentLoaded", () => {
        ========================================= */
     const translations = {
         es: {
-            cart: "Cesta", pretitle: "Portal al Reino Yokai", subtitle: "El Refugio de los Espíritus Dulces",
-            cta: "Entrar al Portal", introTitle: "Dulzura Entre Mundos",
-            introText: "No horneamos para el hambre del cuerpo, sino para los antojos del alma. Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna y la quietud antigua.",
-            collectionTitle: "La Colección", addToCart: "Añadir a la Cesta",
-            oracleTitle: "El Oráculo del Bakeneko", oracleDesc: "¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.", oracleBtn: "Consultar al Oráculo",
-            tabAll: "El Grimorio Completo", tabDesserts: "Postres Yokai", tabWines: "Vinos Espirituales",
-            collabSub: "Colaboración Exclusiva", collabDesc: "El equilibrio perfecto entre el Wagashi tradicional y la enología premium. Un maridaje de leyenda diseñado para despertar a los espíritus.", collabMarquee: "✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO ", cartTitle: "Tu Selección", cartEmpty: "El grimorio está vacío.", cartTotal: "Total Ritual:", cartCheckout: "Completar Invocación", cartTitle: "Tu Selección", cartEmpty: "El grimorio está vacío.", cartTotal: "Total Ritual:", cartCheckout: "Completar Invocación", cartAdded: "¡Añadido!", checkoutTitle: "Sellar el Pacto", checkoutSub: "Prepara tu ofrenda para recibir los elixires y wagashi.", checkoutShipping: "Destino del Ritual", chkName: "Nombre del Mortal", chkAddress: "Dirección (Plano Terrenal)", checkoutPayment: "Ofrenda de Intercambio", chkCard: "Runas de la Tarjeta (16 dígitos)", chkExp: "Caducidad (MM/AA)", chkSubmit: "Confirmar Invocación", successTitle: "Pacto Sellado", successText: "Los espíritus han aceptado tu ofrenda. Tu pedido está en camino a través del portal.", backToRealm: "Volver al Reino", returnStore: "← Volver al Grimorio", selectZone: "Selecciona tu Reino...", summaryTitle: "Resumen de Invocación", summarySub: "Subtotal", summaryShip: "Envío (Portal)", summaryTotal: "Total Ritual"
+            cart: "Cesta", pretitle: "Portal al Reino Yokai", subtitle: "El Refugio de los Espíritus Dulces", cta: "Entrar al Portal", introTitle: "Dulzura Entre Mundos", introText: "No horneamos para el hambre del cuerpo, sino para los antojos del alma. Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna y la quietud antigua.", collectionTitle: "La Colección", addToCart: "Añadir a la Cesta", oracleTitle: "El Oráculo del Bakeneko", oracleDesc: "¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.", oracleBtn: "Consultar al Oráculo", tabAll: "El Grimorio Completo", tabDesserts: "Postres Yokai", tabWines: "Vinos Espirituales", collabSub: "Colaboración Exclusiva", collabDesc: "El equilibrio perfecto entre el Wagashi tradicional y la enología premium. Un maridaje de leyenda diseñado para despertar a los espíritus.", collabMarquee: "✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO ", cartTitle: "Tu Selección", cartEmpty: "El grimorio está vacío.", cartTotal: "Total Ritual:", cartCheckout: "Completar Invocación", cartTitle: "Tu Selección", cartEmpty: "El grimorio está vacío.", cartTotal: "Total Ritual:", cartCheckout: "Completar Invocación", cartAdded: "¡Añadido!", checkoutTitle: "Sellar el Pacto", checkoutSub: "Prepara tu ofrenda para recibir los elixires y wagashi.", checkoutShipping: "Destino del Ritual", chkName: "Nombre del Mortal", chkAddress: "Dirección (Plano Terrenal)", checkoutPayment: "Ofrenda de Intercambio", chkCard: "Runas de la Tarjeta (16 dígitos)", chkExp: "Caducidad (MM/AA)", chkSubmit: "Confirmar Invocación", successTitle: "Pacto Sellado", successText: "Los espíritus han aceptado tu ofrenda. Tu pedido está en camino a través del portal.", backToRealm: "Volver al Reino", returnStore: "← Volver al Grimorio", selectZone: "Selecciona tu Reino...", summaryTitle: "Resumen de Invocación", summarySub: "Subtotal", summaryShip: "Envío (Portal)", summaryTotal: "Total Ritual", yokaiClass: "Espíritu Guardián:", allergenLabel: "Alérgenos:", unit: "/ ud", allergenLabel: "Alérgenos:", unit: "/ ud", botName: "Espíritu Bakeneko", botStatus: "Guardián del Grimorio"
         },
         en: {
-            cart: "Cart", pretitle: "Gateway to the Yokai Realm", subtitle: "Sanctuary of Sweet Spirits",
-            cta: "Enter the Portal", introTitle: "Sweetness Between Worlds",
-            introText: "We do not bake for the body's hunger, but for the soul's cravings. Guided by the Bakeneko, our sweets bridge the gap between modern rush and ancient stillness.",
-            collectionTitle: "The Collection", addToCart: "Add to Cart",
-            oracleTitle: "The Bakeneko Oracle", oracleDesc: "In doubt? Let fate choose the spirit your soul needs today.", oracleBtn: "Consult the Oracle",
-            tabAll: "The Complete Grimoire", tabDesserts: "Yokai Sweets", tabWines: "Spiritual Wines",
-            collabSub: "Exclusive Collaboration", collabDesc: "The perfect balance between traditional Wagashi and premium oenology. A legendary pairing designed to awaken the spirits.", collabMarquee: "✦ BAKENEKO × BODEGAS KIZUNA ✦ EXCLUSIVE PAIRING DROP ", cartTitle: "Your Selection", cartEmpty: "The grimoire is empty.", cartTotal: "Ritual Total:", cartCheckout: "Complete Invocation", cartTitle: "Your Selection", cartEmpty: "The grimoire is empty.", cartTotal: "Ritual Total:", cartCheckout: "Complete Invocation", cartAdded: "Added!", checkoutTitle: "Seal the Pact", checkoutSub: "Prepare your offering to receive the elixirs and wagashi.", checkoutShipping: "Ritual Destination", chkName: "Mortal's Name", chkAddress: "Address (Earthly Plane)", checkoutPayment: "Exchange Offering", chkCard: "Card Runes (16 digits)", chkExp: "Expiry (MM/YY)", chkSubmit: "Confirm Invocation", successTitle: "Pact Sealed", successText: "The spirits have accepted your offering. Your order is on its way through the portal.", backToRealm: "Return to Realm", returnStore: "← Return to Grimoire", selectZone: "Select your Realm...", summaryTitle: "Invocation Summary", summarySub: "Subtotal", summaryShip: "Shipping (Portal)", summaryTotal: "Ritual Total", returnStore: "← 魔導書に戻る", selectZone: "領域を選択...", summaryTitle: "召喚の概要", summarySub: "小計", summaryShip: "送料（ポータル）", summaryTotal: "儀式の合計"
+            cart: "Cart", pretitle: "Gateway to the Yokai Realm", subtitle: "Sanctuary of Sweet Spirits", cta: "Enter the Portal", introTitle: "Sweetness Between Worlds", introText: "We do not bake for the body's hunger, but for the soul's cravings. Guided by the Bakeneko, our sweets bridge the gap between modern rush and ancient stillness.", collectionTitle: "The Collection", addToCart: "Add to Cart", oracleTitle: "The Bakeneko Oracle", oracleDesc: "In doubt? Let fate choose the spirit your soul needs today.", oracleBtn: "Consult the Oracle", tabAll: "The Complete Grimoire", tabDesserts: "Yokai Sweets", tabWines: "Spiritual Wines", collabSub: "Exclusive Collaboration", collabDesc: "The perfect balance between traditional Wagashi and premium oenology. A legendary pairing designed to awaken the spirits.", collabMarquee: "✦ BAKENEKO × BODEGAS KIZUNA ✦ EXCLUSIVE PAIRING DROP ", cartTitle: "Your Selection", cartEmpty: "The grimoire is empty.", cartTotal: "Ritual Total:", cartCheckout: "Complete Invocation", cartTitle: "Your Selection", cartEmpty: "The grimoire is empty.", cartTotal: "Ritual Total:", cartCheckout: "Complete Invocation", cartAdded: "Added!", checkoutTitle: "Seal the Pact", checkoutSub: "Prepare your offering to receive the elixirs and wagashi.", checkoutShipping: "Ritual Destination", chkName: "Mortal's Name", chkAddress: "Address (Earthly Plane)", checkoutPayment: "Exchange Offering", chkCard: "Card Runes (16 digits)", chkExp: "Expiry (MM/YY)", chkSubmit: "Confirm Invocation", successTitle: "Pact Sealed", successText: "The spirits have accepted your offering. Your order is on its way through the portal.", backToRealm: "Return to Realm", returnStore: "← Return to Grimoire", selectZone: "Select your Realm...", summaryTitle: "Invocation Summary", summarySub: "Subtotal", summaryShip: "Shipping (Portal)", summaryTotal: "Ritual Total", returnStore: "← 魔導書に戻る", selectZone: "領域を選択...", summaryTitle: "召喚の概要", summarySub: "小計", summaryShip: "送料（ポータル）", summaryTotal: "儀式の合計", yokaiClass: "Guardian Spirit:", allergenLabel: "Allergens:", unit: "/ ea", allergenLabel: "Allergens:", unit: "/ ea", botName: "Bakeneko Spirit", botStatus: "Grimoire Guardian"
         },
         jp: {
-            cart: "カート", pretitle: "妖怪のレルムへの入り口", subtitle: "甘い精霊の聖域",
-            cta: "ポータルに入る", introTitle: "世界の間の甘さ",
-            introText: "私たちは体の飢えのためではなく、魂の渇望のために焼きます。化け猫に導かれ、私たちのスイーツは現代の慌ただしさと古代の静けさの間の架け橋となります。",
-            collectionTitle: "コレクション", addToCart: "カートに追加",
-            oracleTitle: "化け猫の神託", oracleDesc: "迷っていますか？今日あなたの魂が必要とする精霊を運命に選ばせましょう。", oracleBtn: "神託を伺う",
-            tabAll: "完全な魔導書", tabDesserts: "妖怪のスイーツ", tabWines: "霊的なワイン",
-            collabSub: "特別コラボレーション", collabDesc: "伝統的な和菓子と高級ワインの完璧なバランス。精霊を目覚めさせるためにデザインされた伝説のペアリング。", collabMarquee: "✦ 化け猫 × KIZUNAワイナリー ✦ 特別なペアリング ", cartTitle: "あなたの選択", cartEmpty: "魔導書は空です。", cartTotal: "儀式の合計:", cartCheckout: "召喚を完了する", cartTitle: "あなたの選択", cartEmpty: "魔導書は空です。", cartTotal: "儀式の合計:", cartCheckout: "召喚を完了する", cartAdded: "追加されました！", checkoutTitle: "契約を結ぶ", checkoutSub: "お供え物を準備して、霊薬と和菓子を受け取ります。", checkoutShipping: "儀式の目的地", chkName: "定命の者の名前", chkAddress: "住所（現世）", checkoutPayment: "交換の供物", chkCard: "カードのルーン（16桁）", chkExp: "有効期限 (MM/YY)", chkSubmit: "召喚を確認する", successTitle: "契約完了", successText: "精霊たちがあなたの供物を受け入れました。ご注文はポータルを通って向かっています。", backToRealm: "レルムに戻る"
+            cart: "カート", pretitle: "妖怪のレルムへの入り口", subtitle: "甘い精霊の聖域", cta: "ポータルに入る", introTitle: "世界の間の甘さ", introText: "私たちは体の飢えのためではなく、魂の渇望のために焼きます。化け猫に導かれ、私たちのスイーツは現代の慌ただしさと古代の静けさの間の架け橋となります。", collectionTitle: "コレクション", addToCart: "カートに追加", oracleTitle: "化け猫の神託", oracleDesc: "迷っていますか？今日あなたの魂が必要とする精霊を運命に選ばせましょう。", oracleBtn: "神託を伺う", tabAll: "完全な魔導書", tabDesserts: "妖怪のスイーツ", tabWines: "霊的なワイン", collabSub: "特別コラボレーション", collabDesc: "伝統的な和菓子と高級ワインの完璧なバランス。精霊を目覚めさせるためにデザインされた伝説のペアリング。", collabMarquee: "✦ 化け猫 × KIZUNAワイナリー ✦ 特別なペアリング ", cartTitle: "あなたの選択", cartEmpty: "魔導書は空です。", cartTotal: "儀式の合計:", cartCheckout: "召喚を完了する", cartTitle: "あなたの選択", cartEmpty: "魔導書は空です。", cartTotal: "儀式の合計:", cartCheckout: "召喚を完了する", cartAdded: "追加されました！", checkoutTitle: "契約を結ぶ", checkoutSub: "お供え物を準備して、霊薬と和菓子を受け取ります。", checkoutShipping: "儀式の目的地", chkName: "定命の者の名前", chkAddress: "住所（現世）", checkoutPayment: "交換の供物", chkCard: "カードのルーン（16桁）", chkExp: "有効期限 (MM/YY)", chkSubmit: "召喚を確認する", successTitle: "契約完了", successText: "精霊たちがあなたの供物を受け入れました。ご注文はポータルを通って向かっています。", backToRealm: "レルムに戻る", yokaiClass: "守護霊:", allergenLabel: "アレルギー物質:", unit: "/ 個", allergenLabel: "アレルギー物質:", unit: "/ 個", botName: "化け猫の精霊", botStatus: "魔導書の守護者"
         }
     };
 
     // ¡Aquí cambiamos "model:" por "img:"!
     const productsDB = {
         p1: {
-            es: { name: "Dorayaki", desc: "El Tanuki es un espíritu del bosque famoso por su gran barriga y su amor por los festines. Este dulce redondo rinde homenaje a su apetito insaciable." },
-            en: { name: "Dorayaki", desc: "The Tanuki is a forest spirit famous for its big belly and love of feasts. This round sweet pays homage to its insatiable appetite." },
-            jp: { name: "どら焼き", desc: "タヌキは大きなお腹と宴会好きで有名な森の精霊です。この丸いお菓子は彼の飽くなき食欲に敬意を表しています。" },
+            es: { name: "Dorayaki", desc: "El Tanuki es un espíritu del bosque famoso por su gran barriga y su amor por los festines. Este dulce redondo rinde homenaje a su apetito insaciable.", allergens: "Trigo, Huevo, Soja." },
+            en: { name: "Dorayaki", desc: "The Tanuki is a forest spirit famous for its big belly and love of feasts. This round sweet pays homage to its insatiable appetite.", allergens: "Wheat, Egg, Soy." },
+            jp: { name: "どら焼き", desc: "タヌキは大きなお腹と宴会好きで有名な森の精霊です。この丸いお菓子は彼の飽くなき食欲に敬意を表しています。", allergens: "小麦、卵、大豆。" },
             class: "Tanuki", price: 3.50, img: "assets/images/dorayaki-tanuki.jpg"
         },
         p2: {
-            es: { name: "Mochi Daifuku", desc: "Se dice que el Kitsune cambia de forma para engañar a los viajeros. Este mochi, suave y pálido por fuera, esconde un corazón astuto." },
-            en: { name: "Mochi Daifuku", desc: "It is said that the Kitsune shapeshifts to trick travelers. This mochi, soft and pale on the outside, hides a cunning heart." },
-            jp: { name: "大福餅", desc: "キツネは旅人を騙すために姿を変えると言われています。外は柔らかく白いこの餅は、ずる賢い心を隠しています。" },
+            es: { name: "Mochi Daifuku", desc: "Se dice que el Kitsune cambia de forma para engañar a los viajeros. Este mochi, suave y pálido por fuera, esconde un corazón astuto.", allergens: "Trigo, Huevo, Soja." },
+            en: { name: "Mochi Daifuku", desc: "It is said that the Kitsune shapeshifts to trick travelers. This mochi, soft and pale on the outside, hides a cunning heart.", allergens: "Wheat, Egg, Soy." },
+            jp: { name: "大福餅", desc: "キツネは旅人を騙すために姿を変えると言われています。外は柔らかく白いこの餅は、ずる賢い心を隠しています。", allergens: "小麦、卵、大豆。" },
             class: "Kitsune", price: 3.80, img: "assets/images/mochi-kitsune.jpg"
         },
         p3: {
-            es: { name: "Dango Tricolor", desc: "Tres esferas perfectas que representan a tres pequeños gatos traviesos jugando en equilibrio bajo los cerezos." },
-            en: { name: "Tricolor Dango", desc: "Three perfect spheres representing three mischievous little cats playing in balance under the cherry trees." },
-            jp: { name: "三色団子", desc: "桜の下でバランスを取りながら遊ぶ3匹のいたずら好きな子猫を表す3つの完璧な球体。" },
+            es: { name: "Dango Tricolor", desc: "Tres esferas perfectas que representan a tres pequeños gatos traviesos jugando en equilibrio bajo los cerezos.", allergens: "Trigo, Huevo, Soja." },
+            en: { name: "Tricolor Dango", desc: "Three perfect spheres representing three mischievous little cats playing in balance under the cherry trees.", allergens: "Wheat, Egg, Soy." },
+            jp: { name: "三色団子", desc: "桜の下でバランスを取りながら遊ぶ3匹のいたずら好きな子猫を表す3つの完璧な球体。", allergens: "小麦、卵、大豆。" },
             class: "Bakeneko", price: 3.00, img: "assets/images/dango-bakeneko.jpg"
         },
         p4: {
-            es: { name: "Kuzumochi", desc: "Fresco, acuoso y transparente como el río donde habita el Kappa. Un postre que se desliza en el paladar." },
-            en: { name: "Kuzumochi", desc: "Fresh, watery, and transparent like the river where the Kappa lives. A dessert that glides on the palate." },
-            jp: { name: "葛餅", desc: "カッパが住む川のように新鮮で水っぽく透明です。口の中で滑るデザート。" },
+            es: { name: "Kuzumochi", desc: "Fresco, acuoso y transparente como el río donde habita el Kappa. Un postre que se desliza en el paladar.", allergens: "Trigo, Huevo, Soja." },
+            en: { name: "Kuzumochi", desc: "Fresh, watery, and transparent like the river where the Kappa lives. A dessert that glides on the palate.", allergens: "Wheat, Egg, Soy." },
+            jp: { name: "葛餅", desc: "カッパが住む川のように新鮮で水っぽく透明です。口の中で滑るデザート。", allergens: "小麦、卵、大豆。" },
             class: "Kappa", price: 4.50, img: "assets/images/kuzumochi-kappa.jpg"
         },
         p5: {
-            es: { name: "Yokan Nocturno", desc: "Oscuro, denso y profundo como el océano donde emerge el gigante Umibozu. Un sabor intenso para valientes." },
-            en: { name: "Night Yokan", desc: "Dark, dense, and deep like the ocean where the giant Umibozu emerges. An intense flavor for the brave." },
-            jp: { name: "夜の羊羹", desc: "巨大な海坊主が現れる海のように暗く、密度が濃く、深い。勇者のための強烈な風味。" },
+            es: { name: "Yokan Nocturno", desc: "Oscuro, denso y profundo como el océano donde emerge el gigante Umibozu. Un sabor intenso para valientes.", allergens: "Trigo, Huevo, Soja." },
+            en: { name: "Night Yokan", desc: "Dark, dense, and deep like the ocean where the giant Umibozu emerges. An intense flavor for the brave.", allergens: "Wheat, Egg, Soy." },
+            jp: { name: "夜の羊羹", desc: "巨大な海坊主が現れる海のように暗く、密度が濃く、深い。勇者のための強烈な風味。", allergens: "小麦、卵、大豆。" },
             class: "Umibozu", price: 4.20, img: "assets/images/yokan-umibozu.jpg"
         },
         p6: {
-            es: { name: "Nerikiri de Camelia", desc: "Arte comestible. Tan bello, pálido y delicado como la Yuki-Onna. Captura una belleza fría y efímera." },
-            en: { name: "Camellia Nerikiri", desc: "Edible art. As beautiful, pale, and delicate as the Yuki-Onna. It captures a cold, ephemeral beauty." },
-            jp: { name: "椿の練り切り", desc: "食べられる芸術。雪女のように美しく、青白く、繊細です。冷たく儚い美しさを捉えています。" },
+            es: { name: "Nerikiri de Camelia", desc: "Arte comestible. Tan bello, pálido y delicado como la Yuki-Onna. Captura una belleza fría y efímera.", allergens: "Trigo, Huevo, Soja." },
+            en: { name: "Camellia Nerikiri", desc: "Edible art. As beautiful, pale, and delicate as the Yuki-Onna. It captures a cold, ephemeral beauty.", allergens: "Wheat, Egg, Soy." },
+            jp: { name: "椿の練り切り", desc: "食べられる芸術。雪女のように美しく、青白く、繊細です。冷たく儚い美しさを捉えています。", allergens: "小麦、卵、大豆。" },
             class: "Yuki-Onna", price: 5.50, img: "assets/images/nerikiri-yukionna.jpg"
         },
        // --- VINOS BODEGAS KIZUNA ---
         p7: {
-            es: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 6°C. El elixir de la Ningyo (Sirena), ideal para acompañar cortes de pescado crudo, Sashimi y preparaciones con Wasabi. 12,5% Vol." },
-            en: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 6°C. The elixir of the Ningyo (Mermaid), ideal for raw fish, Sashimi, and Wasabi preparations. 12.5% Vol." },
-            jp: { name: "ソーヴィニヨン・ブラン 'The Raw'", desc: "ペネデス原産地呼称。Kizunaワイナリー。6°Cで提供。人魚の霊薬。刺身やわさびの料理に最適です。アルコール度数12.5%。" },
+            es: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 6°C. El elixir de la Ningyo (Sirena), ideal para acompañar cortes de pescado crudo, Sashimi y preparaciones con Wasabi. 12,5% Vol.", allergens: "Contiene Sulfitos." },
+            en: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 6°C. The elixir of the Ningyo (Mermaid), ideal for raw fish, Sashimi, and Wasabi preparations. 12.5% Vol.", allergens: "Contains Sulfites." },
+            jp: { name: "ソーヴィニヨン・ブラン 'The Raw'", desc: "ペネデス原産地呼称。Kizunaワイナリー。6°Cで提供。人魚の霊薬。刺身やわさびの料理に最適です。アルコール度数12.5%。", allergens: "亜硫酸塩が含まれています。" },
             class: "Ningyo (Sirena)", price: 16.50, img: "assets/images/vino-theraw.jpg"
         },
         p8: {
-            es: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 14°C. El fuego del Shuten-Dōji. Maridaje óptimo para carnes a la brasa, Yakitori, anguila (Unagi) y salsas Teriyaki. 14% Vol." },
-            en: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 14°C. The fire of Shuten-Dōji. Optimal pairing for grilled meats, Yakitori, eel (Unagi), and Teriyaki sauces. 14% Vol." },
-            jp: { name: "ガルナッチャ・ティンタ 'The Grill'", desc: "ペネデス原産地呼称。Kizunaワイナリー。14°Cで提供。酒呑童子の炎。焼き鳥、うなぎ、照り焼きソースに最適です。アルコール度数14%。" },
+            es: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 14°C. El fuego del Shuten-Dōji. Maridaje óptimo para carnes a la brasa, Yakitori, anguila (Unagi) y salsas Teriyaki. 14% Vol.", allergens: "Contiene Sulfitos." },
+            en: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 14°C. The fire of Shuten-Dōji. Optimal pairing for grilled meats, Yakitori, eel (Unagi), and Teriyaki sauces. 14% Vol.", allergens: "Contains Sulfites." },
+            jp: { name: "ガルナッチャ・ティンタ 'The Grill'", desc: "ペネデス原産地呼称。Kizunaワイナリー。14°Cで提供。酒呑童子の炎。焼き鳥、うなぎ、照り焼きソースに最適です。アルコール度数14%。", allergens: "亜硫酸塩が含まれています。" },
             class: "Shuten-Dōji (Oni)", price: 18.00, img: "assets/images/vino-thegrill.jpg"
         },
         p9: {
-            es: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Método Tradicional. Bodegas Kizuna. Servir a 5°C. La celebración del Kitsune. Estructura perfecta para Tempura, frituras y caldos ricos en Umami. 12% Vol." },
-            en: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Traditional Method. Kizuna Wineries. Serve at 5°C. The Kitsune's celebration. Perfect structure for Tempura, fried foods, and Umami-rich broths. 12% Vol." },
-            jp: { name: "カヴァ・ブリュット 'The Umami'", desc: "カヴァ原産地呼称。伝統的製法。Kizunaワイナリー。5°Cで提供。狐の祝い。天ぷら、揚げ物、旨味豊かなスープに最適です。アルコール度数12%。" },
+            es: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Método Tradicional. Bodegas Kizuna. Servir a 5°C. La celebración del Kitsune. Estructura perfecta para Tempura, frituras y caldos ricos en Umami. 12% Vol.", allergens: "Contiene Sulfitos." },
+            en: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Traditional Method. Kizuna Wineries. Serve at 5°C. The Kitsune's celebration. Perfect structure for Tempura, fried foods, and Umami-rich broths. 12% Vol.", allergens: "Contains Sulfites." },
+            jp: { name: "カヴァ・ブリュット 'The Umami'", desc: "カヴァ原産地呼称。伝統的製法。Kizunaワイナリー。5°Cで提供。狐の祝い。天ぷら、揚げ物、旨味豊かなスープに最適です。アルコール度数12%。", allergens: "亜硫酸塩が含まれています。" },
             class: "Kitsune (Zorro)", price: 22.00, img: "assets/images/vino-theumami.jpg"
         }
     };
 
-    // Language Logic & LocalStorage (Memoria)
+// Language Logic & LocalStorage (Memoria)
     const langs = ['es', 'en', 'jp'];
+    
+    // NUEVO: Diccionario visual de Endónimos para el botón
+    const langDisplayNames = {
+        es: 'ES',
+        en: 'EN',
+        jp: '日本語'
+    };
+    
     let currentLangIndex = 0;
     const langBtn = document.getElementById('lang-toggle');
 
-    // --- NUEVO: Recuperar idioma guardado si existe ---
+    // --- Recuperar idioma guardado si existe ---
     const savedLang = localStorage.getItem('bakenekoLang');
     if (savedLang && langs.includes(savedLang)) {
         currentLangIndex = langs.indexOf(savedLang);
         document.body.setAttribute('data-lang', savedLang);
         updateLanguage(savedLang);
     }
-    langBtn.innerText = langs.map(l => l.toUpperCase()).join(' / ');
+    
+    // Pintar el botón correctamente al iniciar
+    langBtn.innerText = langs.map(l => langDisplayNames[l]).join(' / ');
     // --------------------------------------------------
 
     langBtn.addEventListener('click', () => {
         currentLangIndex = (currentLangIndex + 1) % langs.length;
         const currentLang = langs[currentLangIndex];
-        langBtn.innerText = langs.map(l => l.toUpperCase()).join(' / ');
+        
+        // Pintar el botón usando los nombres nativos
+        langBtn.innerText = langs.map(l => langDisplayNames[l]).join(' / ');
+        
         document.body.setAttribute('data-lang', currentLang);
         
         // Guardamos el idioma en memoria al cambiarlo
@@ -121,9 +116,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function updateLanguage(lang) {
         // UI Text
+        const t = translations[lang];
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if(translations[lang][key]) el.innerText = translations[lang][key];
+            const botNameEl = document.getElementById('bot-name');
+        if (botNameEl) botNameEl.innerText = t.botName;
+        
+        const botStatusEl = document.getElementById('bot-status');
+        if (botStatusEl) botStatusEl.innerText = t.botStatus;
         });
 
         // Product Cards
@@ -197,14 +198,18 @@ document.addEventListener("DOMContentLoaded", () => {
         const lang = langs[currentLangIndex];
         const data = productsDB[id];
         
-        // Rellenar textos
+        // Rellenar Nombre y Descripción (ya lo tienes)
         modalTitle.innerText = data[lang].name;
         modalDesc.innerText = data[lang].desc;
-        modalClass.innerText = `Espíritu Guardián: ${data.class}`;
         
-        // Cargar imagen en lugar del modelo 3D
+        // CORRECCIÓN 1: Clase Yokai traducida
+        modalClass.innerText = `${translations[lang].yokaiClass} ${data.class}`;
+        
+        // CORRECCIÓN 2: Etiqueta de alérgenos y el contenido traducido
+        document.querySelector('[data-i18n="allergenLabel"]').innerText = translations[lang].allergenLabel;
+        document.getElementById('active-allergens').innerText = data[lang].allergens;
+        
         activeImage.src = data.img;
-        
         modalContent.setAttribute('data-active-id', id);
     }
 
@@ -477,7 +482,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <img src="${item.img}" alt="${translatedName}" class="cart-item-img">
                     <div class="cart-item-info">
                         <h4 class="cart-item-title">${translatedName}</h4>
-                        <span class="cart-item-price">${item.price.toFixed(2)}€ / ud</span>
+                        <span class="cart-item-price">${item.price.toFixed(2)}€ ${translations[lang].unit}</span>
                         <div class="quantity-controls">
                             <button class="qty-btn" onclick="changeQuantity(${index}, -1)">-</button>
                             <span class="qty-display">${item.quantity}</span>
@@ -552,60 +557,85 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatOptions = document.getElementById('chat-options');
 
     // Árbol de decisiones del Bot (FAQ)
+   // Árbol de decisiones del Bot (FAQ) Ampliado
     const botDialogues = {
         es: {
             start: {
-                msg: "¡Miau! 🐾 Soy el espíritu Bakeneko. ¿Qué secreto de la Bakery deseas desvelar?",
+                msg: "¡Miau! 🐾 Soy el espíritu Bakeneko. ¿En qué te puedo ayudar hoy?",
                 options: [
-                    { text: "📦 ¿Cuánto tarda el envío?", next: "envio" },
+                    { text: "📍 ¿Dónde está mi pedido?", next: "rastrear" },
+                    { text: "📦 Tiempos de envío", next: "envio" },
                     { text: "🌾 Alergias e Ingredientes", next: "alergenos" },
-                    { text: "✨ ¡Recomiéndame algo!", next: "recomendar" }
+                    { text: "✨ Recomiéndame algo", next: "recomendar" },
+                    { text: "👤 Hablar con Atención al Cliente", next: "contacto" }
                 ]
             },
+            rastrear: {
+                msg: "Para ver por dónde va tu ofrenda, busca el <b>Número de Pacto</b> en el pergamino (email) de confirmación que te enviamos al comprar. <br><br>Si ya lo tienes, puedes rastrearlo en el portal del transportista.",
+                options: [{ text: "Volver al menú", next: "start" }, { text: "No encuentro mi número", next: "contacto" }]
+            },
+            contacto: {
+                msg: "Nuestros monjes de soporte atienden de Lunes a Viernes. <br><br>📞 Teléfono: <b>+34 900 000 000</b><br>✉️ Email: <a href='mailto:ayuda@bakeneko.com' style='color:var(--c-vermilion); font-weight:bold;'>ayuda@bakeneko.com</a><br><br>¿Te ayudo con otra cosa?",
+                options: [{ text: "Volver al menú", next: "start" }, { text: "Cerrar chat", next: "fin" }]
+            },
             envio: {
-                msg: "Nuestros portales se abren a diario. El envío Estándar tarda 48-72h. Si pides productos frescos (como Mochi), usa el Exprés Frío (24h).",
-                options: [{ text: "Tengo otra duda", next: "start" }, { text: "Todo claro, ¡gracias!", next: "fin" }]
+                msg: "¡No te preocupes por el clima! ❄️ Todos nuestros postres y elixires viajan SIEMPRE en arcas refrigeradas mágicas sin coste adicional por el frío. <br><br>Puedes elegir el <b>Estándar (48-72h)</b> o, si la gula te puede, el <b>Exprés (24h)</b>.",
+                options: [{ text: "Ver más opciones", next: "start" }]
             },
             alergenos: {
-                msg: "Usamos harina de arroz glutinoso (sin gluten natural), pero procesamos soja, lácteos y frutos secos en nuestro obrador mágico. ¡Pregunta en la cesta si tienes dudas severas!",
-                options: [{ text: "Tengo otra duda", next: "start" }, { text: "Entendido", next: "fin" }]
+                msg: "Usamos harina de arroz glutinoso (sin gluten), pero procesamos soja, lácteos y frutos secos en nuestro obrador mágico. ¡Contáctanos si tienes alergias severas!",
+                options: [{ text: "Contactar", next: "contacto" }, { text: "Volver", next: "start" }]
             },
             recomendar: {
-                msg: "Si es tu primera vez, el Dorayaki es un clásico infalible. Si buscas una experiencia mística de maridaje, prueba el Sauvignon Blanc 'The Raw'.",
-                options: [{ text: "Ver otra duda", next: "start" }]
+                msg: "Si es tu primera vez, el Dorayaki Tanuki es un clásico infalible. Si buscas una experiencia mística de maridaje, prueba nuestro vino 'The Raw'.",
+                options: [{ text: "Gracias, echaré un vistazo", next: "fin" }, { text: "Menú principal", next: "start" }]
             },
             fin: {
-                msg: "¡Que los espíritus dulces te acompañen! Cierro el portal de chat.",
+                msg: "¡Que los espíritus dulces te acompañen! 🌸 Cierro el portal de chat.",
                 options: []
             }
         },
         en: {
             start: {
-                msg: "Meow! 🐾 I'm the Bakeneko spirit. What secret of the Bakery do you wish to unveil?",
+                msg: "Meow! 🐾 I'm the Bakeneko spirit. How can I assist you today?",
                 options: [
-                    { text: "📦 Shipping times?", next: "envio" },
+                    { text: "📍 Where is my order?", next: "rastrear" },
+                    { text: "📦 Shipping times", next: "envio" },
                     { text: "🌾 Allergies & Ingredients", next: "alergenos" },
-                    { text: "✨ Recommend me something!", next: "recomendar" }
+                    { text: "✨ Recommend me something", next: "recomendar" },
+                    { text: "👤 Talk to Customer Service", next: "contacto" }
                 ]
             },
-            envio: { msg: "Standard takes 48-72h. For fresh items (like Mochi), please use Cold Express (24h).", options: [{ text: "Another question", next: "start" }, { text: "Thanks!", next: "fin" }] },
-            alergenos: { msg: "We use glutinous rice flour (naturally gluten-free), but handle soy, dairy, and nuts. Ask us if you have severe allergies!", options: [{ text: "Another question", next: "start" }, { text: "Got it", next: "fin" }] },
-            recomendar: { msg: "For beginners, the Dorayaki is a classic. For a mystical pairing, try the 'The Raw' Sauvignon Blanc.", options: [{ text: "Back to menu", next: "start" }] },
-            fin: { msg: "May the sweet spirits be with you! Closing chat.", options: [] }
+            rastrear: { msg: "To track your offering, find your <b>Pact Number</b> in the confirmation scroll (email) we sent you. <br><br>If you have it, you can track it via the courier's portal.", options: [{ text: "Back to menu", next: "start" }, { text: "I lost my number", next: "contacto" }] },
+            contacto: { msg: "Our support monks are available Mon-Fri. <br><br>📞 Phone: <b>+34 900 000 000</b><br>✉️ Email: <a href='mailto:help@bakeneko.com' style='color:var(--c-vermilion); font-weight:bold;'>help@bakeneko.com</a>", options: [{ text: "Back to menu", next: "start" }, { text: "Close chat", next: "fin" }] },
+            envio: {
+                msg: "Don't worry about the weather! ❄️ All our sweets and elixirs ALWAYS travel in magical refrigerated arks with no extra cold-chain costs. <br><br>You can choose <b>Standard (48-72h)</b> or, if you can't wait, <b>Express (24h)</b>.",
+                options: [{ text: "More options", next: "start" }]
+            },
+            alergenos: { msg: "We use glutinous rice flour (naturally gluten-free), but handle soy, dairy, and nuts. Contact us if you have severe allergies!", options: [{ text: "Contact Support", next: "contacto" }, { text: "Back", next: "start" }] },
+            recomendar: { msg: "For beginners, the Tanuki Dorayaki is a classic. For a mystical pairing, try 'The Raw' wine.", options: [{ text: "Thanks!", next: "fin" }, { text: "Main menu", next: "start" }] },
+            fin: { msg: "May the sweet spirits be with you! 🌸 Closing chat.", options: [] }
         },
         jp: {
             start: {
-                msg: "ニャー！🐾 私は化け猫の精霊です。ベーカリーのどんな秘密を知りたいですか？",
+                msg: "ニャー！🐾 私は化け猫の精霊です。今日はどうされましたか？",
                 options: [
-                    { text: "📦 配送時間は？", next: "envio" },
+                    { text: "📍 注文はどこですか？", next: "rastrear" },
+                    { text: "📦 配送時間", next: "envio" },
                     { text: "🌾 アレルギーと成分", next: "alergenos" },
-                    { text: "✨ おすすめは？", next: "recomendar" }
+                    { text: "✨ おすすめは？", next: "recomendar" },
+                    { text: "👤 カスタマーサポートに連絡", next: "contacto" }
                 ]
             },
-            envio: { msg: "通常配送は48〜72時間です。新鮮な商品にはクール便（24時間）をご利用ください。", options: [{ text: "他の質問", next: "start" }, { text: "ありがとう！", next: "fin" }] },
-            alergenos: { msg: "もち米粉を使用していますが、大豆、乳製品、ナッツも取り扱っています。", options: [{ text: "他の質問", next: "start" }, { text: "了解", next: "fin" }] },
-            recomendar: { msg: "初めての方には「どら焼き」がお勧めです。特別なペアリングには白ワイン「The Raw」をお試しください。", options: [{ text: "メニューに戻る", next: "start" }] },
-            fin: { msg: "甘い精霊があなたと共にありますように！", options: [] }
+            rastrear: { msg: "供物を追跡するには、確認メールにある<b>「契約番号」</b>をご用意ください。<br><br>番号をお持ちの場合は、配送業者のポータルから追跡できます。", options: [{ text: "メニューに戻る", next: "start" }, { text: "番号を忘れた", next: "contacto" }] },
+            contacto: { msg: "サポートの僧侶は月曜から金曜まで対応しています。<br><br>📞 電話: <b>+34 900 000 000</b><br>✉️ メール: <a href='mailto:help@bakeneko.com' style='color:var(--c-vermilion); font-weight:bold;'>help@bakeneko.com</a>", options: [{ text: "メニューに戻る", next: "start" }, { text: "チャットを閉じる", next: "fin" }] },
+            envio: {
+                msg: "天候の心配は無用です！❄️ 私たちのスイーツと霊薬はすべて、追加の冷蔵料金なしで魔法の冷蔵箱に入れられて配送されます。<br><br><b>通常便（48〜72時間）</b>か、お急ぎの場合は<b>お急ぎ便（24時間）</b>をお選びいただけます。",
+                options: [{ text: "他のオプション", next: "start" }]
+            },
+            alergenos: { msg: "もち米粉を使用していますが、大豆、乳製品、ナッツも取り扱っています。重度のアレルギーがある場合はご連絡ください！", options: [{ text: "サポートに連絡", next: "contacto" }, { text: "戻る", next: "start" }] },
+            recomendar: { msg: "初めての方には「どら焼き」がお勧めです。特別なペアリングには白ワイン「The Raw」をお試しください。", options: [{ text: "ありがとう！", next: "fin" }, { text: "メインメニュー", next: "start" }] },
+            fin: { msg: "甘い精霊があなたと共にありますように！🌸", options: [] }
         }
     };
 
@@ -642,7 +672,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Burbuja del bot
             const msgEl = document.createElement('div');
             msgEl.className = 'chat-bubble msg-bot';
-            msgEl.innerText = node.msg;
+            msgEl.innerHTML = node.msg;
             chatMessages.appendChild(msgEl);
             
             // Hacer scroll hacia abajo

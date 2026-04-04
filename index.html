@@ -15,7 +15,7 @@
 
         <div class="noise-overlay"></div>
 
-        <button id="lang-toggle" class="lang-btn">ES / EN / JP</button>
+        <button id="lang-toggle" class="lang-btn">ES / EN / 日本語</button>
 
         <nav class="main-nav">
             <div class="logo">化け猫 <span class="sub">Bakery</span></div>
@@ -196,14 +196,14 @@
                 <div class="chat-title">
                     <span class="bot-avatar">猫</span>
                     <div>
-                        <h4>Espíritu Bakeneko</h4>
-                        <span class="bot-status">Guardián del Grimorio</span>
+                        <h4 id="bot-name">Espíritu Bakeneko</h4>
+                        <span class="bot-status" id="bot-status">Guardián del Grimorio</span>
                     </div>
                 </div>
                 <button class="close-chat" id="close-chat">×</button>
             </div>
             
-            <div class="chat-messages" id="chat-messages">
+            <div class="chat-messages" id="chat-messages" data-lenis-prevent>
                 </div>
             
             <div class="chat-options" id="chat-options">
@@ -220,7 +220,17 @@
                     <span class="modal-yokai-class"></span>
                     <h2 class="modal-title"></h2>
                     <p class="modal-desc"></p>
-                    <button class="add-cart-btn" data-i18n="addToCart">Añadir / Add</button>
+                    <div class="modal-info">
+                        <span class="modal-yokai-class"></span>
+                        <h2 class="modal-title"></h2>
+                        <p class="modal-desc"></p>
+                        
+                        <p class="modal-allergens">
+                            <strong data-i18n="allergenLabel">Alérgenos:</strong> <span id="active-allergens"></span>
+                        </p>
+                        
+                        <button class="cta-btn add-cart-btn" data-i18n="addToCart">Añadir a la Cesta</button>
+                    </div>
                 </div>
             </div>
         </div>
