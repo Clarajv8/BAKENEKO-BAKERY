@@ -21,37 +21,37 @@ document.addEventListener("DOMContentLoaded", () => {
             es: { name: "Dorayaki", desc: "El Tanuki es un espíritu del bosque famoso por su gran barriga y su amor por los festines. Este dulce redondo rinde homenaje a su apetito insaciable.", allergens: "Trigo, Huevo, Soja." },
             en: { name: "Dorayaki", desc: "The Tanuki is a forest spirit famous for its big belly and love of feasts. This round sweet pays homage to its insatiable appetite.", allergens: "Wheat, Egg, Soy." },
             jp: { name: "どら焼き", desc: "タヌキは大きなお腹と宴会好きで有名な森の精霊です。この丸いお菓子は彼の飽くなき食欲に敬意を表しています。", allergens: "小麦、卵、大豆。" },
-            class: "Tanuki", price: 3.50, img: "assets/images/dorayaki-tanuki.jpg"
+            class: "Tanuki", price: 3.50, img: "assets/images/dorayaki.webp"
         },
         p2: {
             es: { name: "Mochi Daifuku", desc: "Se dice que el Kitsune cambia de forma para engañar a los viajeros. Este mochi, suave y pálido por fuera, esconde un corazón astuto.", allergens: "Trigo, Huevo, Soja." },
             en: { name: "Mochi Daifuku", desc: "It is said that the Kitsune shapeshifts to trick travelers. This mochi, soft and pale on the outside, hides a cunning heart.", allergens: "Wheat, Egg, Soy." },
             jp: { name: "大福餅", desc: "キツネは旅人を騙すために姿を変えると言われています。外は柔らかく白いこの餅は、ずる賢い心を隠しています。", allergens: "小麦、卵、大豆。" },
-            class: "Kitsune", price: 3.80, img: "assets/images/mochi-kitsune.jpg"
+            class: "Kitsune", price: 3.80, img: "assets/images/mochi.webp"
         },
         p3: {
             es: { name: "Dango Tricolor", desc: "Tres esferas perfectas que representan a tres pequeños gatos traviesos jugando en equilibrio bajo los cerezos.", allergens: "Trigo, Huevo, Soja." },
             en: { name: "Tricolor Dango", desc: "Three perfect spheres representing three mischievous little cats playing in balance under the cherry trees.", allergens: "Wheat, Egg, Soy." },
             jp: { name: "三色団子", desc: "桜の下でバランスを取りながら遊ぶ3匹のいたずら好きな子猫を表す3つの完璧な球体。", allergens: "小麦、卵、大豆。" },
-            class: "Bakeneko", price: 3.00, img: "assets/images/dango-bakeneko.jpg"
+            class: "Bakeneko", price: 3.00, img: "assets/images/dangos.webp"
         },
         p4: {
             es: { name: "Kuzumochi", desc: "Fresco, acuoso y transparente como el río donde habita el Kappa. Un postre que se desliza en el paladar.", allergens: "Trigo, Huevo, Soja." },
             en: { name: "Kuzumochi", desc: "Fresh, watery, and transparent like the river where the Kappa lives. A dessert that glides on the palate.", allergens: "Wheat, Egg, Soy." },
             jp: { name: "葛餅", desc: "カッパが住む川のように新鮮で水っぽく透明です。口の中で滑るデザート。", allergens: "小麦、卵、大豆。" },
-            class: "Kappa", price: 4.50, img: "assets/images/kuzumochi-kappa.jpg"
+            class: "Kappa", price: 4.50, img: "assets/images/kuzumochi.webp"
         },
         p5: {
             es: { name: "Yokan Nocturno", desc: "Oscuro, denso y profundo como el océano donde emerge el gigante Umibozu. Un sabor intenso para valientes.", allergens: "Trigo, Huevo, Soja." },
             en: { name: "Night Yokan", desc: "Dark, dense, and deep like the ocean where the giant Umibozu emerges. An intense flavor for the brave.", allergens: "Wheat, Egg, Soy." },
             jp: { name: "夜の羊羹", desc: "巨大な海坊主が現れる海のように暗く、密度が濃く、深い。勇者のための強烈な風味。", allergens: "小麦、卵、大豆。" },
-            class: "Umibozu", price: 4.20, img: "assets/images/yokan-umibozu.jpg"
+            class: "Umibozu", price: 4.20, img: "assets/images/yokan.webp"
         },
         p6: {
             es: { name: "Nerikiri de Camelia", desc: "Arte comestible. Tan bello, pálido y delicado como la Yuki-Onna. Captura una belleza fría y efímera.", allergens: "Trigo, Huevo, Soja." },
             en: { name: "Camellia Nerikiri", desc: "Edible art. As beautiful, pale, and delicate as the Yuki-Onna. It captures a cold, ephemeral beauty.", allergens: "Wheat, Egg, Soy." },
             jp: { name: "椿の練り切り", desc: "食べられる芸術。雪女のように美しく、青白く、繊細です。冷たく儚い美しさを捉えています。", allergens: "小麦、卵、大豆。" },
-            class: "Yuki-Onna", price: 5.50, img: "assets/images/nerikiri-yukionna.jpg"
+            class: "Yuki-Onna", price: 5.50, img: "assets/images/nerikiri.webp"
         },
        // --- VINOS BODEGAS KIZUNA ---
         p7: {
@@ -193,19 +193,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalTitle = document.querySelector('.modal-title');
     const modalDesc = document.querySelector('.modal-desc');
     const modalClass = document.querySelector('.modal-yokai-class');
+    
+    // NUEVO: Variable para guardar el temporizador
+    let clearImageTimer; 
 
     function fillModal(id) {
         const lang = langs[currentLangIndex];
         const data = productsDB[id];
         
-        // Rellenar Nombre y Descripción (ya lo tienes)
         modalTitle.innerText = data[lang].name;
         modalDesc.innerText = data[lang].desc;
-        
-        // CORRECCIÓN 1: Clase Yokai traducida
         modalClass.innerText = `${translations[lang].yokaiClass} ${data.class}`;
-        
-        // CORRECCIÓN 2: Etiqueta de alérgenos y el contenido traducido
         document.querySelector('[data-i18n="allergenLabel"]').innerText = translations[lang].allergenLabel;
         document.getElementById('active-allergens').innerText = data[lang].allergens;
         
@@ -217,32 +215,31 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('click', (e) => {
             
-            // --- MAGIA ANTI-SOLAPAMIENTO ---
-            // Si el clic ha tocado el botón "Quick Add" (+), ignoramos el resto y no abrimos el modal
             if (e.target.closest('.quick-add-btn')) {
                 return; 
             }
-            // -------------------------------
+
+            // NUEVO: Cancelamos el borrado fantasma si abrimos un producto rápido
+            clearTimeout(clearImageTimer); 
 
             const id = card.getAttribute('data-id');
             fillModal(id);
             modalOverlay.classList.add('active');
             
-            // Paramos el scroll de fondo
             document.body.style.overflow = 'hidden';
-            if (window.lenis) window.lenis.stop(); // <-- ¡AQUÍ ESTÁ PERFECTO!
+            if (window.lenis) window.lenis.stop(); 
         });
     });
 
-    // Cerrar Modal (¡Debe ir separado, fuera del bloque anterior!)
+    // Cerrar Modal
     function closeModal() {
         modalOverlay.classList.remove('active');
         
-        // Reactivamos el scroll de fondo
         document.body.style.overflow = '';
-        if (window.lenis) window.lenis.start(); // <-- ¡AQUÍ TAMBIÉN ESTÁ PERFECTO!
+        if (window.lenis) window.lenis.start(); 
         
-        setTimeout(() => { activeImage.src = ""; }, 500); 
+        // NUEVO: Guardamos el temporizador en la variable para poder cancelarlo si hace falta
+        clearImageTimer = setTimeout(() => { activeImage.src = ""; }, 500); 
     }
 
     // Escuchadores de cierre
