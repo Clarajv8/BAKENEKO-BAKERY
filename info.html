@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grimorio de Ayuda y Leyes | Bakeneko Bakery</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,700;1,400&family=Zen+Kaku+Gothic+New:wght@300;500;700&family=Noto+Serif+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="background: var(--c-cream);">
+
+    <button id="lang-toggle" class="lang-btn">ES / EN / 日本語</button>
+
+    <header class="checkout-header" style="position: sticky; top: 0; z-index: 100;">
+        <h2 class="logo">化け猫 <span>Bakery</span></h2>
+        <a href="index.html" class="text-btn" data-i18n="backStore">← Volver a la Tienda</a>
+    </header>
+
+    <main class="info-page-wrapper">
+        <aside class="info-sidebar">
+            <h3 data-i18n="infoIndex">Índice del Grimorio</h3>
+            <ul>
+                <li><a href="#faq" data-i18n="infoFAQ">Preguntas Frecuentes</a></li>
+                <li><a href="#allergens" data-i18n="infoAllergens">Guía de Alérgenos</a></li>
+                <li><a href="#privacy" data-i18n="infoPrivacy">Política de Privacidad</a></li>
+                <li><a href="#tos" data-i18n="infoTOS">Términos del Pacto (TOS)</a></li>
+                <li><a href="#social" data-i18n="infoSocial">Redes Espirituales</a></li>
+            </ul>
+        </aside>
+
+        <div class="info-content">
+            
+            <section id="faq">
+                <h2 data-i18n="infoFAQ">Preguntas Frecuentes</h2>
+                <div class="legal-block">
+                    <h3 data-i18n="faqQ1">¿Cómo se envían los wagashi?</h3>
+                    <p data-i18n="faqA1">Todos nuestros postres viajan en arcas refrigeradas mágicas para garantizar que lleguen tan frescos como cuando salieron de nuestro obrador en el plano espiritual.</p>
+                    
+                    <h3 data-i18n="faqQ2">¿Dónde está mi pedido?</h3>
+                    <p data-i18n="faqA2">Al sellar el pacto (comprar), recibes un pergamino electrónico (email) con un Código de Invocación. Puedes usar ese número en el portal de nuestro transportista para ver por dónde va.</p>
+                </div>
+            </section>
+
+            <section id="allergens">
+                <h2 data-i18n="allTitle">Guía de Alérgenos por Postre</h2>
+                <div class="legal-block">
+                    <p data-i18n="allIntro">En la Bakeneko Bakery procesamos ingredientes en un obrador compartido. Aunque usamos harina de arroz glutinoso (libre de gluten por naturaleza), no podemos garantizar la ausencia de trazas cruzadas.</p>
+                    <ul data-i18n="allList">
+                        <li><strong>Dorayaki (Tanuki):</strong> Trigo, Huevo, Soja.</li>
+                        <li><strong>Mochi Daifuku (Kitsune):</strong> Trigo, Huevo, Soja.</li>
+                        <li><strong>Dango Tricolor (Bakeneko):</strong> Trigo, Huevo, Soja.</li>
+                        <li><strong>Kuzumochi (Kappa):</strong> Trigo, Huevo, Soja.</li>
+                        <li><strong>Yokan Nocturno (Umibozu):</strong> Trigo, Huevo, Soja.</li>
+                        <li><strong>Nerikiri de Camelia (Yuki-Onna):</strong> Trigo, Huevo, Soja.</li>
+                        <li><strong>Vinos Espirituales (Bodegas Kizuna):</strong> Contienen Sulfitos.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="privacy">
+                <h2 data-i18n="infoPrivacy">Política de Privacidad</h2>
+                <div class="legal-block">
+                    <p data-i18n="priv1">El espíritu Bakeneko es un guardián celoso. Tus datos mortales (nombre, dirección terrenal y runas de pago) se encriptan mediante hechizos de alta seguridad (SSL/TLS).</p>
+                    <p data-i18n="priv2">Nunca venderemos tu información a otros gremios, demonios o empresas de terceros. Solo usamos tu correo para enviarte cuervos mensajeros con el estado de tu pedido.</p>
+                </div>
+            </section>
+
+            <section id="tos">
+                <h2 data-i18n="infoTOS">Términos del Pacto (TOS)</h2>
+                <div class="legal-block">
+                    <p data-i18n="tos1">Al confirmar una invocación (compra) en nuestra web, aceptas los siguientes términos:</p>
+                    <p data-i18n="tos2"><strong>Devoluciones:</strong> Al tratarse de ofrendas perecederas (alimentos frescos), no se aceptan devoluciones a menos que el producto llegue corrompido o el portal de envío haya fallado. Si es el caso, contacta con un monje de atención al cliente en un plazo de 24 horas.</p>
+                </div>
+            </section>
+
+            <section id="social">
+                <h2 data-i18n="infoSocial">Redes Espirituales</h2>
+                <div class="legal-block">
+                    <p data-i18n="soc1">Síguenos en nuestros portales de comunicación para descubrir nuevos postres antes que nadie y ver el proceso de creación en nuestro obrador.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                        <a href="#" style="color: var(--c-indigo); font-weight: bold; text-decoration: underline;">Instagram (@BakenekoBakery)</a>
+                        <a href="#" style="color: var(--c-indigo); font-weight: bold; text-decoration: underline;">X / Twitter (@BakenekoSweets)</a>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script> 
+    <script src="js/info.js"></script> </body>
+</html>
