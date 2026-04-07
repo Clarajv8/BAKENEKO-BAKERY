@@ -933,25 +933,40 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     /* =========================================
-       11. HITODAMA CURSOR (Espíritu Seguidor)
+       11. NUEVO CURSOR CIRCULAR DINÁMICO
        ========================================= */
-    const hitodama = document.getElementById('hitodama');
-    
-    // GSAP quickTo crea una inercia mágica y suave hacia el ratón
-    const xTo = gsap.quickTo(hitodama, "x", { duration: 0.6, ease: "power3" });
-    const yTo = gsap.quickTo(hitodama, "y", { duration: 0.6, ease: "power3" });
+    const cursor = document.getElementById('neo-cursor');
 
-    // Cuando el ratón se mueve, el espíritu lo persigue
+    // Centramos el punto de anclaje del círculo exactamente en el medio
+    gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+
+    // Movimiento fluido con GSAP
+    const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
+    const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
+
     window.addEventListener("mousemove", (e) => {
-        hitodama.style.opacity = '0.7'; // Lo hacemos visible
-        // Centramos el punto exacto de la esfera en el ratón
-        xTo(e.clientX - 12.5); 
-        yTo(e.clientY - 12.5);
+        xTo(e.clientX);
+        yTo(e.clientY);
     });
 
-    // Chispazo al hacer clic
-    window.addEventListener("mousedown", () => hitodama.classList.add("pulsado"));
-    window.addEventListener("mouseup", () => hitodama.classList.remove("pulsado"));
+    // Eventos de clic (se hace pequeñito)
+    window.addEventListener('mousedown', () => cursor.classList.add('click'));
+    window.addEventListener('mouseup', () => cursor.classList.remove('click'));
+
+    // --- INTELIGENCIA DE INTERACCIÓN (ESTADO HOVER) ---
+    // Seleccionamos todo lo que sea "clicable" en tu tienda
+    const interactables = document.querySelectorAll('a, button, .product-card, .cart-trigger, input, select');
+
+    interactables.forEach(el => {
+        // Al entrar en un botón, el cursor crece
+        el.addEventListener('mouseenter', () => {
+            cursor.classList.add('hover');
+        });
+        // Al salir, vuelve a la normalidad
+        el.addEventListener('mouseleave', () => {
+            cursor.classList.remove('hover');
+        });
+    });
 
 
     /* =========================================

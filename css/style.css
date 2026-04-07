@@ -1209,30 +1209,52 @@ body {
 
 
 
-
 /* =========================================
-   11. HITODAMA CURSOR (Espíritu Acompañante)
+   11. NUEVO CURSOR CIRCULAR (NEO-UKIYO-E)
    ========================================= */
-#hitodama {
+/* Ocultamos el cursor por defecto del sistema operativo para mayor inmersión */
+body, * {
+    cursor: none !important; 
+}
+
+/* Excepción: Si quieres que al seleccionar texto aparezca la barrita de escribir, descomenta esto: */
+
+p, h1, h2, h3, h4, span {
+    cursor: text !important;
+}
+
+#neo-cursor {
     position: fixed;
     top: 0;
     left: 0;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid var(--c-gold);
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(188, 175, 230, 1) 0%, rgba(93, 76, 204, 0.8) 70%, transparent 100%);
-    pointer-events: none; /* ¡Vital! Para no bloquear los clics del usuario */
-    z-index: 9999; /* Por encima de casi todo */
-    filter: blur(2px) drop-shadow(0 0 10px rgba(188, 175, 230, 0.6));
-    opacity: 0; /* Oculto hasta que se mueve el ratón */
-    transition: transform 0.15s ease-out, filter 0.15s ease-out;
+    pointer-events: none;
+    
+    /* CAMBIA ESTO A UN NÚMERO GIGANTE */
+    z-index: 999999 !important; 
+    
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Efecto al hacer clic (chispazo) */
-#hitodama.pulsado {
-    transform: scale(1.8) !important;
-    filter: blur(1px) drop-shadow(0 0 20px rgba(197, 163, 101, 0.8)); /* Se vuelve dorado */
+/* ESTADO 1: Hover (Al pasar sobre botones, postres o enlaces) */
+#neo-cursor.hover {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(197, 163, 101, 0.1); /* Fondo dorado muy sutil */
+    border-color: var(--c-vermilion); /* El borde cambia a rojo Yokai */
 }
+
+/* ESTADO 2: Clic (Al pulsar el ratón) */
+#neo-cursor.click {
+    width: 15px;
+    height: 15px;
+    background-color: var(--c-gold);
+    border-color: var(--c-gold);
+}
+
 
 /* =========================================
    12. SELLOS HANKO DINÁMICOS

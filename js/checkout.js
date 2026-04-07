@@ -185,4 +185,31 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById('back-to-realm').addEventListener('click', () => {
         window.location.href = 'index.html';
     });
+
+    /* =========================================
+       MOTOR DEL CURSOR NEO-UKIYO-E (CHECKOUT)
+       ========================================= */
+    const cursor = document.getElementById('neo-cursor');
+    
+    if (cursor && typeof gsap !== 'undefined') {
+        gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+
+        const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
+        const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
+
+        window.addEventListener("mousemove", (e) => { 
+            xTo(e.clientX); 
+            yTo(e.clientY); 
+        });
+
+        window.addEventListener('mousedown', () => cursor.classList.add('click'));
+        window.addEventListener('mouseup', () => cursor.classList.remove('click'));
+
+        // Inteligencia de hover para inputs, select y botones del checkout
+        const interactables = document.querySelectorAll('a, button, input, select');
+        interactables.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
+    }
 });

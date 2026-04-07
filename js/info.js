@@ -100,4 +100,32 @@ document.addEventListener("DOMContentLoaded", () => {
         function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
     }
+
+    /* =========================================
+       CURSOR CIRCULAR DINÁMICO (Para páginas secundarias)
+       ========================================= */
+    const cursor = document.getElementById('neo-cursor');
+
+    if (cursor) {
+        gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+
+        const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
+        const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
+
+        window.addEventListener("mousemove", (e) => {
+            xTo(e.clientX);
+            yTo(e.clientY);
+        });
+
+        window.addEventListener('mousedown', () => cursor.classList.add('click'));
+        window.addEventListener('mouseup', () => cursor.classList.remove('click'));
+
+        // Seleccionamos todo lo que sea clicable en esta página
+        const interactables = document.querySelectorAll('a, button, input, select');
+
+        interactables.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
+    }
 });
