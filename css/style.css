@@ -1210,6 +1210,62 @@ body {
 
 
 
+/* =========================================
+   11. HITODAMA CURSOR (Espíritu Acompañante)
+   ========================================= */
+#hitodama {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(188, 175, 230, 1) 0%, rgba(93, 76, 204, 0.8) 70%, transparent 100%);
+    pointer-events: none; /* ¡Vital! Para no bloquear los clics del usuario */
+    z-index: 9999; /* Por encima de casi todo */
+    filter: blur(2px) drop-shadow(0 0 10px rgba(188, 175, 230, 0.6));
+    opacity: 0; /* Oculto hasta que se mueve el ratón */
+    transition: transform 0.15s ease-out, filter 0.15s ease-out;
+}
+
+/* Efecto al hacer clic (chispazo) */
+#hitodama.pulsado {
+    transform: scale(1.8) !important;
+    filter: blur(1px) drop-shadow(0 0 20px rgba(197, 163, 101, 0.8)); /* Se vuelve dorado */
+}
+
+/* =========================================
+   12. SELLOS HANKO DINÁMICOS
+   ========================================= */
+.hanko-stamp {
+    position: absolute; /* <--- ANTES ERA FIXED */
+    color: var(--c-vermilion);
+    border: 3px solid var(--c-vermilion);
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-family: "Noto Serif JP", serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    pointer-events: none; 
+    z-index: 5; /* Como ahora es absoluto, se quedará pegado al fondo real de la web */
+    
+    animation: stampFade 4s forwards ease-out;
+}
+
+@keyframes stampFade {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(2) rotate(var(--rot)); }
+    5% { opacity: 0.8; transform: translate(-50%, -50%) scale(1) rotate(var(--rot)); }
+    70% { opacity: 0.6; } /* Tarda en secarse */
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(1) rotate(var(--rot)); }
+}
+
+
+
+
+
+
+
+
 
 
 /* =========================================

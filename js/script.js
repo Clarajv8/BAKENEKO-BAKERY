@@ -932,4 +932,65 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("🐈‍⬛ ¡Bakeneko invocado mediante magia de consola!");
     };
 
+    /* =========================================
+       11. HITODAMA CURSOR (Espíritu Seguidor)
+       ========================================= */
+    const hitodama = document.getElementById('hitodama');
+    
+    // GSAP quickTo crea una inercia mágica y suave hacia el ratón
+    const xTo = gsap.quickTo(hitodama, "x", { duration: 0.6, ease: "power3" });
+    const yTo = gsap.quickTo(hitodama, "y", { duration: 0.6, ease: "power3" });
+
+    // Cuando el ratón se mueve, el espíritu lo persigue
+    window.addEventListener("mousemove", (e) => {
+        hitodama.style.opacity = '0.7'; // Lo hacemos visible
+        // Centramos el punto exacto de la esfera en el ratón
+        xTo(e.clientX - 12.5); 
+        yTo(e.clientY - 12.5);
+    });
+
+    // Chispazo al hacer clic
+    window.addEventListener("mousedown", () => hitodama.classList.add("pulsado"));
+    window.addEventListener("mouseup", () => hitodama.classList.remove("pulsado"));
+
+
+    /* =========================================
+       12. SELLOS DE TINTA (EFECTO HANKO)
+       ========================================= */
+    // Colección de Kanjis mágicos: Gato, Espíritu, Pacto, Dulce, Zorro
+    const kanjis = ["猫", "霊", "契", "甘", "狐"]; 
+
+    document.addEventListener('click', (e) => {
+        // 1. RESTRICCIÓN: No poner sellos si el usuario está interactuando con algo útil
+        // Ignoramos clics en botones, enlaces, tarjetas, modal, header o footer.
+        const clicValido = !e.target.closest('button, a, input, select, .product-card, .modal-content, .cart-drawer, .chatbot-window, .main-nav, .hero-content');
+        
+        if (!clicValido) return;
+
+        // 2. CREACIÓN DEL SELLO
+        const stamp = document.createElement('div');
+        stamp.className = 'hanko-stamp';
+        
+        // Seleccionamos un Kanji al azar
+        stamp.innerText = kanjis[Math.floor(Math.random() * kanjis.length)];
+
+        // Le damos una rotación aleatoria para que parezca un sello estampado a mano (-20 a 20 grados)
+        const rotation = Math.floor(Math.random() * 40) - 20;
+        
+        // Lo colocamos exactamente donde hizo clic
+        stamp.style.left = e.pageX + 'px'; // <--- CAMBIAR clientX por pageX
+        stamp.style.top = e.pageY + 'px';  // <--- CAMBIAR clientY por pageY
+        
+        // Le inyectamos la rotación como variable CSS para que la animación la respete
+        stamp.style.setProperty('--rot', rotation + 'deg');
+
+        document.body.appendChild(stamp);
+
+        // 3. LIMPIEZA
+        // Una vez que el CSS termina de desvanecerlo (4 segundos), lo borramos del código para no saturar la memoria de la web
+        setTimeout(() => {
+            stamp.remove();
+        }, 4000);
+    });
+
 });
