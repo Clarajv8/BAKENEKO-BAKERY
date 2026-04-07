@@ -574,22 +574,38 @@ body {
     color: var(--c-gold);
 }
 
-.oracle-runes {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    font-size: 2.5rem;
-    color: var(--c-vermilion);
-    margin: 2rem 0;
-    opacity: 0.3;
+/* --- Tragaperras del Oráculo --- */
+.omikuji-window {
+    width: 120px;
+    height: 120px;
+    background: #000;
+    border: 3px solid var(--c-vermilion);
+    border-radius: 8px;
+    overflow: hidden; /* Vital: Corta las runas que se salen de la caja */
+    position: relative;
+    margin: 2rem auto;
+    /* Sombras para dar profundidad de tubo giratorio */
+    box-shadow: inset 0 20px 20px -10px rgba(0,0,0,0.9), 
+                inset 0 -20px 20px -10px rgba(0,0,0,0.9), 
+                0 0 20px rgba(220, 70, 50, 0.2);
 }
 
-.oracle-runes.spinning span {
-    animation: flash 0.5s infinite alternate;
+.rune-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-.oracle-runes.spinning span:nth-child(2) { animation-delay: 0.1s; }
-.oracle-runes.spinning span:nth-child(3) { animation-delay: 0.2s; }
-.oracle-runes.spinning span:nth-child(4) { animation-delay: 0.3s; }
+
+.rune-item {
+    height: 120px; /* Exactamente igual que la ventana para que encaje perfecto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    color: var(--c-gold);
+    font-family: var(--f-serif); /* Usamos tu fuente Serif */
+    text-shadow: 0 0 15px rgba(197, 163, 101, 0.6);
+}
 
 
 .collab-subtitle {

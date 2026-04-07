@@ -5,19 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
        ========================================= */
     const translations = {
         es: {
-            cart: "Cesta", pretitle: "Portal al Reino Yokai", subtitle: "El Refugio de los Espíritus Dulces", cta: "Entrar al Portal", introTitle: "Dulzura Entre Mundos", introText: "No horneamos para el hambre del cuerpo, sino para los antojos del alma. Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna y la quietud antigua.", collectionTitle: "La Colección", addToCart: "Añadir a la Cesta", oracleTitle: "El Oráculo del Bakeneko", oracleDesc: "¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.", oracleBtn: "Consultar al Oráculo", tabAll: "El Grimorio Completo", tabDesserts: "Postres Yokai", tabWines: "Vinos Espirituales", collabSub: "Colaboración Exclusiva", collabDesc: "El equilibrio perfecto entre el Wagashi tradicional y la enología premium. Un maridaje de leyenda diseñado para despertar a los espíritus.", collabMarquee: "✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO ", cartTitle: "Tu Selección", cartEmpty: "El grimorio está vacío.", cartTotal: "Total Ritual:", cartCheckout: "Completar Invocación", cartTitle: "Tu Selección", cartEmpty: "El grimorio está vacío.", cartTotal: "Total Ritual:", cartCheckout: "Completar Invocación", cartAdded: "¡Añadido!", checkoutTitle: "Sellar el Pacto", checkoutSub: "Prepara tu ofrenda para recibir los elixires y wagashi.", checkoutShipping: "Destino del Ritual", chkName: "Nombre del Mortal", chkAddress: "Dirección (Plano Terrenal)", checkoutPayment: "Ofrenda de Intercambio", chkCard: "Runas de la Tarjeta (16 dígitos)", chkExp: "Caducidad (MM/AA)", chkSubmit: "Confirmar Invocación", successTitle: "Pacto Sellado", successText: "Los espíritus han aceptado tu ofrenda. Tu pedido está en camino a través del portal.", backToRealm: "Volver al Reino", returnStore: "← Volver al Grimorio", selectZone: "Selecciona tu Reino...", summaryTitle: "Resumen de Invocación", summarySub: "Subtotal", summaryShip: "Envío (Portal)", summaryTotal: "Total Ritual", yokaiClass: "Espíritu Guardián:", allergenLabel: "Alérgenos:", unit: "/ ud", allergenLabel: "Alérgenos:", unit: "/ ud", botName: "Espíritu Bakeneko", botStatus: "Guardián del Grimorio", ftBio: "Dulzura entre mundos. Unimos la tradición del wagashi con la vanguardia, guiados por el Bakeneko.",
+            cart: "Cesta", pretitle: "Portal al Reino Yokai", subtitle: "El Refugio de los Espíritus Dulces", cta: "Entrar al Portal", introTitle: "Dulzura Entre Mundos", introText: "No horneamos para el hambre del cuerpo, sino para los antojos del alma. Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna y la quietud antigua.", collectionTitle: "La Colección", addToCart: "Añadir a la Cesta", oracleTitle: "El Oráculo del Bakeneko", oracleDesc: "¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.", oracleBtn: "Consultar al Oráculo", tabAll: "El Grimorio Completo", tabDesserts: "Postres Yokai", tabWines: "Vinos Espirituales", collabSub: "Colaboración Exclusiva", collabDesc: "El equilibrio perfecto entre el Wagashi tradicional y la enología premium. Un maridaje de leyenda diseñado para despertar a los espíritus.", collabMarquee: "✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO ", cartTitle: "Tu Selección", cartEmpty: "El grimorio está vacío.", cartTotal: "Total Ritual:", cartCheckout: "Completar Invocación", cartAdded: "¡Añadido!", checkoutTitle: "Sellar el Pacto", checkoutSub: "Prepara tu ofrenda para recibir los elixires y wagashi.", checkoutShipping: "Destino del Ritual", chkName: "Nombre del Mortal", chkAddress: "Dirección (Plano Terrenal)", checkoutPayment: "Ofrenda de Intercambio", chkCard: "Runas de la Tarjeta (16 dígitos)", chkExp: "Caducidad (MM/AA)", chkSubmit: "Confirmar Invocación", successTitle: "Pacto Sellado", successText: "Los espíritus han aceptado tu ofrenda. Tu pedido está en camino a través del portal.", backToRealm: "Volver al Reino", returnStore: "← Volver al Grimorio", selectZone: "Selecciona tu Reino...", summaryTitle: "Resumen de Invocación", summarySub: "Subtotal", summaryShip: "Envío (Portal)", summaryTotal: "Total Ritual", yokaiClass: "Espíritu Guardián:", allergenLabel: "Alérgenos:", unit: "/ ud", botName: "Espíritu Bakeneko", botStatus: "Guardián del Grimorio", ftBio: "Dulzura entre mundos. Unimos la tradición del wagashi con la vanguardia, guiados por el Bakeneko.",
             ftQuickLinks: "Enlaces Rápidos", ftShop: "El Grimorio (Tienda)", ftFAQ: "Preguntas Frecuentes", ftTrack: "Rastrear Ofrenda", ftLegal: "Legal y Transparencia", ftPrivacy: "Política de Privacidad", ftTerms: "Términos del Pacto (TOS)", ftAllergensInfo: "Guía de Alérgenos", ftContactAcc: "Atención y Cuenta", ftContactUs: "📞 Habla con un Monje", ftMyAccount: "👤 Mi Cuenta / Iniciar Sesión", ftRights: "© 2026 Bakeneko Bakery."
         },
         en: {
-            cart: "Cart", pretitle: "Gateway to the Yokai Realm", subtitle: "Sanctuary of Sweet Spirits", cta: "Enter the Portal", introTitle: "Sweetness Between Worlds", introText: "We do not bake for the body's hunger, but for the soul's cravings. Guided by the Bakeneko, our sweets bridge the gap between modern rush and ancient stillness.", collectionTitle: "The Collection", addToCart: "Add to Cart", oracleTitle: "The Bakeneko Oracle", oracleDesc: "In doubt? Let fate choose the spirit your soul needs today.", oracleBtn: "Consult the Oracle", tabAll: "The Complete Grimoire", tabDesserts: "Yokai Sweets", tabWines: "Spiritual Wines", collabSub: "Exclusive Collaboration", collabDesc: "The perfect balance between traditional Wagashi and premium oenology. A legendary pairing designed to awaken the spirits.", collabMarquee: "✦ BAKENEKO × BODEGAS KIZUNA ✦ EXCLUSIVE PAIRING DROP ", cartTitle: "Your Selection", cartEmpty: "The grimoire is empty.", cartTotal: "Ritual Total:", cartCheckout: "Complete Invocation", cartTitle: "Your Selection", cartEmpty: "The grimoire is empty.", cartTotal: "Ritual Total:", cartCheckout: "Complete Invocation", cartAdded: "Added!", checkoutTitle: "Seal the Pact", checkoutSub: "Prepare your offering to receive the elixirs and wagashi.", checkoutShipping: "Ritual Destination", chkName: "Mortal's Name", 
-            chkAddress: "Address (Earthly Plane)", checkoutPayment: "Exchange Offering", chkCard: "Card Runes (16 digits)", chkExp: "Expiry (MM/YY)", chkSubmit: "Confirm Invocation", successTitle: "Pact Sealed", successText: "The spirits have accepted your offering. Your order is on its way through the portal.", backToRealm: "Return to Realm", returnStore: "← Return to Grimoire", selectZone: "Select your Realm...", summaryTitle: "Invocation Summary", summarySub: "Subtotal", summaryShip: "Shipping (Portal)", summaryTotal: "Ritual Total", returnStore: "← 魔導書に戻る", selectZone: "領域を選択...", summaryTitle: "召喚の概要", summarySub: "小計", summaryShip: "送料（ポータル）", summaryTotal: "儀式の合計", yokaiClass: "Guardian Spirit:", allergenLabel: "Allergens:", unit: "/ ea", allergenLabel: "Allergens:", unit: "/ ea", botName: "Bakeneko Spirit", botStatus: "Grimoire Guardian", ftBio: "Sweetness between worlds. We blend wagashi tradition with the avant-garde, guided by the Bakeneko.", ftQuickLinks: "Quick Links", ftShop: "The Grimoire (Shop)", ftFAQ: "Frequently Asked Questions",  ftTrack: "Track Offering",  ftLegal: "Legal & Transparency", ftPrivacy: "Privacy Policy", ftTerms: "Terms of the Pact (TOS)", ftAllergensInfo: "Allergen Guide", ftContactAcc: "Support & Account", ftContactUs: "📞 Speak with a Monk", ftMyAccount: "👤 My Account / Login", ftRights: "© 2026 Bakeneko Bakery."
+            cart: "Cart", pretitle: "Gateway to the Yokai Realm", subtitle: "Sanctuary of Sweet Spirits", cta: "Enter the Portal", introTitle: "Sweetness Between Worlds", introText: "We do not bake for the body's hunger, but for the soul's cravings. Guided by the Bakeneko, our sweets bridge the gap between modern rush and ancient stillness.", collectionTitle: "The Collection", addToCart: "Add to Cart", oracleTitle: "The Bakeneko Oracle", oracleDesc: "In doubt? Let fate choose the spirit your soul needs today.", oracleBtn: "Consult the Oracle", tabAll: "The Complete Grimoire", tabDesserts: "Yokai Sweets", tabWines: "Spiritual Wines", collabSub: "Exclusive Collaboration", collabDesc: "The perfect balance between traditional Wagashi and premium oenology. A legendary pairing designed to awaken the spirits.", collabMarquee: "✦ BAKENEKO × BODEGAS KIZUNA ✦ EXCLUSIVE PAIRING DROP ", cartTitle: "Your Selection", cartEmpty: "The grimoire is empty.", cartTotal: "Ritual Total:", cartCheckout: "Complete Invocation", cartAdded: "Added!", checkoutTitle: "Seal the Pact", checkoutSub: "Prepare your offering to receive the elixirs and wagashi.", checkoutShipping: "Ritual Destination", chkName: "Mortal's Name", 
+            chkAddress: "Address (Earthly Plane)", checkoutPayment: "Exchange Offering", chkCard: "Card Runes (16 digits)", chkExp: "Expiry (MM/YY)", chkSubmit: "Confirm Invocation", successTitle: "Pact Sealed", successText: "The spirits have accepted your offering. Your order is on its way through the portal.", backToRealm: "Return to Realm", returnStore: "← Return to Grimoire", selectZone: "Select your Realm...", summaryTitle: "Invocation Summary", summarySub: "Subtotal", summaryShip: "Shipping (Portal)", summaryTotal: "Ritual Total", yokaiClass: "Guardian Spirit:", allergenLabel: "Allergens:", unit: "/ ea", botName: "Bakeneko Spirit", botStatus: "Grimoire Guardian", ftBio: "Sweetness between worlds. We blend wagashi tradition with the avant-garde, guided by the Bakeneko.", ftQuickLinks: "Quick Links", ftShop: "The Grimoire (Shop)", ftFAQ: "Frequently Asked Questions",  ftTrack: "Track Offering",  ftLegal: "Legal & Transparency", ftPrivacy: "Privacy Policy", ftTerms: "Terms of the Pact (TOS)", ftAllergensInfo: "Allergen Guide", ftContactAcc: "Support & Account", ftContactUs: "📞 Speak with a Monk", ftMyAccount: "👤 My Account / Login", ftRights: "© 2026 Bakeneko Bakery."
         },
         jp: {
-            cart: "カート", pretitle: "妖怪のレルムへの入り口", subtitle: "甘い精霊の聖域", cta: "ポータルに入る", introTitle: "世界の間の甘さ", introText: "私たちは体の飢えのためではなく、魂の渇望のために焼きます。化け猫に導かれ、私たちのスイーツは現代の慌ただしさと古代の静けさの間の架け橋となります。", collectionTitle: "コレクション", addToCart: "カートに追加", oracleTitle: "化け猫の神託", oracleDesc: "迷っていますか？今日あなたの魂が必要とする精霊を運命に選ばせましょう。", oracleBtn: "神託を伺う", tabAll: "完全な魔導書", tabDesserts: "妖怪のスイーツ", tabWines: "霊的なワイン", collabSub: "特別コラボレーション", collabDesc: "伝統的な和菓子と高級ワインの完璧なバランス。精霊を目覚めさせるためにデザインされた伝説のペアリング。", collabMarquee: "✦ 化け猫 × KIZUNAワイナリー ✦ 特別なペアリング ", cartTitle: "あなたの選択", cartEmpty: "魔導書は空です。", cartTotal: "儀式の合計:", cartCheckout: "召喚を完了する", cartTitle: "あなたの選択", cartEmpty: "魔導書は空です。", cartTotal: "儀式の合計:", cartCheckout: "召喚を完了する", cartAdded: "追加されました！", checkoutTitle: "契約を結ぶ", checkoutSub: "お供え物を準備して、霊薬と和菓子を受け取ります。", checkoutShipping: "儀式の目的地", chkName: "定命の者の名前", chkAddress: "住所（現世）", checkoutPayment: "交換の供物", chkCard: "カードのルーン（16桁）", chkExp: "有効期限 (MM/YY)", chkSubmit: "召喚を確認する", successTitle: "契約完了", successText: "精霊たちがあなたの供物を受け入れました。ご注文はポータルを通って向かっています。", backToRealm: "レルムに戻る", yokaiClass: "守護霊:", allergenLabel: "アレルギー物質:", unit: "/ 個", allergenLabel: "アレルギー物質:", unit: "/ 個", botName: "化け猫の精霊", botStatus: "魔導書の守護者", ftBio: "世界の間の甘さ。化け猫に導かれ、和菓子の伝統とアバンギャルドを融合させています。", ftQuickLinks: "クイックリンク", ftShop: "魔導書（ショップ）", ftFAQ: "よくある質問", ftTrack: "供物の追跡", ftLegal: "法的情報と透明性", ftPrivacy: "プライバシーポリシー", ftTerms: "契約条件（TOS）", ftAllergensInfo: "アレルギーガイド", ftContactAcc: "サポートとアカウント", ftContactUs: "📞 僧侶と話す", ftMyAccount: "👤 マイアカウント / ログイン", ftRights: "© 2026 Bakeneko Bakery."
+            cart: "カート", pretitle: "妖怪のレルムへの入り口", subtitle: "甘い精霊の聖域", cta: "ポータルに入る", introTitle: "世界の間の甘さ", introText: "私たちは体の飢えのためではなく、魂の渇望のために焼きます。化け猫に導かれ、私たちのスイーツは現代の慌ただしさと古代の静けさの間の架け橋となります。", collectionTitle: "コレクション", addToCart: "カートに追加", oracleTitle: "化け猫の神託", oracleDesc: "迷っていますか？今日あなたの魂が必要とする精霊を運命に選ばせましょう。", oracleBtn: "神託を伺う", tabAll: "完全な魔導書", tabDesserts: "妖怪のスイーツ", tabWines: "霊的なワイン", collabSub: "特別コラボレーション", collabDesc: "伝統的な和菓子と高級ワインの完璧なバランス。精霊を目覚めさせるためにデザインされた伝説のペアリング。", collabMarquee: "✦ 化け猫 × KIZUNAワイナリー ✦ 特別なペアリング ", cartTitle: "あなたの選択", cartEmpty: "魔導書は空です。", cartTotal: "儀式の合計:", cartCheckout: "召喚を完了する", cartAdded: "追加されました！", checkoutTitle: "契約を結ぶ", checkoutSub: "お供え物を準備して、霊薬と和菓子を受け取ります。", checkoutShipping: "儀式の目的地", chkName: "定命の者の名前", chkAddress: "住所（現世）", checkoutPayment: "交換の供物", chkCard: "カードのルーン（16桁）", chkExp: "有効期限 (MM/YY)", chkSubmit: "召喚を確認する", successTitle: "契約完了", successText: "精霊たちがあなたの供物を受け入れました。ご注文はポータルを通って向かっています。", backToRealm: "レルムに戻る", returnStore: "← 魔導書に戻る", selectZone: "領域を選択...", summaryTitle: "召喚の概要", summarySub: "小計", summaryShip: "送料（ポータル）", summaryTotal: "儀式の合計", yokaiClass: "守護霊:", allergenLabel: "アレルギー物質:", unit: "/ 個", botName: "化け猫の精霊", botStatus: "魔導書の守護者", ftBio: "世界の間の甘さ。化け猫に導かれ、和菓子の伝統とアバンギャルドを融合させています。", ftQuickLinks: "クイックリンク", ftShop: "魔導書（ショップ）", ftFAQ: "よくある質問", ftTrack: "供物の追跡", ftLegal: "法的情報と透明性", ftPrivacy: "プライバシーポリシー", ftTerms: "契約条件（TOS）", ftAllergensInfo: "アレルギーガイド", ftContactAcc: "サポートとアカウント", ftContactUs: "📞 僧侶と話す", ftMyAccount: "👤 マイアカウント / ログイン", ftRights: "© 2026 Bakeneko Bakery."
         }
     };
 
-    // ¡Aquí cambiamos "model:" por "img:"!
     const productsDB = {
         p1: {
             es: { name: "Dorayaki", desc: "El Tanuki es un espíritu del bosque famoso por su gran barriga y su amor por los festines. Este dulce redondo rinde homenaje a su apetito insaciable.", allergens: "Trigo, Huevo, Soja." },
@@ -55,92 +54,74 @@ document.addEventListener("DOMContentLoaded", () => {
             jp: { name: "椿の練り切り", desc: "食べられる芸術。雪女のように美しく、青白く、繊細です。冷たく儚い美しさを捉えています。", allergens: "木の実（クルミ）、大豆。" },
             class: "Yuki-Onna", price: 5.50, img: "assets/images/nerikiri.webp"
         },
-       // --- VINOS BODEGAS KIZUNA ---
         p7: {
-            es: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 6°C. El elixir de la Ningyo (Sirena), ideal para acompañar cortes de pescado crudo, Sashimi y preparaciones con Wasabi. 12,5% Vol.", allergens: "Contiene Sulfitos." },
-            en: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 6°C. The elixir of the Ningyo (Mermaid), ideal for raw fish, Sashimi, and Wasabi preparations. 12.5% Vol.", allergens: "Contains Sulfites." },
-            jp: { name: "ソーヴィニヨン・ブラン 'The Raw'", desc: "ペネデス原産地呼称。Kizunaワイナリー。6°Cで提供。人魚の霊薬。刺身やわさびの料理に最適です。アルコール度数12.5%。", allergens: "亜硫酸塩が含まれています。" },
+            es: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 6°C. El elixir de la Ningyo (Sirena), ideal para acompañar cortes de pescado crudo.", allergens: "Contiene Sulfitos." },
+            en: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 6°C. The elixir of the Ningyo (Mermaid), ideal for raw fish.", allergens: "Contains Sulfites." },
+            jp: { name: "ソーヴィニヨン・ブラン 'The Raw'", desc: "ペネデス原産地呼称。Kizunaワイナリー。6°Cで提供。人魚の霊薬。刺身料理に最適です。", allergens: "亜硫酸塩が含まれています。" },
             class: "Ningyo (Sirena)", price: 16.50, img: "assets/images/vino-theraw.jpg"
         },
         p8: {
-            es: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 14°C. El fuego del Shuten-Dōji. Maridaje óptimo para carnes a la brasa, Yakitori, anguila (Unagi) y salsas Teriyaki. 14% Vol.", allergens: "Contiene Sulfitos." },
-            en: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 14°C. The fire of Shuten-Dōji. Optimal pairing for grilled meats, Yakitori, eel (Unagi), and Teriyaki sauces. 14% Vol.", allergens: "Contains Sulfites." },
-            jp: { name: "ガルナッチャ・ティンタ 'The Grill'", desc: "ペネデス原産地呼称。Kizunaワイナリー。14°Cで提供。酒呑童子の炎。焼き鳥、うなぎ、照り焼きソースに最適です。アルコール度数14%。", allergens: "亜硫酸塩が含まれています。" },
+            es: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 14°C. El fuego del Shuten-Dōji. Maridaje óptimo para carnes a la brasa y yakitori.", allergens: "Contiene Sulfitos." },
+            en: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 14°C. The fire of Shuten-Dōji. Optimal pairing for grilled meats and yakitori.", allergens: "Contains Sulfites." },
+            jp: { name: "ガルナッチャ・ティンタ 'The Grill'", desc: "ペネデス原産地呼称。Kizunaワイナリー。14°Cで提供。酒呑童子の炎。焼き鳥や肉料理に最適です。", allergens: "亜硫酸塩が含まれています。" },
             class: "Shuten-Dōji (Oni)", price: 18.00, img: "assets/images/vino-thegrill.jpg"
         },
         p9: {
-            es: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Método Tradicional. Bodegas Kizuna. Servir a 5°C. La celebración del Kitsune. Estructura perfecta para Tempura, frituras y caldos ricos en Umami. 12% Vol.", allergens: "Contiene Sulfitos." },
-            en: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Traditional Method. Kizuna Wineries. Serve at 5°C. The Kitsune's celebration. Perfect structure for Tempura, fried foods, and Umami-rich broths. 12% Vol.", allergens: "Contains Sulfites." },
-            jp: { name: "カヴァ・ブリュット 'The Umami'", desc: "カヴァ原産地呼称。伝統的製法。Kizunaワイナリー。5°Cで提供。狐の祝い。天ぷら、揚げ物、旨味豊かなスープに最適です。アルコール度数12%。", allergens: "亜硫酸塩が含まれています。" },
+            es: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Método Tradicional. Bodegas Kizuna. Servir a 5°C. Estructura perfecta para Tempura y caldos ricos en Umami.", allergens: "Contiene Sulfitos." },
+            en: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Traditional Method. Kizuna Wineries. Serve at 5°C. Perfect structure for Tempura and Umami-rich broths.", allergens: "Contains Sulfites." },
+            jp: { name: "カヴァ・ブリュット 'The Umami'", desc: "カヴァ原産地呼称。伝統的製法。Kizunaワイナリー。5°Cで提供。天ぷらや旨味豊かなスープに最適です。", allergens: "亜硫酸塩が含まれています。" },
             class: "Kitsune (Zorro)", price: 22.00, img: "assets/images/vino-theumami.jpg"
         }
     };
 
-// Language Logic & LocalStorage (Memoria)
+    // Language Logic
     const langs = ['es', 'en', 'jp'];
-    
-    // NUEVO: Diccionario visual de Endónimos para el botón
-    const langDisplayNames = {
-        es: 'ES',
-        en: 'EN',
-        jp: '日本語'
-    };
+    const langDisplayNames = { es: 'ES', en: 'EN', jp: '日本語' };
     
     let currentLangIndex = 0;
     const langBtn = document.getElementById('lang-toggle');
 
-    // --- Recuperar idioma guardado si existe ---
-    const savedLang = localStorage.getItem('bakenekoLang');
-    if (savedLang && langs.includes(savedLang)) {
-        currentLangIndex = langs.indexOf(savedLang);
-        document.body.setAttribute('data-lang', savedLang);
-        updateLanguage(savedLang);
-    }
-    
-    // Pintar el botón correctamente al iniciar
-    langBtn.innerText = langs.map(l => langDisplayNames[l]).join(' / ');
-    // --------------------------------------------------
-
-    langBtn.addEventListener('click', () => {
-        currentLangIndex = (currentLangIndex + 1) % langs.length;
-        const currentLang = langs[currentLangIndex];
+    if (langBtn) {
+        const savedLang = localStorage.getItem('bakenekoLang');
+        if (savedLang && langs.includes(savedLang)) {
+            currentLangIndex = langs.indexOf(savedLang);
+            document.body.setAttribute('data-lang', savedLang);
+            updateLanguage(savedLang);
+        }
         
-        // Pintar el botón usando los nombres nativos
         langBtn.innerText = langs.map(l => langDisplayNames[l]).join(' / ');
-        
-        document.body.setAttribute('data-lang', currentLang);
-        
-        // Guardamos el idioma en memoria al cambiarlo
-        localStorage.setItem('bakenekoLang', currentLang);
-        
-        updateLanguage(currentLang);
-    });
+
+        langBtn.addEventListener('click', () => {
+            currentLangIndex = (currentLangIndex + 1) % langs.length;
+            const currentLang = langs[currentLangIndex];
+            langBtn.innerText = langs.map(l => langDisplayNames[l]).join(' / ');
+            document.body.setAttribute('data-lang', currentLang);
+            localStorage.setItem('bakenekoLang', currentLang);
+            updateLanguage(currentLang);
+        });
+    }
 
     function updateLanguage(lang) {
-        // UI Text
         const t = translations[lang];
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
-            if(translations[lang][key]) el.innerText = translations[lang][key];
-            const botNameEl = document.getElementById('bot-name');
-        if (botNameEl) botNameEl.innerText = t.botName;
+            if(t[key]) el.innerText = t[key];
+        });
         
+        const botNameEl = document.getElementById('bot-name');
+        if (botNameEl) botNameEl.innerText = t.botName;
         const botStatusEl = document.getElementById('bot-status');
         if (botStatusEl) botStatusEl.innerText = t.botStatus;
-        });
 
-        // Product Cards
         document.querySelectorAll('.product-card').forEach(card => {
             const id = card.getAttribute('data-id');
             const nameEl = card.querySelector('[data-i18n-product="name"]');
-            if(productsDB[id]) nameEl.innerText = productsDB[id][lang].name;
+            if(productsDB[id] && nameEl) nameEl.innerText = productsDB[id][lang].name;
         });
 
-        // Update Modal if open
-        const activeId = document.querySelector('.modal-content').getAttribute('data-active-id');
+        const activeId = document.querySelector('.modal-content')?.getAttribute('data-active-id');
         if(activeId) fillModal(activeId);
         
-        // NUEVO: Refrescar la cesta cuando se cambia el idioma
         if (typeof updateCartUI === 'function') {
             updateCartUI();
         }
@@ -186,7 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================
-       3. MODAL DE PRODUCTO (CON IMAGEN 2D)
+       3. MODAL DE PRODUCTO (2D)
        ========================================= */
     const modalOverlay = document.querySelector('.modal-overlay');
     const modalContent = document.querySelector('.modal-content');
@@ -195,11 +176,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const modalTitle = document.querySelector('.modal-title');
     const modalDesc = document.querySelector('.modal-desc');
     const modalClass = document.querySelector('.modal-yokai-class');
-    
-    // NUEVO: Variable para guardar el temporizador
     let clearImageTimer; 
 
     function fillModal(id) {
+        if (!modalContent || !productsDB[id]) return;
         const lang = langs[currentLangIndex];
         const data = productsDB[id];
         
@@ -213,17 +193,11 @@ document.addEventListener("DOMContentLoaded", () => {
         modalContent.setAttribute('data-active-id', id);
     }
 
-    // Abrir Modal al hacer clic en un producto
     document.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('click', (e) => {
-            
-            if (e.target.closest('.quick-add-btn')) {
-                return; 
-            }
+            if (e.target.closest('.quick-add-btn')) return; 
 
-            // NUEVO: Cancelamos el borrado fantasma si abrimos un producto rápido
             clearTimeout(clearImageTimer); 
-
             const id = card.getAttribute('data-id');
             fillModal(id);
             modalOverlay.classList.add('active');
@@ -233,37 +207,33 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Cerrar Modal
     function closeModal() {
+        if(!modalOverlay) return;
         modalOverlay.classList.remove('active');
-        
         document.body.style.overflow = '';
         if (window.lenis) window.lenis.start(); 
-        
-        // NUEVO: Guardamos el temporizador en la variable para poder cancelarlo si hace falta
-        clearImageTimer = setTimeout(() => { activeImage.src = ""; }, 500); 
+        clearImageTimer = setTimeout(() => { if(activeImage) activeImage.src = ""; }, 500); 
     }
 
-    // Escuchadores de cierre
-    closeBtn.addEventListener('click', closeModal);
-    modalOverlay.addEventListener('click', (e) => {
-        if (e.target === modalOverlay) closeModal();
-    });
+    if(closeBtn) closeBtn.addEventListener('click', closeModal);
+    if(modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+    }
 
     /* =========================================
-       4. LÓGICA DE PESTAÑAS (FILTROS) Y ORÁCULO
+       4. PESTAÑAS Y TRAGAPERRAS OMIKUJI
        ========================================= */
     const tabBtns = document.querySelectorAll('.tab-btn');
     const productCards = document.querySelectorAll('.product-card');
 
-    // Funcionalidad de las pestañas
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             
             const filter = btn.getAttribute('data-filter');
-            
             productCards.forEach(card => {
                 if (filter === 'all' || card.getAttribute('data-category') === filter) {
                     card.style.display = 'flex';
@@ -275,55 +245,82 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Funcionalidad del Oráculo (Ruleta)
+    // --- EL TRAGAPERRAS MÁGICO (OMIKUJI) ---
     const spinBtn = document.getElementById('spin-btn');
-    const runesContainer = document.getElementById('runes-container');
+    const strip = document.getElementById('rune-strip');
+    const runasBase = ["火", "水", "木", "金", "土"];
+    let isSpinning = false;
 
-    spinBtn.addEventListener('click', () => {
-        spinBtn.disabled = true;
-        const originalText = spinBtn.innerText;
-        spinBtn.innerText = "...";
-        
-        runesContainer.classList.add('spinning');
+    if (strip && spinBtn) {
+        const totalLoops = 8;
+        let stripHTML = "";
+        for (let i = 0; i < totalLoops; i++) {
+            runasBase.forEach(runa => {
+                stripHTML += `<div class="rune-item">${runa}</div>`;
+            });
+        }
+        strip.innerHTML = stripHTML;
 
-        setTimeout(() => {
-            runesContainer.classList.remove('spinning');
-            spinBtn.disabled = false;
-            spinBtn.innerText = originalText;
-            
-            // Elegir aleatoriamente entre p1 y p9
+        spinBtn.addEventListener('click', () => {
+            if (isSpinning) return;
+            isSpinning = true;
+
+            spinBtn.disabled = true;
+            const originalText = spinBtn.innerText;
+            spinBtn.innerText = "...";
+
             const keys = Object.keys(productsDB);
-            const randomKey = keys[Math.floor(Math.random() * keys.length)];
-            
-            fillModal(randomKey);
-            modalOverlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-            
-        }, 2000);
-    });
+            const randomProductKey = keys[Math.floor(Math.random() * keys.length)];
+            const winnerRuneIndex = Math.floor(Math.random() * runasBase.length);
+
+            const itemHeight = 120;
+            const itemsPerLoop = runasBase.length;
+            const targetItemPos = ((totalLoops - 1) * itemsPerLoop) + winnerRuneIndex;
+            const targetY = -(targetItemPos * itemHeight);
+
+            gsap.set(strip, { y: 0 });
+
+            gsap.to(strip, {
+                y: targetY,
+                duration: 3.5,
+                ease: "power4.inOut",
+                onStart: () => gsap.to(strip, { filter: "blur(4px)", duration: 0.5 }),
+                onComplete: () => {
+                    gsap.to(strip, { filter: "blur(0px)", duration: 0.2 });
+                    
+                    setTimeout(() => {
+                        fillModal(randomProductKey);
+                        modalOverlay.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                        if (window.lenis) window.lenis.stop();
+
+                        spinBtn.disabled = false;
+                        spinBtn.innerText = originalText;
+                        isSpinning = false;
+                    }, 500);
+                }
+            });
+        });
+    }
 
     /* =========================================
-       5. BANNER COLABORACIÓN (CERRAR CINTA)
+       5. BANNER COLABORACIÓN
        ========================================= */
     const collabBanner = document.getElementById('collab-banner');
     const closeCollabBtn = document.getElementById('close-collab');
 
     if (collabBanner && closeCollabBtn) {
         closeCollabBtn.addEventListener('click', () => {
-            // Añadimos la clase para que haga la animación de desaparecer
             collabBanner.classList.add('hidden');
-            
-            // Esperamos a que acabe la animación (400ms) y lo borramos del espacio
             setTimeout(() => {
                 collabBanner.style.display = 'none';
-                // Si GSAP está cargado, le decimos que recalcule el tamaño de la página
                 if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
             }, 400);
         });
     }
 
     /* =========================================
-       6. LÓGICA DE LA CESTA (CART DRAWER)
+       6. LÓGICA DE LA CESTA
        ========================================= */
     let cart = JSON.parse(localStorage.getItem('bakenekoCart')) || [];
 
@@ -336,107 +333,88 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartDot = document.querySelector('.cart-dot');
     const addCartBtn = document.querySelector('.add-cart-btn');
 
-    // Funciones Abrir/Cerrar
     function openCart() {
+        if(!cartOverlay) return;
         cartOverlay.classList.add('active');
         cartDrawer.classList.add('active');
         document.body.style.overflow = 'hidden'; 
-        if (window.lenis) window.lenis.stop(); // <-- Pausamos el scroll de fondo
+        if (window.lenis) window.lenis.stop(); 
     }
     
     function closeCartDrawer() {
+        if(!cartOverlay) return;
         cartOverlay.classList.remove('active');
         cartDrawer.classList.remove('active');
         document.body.style.overflow = '';
-        if (window.lenis) window.lenis.start(); // <-- Reanudamos el scroll
+        if (window.lenis) window.lenis.start(); 
     }
 
-    cartTrigger.addEventListener('click', openCart);
-    closeCartBtn.addEventListener('click', closeCartDrawer);
-    cartOverlay.addEventListener('click', closeCartDrawer);
+    if(cartTrigger) cartTrigger.addEventListener('click', openCart);
+    if(closeCartBtn) closeCartBtn.addEventListener('click', closeCartDrawer);
+    if(cartOverlay) cartOverlay.addEventListener('click', closeCartDrawer);
 
-    // ========================================================
-    // A) Función para añadir al carrito DESDE EL MODAL
-    // ========================================================
-    addCartBtn.addEventListener('click', () => {
-        const activeId = document.querySelector('.modal-content').getAttribute('data-active-id');
-        if(activeId) {
-            const product = productsDB[activeId];
-            const lang = langs[currentLangIndex];
-            
-            const existingItemIndex = cart.findIndex(item => item.id === activeId);
-            
-            if (existingItemIndex !== -1) {
-                cart[existingItemIndex].quantity += 1;
-            } else {
-                cart.push({
-                    id: activeId, name: product[lang].name, price: product.price, img: product.img, quantity: 1
-                });
+    if(addCartBtn) {
+        addCartBtn.addEventListener('click', () => {
+            const activeId = document.querySelector('.modal-content').getAttribute('data-active-id');
+            if(activeId) {
+                const product = productsDB[activeId];
+                const lang = langs[currentLangIndex];
+                
+                const existingItemIndex = cart.findIndex(item => item.id === activeId);
+                if (existingItemIndex !== -1) {
+                    cart[existingItemIndex].quantity += 1;
+                } else {
+                    cart.push({ id: activeId, name: product[lang].name, price: product.price, img: product.img, quantity: 1 });
+                }
+                
+                updateCartUI();
+                
+                const originalText = addCartBtn.innerText;
+                addCartBtn.innerText = translations[lang].cartAdded; 
+                addCartBtn.style.background = "var(--c-gold)";
+                addCartBtn.style.color = "var(--c-indigo)";
+                
+                setTimeout(() => {
+                    addCartBtn.innerText = originalText;
+                    addCartBtn.style.background = "";
+                    addCartBtn.style.color = "";
+                    closeModal();
+                    openCart();
+                }, 800);
             }
-            
-            updateCartUI();
-            
-            // Feedback visual
-            const originalText = addCartBtn.innerText;
-            addCartBtn.innerText = translations[lang].cartAdded; 
-            addCartBtn.style.background = "var(--c-gold)";
-            addCartBtn.style.color = "var(--c-indigo)";
-            
-            setTimeout(() => {
-                addCartBtn.innerText = originalText;
-                addCartBtn.style.background = "";
-                addCartBtn.style.color = "";
-                closeModal();
-                openCart();
-            }, 800);
-        }
-    }); // <--- AQUÍ DEBÍA CERRARSE ESTA FUNCIÓN, la tuya englobaba a la siguiente.
+        }); 
+    }
 
-
-    // ========================================================
-    // B) Función "Quick Add" DESDE LA TARJETA (+)
-    // ========================================================
     document.querySelectorAll('.quick-add-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            // 1. Evitamos que el clic "atraviese" al postre y abra el modal
             e.preventDefault();
             e.stopPropagation(); 
             
-            // 2. Buscamos el ID del producto
             const card = btn.closest('.product-card');
             const activeId = card.getAttribute('data-id');
-            
             if(!activeId) return;
 
             const product = productsDB[activeId];
             const lang = langs[currentLangIndex];
             
-            // 3. Lógica de la Cesta
             const existingItemIndex = cart.findIndex(item => item.id === activeId);
-            
             if (existingItemIndex !== -1) {
                 cart[existingItemIndex].quantity += 1;
             } else {
-                cart.push({
-                    id: activeId, name: product[lang].name, price: product.price, img: product.img, quantity: 1
-                });
+                cart.push({ id: activeId, name: product[lang].name, price: product.price, img: product.img, quantity: 1 });
             }
             
-            // 4. Actualizamos la interfaz
             updateCartUI(); 
             
-            // 5. --- FEEDBACK VISUAL DE ÉXITO ---
             const originalText = btn.innerText;
             btn.innerText = "✓";
             btn.classList.add('added');
             
-            // Animación de la bolita
             if (cartDot) {
                 cartDot.style.transform = 'scale(1.5)';
                 setTimeout(() => cartDot.style.transform = 'scale(1)', 300);
             }
             
-            // Restaurar el botón
             setTimeout(() => {
                 btn.innerText = originalText;
                 btn.classList.remove('added');
@@ -444,10 +422,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-
-    // ========================================================
-    // C) Funciones globales de la Cesta (Sumar, Restar, Dibujar)
-    // ========================================================
     window.changeQuantity = function(index, delta) {
         if (cart[index]) {
             cart[index].quantity += delta;
@@ -460,6 +434,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.updateCartUI = function() {
+        if(!cartItemsContainer) return;
         cartItemsContainer.innerHTML = ''; 
         let total = 0;
         let totalItemsCount = 0;
@@ -467,7 +442,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(cart.length === 0) {
             cartItemsContainer.innerHTML = `<div class="empty-cart-msg" data-i18n="cartEmpty">${translations[lang].cartEmpty}</div>`;
-            cartDot.classList.remove('active');
+            if(cartDot) cartDot.classList.remove('active');
         } else {
             cart.forEach((item, index) => {
                 const itemTotal = item.price * item.quantity;
@@ -495,10 +470,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
                 cartItemsContainer.appendChild(itemEl);
             });
-            cartDot.innerText = totalItemsCount;
-            cartDot.classList.add('active');
+            if(cartDot) {
+                cartDot.innerText = totalItemsCount;
+                cartDot.classList.add('active');
+            }
         }
-        cartTotalEl.innerText = `${total.toFixed(2)}€`;
+        if(cartTotalEl) cartTotalEl.innerText = `${total.toFixed(2)}€`;
         localStorage.setItem('bakenekoCart', JSON.stringify(cart));
     }
 
@@ -517,37 +494,29 @@ document.addEventListener("DOMContentLoaded", () => {
     
     updateCartUI();
 
-    /* =========================================
-       8. IR AL CHECKOUT (NUEVA PÁGINA)
-       ========================================= */
     const checkoutBtn = document.querySelector('.checkout-btn');
-
-    checkoutBtn.addEventListener('click', () => {
-        if (cart.length > 0) {
-            
-            // MAGIA DE TRADUCCIÓN: Actualizamos los nombres de la cesta al idioma actual justo antes de irnos
-            const currentLang = langs[currentLangIndex];
-            const cartTranslated = cart.map(item => {
-                return {
-                    id: item.id,
-                    name: productsDB[item.id][currentLang].name, // Forzamos el nombre en el idioma correcto
-                    price: item.price,
-                    img: item.img,
-                    quantity: item.quantity
-                };
-            });
-
-            // Guardamos el carrito ya traducido y el idioma en la memoria
-            localStorage.setItem('bakenekoCart', JSON.stringify(cartTranslated));
-            localStorage.setItem('bakenekoLang', currentLang);
-            
-            // Viajamos a la nueva página
-            window.location.href = 'checkout.html';
-        }
-    });
+    if(checkoutBtn) {
+        checkoutBtn.addEventListener('click', () => {
+            if (cart.length > 0) {
+                const currentLang = langs[currentLangIndex];
+                const cartTranslated = cart.map(item => {
+                    return {
+                        id: item.id,
+                        name: productsDB[item.id][currentLang].name, 
+                        price: item.price,
+                        img: item.img,
+                        quantity: item.quantity
+                    };
+                });
+                localStorage.setItem('bakenekoCart', JSON.stringify(cartTranslated));
+                localStorage.setItem('bakenekoLang', currentLang);
+                window.location.href = 'checkout.html';
+            }
+        });
+    }
 
     /* =========================================
-       9. ASISTENTE YOKAI (CHATBOT FAQ)
+       9. ASISTENTE YOKAI (CHATBOT)
        ========================================= */
     const chatbotTrigger = document.getElementById('chatbot-trigger');
     const chatbotWindow = document.getElementById('chatbot-window');
@@ -555,142 +524,63 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatMessages = document.getElementById('chat-messages');
     const chatOptions = document.getElementById('chat-options');
 
-    // Árbol de decisiones del Bot (FAQ)
-   // Árbol de decisiones del Bot (FAQ) Ampliado
     const botDialogues = {
         es: {
-            start: {
-                msg: "¡Miau! 🐾 Soy el espíritu Bakeneko. ¿En qué te puedo ayudar hoy?",
-                options: [
-                    { text: "📍 ¿Dónde está mi pedido?", next: "rastrear" },
-                    { text: "📦 Tiempos de envío", next: "envio" },
-                    { text: "🌾 Alergias e Ingredientes", next: "alergenos" },
-                    { text: "✨ Recomiéndame algo", next: "recomendar" },
-                    { text: "👤 Hablar con Atención al Cliente", next: "contacto" }
-                ]
-            },
-            rastrear: {
-                msg: "Para ver por dónde va tu ofrenda, busca el <b>Número de Pacto</b> en el pergamino (email) de confirmación que te enviamos al comprar. <br><br>Si ya lo tienes, puedes rastrearlo en el portal del transportista.",
-                options: [{ text: "Volver al menú", next: "start" }, { text: "No encuentro mi número", next: "contacto" }]
-            },
-            contacto: {
-                msg: "Nuestros monjes de soporte atienden de Lunes a Viernes. <br><br>📞 Teléfono: <b>+34 900 000 000</b><br>✉️ Email: <a href='mailto:ayuda@bakeneko.com' style='color:var(--c-vermilion); font-weight:bold;'>ayuda@bakeneko.com</a><br><br>¿Te ayudo con otra cosa?",
-                options: [{ text: "Volver al menú", next: "start" }, { text: "Cerrar chat", next: "fin" }]
-            },
-            envio: {
-                msg: "¡No te preocupes por el clima! ❄️ Todos nuestros postres y elixires viajan SIEMPRE en arcas refrigeradas mágicas sin coste adicional por el frío. <br><br>Puedes elegir el <b>Estándar (48-72h)</b> o, si la gula te puede, el <b>Exprés (24h)</b>.",
-                options: [{ text: "Ver más opciones", next: "start" }]
-            },
-            alergenos: {
-                msg: "Usamos harina de arroz glutinoso (sin gluten), pero procesamos soja, lácteos y frutos secos en nuestro obrador mágico. ¡Contáctanos si tienes alergias severas!",
-                options: [{ text: "Contactar", next: "contacto" }, { text: "Volver", next: "start" }]
-            },
-            recomendar: {
-                msg: "Si es tu primera vez, el Dorayaki Tanuki es un clásico infalible. Si buscas una experiencia mística de maridaje, prueba nuestro vino 'The Raw'.",
-                options: [{ text: "Gracias, echaré un vistazo", next: "fin" }, { text: "Menú principal", next: "start" }]
-            },
-            fin: {
-                msg: "¡Que los espíritus dulces te acompañen! 🌸 Cierro el portal de chat.",
-                options: []
-            }
+            start: { msg: "¡Miau! 🐾 Soy el espíritu Bakeneko. ¿En qué te puedo ayudar hoy?", options: [{ text: "📍 ¿Dónde está mi pedido?", next: "rastrear" }, { text: "📦 Tiempos de envío", next: "envio" }, { text: "🌾 Alergias", next: "alergenos" }, { text: "👤 Contacto", next: "contacto" }] },
+            rastrear: { msg: "Busca tu <b>Número de Pacto</b> en el email de confirmación.", options: [{ text: "Menú", next: "start" }] },
+            contacto: { msg: "Llámanos al <b>+34 900 000 000</b> o escribe a ayuda@bakeneko.com.", options: [{ text: "Menú", next: "start" }, { text: "Cerrar", next: "fin" }] },
+            envio: { msg: "Todo viaja en frío mágico. Estándar (48-72h) o Exprés (24h).", options: [{ text: "Menú", next: "start" }] },
+            alergenos: { msg: "Usamos arroz sin gluten, pero hay trazas de soja, leche y nueces.", options: [{ text: "Menú", next: "start" }] },
+            fin: { msg: "¡Que los espíritus te acompañen! 🌸", options: [] }
         },
         en: {
-            start: {
-                msg: "Meow! 🐾 I'm the Bakeneko spirit. How can I assist you today?",
-                options: [
-                    { text: "📍 Where is my order?", next: "rastrear" },
-                    { text: "📦 Shipping times", next: "envio" },
-                    { text: "🌾 Allergies & Ingredients", next: "alergenos" },
-                    { text: "✨ Recommend me something", next: "recomendar" },
-                    { text: "👤 Talk to Customer Service", next: "contacto" }
-                ]
-            },
-            rastrear: { msg: "To track your offering, find your <b>Pact Number</b> in the confirmation scroll (email) we sent you. <br><br>If you have it, you can track it via the courier's portal.", options: [{ text: "Back to menu", next: "start" }, { text: "I lost my number", next: "contacto" }] },
-            contacto: { msg: "Our support monks are available Mon-Fri. <br><br>📞 Phone: <b>+34 900 000 000</b><br>✉️ Email: <a href='mailto:help@bakeneko.com' style='color:var(--c-vermilion); font-weight:bold;'>help@bakeneko.com</a>", options: [{ text: "Back to menu", next: "start" }, { text: "Close chat", next: "fin" }] },
-            envio: {
-                msg: "Don't worry about the weather! ❄️ All our sweets and elixirs ALWAYS travel in magical refrigerated arks with no extra cold-chain costs. <br><br>You can choose <b>Standard (48-72h)</b> or, if you can't wait, <b>Express (24h)</b>.",
-                options: [{ text: "More options", next: "start" }]
-            },
-            alergenos: { msg: "We use glutinous rice flour (naturally gluten-free), but handle soy, dairy, and nuts. Contact us if you have severe allergies!", options: [{ text: "Contact Support", next: "contacto" }, { text: "Back", next: "start" }] },
-            recomendar: { msg: "For beginners, the Tanuki Dorayaki is a classic. For a mystical pairing, try 'The Raw' wine.", options: [{ text: "Thanks!", next: "fin" }, { text: "Main menu", next: "start" }] },
-            fin: { msg: "May the sweet spirits be with you! 🌸 Closing chat.", options: [] }
+            start: { msg: "Meow! 🐾 I'm Bakeneko. How can I help?", options: [{ text: "📍 Order status", next: "rastrear" }, { text: "📦 Shipping", next: "envio" }, { text: "🌾 Allergies", next: "alergenos" }, { text: "👤 Contact", next: "contacto" }] },
+            rastrear: { msg: "Check your email for the <b>Pact Number</b>.", options: [{ text: "Menu", next: "start" }] },
+            contacto: { msg: "Call <b>+34 900 000 000</b> or email help@bakeneko.com.", options: [{ text: "Menu", next: "start" }, { text: "Close", next: "fin" }] },
+            envio: { msg: "Cold shipping always. Standard (48-72h) or Express (24h).", options: [{ text: "Menu", next: "start" }] },
+            alergenos: { msg: "We use gluten-free rice, but handle soy, milk, and nuts.", options: [{ text: "Menu", next: "start" }] },
+            fin: { msg: "May the spirits guide you! 🌸", options: [] }
         },
         jp: {
-            start: {
-                msg: "ニャー！🐾 私は化け猫の精霊です。今日はどうされましたか？",
-                options: [
-                    { text: "📍 注文はどこですか？", next: "rastrear" },
-                    { text: "📦 配送時間", next: "envio" },
-                    { text: "🌾 アレルギーと成分", next: "alergenos" },
-                    { text: "✨ おすすめは？", next: "recomendar" },
-                    { text: "👤 カスタマーサポートに連絡", next: "contacto" }
-                ]
-            },
-            rastrear: { msg: "供物を追跡するには、確認メールにある<b>「契約番号」</b>をご用意ください。<br><br>番号をお持ちの場合は、配送業者のポータルから追跡できます。", options: [{ text: "メニューに戻る", next: "start" }, { text: "番号を忘れた", next: "contacto" }] },
-            contacto: { msg: "サポートの僧侶は月曜から金曜まで対応しています。<br><br>📞 電話: <b>+34 900 000 000</b><br>✉️ メール: <a href='mailto:help@bakeneko.com' style='color:var(--c-vermilion); font-weight:bold;'>help@bakeneko.com</a>", options: [{ text: "メニューに戻る", next: "start" }, { text: "チャットを閉じる", next: "fin" }] },
-            envio: {
-                msg: "天候の心配は無用です！❄️ 私たちのスイーツと霊薬はすべて、追加の冷蔵料金なしで魔法の冷蔵箱に入れられて配送されます。<br><br><b>通常便（48〜72時間）</b>か、お急ぎの場合は<b>お急ぎ便（24時間）</b>をお選びいただけます。",
-                options: [{ text: "他のオプション", next: "start" }]
-            },
-            alergenos: { msg: "もち米粉を使用していますが、大豆、乳製品、ナッツも取り扱っています。重度のアレルギーがある場合はご連絡ください！", options: [{ text: "サポートに連絡", next: "contacto" }, { text: "戻る", next: "start" }] },
-            recomendar: { msg: "初めての方には「どら焼き」がお勧めです。特別なペアリングには白ワイン「The Raw」をお試しください。", options: [{ text: "ありがとう！", next: "fin" }, { text: "メインメニュー", next: "start" }] },
-            fin: { msg: "甘い精霊があなたと共にありますように！🌸", options: [] }
+            start: { msg: "ニャー！🐾 化け猫です。どうされましたか？", options: [{ text: "📍 注文状況", next: "rastrear" }, { text: "📦 配送について", next: "envio" }, { text: "🌾 アレルギー", next: "alergenos" }, { text: "👤 お問い合わせ", next: "contacto" }] },
+            rastrear: { msg: "確認メールの<b>契約番号</b>をご覧ください。", options: [{ text: "メニュー", next: "start" }] },
+            contacto: { msg: "電話: <b>+34 900 000 000</b> または help@bakeneko.com まで。", options: [{ text: "メニュー", next: "start" }, { text: "閉じる", next: "fin" }] },
+            envio: { msg: "クール便で発送します。通常便（48〜72時間）かお急ぎ便（24時間）。", options: [{ text: "メニュー", next: "start" }] },
+            alergenos: { msg: "グルテンフリーですが、大豆やナッツも扱っています。", options: [{ text: "メニュー", next: "start" }] },
+            fin: { msg: "良い旅を！🌸", options: [] }
         }
     };
 
     let chatInitialized = false;
 
-    // Funciones abrir y cerrar
-    chatbotTrigger.addEventListener('click', () => {
-        chatbotWindow.classList.add('active');
-        if (!chatInitialized) {
-            startChat();
-            chatInitialized = true;
-        }
-    });
-
-    closeChatBtn.addEventListener('click', () => {
-        chatbotWindow.classList.remove('active');
-    });
-
-    // Iniciar conversación
-    function startChat() {
-        chatMessages.innerHTML = ''; // Limpiar chat
-        renderBotMessage("start");
+    if(chatbotTrigger) {
+        chatbotTrigger.addEventListener('click', () => {
+            chatbotWindow.classList.add('active');
+            if (!chatInitialized) { startChat(); chatInitialized = true; }
+        });
     }
 
-    // Dibujar mensaje del bot
+    if(closeChatBtn) closeChatBtn.addEventListener('click', () => chatbotWindow.classList.remove('active'));
+
+    function startChat() { chatMessages.innerHTML = ''; renderBotMessage("start"); }
+
     function renderBotMessage(nodeKey) {
         const lang = langs[currentLangIndex];
         const node = botDialogues[lang][nodeKey];
-        
-        // Simular que el bot está escribiendo (0.5 segundos de retraso)
-        chatOptions.innerHTML = ''; // Ocultar botones mientras piensa
-        
+        chatOptions.innerHTML = ''; 
         setTimeout(() => {
-            // Burbuja del bot
             const msgEl = document.createElement('div');
             msgEl.className = 'chat-bubble msg-bot';
             msgEl.innerHTML = node.msg;
             chatMessages.appendChild(msgEl);
-            
-            // Hacer scroll hacia abajo
             chatMessages.scrollTop = chatMessages.scrollHeight;
-
-            // Renderizar botones de respuesta si hay
             renderOptions(node.options);
-            
-            // Si es el final, reiniciar después de 3 segundos
             if (nodeKey === "fin") {
-                setTimeout(() => {
-                    chatbotWindow.classList.remove('active');
-                    chatInitialized = false;
-                }, 3000);
+                setTimeout(() => { chatbotWindow.classList.remove('active'); chatInitialized = false; }, 3000);
             }
         }, 500);
     }
 
-    // Dibujar las opciones para el usuario
     function renderOptions(optionsArray) {
         chatOptions.innerHTML = '';
         optionsArray.forEach(opt => {
@@ -702,310 +592,190 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Lo que pasa cuando el usuario hace clic en un botón
     function handleUserClick(userText, nextNode) {
-        // Pintar burbuja del usuario
         const msgEl = document.createElement('div');
         msgEl.className = 'chat-bubble msg-user';
         msgEl.innerText = userText;
         chatMessages.appendChild(msgEl);
         chatMessages.scrollTop = chatMessages.scrollHeight;
-        
-        // Llamar a la siguiente respuesta del bot
         renderBotMessage(nextNode);
     }
 
-    // Resetear el chat si se cambia de idioma
-    langBtn.addEventListener('click', () => {
-        if(chatInitialized) {
-            startChat();
-        }
-    });
-
-/* =========================================
-       10. EASTER EGG: LA TRAVESURA ALEATORIA Y NATURAL
+    /* =========================================
+       10. EASTER EGG: ZARPA DEL BAKENEKO
        ========================================= */
     const paw = document.getElementById('bakeneko-paw');
-    
-    let idleTimer;
-    let isPawActive = false;
-    let haSucedidoTravesura = false; 
-    let haPulsadoPostre = false;     
-    let isAutoScrolling = false; 
-    let isRetracting = false; 
+    if (paw) {
+        let idleTimer;
+        let isPawActive = false;
+        let haSucedidoTravesura = false; 
+        let haPulsadoPostre = false;     
+        let isAutoScrolling = false; 
+        let isRetracting = false; 
 
-    // --- NUEVAS REGLAS DE COMPORTAMIENTO NATURAL ---
-    const IDLE_TIME = 8000; // 8 segundos quieto para "tirar los dados"
-    const PROBABILITY = 0.40; // 40% de probabilidad de salir (Es decir, 1 de cada 7 veces que te pares)
-    const COOLDOWN = 120000; // 120.000 milisegundos = 2 minutos de siesta obligatoria tras salir
-    let lastPawTime = 0; // Memoria de la última vez que actuó
+        const IDLE_TIME = 8000; 
+        const PROBABILITY = 0.40; 
+        const COOLDOWN = 120000; 
+        let lastPawTime = 0; 
+        const allProducts = document.querySelectorAll('.product-card');
 
-    const allProducts = document.querySelectorAll('.product-card');
+        function triggerPawMischief(forzar = false) {
+            if (isPawActive) return;
+            if (!forzar && haSucedidoTravesura) return;
 
-    // Le añadimos un parámetro "forzar" que por defecto es falso
-    function triggerPawMischief(forzar = false) {
-        // Si el gato ya está fuera, no hacemos nada
-        if (isPawActive) return;
-        
-        // Si no estamos forzando y ya salió, cancelamos
-        if (!forzar && haSucedidoTravesura) return;
+            haSucedidoTravesura = true; 
+            const now = Date.now();
+            
+            if (!forzar) {
+                if (now - lastPawTime < COOLDOWN) return;
+                if (Math.random() > PROBABILITY) return;
+            }
 
-        haSucedidoTravesura = true; 
+            lastPawTime = now; 
+            isPawActive = true;
+            paw.style.display = 'block';
 
-        const now = Date.now();
-        
-        // Si NO estamos forzando la aparición, aplicamos las reglas de tiempo y azar
-        if (!forzar) {
-            if (now - lastPawTime < COOLDOWN) return;
-            if (Math.random() > PROBABILITY) return;
-        }
+            const viewportCenterY = window.innerHeight / 2;
+            let targetProduct = null;
+            let minDistance = Infinity;
 
-        // --- ¡EL GATO SALE! ---
-        lastPawTime = now; 
-        isPawActive = true;
-        paw.style.display = 'block';
-        
-        // ... (El resto del código hacia abajo se queda exactamente igual)
-        paw.style.display = 'block';
-
-        const viewportCenterY = window.innerHeight / 2;
-        let targetProduct = null;
-        let minDistance = Infinity;
-
-        allProducts.forEach(product => {
-            if (product.style.display !== 'none') {
-                const rect = product.getBoundingClientRect();
-                const productCenterY = rect.top + rect.height / 2;
-                
-                const isVisible = productCenterY > 100 && productCenterY < (window.innerHeight - 100);
-                
-                if (isVisible) {
-                    const distance = Math.abs(viewportCenterY - productCenterY);
-                    if (distance < minDistance) {
-                        minDistance = distance;
-                        targetProduct = product;
+            allProducts.forEach(product => {
+                if (product.style.display !== 'none') {
+                    const rect = product.getBoundingClientRect();
+                    const productCenterY = rect.top + rect.height / 2;
+                    const isVisible = productCenterY > 100 && productCenterY < (window.innerHeight - 100);
+                    if (isVisible) {
+                        const distance = Math.abs(viewportCenterY - productCenterY);
+                        if (distance < minDistance) { minDistance = distance; targetProduct = product; }
                     }
                 }
-            }
-        });
+            });
 
-        if (targetProduct && !haPulsadoPostre) {
-            ejecutarSustoDelPostre(targetProduct);
-        } else {
-            ejecutarTravesuraScroll();
+            if (targetProduct && !haPulsadoPostre) {
+                ejecutarSustoDelPostre(targetProduct);
+            } else {
+                ejecutarTravesuraScroll();
+            }
         }
-    }
 
-    // --- ACCIÓN A: PULSAR EL POSTRE ---
-    function ejecutarSustoDelPostre(targetProduct) {
-        haPulsadoPostre = true; 
-        const productRect = targetProduct.getBoundingClientRect();
-        const targetY = productRect.top + (productRect.height / 2) - (paw.offsetHeight / 2);
-        const targetX = -(paw.offsetWidth * 0.4);
+        function ejecutarSustoDelPostre(targetProduct) {
+            haPulsadoPostre = true; 
+            const productRect = targetProduct.getBoundingClientRect();
+            const targetY = productRect.top + (productRect.height / 2) - (paw.offsetHeight / 2);
+            const targetX = -(paw.offsetWidth * 0.4);
 
-        const tl = gsap.timeline({
-            onComplete: () => { 
-                if(isPawActive && !isRetracting) {
-                    isRetracting = true;
-                    // RETIRADA NORMAL: 1.2 segundos (Más lento y elegante)
-                    gsap.to(paw, { x: 150, duration: 1.2, ease: "power2.inOut", onComplete: () => {
-                        paw.style.display = 'none';
-                        isPawActive = false;
-                        isRetracting = false;
-                    }});
-                }
-            }
-        });
-
-        gsap.set(paw, { y: targetY, x: 0, rotation: 0, scale: 1 });
-        tl.to(paw, { x: targetX, duration: 2, ease: "power2.out" })
-          .to(paw, { rotation: -10, scale: 1.1, duration: 0.3, ease: "back.out(2)" }, "+=0.2")
-          .add(() => {
-              if (isPawActive) {
-                  targetProduct.click();
-                  
-                  // SUSTO POR EL CLIC
-                  isRetracting = true; 
-                  gsap.killTweensOf(paw); 
-                  // HUIDA ASUSTADA: 0.8 segundos (Suficientemente rápido para ser un susto, pero visible)
-                  gsap.to(paw, { 
-                      x: 150, 
-                      rotation: 20, 
-                      duration: 0.8, 
-                      ease: "power2.in",
-                      onComplete: () => { 
-                          paw.style.display = 'none'; 
-                          isPawActive = false; 
-                          isRetracting = false; 
-                      }
-                  });
-              }
-          });
-    }
-
-    // --- ACCIÓN B: MOVER LA PANTALLA ---
-    function ejecutarTravesuraScroll() {
-        const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200;
-        const scrollAmount = isAtBottom ? -450 : 450; 
-        const centerY = (window.innerHeight / 2) - (paw.offsetHeight / 2);
-
-        const pawTimeline = gsap.timeline({ 
-            onComplete: () => { 
-                paw.style.display = 'none'; 
-                isPawActive = false; 
-            } 
-        });
-
-        gsap.set(paw, { y: centerY, x: 0, rotation: 0, scale: 1 });
-
-        pawTimeline.to(paw, { x: -120, duration: 2, ease: "power1.inOut" }) 
-                   .add(() => { isAutoScrolling = true; }) 
-                   .to(paw, { 
-                       y: centerY + (isAtBottom ? -100 : 100), 
-                       rotation: isAtBottom ? 30 : -30, 
-                       duration: 0.8, 
-                       ease: "power2.in",
-                       onStart: () => {
-                           if (window.lenis) { 
-                               window.lenis.scrollTo(window.scrollY + scrollAmount, { 
-                                   duration: 1.5,
-                                   onComplete: () => { isAutoScrolling = false; } 
-                               }); 
-                           } else { 
-                               window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
-                               setTimeout(() => { isAutoScrolling = false; }, 1000);
-                           }
-                       }
-                   })
-                   // RETIRADA DE SCROLL: 1.2 segundos
-                   .to(paw, { x: 150, duration: 1.2, ease: "power2.in" });
-    }
-
-    // --- CONTROL DEL TEMPORIZADOR Y SUSTO MANUAL ---
-    function resetIdleTimer(e) {
-        if (isAutoScrolling && e && e.type === 'scroll') return;
-
-        haSucedidoTravesura = false; 
-
-        // SI EL GATO ESTÁ FUERA Y EL USUARIO MUEVE EL RATÓN
-        if (isPawActive && !isRetracting) {
-            isRetracting = true; 
-            gsap.killTweensOf(paw);
-            
-            // HUIDA MANUAL: 0.8 segundos (Movimiento fantasma suave)
-            gsap.to(paw, { 
-                x: 150, 
-                rotation: 15, 
-                scale: 1, 
-                duration: 0.8, 
-                ease: "power2.in", 
-                onComplete: () => {
-                    paw.style.display = 'none';
-                    isPawActive = false;
-                    isRetracting = false; 
+            const tl = gsap.timeline({
+                onComplete: () => { 
+                    if(isPawActive && !isRetracting) {
+                        isRetracting = true;
+                        gsap.to(paw, { x: 150, duration: 1.2, ease: "power2.inOut", onComplete: () => {
+                            paw.style.display = 'none'; isPawActive = false; isRetracting = false;
+                        }});
+                    }
                 }
             });
+
+            gsap.set(paw, { y: targetY, x: 0, rotation: 0, scale: 1 });
+            tl.to(paw, { x: targetX, duration: 2, ease: "power2.out" })
+              .to(paw, { rotation: -10, scale: 1.1, duration: 0.3, ease: "back.out(2)" }, "+=0.2")
+              .add(() => {
+                  if (isPawActive) {
+                      targetProduct.click();
+                      isRetracting = true; 
+                      gsap.killTweensOf(paw); 
+                      gsap.to(paw, { x: 150, rotation: 20, duration: 0.8, ease: "power2.in",
+                          onComplete: () => { paw.style.display = 'none'; isPawActive = false; isRetracting = false; }
+                      });
+                  }
+              });
         }
 
-        clearTimeout(idleTimer);
+        function ejecutarTravesuraScroll() {
+            const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200;
+            const scrollAmount = isAtBottom ? -450 : 450; 
+            const centerY = (window.innerHeight / 2) - (paw.offsetHeight / 2);
 
-        const modalOpen = document.querySelector('.modal-overlay.active');
-        const cartOpen = document.querySelector('.cart-overlay.active');
-        const chatOpen = document.querySelector('.chatbot-window.active');
+            const pawTimeline = gsap.timeline({ onComplete: () => { paw.style.display = 'none'; isPawActive = false; } });
 
-        if (!modalOpen && !cartOpen && !chatOpen) {
-            idleTimer = setTimeout(triggerPawMischief, IDLE_TIME);
+            gsap.set(paw, { y: centerY, x: 0, rotation: 0, scale: 1 });
+
+            pawTimeline.to(paw, { x: -120, duration: 2, ease: "power1.inOut" }) 
+                       .add(() => { isAutoScrolling = true; }) 
+                       .to(paw, { 
+                           y: centerY + (isAtBottom ? -100 : 100), rotation: isAtBottom ? 30 : -30, duration: 0.8, ease: "power2.in",
+                           onStart: () => {
+                               if (window.lenis) { window.lenis.scrollTo(window.scrollY + scrollAmount, { duration: 1.5, onComplete: () => { isAutoScrolling = false; } }); } 
+                               else { window.scrollBy({ top: scrollAmount, behavior: 'smooth' }); setTimeout(() => { isAutoScrolling = false; }, 1000); }
+                           }
+                       })
+                       .to(paw, { x: 150, duration: 1.2, ease: "power2.in" });
         }
+
+        function resetIdleTimer(e) {
+            if (isAutoScrolling && e && e.type === 'scroll') return;
+            haSucedidoTravesura = false; 
+
+            if (isPawActive && !isRetracting) {
+                isRetracting = true; 
+                gsap.killTweensOf(paw);
+                gsap.to(paw, { x: 150, rotation: 15, scale: 1, duration: 0.8, ease: "power2.in", 
+                    onComplete: () => { paw.style.display = 'none'; isPawActive = false; isRetracting = false; }
+                });
+            }
+
+            clearTimeout(idleTimer);
+            const modalOpen = document.querySelector('.modal-overlay.active');
+            const cartOpen = document.querySelector('.cart-overlay.active');
+            const chatOpen = document.querySelector('.chatbot-window.active');
+
+            if (!modalOpen && !cartOpen && !chatOpen) { idleTimer = setTimeout(triggerPawMischief, IDLE_TIME); }
+        }
+
+        ['mousemove', 'scroll', 'keydown', 'click', 'touchstart'].forEach(evt => window.addEventListener(evt, resetIdleTimer));
+        resetIdleTimer({type: 'init'});
+        
+        window.invocarZarpa = function() {
+            haPulsadoPostre = false; triggerPawMischief(true); console.log("🐈‍⬛ ¡Bakeneko invocado mediante magia de consola!");
+        };
     }
 
-    // Escuchadores de eventos
-    ['mousemove', 'scroll', 'keydown', 'click', 'touchstart'].forEach(evt => {
-        window.addEventListener(evt, resetIdleTimer);
-    });
-
-    resetIdleTimer({type: 'init'});
-
-    // --- HERRAMIENTA DE DEBUG PARA EL INSPECTOR (F12) ---
-    window.invocarZarpa = function() {
-        haPulsadoPostre = false; // Le borramos la memoria para que pueda volver a pulsar
-        triggerPawMischief(true); // El "true" desactiva el azar y la siesta temporalmente
-        console.log("🐈‍⬛ ¡Bakeneko invocado mediante magia de consola!");
-    };
-
     /* =========================================
-       11. NUEVO CURSOR CIRCULAR DINÁMICO
+       11. CURSOR CIRCULAR
        ========================================= */
     const cursor = document.getElementById('neo-cursor');
+    if (cursor) {
+        gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+        const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
+        const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
 
-    // Centramos el punto de anclaje del círculo exactamente en el medio
-    gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+        window.addEventListener("mousemove", (e) => { xTo(e.clientX); yTo(e.clientY); });
+        window.addEventListener('mousedown', () => cursor.classList.add('click'));
+        window.addEventListener('mouseup', () => cursor.classList.remove('click'));
 
-    // Movimiento fluido con GSAP
-    const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
-    const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
-
-    window.addEventListener("mousemove", (e) => {
-        xTo(e.clientX);
-        yTo(e.clientY);
-    });
-
-    // Eventos de clic (se hace pequeñito)
-    window.addEventListener('mousedown', () => cursor.classList.add('click'));
-    window.addEventListener('mouseup', () => cursor.classList.remove('click'));
-
-    // --- INTELIGENCIA DE INTERACCIÓN (ESTADO HOVER) ---
-    // Seleccionamos todo lo que sea "clicable" en tu tienda
-    const interactables = document.querySelectorAll('a, button, .product-card, .cart-trigger, input, select');
-
-    interactables.forEach(el => {
-        // Al entrar en un botón, el cursor crece
-        el.addEventListener('mouseenter', () => {
-            cursor.classList.add('hover');
+        const interactables = document.querySelectorAll('a, button, .product-card, .cart-trigger, input, select');
+        interactables.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
         });
-        // Al salir, vuelve a la normalidad
-        el.addEventListener('mouseleave', () => {
-            cursor.classList.remove('hover');
-        });
-    });
-
+    }
 
     /* =========================================
-       12. SELLOS DE TINTA (EFECTO HANKO)
+       12. SELLOS HANKO
        ========================================= */
-    // Colección de Kanjis mágicos: Gato, Espíritu, Pacto, Dulce, Zorro
     const kanjis = ["猫", "霊", "契", "甘", "狐"]; 
-
     document.addEventListener('click', (e) => {
-        // 1. RESTRICCIÓN: No poner sellos si el usuario está interactuando con algo útil
-        // Ignoramos clics en botones, enlaces, tarjetas, modal, header o footer.
-        const clicValido = !e.target.closest('button, a, input, select, .product-card, .modal-content, .cart-drawer, .chatbot-window, .main-nav, .hero-content');
-        
+        const clicValido = !e.target.closest('button, a, input, select, .product-card, .modal-content, .cart-drawer, .chatbot-window, .main-nav, .hero-content, .omikuji-window');
         if (!clicValido) return;
 
-        // 2. CREACIÓN DEL SELLO
         const stamp = document.createElement('div');
         stamp.className = 'hanko-stamp';
-        
-        // Seleccionamos un Kanji al azar
         stamp.innerText = kanjis[Math.floor(Math.random() * kanjis.length)];
-
-        // Le damos una rotación aleatoria para que parezca un sello estampado a mano (-20 a 20 grados)
         const rotation = Math.floor(Math.random() * 40) - 20;
-        
-        // Lo colocamos exactamente donde hizo clic
-        stamp.style.left = e.pageX + 'px'; // <--- CAMBIAR clientX por pageX
-        stamp.style.top = e.pageY + 'px';  // <--- CAMBIAR clientY por pageY
-        
-        // Le inyectamos la rotación como variable CSS para que la animación la respete
+        stamp.style.left = e.pageX + 'px';
+        stamp.style.top = e.pageY + 'px'; 
         stamp.style.setProperty('--rot', rotation + 'deg');
-
         document.body.appendChild(stamp);
-
-        // 3. LIMPIEZA
-        // Una vez que el CSS termina de desvanecerlo (4 segundos), lo borramos del código para no saturar la memoria de la web
-        setTimeout(() => {
-            stamp.remove();
-        }, 4000);
+        setTimeout(() => stamp.remove(), 4000);
     });
 
 });
