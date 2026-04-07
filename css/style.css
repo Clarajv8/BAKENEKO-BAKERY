@@ -1172,6 +1172,34 @@ body {
 
 
 
+/* =========================================
+   EASTER EGG: ZARPA DEL BAKENEKO (EXTERNA)
+   ========================================= */
+#bakeneko-paw {
+    position: fixed;
+    /* Importante: top 0 para que el JS calcule la posición exacta */
+    top: 0; 
+    right: -220px; /* Escondida según el ancho de tu SVG (ajústalo si es necesario) */
+    width: 200px;  /* Ancho de tu zarpa */
+    height: 200px; /* Alto de tu zarpa */
+    z-index: 8500; /* Por debajo del modal (z-index 9000), para que la cubra al abrirse */
+    pointer-events: none; /* No interfiere con clics reales del usuario */
+    
+    /* Referencia a tu archivo externo */
+    background-image: url('../assets/images/paw.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    /* Brillo espectral sutil */
+    filter: drop-shadow(0 0 15px rgba(197, 163, 101, 0.4));
+    
+    /* Punto de rotación en la base de la pata (derecha), para que gire natural */
+    transform-origin: center right; 
+    display: none; /* Oculta por defecto hasta que el JS la active */
+}
+
+
 
 
 

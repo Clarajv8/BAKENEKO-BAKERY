@@ -722,4 +722,214 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 
+/* =========================================
+       10. EASTER EGG: LA TRAVESURA ALEATORIA Y NATURAL
+       ========================================= */
+    const paw = document.getElementById('bakeneko-paw');
+    
+    let idleTimer;
+    let isPawActive = false;
+    let haSucedidoTravesura = false; 
+    let haPulsadoPostre = false;     
+    let isAutoScrolling = false; 
+    let isRetracting = false; 
+
+    // --- NUEVAS REGLAS DE COMPORTAMIENTO NATURAL ---
+    const IDLE_TIME = 8000; // 8 segundos quieto para "tirar los dados"
+    const PROBABILITY = 0.40; // 40% de probabilidad de salir (Es decir, 1 de cada 7 veces que te pares)
+    const COOLDOWN = 120000; // 120.000 milisegundos = 2 minutos de siesta obligatoria tras salir
+    let lastPawTime = 0; // Memoria de la última vez que actuó
+
+    const allProducts = document.querySelectorAll('.product-card');
+
+    // Le añadimos un parámetro "forzar" que por defecto es falso
+    function triggerPawMischief(forzar = false) {
+        // Si el gato ya está fuera, no hacemos nada
+        if (isPawActive) return;
+        
+        // Si no estamos forzando y ya salió, cancelamos
+        if (!forzar && haSucedidoTravesura) return;
+
+        haSucedidoTravesura = true; 
+
+        const now = Date.now();
+        
+        // Si NO estamos forzando la aparición, aplicamos las reglas de tiempo y azar
+        if (!forzar) {
+            if (now - lastPawTime < COOLDOWN) return;
+            if (Math.random() > PROBABILITY) return;
+        }
+
+        // --- ¡EL GATO SALE! ---
+        lastPawTime = now; 
+        isPawActive = true;
+        paw.style.display = 'block';
+        
+        // ... (El resto del código hacia abajo se queda exactamente igual)
+        paw.style.display = 'block';
+
+        const viewportCenterY = window.innerHeight / 2;
+        let targetProduct = null;
+        let minDistance = Infinity;
+
+        allProducts.forEach(product => {
+            if (product.style.display !== 'none') {
+                const rect = product.getBoundingClientRect();
+                const productCenterY = rect.top + rect.height / 2;
+                
+                const isVisible = productCenterY > 100 && productCenterY < (window.innerHeight - 100);
+                
+                if (isVisible) {
+                    const distance = Math.abs(viewportCenterY - productCenterY);
+                    if (distance < minDistance) {
+                        minDistance = distance;
+                        targetProduct = product;
+                    }
+                }
+            }
+        });
+
+        if (targetProduct && !haPulsadoPostre) {
+            ejecutarSustoDelPostre(targetProduct);
+        } else {
+            ejecutarTravesuraScroll();
+        }
+    }
+
+    // --- ACCIÓN A: PULSAR EL POSTRE ---
+    function ejecutarSustoDelPostre(targetProduct) {
+        haPulsadoPostre = true; 
+        const productRect = targetProduct.getBoundingClientRect();
+        const targetY = productRect.top + (productRect.height / 2) - (paw.offsetHeight / 2);
+        const targetX = -(paw.offsetWidth * 0.4);
+
+        const tl = gsap.timeline({
+            onComplete: () => { 
+                if(isPawActive && !isRetracting) {
+                    isRetracting = true;
+                    // RETIRADA NORMAL: 1.2 segundos (Más lento y elegante)
+                    gsap.to(paw, { x: 150, duration: 1.2, ease: "power2.inOut", onComplete: () => {
+                        paw.style.display = 'none';
+                        isPawActive = false;
+                        isRetracting = false;
+                    }});
+                }
+            }
+        });
+
+        gsap.set(paw, { y: targetY, x: 0, rotation: 0, scale: 1 });
+        tl.to(paw, { x: targetX, duration: 2, ease: "power2.out" })
+          .to(paw, { rotation: -10, scale: 1.1, duration: 0.3, ease: "back.out(2)" }, "+=0.2")
+          .add(() => {
+              if (isPawActive) {
+                  targetProduct.click();
+                  
+                  // SUSTO POR EL CLIC
+                  isRetracting = true; 
+                  gsap.killTweensOf(paw); 
+                  // HUIDA ASUSTADA: 0.8 segundos (Suficientemente rápido para ser un susto, pero visible)
+                  gsap.to(paw, { 
+                      x: 150, 
+                      rotation: 20, 
+                      duration: 0.8, 
+                      ease: "power2.in",
+                      onComplete: () => { 
+                          paw.style.display = 'none'; 
+                          isPawActive = false; 
+                          isRetracting = false; 
+                      }
+                  });
+              }
+          });
+    }
+
+    // --- ACCIÓN B: MOVER LA PANTALLA ---
+    function ejecutarTravesuraScroll() {
+        const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200;
+        const scrollAmount = isAtBottom ? -450 : 450; 
+        const centerY = (window.innerHeight / 2) - (paw.offsetHeight / 2);
+
+        const pawTimeline = gsap.timeline({ 
+            onComplete: () => { 
+                paw.style.display = 'none'; 
+                isPawActive = false; 
+            } 
+        });
+
+        gsap.set(paw, { y: centerY, x: 0, rotation: 0, scale: 1 });
+
+        pawTimeline.to(paw, { x: -120, duration: 2, ease: "power1.inOut" }) 
+                   .add(() => { isAutoScrolling = true; }) 
+                   .to(paw, { 
+                       y: centerY + (isAtBottom ? -100 : 100), 
+                       rotation: isAtBottom ? 30 : -30, 
+                       duration: 0.8, 
+                       ease: "power2.in",
+                       onStart: () => {
+                           if (window.lenis) { 
+                               window.lenis.scrollTo(window.scrollY + scrollAmount, { 
+                                   duration: 1.5,
+                                   onComplete: () => { isAutoScrolling = false; } 
+                               }); 
+                           } else { 
+                               window.scrollBy({ top: scrollAmount, behavior: 'smooth' });
+                               setTimeout(() => { isAutoScrolling = false; }, 1000);
+                           }
+                       }
+                   })
+                   // RETIRADA DE SCROLL: 1.2 segundos
+                   .to(paw, { x: 150, duration: 1.2, ease: "power2.in" });
+    }
+
+    // --- CONTROL DEL TEMPORIZADOR Y SUSTO MANUAL ---
+    function resetIdleTimer(e) {
+        if (isAutoScrolling && e && e.type === 'scroll') return;
+
+        haSucedidoTravesura = false; 
+
+        // SI EL GATO ESTÁ FUERA Y EL USUARIO MUEVE EL RATÓN
+        if (isPawActive && !isRetracting) {
+            isRetracting = true; 
+            gsap.killTweensOf(paw);
+            
+            // HUIDA MANUAL: 0.8 segundos (Movimiento fantasma suave)
+            gsap.to(paw, { 
+                x: 150, 
+                rotation: 15, 
+                scale: 1, 
+                duration: 0.8, 
+                ease: "power2.in", 
+                onComplete: () => {
+                    paw.style.display = 'none';
+                    isPawActive = false;
+                    isRetracting = false; 
+                }
+            });
+        }
+
+        clearTimeout(idleTimer);
+
+        const modalOpen = document.querySelector('.modal-overlay.active');
+        const cartOpen = document.querySelector('.cart-overlay.active');
+        const chatOpen = document.querySelector('.chatbot-window.active');
+
+        if (!modalOpen && !cartOpen && !chatOpen) {
+            idleTimer = setTimeout(triggerPawMischief, IDLE_TIME);
+        }
+    }
+
+    // Escuchadores de eventos
+    ['mousemove', 'scroll', 'keydown', 'click', 'touchstart'].forEach(evt => {
+        window.addEventListener(evt, resetIdleTimer);
+    });
+
+    resetIdleTimer({type: 'init'});
+
+    // --- HERRAMIENTA DE DEBUG PARA EL INSPECTOR (F12) ---
+    window.invocarZarpa = function() {
+        haPulsadoPostre = false; // Le borramos la memoria para que pueda volver a pulsar
+        triggerPawMischief(true); // El "true" desactiva el azar y la siesta temporalmente
+        console.log("🐈‍⬛ ¡Bakeneko invocado mediante magia de consola!");
+    };
+
 });
