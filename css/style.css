@@ -638,18 +638,18 @@ body {
 .collab-marquee-wrapper {
     position: relative;
     width: 100vw;
-    margin-left: calc(-50vw + 50%); /* Truco para romper el contenedor y ocupar toda la pantalla */
-    background: var(--c-vermilion); /* Rojo impactante */
-    color: var(--c-cream);
+    margin-left: calc(-50vw + 50%);
+    background: var(--c-indigo); /* Cambiado a Índigo para más elegancia */
+    color: var(--c-gold); /* Texto en Oro */
     padding: 12px 0;
     margin-bottom: 5rem;
     display: flex;
     align-items: center;
-    border-top: 3px solid var(--c-indigo);
-    border-bottom: 3px solid var(--c-indigo);
-    transform: rotate(-2deg); /* El toque rebelde streetwear */
+    border-top: 1px solid var(--c-gold); /* Borde fino dorado */
+    border-bottom: 1px solid var(--c-gold);
+    transform: rotate(-2deg); 
     z-index: 50;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
     transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
@@ -692,9 +692,9 @@ body {
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
-    background: var(--c-indigo);
-    color: var(--c-cream);
-    border: none;
+    background: transparent;
+    color: var(--c-gold);
+    border: 1px solid var(--c-gold);
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -709,8 +709,8 @@ body {
 }
 
 .close-collab:hover {
-    background: var(--c-cream);
-    color: var(--c-vermilion);
+    background: var(--c-gold);
+    color: var(--c-indigo);
     transform: translateY(-50%) scale(1.1);
 }
 

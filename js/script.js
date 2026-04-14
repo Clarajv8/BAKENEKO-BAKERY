@@ -71,6 +71,42 @@ document.addEventListener("DOMContentLoaded", () => {
             en: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Traditional Method. Kizuna Wineries. Serve at 5°C. Perfect structure for Tempura and Umami-rich broths.", allergens: "Contains Sulfites." },
             jp: { name: "カヴァ・ブリュット 'The Umami'", desc: "カヴァ原産地呼称。伝統的製法。Kizunaワイナリー。5°Cで提供。天ぷらや旨味豊かなスープに最適です。", allergens: "亜硫酸塩が含まれています。" },
             class: "Kitsune (Zorro)", price: 22.00, img: "assets/images/vino-theumami.jpg"
+        },
+        p10: {
+            es: { name: "Tanuki Blend", desc: "El Tanuki es glotón y terrenal. Este origen Brasil (Proceso Natural) aporta notas a chocolate que actúan como el complemento clásico para el bizcocho horneado del Dorayaki.<br><br><b>Notas:</b> Avellana, Cacao, Caramelo<br><b>Maridaje:</b> Dorayaki Clásico<br><br>Cuerpo: 🌕🌕🌕🌕🌕<br>Acidez: 🌕🌑🌑🌑🌑<br>Dulzor: 🌕🌕🌕🌕🌑", allergens: "Café de Especialidad 100% Arábica." },
+            en: { name: "Tanuki Blend", desc: "The Tanuki is gluttonous and earthy. This natural process Brazil origin brings chocolate notes that act as the classic complement to the Dorayaki.<br><br><b>Notes:</b> Hazelnut, Cocoa, Caramel<br><b>Pairing:</b> Classic Dorayaki<br><br>Body: 🌕🌕🌕🌕🌕<br>Acidity: 🌕🌑🌑🌑🌑<br>Sweetness: 🌕🌕🌕🌕🌑", allergens: "100% Arabica Specialty Coffee." },
+            jp: { name: "タヌキブレンド", desc: "タヌキは食いしん坊です。このブラジル産は、どら焼きを補完するチョコレートのノートをもたらします。<br><br><b>ノート:</b> ヘーゼルナッツ、カカオ<br><b>ペアリング:</b> どら焼き<br><br>ボディ: 🌕🌕🌕🌕🌕<br>酸味: 🌕🌑🌑🌑🌑<br>甘味: 🌕🌕🌕🌕🌑", allergens: "100%アラビカ種スペシャルティコーヒー。" },
+            class: "Tanuki (Brasil)", price: 12.00, img: "assets/images/cafe-tanuki.jpg"
+        },
+        p11: {
+            es: { name: "Kitsune Roast", desc: "El Kitsune engaña a los sentidos. Este café etíope lavado parece un té ligero, pero explota con acidez brillante que limpia el paladar tras la densa dulzura del Mochi.<br><br><b>Notas:</b> Jazmín, Melocotón blanco, Miel<br><b>Maridaje:</b> Mochi Daifuku<br><br>Acidez floral: 🌕🌕🌕🌕🌕<br>Cuerpo: 🌕🌕🌑🌑🌑<br>Complejidad: 🌕🌕🌕🌕🌑", allergens: "Café de Especialidad 100% Arábica." },
+            en: { name: "Kitsune Roast", desc: "The Kitsune deceives the senses. This washed Ethiopian coffee looks like tea but explodes with bright acidity to cleanse the palate after the Mochi.<br><br><b>Notes:</b> Jasmine, White Peach, Honey<br><b>Pairing:</b> Mochi Daifuku", allergens: "100% Arabica Specialty Coffee." },
+            jp: { name: "キツネロースト", desc: "エチオピア産のこのコーヒーは、大福餅の甘さの後に口蓋をきれいにする明るい酸味で爆発します。<br><br><b>ノート:</b> ジャスミン、白桃<br><b>ペアリング:</b> 大福餅", allergens: "100%アラビカ種スペシャルティコーヒー。" },
+            class: "Kitsune (Etiopía)", price: 14.50, img: "assets/images/cafe-kitsune.jpg"
+        },
+        p12: {
+            es: { name: "Bakeneko Sakura", desc: "El Bakeneko representa el juego primaveral. El proceso 'Honey' le da un dulzor frutal vibrante que enlaza maravillosamente con el Dango Tricolor.<br><br><b>Notas:</b> Cereza dulce, Frutos Rojos, Panela<br><b>Maridaje:</b> Dango Tricolor<br><br>Equilibrio: 🌕🌕🌕🌕🌕<br>Dulzor: 🌕🌕🌕🌕🌑<br>Intensidad: 🌕🌕🌕🌑🌑", allergens: "Café de Especialidad 100% Arábica." },
+            en: { name: "Bakeneko Sakura", desc: "The 'Honey' process gives it a vibrant fruity sweetness that links beautifully with the Tricolor Dango.<br><br><b>Notes:</b> Sweet Cherry, Red Berries, Panela<br><b>Pairing:</b> Tricolor Dango", allergens: "100% Arabica Specialty Coffee." },
+            jp: { name: "化け猫サクラ", desc: "ハニープロセスは、三色団子と美しくつながる活気に満ちたフルーティーな甘さを与えます。<br><br><b>ノート:</b> さくらんぼ、赤い果実<br><b>ペアリング:</b> 三色団子", allergens: "100%アラビカ種スペシャルティコーヒー。" },
+            class: "Bakeneko (Costa Rica)", price: 15.00, img: "assets/images/cafe-bakeneko.jpg"
+        },
+        p13: {
+            es: { name: "Kappa Cold Brew", desc: "El Kappa requiere frescor acuático. Un Cold Brew elimina el amargor y resalta la frescura, siendo la única bebida lógica para el Kuzumochi traslúcido.<br><br><b>Notas:</b> Manzana verde, Té negro, Caña de azúcar<br><b>Maridaje:</b> Kuzumochi<br><br>Frescor: 🌕🌕🌕🌕🌕<br>Limpieza en boca: 🌕🌕🌕🌕🌕<br>Amargor: 🌕🌑🌑🌑🌑", allergens: "Café de Especialidad 100% Arábica." },
+            en: { name: "Kappa Cold Brew", desc: "A Cold Brew eliminates bitterness and highlights freshness, making it the only logical drink for translucent Kuzumochi.<br><br><b>Notes:</b> Green Apple, Black Tea<br><b>Pairing:</b> Kuzumochi", allergens: "100% Arabica Specialty Coffee." },
+            jp: { name: "カッパコールドブリュー", desc: "コールドブリューは苦味を排除し、新鮮さを強調します。<br><br><b>ノート:</b> 青リンゴ、紅茶<br><b>ペアリング:</b> 葛餅", allergens: "100%アラビカ種スペシャルティコーヒー。" },
+            class: "Kappa (Colombia)", price: 11.00, img: "assets/images/cafe-kappa.jpg"
+        },
+        p14: {
+            es: { name: "Umibozu Dark", desc: "El Yokan es tan denso que aplastaría un café suave; requiere este origen de Sumatra con tueste oscuro y cuerpo muy pesado para sostener el pulso.<br><br><b>Notas:</b> Chocolate 90%, Tabaco, Especias<br><b>Maridaje:</b> Yokan Nocturno<br><br>Intensidad: 🌕🌕🌕🌕🌕<br>Cuerpo: 🌕🌕🌕🌕🌕<br>Acidez: 🌑🌑🌑🌑🌑", allergens: "Café de Especialidad 100% Arábica." },
+            en: { name: "Umibozu Dark", desc: "Requires this Sumatra origin with a dark roast and very heavy body to sustain the pulse against the Yokan.<br><br><b>Notes:</b> 90% Chocolate, Tobacco, Spices<br><b>Pairing:</b> Night Yokan", allergens: "100% Arabica Specialty Coffee." },
+            jp: { name: "海坊主ダーク", desc: "羊羹に負けない、非常に重いボディを持つスマトラ産のダークローストが必要です。<br><br><b>ノート:</b> 90%チョコレート、スパイス<br><b>ペアリング:</b> 夜の羊羹", allergens: "100%アラビカ種スペシャルティコーヒー。" },
+            class: "Umibozu (Sumatra)", price: 13.50, img: "assets/images/cafe-umibozu.jpg"
+        },
+        p15: {
+            es: { name: "Yuki-Onna Geisha", desc: "La belleza fría del Nerikiri merece el café más exclusivo del mundo (Variedad Geisha). Es tan floral y sutil que casi parece desvanecerse como la nieve.<br><br><b>Notas:</b> Flor de Azahar, Bergamota, Té blanco<br><b>Maridaje:</b> Nerikiri de Camelia<br><br>Elegancia: 🌕🌕🌕🌕🌕<br>Aroma: 🌕🌕🌕🌕🌕<br>Rareza: 🌕🌕🌕🌕🌕", allergens: "Lote Exclusivo (Variedad Geisha)." },
+            en: { name: "Yuki-Onna Geisha", desc: "The cold beauty of Nerikiri deserves the world's most exclusive coffee (Geisha variety). It is so floral it seems to fade like snow.<br><br><b>Notes:</b> Orange Blossom, Bergamot<br><b>Pairing:</b> Camellia Nerikiri", allergens: "Exclusive Lot (Geisha Variety)." },
+            jp: { name: "雪女ゲイシャ", desc: "練り切りの冷たい美しさは、世界で最も高級なコーヒー（ゲイシャ種）に値します。<br><br><b>ノート:</b> オレンジの花、ベルガモット<br><b>ペアリング:</b> 椿の練り切り", allergens: "エクスクルーシブロット（ゲイシャ種）。" },
+            class: "Yuki-Onna (Panamá)", price: 35.00, img: "assets/images/cafe-yukionna.jpg"
         }
     };
 
