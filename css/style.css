@@ -25,19 +25,6 @@ body {
     overflow-x: hidden;
 }
 
-/* --- Global Texture (Rice Paper) --- */
-.noise-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: 9000;               /* ← valor de la segunda versión */
-    opacity: 0.08;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    mix-blend-mode: multiply;
-}
 
 /* --- Fixed Elements --- */
 .main-nav {
@@ -139,39 +126,58 @@ body {
     color: var(--c-indigo);
 }
 
-/* --- Intro Section (de la primera versión - parece único) --- */
-.intro-section {
-    padding: 10rem var(--gutter);
-    background-color: var(--c-cream);
-    position: relative;
-    z-index: 10;
-}
-
-.manifesto-text {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.manifesto-text h2 {
-    font-size: 4rem;
-    margin-bottom: 2rem;
-    color: var(--c-ink);
-}
-
-.manifesto-text p {
-    font-size: 1.5rem;
-    line-height: 1.6;
-    color: #555;
+/* --- Tipografía Compacta y Premium --- */
+.tiny-title {
     font-family: var(--f-serif);
+    font-size: 1.8rem; /* Mucho más pequeña que antes */
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--c-indigo);
+    margin-bottom: 1rem;
 }
 
-.kanji-accent {
-    display: block;
-    font-size: 2rem;
+.compact-p {
+    font-size: 0.9rem; /* Letra pequeña y compacta */
+    line-height: 1.8;
+    letter-spacing: 1px;
+    max-width: 400px; /* Forzamos que el texto sea un bloque estrecho */
+    color: #666;
+}
+
+/* --- Layout de Manifiesto Asimétrico --- */
+.intro-minimal {
+    padding: 8rem 10%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.manifesto-mini-wrapper {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+.manifesto-side {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-right: 1px solid rgba(197, 163, 101, 0.3);
+    padding-right: 1.5rem;
+}
+
+.v-label {
+    writing-mode: vertical-rl;
+    font-size: 0.6rem;
+    letter-spacing: 4px;
+    color: var(--c-gold);
+}
+
+.v-kanji {
+    writing-mode: vertical-rl;
+    font-family: var(--f-jp);
+    font-size: 1.5rem;
     color: var(--c-vermilion);
-    margin-bottom: 1rem;
-    font-family: serif;
 }
 
 /* --- Collection & Organic Cards --- */
@@ -209,6 +215,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    will-change: transform, opacity;
 }
 
 .card-visual {
@@ -553,25 +560,87 @@ body {
     color: var(--c-cream);
 }
 
-/* --- Oráculo (Ruleta) --- */
-.oracle-section {
-    padding: 5rem var(--gutter);
-    background-color: var(--c-indigo);
-    color: var(--c-cream);
-    text-align: center;
+/* --- Oráculo Versión "Joyita" (Compacto) --- */
+.oracle-compact-section {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: center;
 }
 
-.oracle-box {
-    border: 1px solid var(--c-gold);
-    padding: 4rem 2rem;
-    border-radius: 20px;
-    background: radial-gradient(circle, rgba(26,38,57,1) 0%, rgba(13,13,13,1) 100%);
+.oracle-mini-box {
+    background: #fff;
+    border: 1px solid rgba(197, 163, 101, 0.2);
+    padding: 2rem 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.02);
 }
 
-.oracle-content h2 {
+.oracle-header-mini {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tiny-title-gold {
     font-family: var(--f-serif);
-    font-size: 3rem;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    color: var(--c-indigo);
+    text-transform: uppercase;
+}
+
+.v-label-gold {
+    writing-mode: vertical-rl;
+    font-size: 0.6rem;
     color: var(--c-gold);
+    letter-spacing: 2px;
+}
+
+.omikuji-stage {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.omikuji-window-small {
+    width: 80px; /* Más pequeña */
+    height: 80px;
+    background: var(--c-indigo);
+    border: 1px solid var(--c-gold);
+    overflow: hidden;
+}
+
+.rune-item {
+    height: 80px; /* Ajustado al nuevo tamaño */
+    font-size: 2.5rem;
+}
+
+.spin-btn-minimal {
+    background: transparent;
+    border: 1px solid var(--c-indigo);
+    padding: 0.5rem 1.5rem;
+    font-family: var(--f-sans);
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.spin-btn-minimal:hover {
+    background: var(--c-indigo);
+    color: var(--c-gold);
+}
+
+.oracle-tip {
+    margin-top: 1.5rem;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    color: #999;
+    text-transform: uppercase;
 }
 
 /* --- Tragaperras del Oráculo --- */
@@ -1516,3 +1585,10 @@ p, h1, h2, h3, h4, span {
     .checkout-container { grid-template-columns: 1fr; padding: 2rem 1rem; }
     .checkout-summary-col { order: -1; position: static; }
 }
+
+/* Colores específicos para los sellos de café */
+[data-id="p10"] .stamp-seal { background: var(--c-gold); color: var(--c-indigo); }
+[data-id="p11"] .stamp-seal { background: var(--c-indigo); color: var(--c-cream); }
+[data-id="p13"] .stamp-seal { background: #4A7C82; } /* Color Kappa */
+[data-id="p14"] .stamp-seal { background: var(--c-ink); }
+[data-id="p15"] .stamp-seal { background: #e0e0e0; color: var(--c-indigo); }

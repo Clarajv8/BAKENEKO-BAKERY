@@ -162,6 +162,7 @@ document.addEventListener("DOMContentLoaded", () => {
             updateCartUI();
         }
     }
+    
 
     /* =========================================
        2. SCROLL & ANIMATION (GSAP)
@@ -187,18 +188,21 @@ document.addEventListener("DOMContentLoaded", () => {
               .to(".hero-mid", { yPercent: 15 }, 0)
               .to(".hero-content", { yPercent: 60, opacity: 0 }, 0);
 
-        const cards = document.querySelectorAll('.product-card');
-        cards.forEach((card, i) => {
-            gsap.fromTo(card, 
-                { y: 150, opacity: 0 },
-                {
-                    y: 0, opacity: 1,
-                    duration: 1.2,
-                    ease: "elastic.out(1, 0.75)",
-                    scrollTrigger: { trigger: card, start: "top 90%" },
-                    delay: i * 0.1
-                }
-            );
+        ScrollTrigger.batch(".product-card", {
+            start: "top 85%",
+            once: true, // ✨ LA MAGIA: Solo se anima la primera vez que lo ves
+            onEnter: (batch) => {
+                gsap.fromTo(batch,
+                    { y: 50, opacity: 0 }, // He bajado el salto de 80 a 50 para que sea más sutil
+                    {
+                        y: 0, 
+                        opacity: 1,
+                        duration: 0.8,
+                        stagger: 0.15,
+                        ease: "power2.out"
+                    }
+                );
+            }
         });
     }
 
@@ -220,7 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const data = productsDB[id];
         
         modalTitle.innerText = data[lang].name;
-        modalDesc.innerText = data[lang].desc;
+        modalDesc.innerHTML = data[lang].desc;
         modalClass.innerText = `${translations[lang].yokaiClass} ${data.class}`;
         document.querySelector('[data-i18n="allergenLabel"]').innerText = translations[lang].allergenLabel;
         document.getElementById('active-allergens').innerText = data[lang].allergens;
@@ -813,5 +817,9 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.appendChild(stamp);
         setTimeout(() => stamp.remove(), 4000);
     });
+
+    window.addEventListener('load', () => {
+    ScrollTrigger.refresh();
+});
 
 });

@@ -1,0 +1,138 @@
+:root {
+    --c-indigo: #0d121d;
+    --c-cream: #f4f1ea;
+    --c-gold: #c5a365;
+    --f-serif: 'Cormorant Garamond', serif;
+    --f-jp: 'Noto Serif JP', serif;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body.landing-page {
+    background-color: var(--c-indigo);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Prohíbe el scroll */
+    font-family: var(--f-serif);
+    color: var(--c-cream);
+}
+
+/* --- FONDO DINÁMICO --- */
+.landing-bg {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+}
+
+.bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6; /* Video sutil */
+}
+
+.bg-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, transparent 20%, var(--c-indigo) 100%);
+}
+
+/* --- LOGO CENTRAL --- */
+.landing-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+}
+
+.main-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-logo .kanji {
+    font-family: var(--f-jp);
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 15px;
+    margin-bottom: 1rem;
+    background: linear-gradient(to bottom, var(--c-gold), #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-logo .latin {
+    font-size: 1.5rem;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.main-logo small { font-weight: 300; letter-spacing: 2px; }
+
+.tagline {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    opacity: 0.7;
+}
+
+/* --- NAVEGACIÓN EN ESQUINAS --- */
+.nav-corner {
+    position: absolute;
+    z-index: 20;
+    padding: 3rem;
+}
+
+.top-left { top: 0; left: 0; }
+.top-right { top: 0; right: 0; }
+.bottom-left { bottom: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+
+.nav-link {
+    text-decoration: none;
+    color: var(--c-cream);
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.6;
+    transition: opacity 0.4s;
+    background: none; border: none; cursor: pointer;
+}
+
+.nav-link span { font-size: 0.6rem; opacity: 0.5; }
+.nav-link:hover { opacity: 1; color: var(--c-gold); }
+
+/* --- BOTÓN ENTRAR (ESQUINA INFERIOR DERECHA) --- */
+.enter-btn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--c-gold);
+    border: 1px solid rgba(197, 163, 101, 0.3);
+    padding: 1.5rem 2.5rem;
+    transition: all 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+.btn-text {
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+}
+
+.btn-kanji {
+    font-family: var(--f-jp);
+    font-size: 1.8rem;
+}
+
+.enter-btn:hover {
+    background: var(--c-gold);
+    color: var(--c-indigo);
+    border-color: var(--c-gold);
+    transform: scale(1.05);
+}
