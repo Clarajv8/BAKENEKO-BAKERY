@@ -58,55 +58,11 @@ body {
 }
 .lang-btn:hover { transform: scale(1.05); }
 
-/* --- Hero --- */
-.hero-section {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.logo {
+    text-decoration: none; 
+    color: inherit;       
+    display: flex;        
     align-items: center;
-    text-align: center;
-}
-
-.parallax-layer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 120%;
-}
-
-.hero-bg {
-    background: radial-gradient(circle at center, #2a3d55 0%, var(--c-indigo) 80%);
-    z-index: 1;
-}
-
-.hero-content {
-    z-index: 3;
-    position: relative;
-    color: var(--c-cream);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.hero-title {
-    font-size: 8vw;
-    font-family: var(--f-serif);
-    text-transform: uppercase;
-    line-height: 0.9;
-    margin: 1rem 0;
-    text-shadow: 0 10px 30px rgba(0,0,0,0.3);
-}
-
-.pre-title,
-.sub-title {
-    letter-spacing: 0.1em;
-    opacity: 0.9;
 }
 
 .cta-btn {
@@ -144,11 +100,74 @@ body {
     color: #666;
 }
 
-/* --- Layout de Manifiesto Asimétrico --- */
+/* --- Intro Staggered (Layout Premium) --- */
 .intro-minimal {
-    padding: 8rem 10%;
+    padding: 12rem 10%;
+    background-color: var(--c-cream);
+}
+
+.intro-staggered {
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    gap: 10rem; /* Gran espacio entre los dos bloques */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.intro-block {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+/* Bloque Identidad (Izquierda) */
+.block-who {
+    align-self: flex-start;
+}
+
+/* Bloque Filosofía (Derecha) */
+.block-concept {
+    align-self: flex-end;
+}
+
+.vertical-marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    border-right: 1px solid rgba(197, 163, 101, 0.3);
+    padding-right: 1.5rem;
+}
+
+.marker-right {
+    border-right: none;
+    border-left: 1px solid rgba(197, 163, 101, 0.3);
+    padding-right: 0;
+    padding-left: 1.5rem;
+}
+
+.block-content.align-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Reutilizamos tus estilos existentes para títulos y párrafos */
+.tiny-title {
+    font-family: var(--f-serif);
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--c-indigo);
+    margin-bottom: 1.5rem;
+}
+
+.compact-p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #666;
+    max-width: 450px;
 }
 
 .manifesto-mini-wrapper {
