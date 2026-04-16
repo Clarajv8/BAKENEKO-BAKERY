@@ -218,118 +218,229 @@ body {
     padding-bottom: 10px;
 }
 
-.product-grid {
+/* =========================================
+   GALERÍA DE PRODUCTOS (ESTILO BOUTIQUE MÍSTICA)
+   ========================================= */
+
+/* --- La Cuadrícula (Mucho más aire y asimetría extrema) --- */
+.products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 4rem;
-    margin-top: 3rem;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12rem 4rem; /* Separación vertical bestial para que parezcan expositores únicos */
+    width: 100%;
+    max-width: 1200px; /* Más estrecho para estilizar el conjunto */
+    margin: 0 auto;
+    padding: 8rem 0;
 }
 
+/* El de en medio baja drásticamente, creando un ritmo de "zigzag" muy premium */
+@media (min-width: 1024px) {
+    .product-card:nth-child(3n + 2) {
+        transform: translateY(10rem);
+    }
+}
+
+@media (max-width: 1023px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8rem 3rem;
+    }
+    .product-card:nth-child(3n + 2) { transform: translateY(0); }
+    .product-card:nth-child(even) { transform: translateY(6rem); }
+}
+
+@media (max-width: 600px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 6rem 0;
+        padding: 2rem 5%;
+    }
+    .product-card:nth-child(even) { transform: translateY(0); }
+}
+
+/* --- La Tarjeta --- */
 .product-card {
-    cursor: pointer;
-    opacity: 0; /* para GSAP reveal */
+    background: transparent;
     display: flex;
     flex-direction: column;
     align-items: center;
-    will-change: transform, opacity;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px; /* Tarjetas muy esbeltas y contenidas */
+    margin: 0 auto;
 }
 
+/* --- El Lienzo: FORMA DE ARCO / PORTAL --- */
 .card-visual {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1; 
-    transition: transform 0.6s cubic-bezier(0.2, 1, 0.3, 1);
+    aspect-ratio: 2 / 3; /* Proporción muy alta, como un cuadro de galería */
+    overflow: visible; 
 }
 
-.ink-mask {
+.visual-inner {
     width: 100%;
     height: 100%;
+    /* AQUÍ ESTÁ LA MAGIA: Borde superior muy redondeado, inferior plano */
+    border-radius: 10rem 10rem 0 0; 
     overflow: hidden;
-    background: #ccc;
-    border-radius: 50%; /* Círculo perfecto */
-    transition: border-radius 0.8s ease-in-out, box-shadow 0.6s ease;
-    box-shadow: 10px 10px 30px rgba(26, 38, 57, 0.1);
+    position: relative;
+    background-color: rgba(26, 38, 57, 0.03);
+    /* Una sombra larguísima y difuminada que da sensación de levitación */
+    box-shadow: 0 30px 60px rgba(26, 38, 57, 0.08);
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), box-shadow 0.8s ease;
 }
 
 .product-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: sepia(30%) contrast(1.1);
-    transition: transform 0.8s ease, filter 0.5s ease;
+    transition: transform 1.5s cubic-bezier(0.2, 1, 0.3, 1); /* Zoom ultra lento */
 }
 
-.product-card:hover .ink-mask {
-    border-radius: 42% 58% 45% 55% / 55% 45% 58% 42%; 
-    box-shadow: 15px 15px 40px rgba(26, 38, 57, 0.2);
+/* El Hover: El portal se eleva y la imagen hace un zoom lento */
+.product-card:hover .visual-inner {
+    transform: translateY(-15px);
+    box-shadow: 0 40px 80px rgba(26, 38, 57, 0.12);
 }
 
 .product-card:hover .product-img {
-    transform: scale(1.1);
-    filter: sepia(0%);
+    transform: scale(1.05); 
 }
 
-.product-card:hover .card-visual {
-    transform: translateY(-10px);
-}
-
+/* --- El Sello Hanko (Rompiendo el borde) --- */
 .stamp-seal {
     position: absolute;
-    top: -10px;
-    right: -10px;
-    width: 50px;
-    height: 50px;
+    /* Colocado justo en el corte donde empieza el arco, rompiendo la geometría */
+    top: 60%; 
+    right: -15px; 
+    z-index: 2;
+    width: 45px;
+    height: 45px;
     background: var(--c-vermilion);
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    font-family: var(--f-jp);
+    box-shadow: 2px 4px 15px rgba(214, 64, 69, 0.3);
+    transform: rotate(8deg); 
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .stamp-seal {
+    transform: rotate(-5deg) scale(1.1); /* El sello reacciona al pasar el ratón */
+}
+
+/* --- Botón Quick-Add --- */
+.quick-add-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    width: 40px;
+    height: 40px;
+    background: var(--c-indigo);
+    color: var(--c-gold);
+    border: none;
     border-radius: 50%;
-    font-weight: bold;
-    font-family: serif;
-    box-shadow: 0 4px 10px rgba(214, 64, 69, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: 3;
 }
 
-.card-info {
-    text-align: center;
-    margin-top: 1rem;
+.product-card:hover .quick-add-btn {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
-.card-info h4 {
+.quick-add-btn:hover {
+    background: var(--c-gold);
+    color: var(--c-indigo);
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* --- Tipografía (Con un poco de aire para respirar) --- */
+.product-info {
+    margin-top: 2.5rem; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.yokai-class {
+    font-size: 0.65rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--c-gold);
+}
+
+.product-card h3 {
     font-family: var(--f-serif);
     font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    color: var(--c-indigo);
+    margin: 0;
+    font-weight: 400;
 }
 
-.price,
-.type {
-    font-family: var(--f-sans);
-    color: var(--c-gold);
-    font-weight: 500;
-}
-
-.type {
-    font-size: 0.8rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+.price {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    color: rgba(26, 38, 57, 0.5);
+    margin-top: 0.5rem;
 }
 
 
-/* --- Texto en Estado de Tinta --- */
-.ink-content-to-reveal {
-    opacity: 1; /* Siempre visible */
-    filter: url(#sumie-filter); /* Aplicamos la deformación inicial */
-    transition: none;
-    will-change: filter; /* Optimización para que vaya fluido */
+
+
+/* --- Ventana Cinematográfica (Editorial) --- */
+.cinematic-window {
+    position: relative;
+    width: 100vw;
+    height: 70vh; 
+    overflow: hidden;
+    background-color: var(--c-indigo);
 }
 
-/* Opcional: un poco de desenfoque inicial que también quitaremos */
+.cinematic-video {
+    width: 100%;
+    height: 120%; /* Más alto que su contenedor para permitir el efecto Parallax */
+    object-fit: cover;
+    opacity: 0.85; /* Un poco translúcido para que sea elegante */
+}
+
+/* El fundido mágico hacia la sección crema */
+.cinematic-fade {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25vh;
+    /* Degradado optimizado para fundir al 100% con el fondo de la web sin cortes */
+    background: linear-gradient(to bottom, transparent 0%, var(--c-cream) 95%, var(--c-cream) 100%);
+    pointer-events: none;
+}
+
+
+/* --- Texto en Estado de Tinta Fragmentada --- */
 .reveal-ink-wrapper {
-    filter: blur(2px); 
-    transition: filter 0.5s ease;
+    opacity: 0; /* Empieza invisible */
+    transition: none;
+}
+
+.ink-content-to-reveal {
+    opacity: 1; 
+    filter: url(#sumie-filter); /* Aplica la deformación masiva inicial */
+    will-change: filter; 
 }
 
 /* --- 2D Modal (Reemplaza al 3D) --- */
@@ -594,148 +705,122 @@ body {
     color: var(--c-cream);
 }
 
-/* --- Oráculo Versión "Joyita" (Compacto) --- */
-.oracle-compact-section {
-    padding: 4rem 0;
+/* --- Oráculo Evolucionado (Artefacto Flotante) --- */
+.oracle-minimal {
+    padding: 15rem 0; /* Más espacio para separar el catálogo del footer */
+    /* Un fondo radial que da la sensación de un foco iluminando el amuleto */
+    background: radial-gradient(circle at center, #1a2639 0%, var(--c-indigo) 100%);
+    color: var(--c-cream);
     display: flex;
     justify-content: center;
 }
 
-.oracle-mini-box {
-    background: #fff;
-    border: 1px solid rgba(197, 163, 101, 0.2);
-    padding: 2rem 3rem;
+.oracle-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.02);
+    gap: 4rem;
+    text-align: center;
 }
 
-.oracle-header-mini {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-}
-
-.tiny-title-gold {
-    font-family: var(--f-serif);
-    font-size: 1.2rem;
-    letter-spacing: 4px;
-    color: var(--c-indigo);
-    text-transform: uppercase;
-}
-
-.v-label-gold {
-    writing-mode: vertical-rl;
-    font-size: 0.6rem;
+.oracle-text .tiny-title {
     color: var(--c-gold);
-    letter-spacing: 2px;
 }
 
-.omikuji-stage {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+.oracle-text .compact-p {
+    color: rgba(244, 241, 234, 0.7);
+    margin: 0 auto;
 }
 
-.omikuji-window-small {
-    width: 80px; /* Más pequeña */
-    height: 80px;
-    background: var(--c-indigo);
-    border: 1px solid var(--c-gold);
-    overflow: hidden;
-}
-
-.rune-item {
-    height: 80px; /* Ajustado al nuevo tamaño */
-    font-size: 2.5rem;
-}
-
-.spin-btn-minimal {
-    background: transparent;
-    border: 1px solid var(--c-indigo);
-    padding: 0.5rem 1.5rem;
-    font-family: var(--f-sans);
-    font-size: 0.7rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+.oracle-interactive {
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.spin-btn-minimal:hover {
-    background: var(--c-indigo);
-    color: var(--c-gold);
-}
-
-.oracle-tip {
-    margin-top: 1.5rem;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    color: #999;
-    text-transform: uppercase;
-}
-
-/* --- Tragaperras del Oráculo --- */
-.omikuji-window {
-    width: 120px;
-    height: 120px;
-    background: #000;
-    border: 3px solid var(--c-vermilion);
-    border-radius: 8px;
-    overflow: hidden; /* Vital: Corta las runas que se salen de la caja */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
-    margin: 2rem auto;
-    /* Sombras para dar profundidad de tubo giratorio */
-    box-shadow: inset 0 20px 20px -10px rgba(0,0,0,0.9), 
-                inset 0 -20px 20px -10px rgba(0,0,0,0.9), 
-                0 0 20px rgba(220, 70, 50, 0.2);
+    padding: 40px; 
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(197, 163, 101, 0.1);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    
+    animation: glow-gold 4s ease-in-out infinite; 
+}
+
+.oracle-interactive:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 50px rgba(197, 163, 101, 0.25);
+    animation: none; 
+}
+
+@keyframes glow-gold {
+    0% { 
+        box-shadow: 0 0 15px rgba(197, 163, 101, 0.02); 
+    }
+    50% { 
+        /* box-shadow: 0 0 60px #2d4161;  */
+        box-shadow: 0 0 60px var(--c-gold); 
+    }
+    100% { 
+        box-shadow: 0 0 15px rgba(197, 163, 101, 0.02); 
+    }
+}
+
+.rune-window {
+    width: 90px;
+    height: 120px; 
+    border: 2px solid rgba(197, 163, 101, 0.4); /* Borde dorado más sólido */
+    border-radius: 60px;
+    overflow: hidden;
+    position: relative;
+    background: rgba(255, 255, 255, 0.02);
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.window-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, var(--c-indigo) 0%, transparent 25%, transparent 75%, var(--c-indigo) 100%);
+    pointer-events: none;
 }
 
 .rune-strip {
     display: flex;
     flex-direction: column;
     align-items: center;
+    will-change: transform, filter;
 }
 
 .rune-item {
-    height: 120px; /* Exactamente igual que la ventana para que encaje perfecto */
+    height: 120px; 
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 5rem;
+    font-size: 3rem;
+    font-family: var(--f-jp);
     color: var(--c-gold);
-    font-family: var(--f-serif); /* Usamos tu fuente Serif */
-    text-shadow: 0 0 15px rgba(197, 163, 101, 0.6);
 }
 
-
-.collab-subtitle {
-    font-family: var(--f-sans);
-    font-size: 0.85rem;
+/* Instrucción Sutil (El nuevo Ghost Button Integrado) */
+.oracle-instruction {
+    margin-top: 1.5rem;
+    padding: 10px 25px;
+    border: 1px solid rgba(197, 163, 101, 0.4);
+    border-radius: 30px;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    letter-spacing: 3px;
-    color: var(--c-vermilion);
-    display: block;
-    margin-bottom: 0.8rem;
-    font-weight: 700;
-}
-
-.collab-title {
-    font-family: var(--f-serif);
-    font-size: 2.2rem;
-    color: var(--c-indigo);
-    margin-bottom: 1rem;
-    line-height: 1;
-}
-
-.x-mark {
     color: var(--c-gold);
-    font-weight: 300;
-    margin: 0 0.5rem;
-    font-size: 1.8rem;
+    transition: all 0.3s ease;
 }
+
+/* Cuando pasas el ratón por el artefacto, el botón se ilumina */
+.oracle-interactive:hover .oracle-instruction {
+    background: var(--c-gold);
+    color: var(--c-indigo);
+    border-color: var(--c-gold);
+    letter-spacing: 5px;
+}
+
 
 /* --- Banner Colaboración (Estilo Street / Marquee) --- */
 .collab-marquee-wrapper {
@@ -772,7 +857,6 @@ body {
 
 .marquee-content {
     display: flex;
-    /* 15s es la velocidad. Cámbialo si quieres que vaya más rápido o lento */
     animation: scroll-marquee 15s linear infinite; 
     font-family: var(--f-sans);
     font-weight: 700;
@@ -937,7 +1021,7 @@ body {
 
 /* --- Controles de Cantidad en la Cesta --- */
 .cart-item {
-    align-items: flex-start; /* Alineamos arriba por si el texto crece */
+    align-items: flex-start; 
 }
 
 .cart-item-info {

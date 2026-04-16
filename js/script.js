@@ -5,15 +5,15 @@ document.addEventListener("DOMContentLoaded", () => {
        ========================================= */
     const translations = {
         es: {
-            cart: "Cesta", pretitle: "Portal al Reino Yokai", subtitle: "El Refugio de los Espíritus Dulces", cta: "Entrar al Portal", introTitle: "Dulzura Entre Mundos", introText: "No horneamos para el hambre del cuerpo, sino para los antojos del alma. Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna y la quietud antigua.", collectionTitle: "La Colección", addToCart: "Añadir a la Cesta", oracleTitle: "El Oráculo del Bakeneko", oracleDesc: "¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.", oracleBtn: "Consultar al Oráculo", tabAll: "El Grimorio Completo", tabDesserts: "Postres Yokai", tabWines: "Vinos Espirituales", collabSub: "Colaboración Exclusiva", collabDesc: "El equilibrio perfecto entre el Wagashi tradicional y la enología premium. Un maridaje de leyenda diseñado para despertar a los espíritus.", collabMarquee: "✦ BAKENEKO × BODEGAS KIZUNA ✦ MARIDAJE EXCLUSIVO ", cartTitle: "Tu Selección", cartEmpty: "El grimorio está vacío.", cartTotal: "Total Ritual:", cartCheckout: "Completar Invocación", cartAdded: "¡Añadido!", checkoutTitle: "Sellar el Pacto", checkoutSub: "Prepara tu ofrenda para recibir los elixires y wagashi.", checkoutShipping: "Destino del Ritual", chkName: "Nombre del Mortal", chkAddress: "Dirección (Plano Terrenal)", checkoutPayment: "Ofrenda de Intercambio", chkCard: "Runas de la Tarjeta (16 dígitos)", chkExp: "Caducidad (MM/AA)", chkSubmit: "Confirmar Invocación", successTitle: "Pacto Sellado", successText: "Los espíritus han aceptado tu ofrenda. Tu pedido está en camino a través del portal.", backToRealm: "Volver al Reino", returnStore: "← Volver al Grimorio", selectZone: "Selecciona tu Reino...", summaryTitle: "Resumen de Invocación", summarySub: "Subtotal", summaryShip: "Envío (Portal)", summaryTotal: "Total Ritual", yokaiClass: "Espíritu Guardián:", allergenLabel: "Alérgenos:", unit: "/ ud", botName: "Espíritu Bakeneko", botStatus: "Guardián del Grimorio", ftBio: "Dulzura entre mundos. Unimos la tradición del wagashi con la vanguardia, guiados por el Bakeneko.",
+            cart: "Cesta", pretitle: "Portal al Reino Yokai", subtitle: "El Refugio de los Espíritus Dulces", cta: "Entrar al Portal", introTitle: "Dulzura Entre Mundos", introText: "No horneamos para el hambre del cuerpo, sino para los antojos del alma. Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna y la quietud antigua.", collectionTitle: "La Colección", addToCart: "Añadir a la Cesta", oracleTitle: "El Oráculo del Bakeneko", oracleDesc: "¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.", oracleBtn: "Consultar al Oráculo", tabAll: "El Grimorio Completo", tabDesserts: "Postres Yokai", tabWines: "Vinos Espirituales", collabSub: "Colaboración Exclusiva", collabDesc: "El equilibrio perfecto entre el Wagashi tradicional y la enología premium. Un maridaje de leyenda diseñado para despertar a los espíritus.", collabMarquee: "✦ BAKENEKO × SYRA COFFEE × BODEGAS KIZUNA ✦ EL GRIMORIO DE LOS 6 REINOS ✦ ", cartTitle: "Tu Selección", cartEmpty: "El grimorio está vacío.", cartTotal: "Total Ritual:", cartCheckout: "Completar Invocación", cartAdded: "¡Añadido!", checkoutTitle: "Sellar el Pacto", checkoutSub: "Prepara tu ofrenda para recibir los elixires y wagashi.", checkoutShipping: "Destino del Ritual", chkName: "Nombre del Mortal", chkAddress: "Dirección (Plano Terrenal)", checkoutPayment: "Ofrenda de Intercambio", chkCard: "Runas de la Tarjeta (16 dígitos)", chkExp: "Caducidad (MM/AA)", chkSubmit: "Confirmar Invocación", successTitle: "Pacto Sellado", successText: "Los espíritus han aceptado tu ofrenda. Tu pedido está en camino a través del portal.", backToRealm: "Volver al Reino", returnStore: "← Volver al Grimorio", selectZone: "Selecciona tu Reino...", summaryTitle: "Resumen de Invocación", summarySub: "Subtotal", summaryShip: "Envío (Portal)", summaryTotal: "Total Ritual", yokaiClass: "Espíritu Guardián:", allergenLabel: "Alérgenos:", unit: "/ ud", botName: "Espíritu Bakeneko", botStatus: "Guardián del Grimorio", ftBio: "Dulzura entre mundos. Unimos la tradición del wagashi con la vanguardia, guiados por el Bakeneko.",
             ftQuickLinks: "Enlaces Rápidos", ftShop: "El Grimorio (Tienda)", ftFAQ: "Preguntas Frecuentes", ftTrack: "Rastrear Ofrenda", ftLegal: "Legal y Transparencia", ftPrivacy: "Política de Privacidad", ftTerms: "Términos del Pacto (TOS)", ftAllergensInfo: "Guía de Alérgenos", ftContactAcc: "Atención y Cuenta", ftContactUs: "📞 Habla con un Monje", ftMyAccount: "👤 Mi Cuenta / Iniciar Sesión", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "CONCEPTO", navSocial: "REDES", enterShop: "ENTRAR AL GRIMORIO", vLabelEssence: "ESENCIA", vLabelConcept: "CONCEPTO", introWhoTitle: "Artesanía de otro mundo", introWhoText: "Bakeneko Bakery no es una pastelería convencional. Somos un espacio donde la técnica milenaria del Wagashi se encuentra con el misticismo. Cada pieza es una ofrenda esculpida a mano para conectar el paladar con la mitología japonesa."
         },
         en: {
-            cart: "Cart", pretitle: "Gateway to the Yokai Realm", subtitle: "Sanctuary of Sweet Spirits", cta: "Enter the Portal", introTitle: "Sweetness Between Worlds", introText: "We do not bake for the body's hunger, but for the soul's cravings. Guided by the Bakeneko, our sweets bridge the gap between modern rush and ancient stillness.", collectionTitle: "The Collection", addToCart: "Add to Cart", oracleTitle: "The Bakeneko Oracle", oracleDesc: "In doubt? Let fate choose the spirit your soul needs today.", oracleBtn: "Consult the Oracle", tabAll: "The Complete Grimoire", tabDesserts: "Yokai Sweets", tabWines: "Spiritual Wines", collabSub: "Exclusive Collaboration", collabDesc: "The perfect balance between traditional Wagashi and premium oenology. A legendary pairing designed to awaken the spirits.", collabMarquee: "✦ BAKENEKO × BODEGAS KIZUNA ✦ EXCLUSIVE PAIRING DROP ", cartTitle: "Your Selection", cartEmpty: "The grimoire is empty.", cartTotal: "Ritual Total:", cartCheckout: "Complete Invocation", cartAdded: "Added!", checkoutTitle: "Seal the Pact", checkoutSub: "Prepare your offering to receive the elixirs and wagashi.", checkoutShipping: "Ritual Destination", chkName: "Mortal's Name", 
+            cart: "Cart", pretitle: "Gateway to the Yokai Realm", subtitle: "Sanctuary of Sweet Spirits", cta: "Enter the Portal", introTitle: "Sweetness Between Worlds", introText: "We do not bake for the body's hunger, but for the soul's cravings. Guided by the Bakeneko, our sweets bridge the gap between modern rush and ancient stillness.", collectionTitle: "The Collection", addToCart: "Add to Cart", oracleTitle: "The Bakeneko Oracle", oracleDesc: "In doubt? Let fate choose the spirit your soul needs today.", oracleBtn: "Consult the Oracle", tabAll: "The Complete Grimoire", tabDesserts: "Yokai Sweets", tabWines: "Spiritual Wines", collabSub: "Exclusive Collaboration", collabDesc: "The perfect balance between traditional Wagashi and premium oenology. A legendary pairing designed to awaken the spirits.", collabMarquee: "✦ BAKENEKO × SYRA COFFEE × BODEGAS KIZUNA ✦ THE GRIMOIRE OF THE 6 REALMS ✦ ", cartTitle: "Your Selection", cartEmpty: "The grimoire is empty.", cartTotal: "Ritual Total:", cartCheckout: "Complete Invocation", cartAdded: "Added!", checkoutTitle: "Seal the Pact", checkoutSub: "Prepare your offering to receive the elixirs and wagashi.", checkoutShipping: "Ritual Destination", chkName: "Mortal's Name", 
             chkAddress: "Address (Earthly Plane)", checkoutPayment: "Exchange Offering", chkCard: "Card Runes (16 digits)", chkExp: "Expiry (MM/YY)", chkSubmit: "Confirm Invocation", successTitle: "Pact Sealed", successText: "The spirits have accepted your offering. Your order is on its way through the portal.", backToRealm: "Return to Realm", returnStore: "← Return to Grimoire", selectZone: "Select your Realm...", summaryTitle: "Invocation Summary", summarySub: "Subtotal", summaryShip: "Shipping (Portal)", summaryTotal: "Ritual Total", yokaiClass: "Guardian Spirit:", allergenLabel: "Allergens:", unit: "/ ea", botName: "Bakeneko Spirit", botStatus: "Grimoire Guardian", ftBio: "Sweetness between worlds. We blend wagashi tradition with the avant-garde, guided by the Bakeneko.", ftQuickLinks: "Quick Links", ftShop: "The Grimoire (Shop)", ftFAQ: "Frequently Asked Questions",  ftTrack: "Track Offering",  ftLegal: "Legal & Transparency", ftPrivacy: "Privacy Policy", ftTerms: "Terms of the Pact (TOS)", ftAllergensInfo: "Allergen Guide", ftContactAcc: "Support & Account", ftContactUs: "📞 Speak with a Monk", ftMyAccount: "👤 My Account / Login", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "CONCEPT", navSocial: "SOCIALS", enterShop: "ENTER THE GRIMOIRE", vLabelEssence: "ESSENCE", vLabelConcept: "CONCEPT", introWhoTitle: "Otherworldly Craft", introWhoText: "Bakeneko Bakery is not a conventional pastry shop. We are a space where ancient Wagashi techniques meet mysticism. Each piece is a hand-sculpted offering to connect your palate with Japanese mythology."
         },
         jp: {
-            cart: "カート", pretitle: "妖怪のレルムへの入り口", subtitle: "甘い精霊の聖域", cta: "ポータルに入る", introTitle: "世界の間の甘さ", introText: "私たちは体の飢えのためではなく、魂の渇望のために焼きます。化け猫に導かれ、私たちのスイーツは現代の慌ただしさと古代の静けさの間の架け橋となります。", collectionTitle: "コレクション", addToCart: "カートに追加", oracleTitle: "化け猫の神託", oracleDesc: "迷っていますか？今日あなたの魂が必要とする精霊を運命に選ばせましょう。", oracleBtn: "神託を伺う", tabAll: "完全な魔導書", tabDesserts: "妖怪のスイーツ", tabWines: "霊的なワイン", collabSub: "特別コラボレーション", collabDesc: "伝統的な和菓子と高級ワインの完璧なバランス。精霊を目覚めさせるためにデザインされた伝説のペアリング。", collabMarquee: "✦ 化け猫 × KIZUNAワイナリー ✦ 特別なペアリング ", cartTitle: "あなたの選択", cartEmpty: "魔導書は空です。", cartTotal: "儀式の合計:", cartCheckout: "召喚を完了する", cartAdded: "追加されました！", checkoutTitle: "契約を結ぶ", checkoutSub: "お供え物を準備して、霊薬と和菓子を受け取ります。", checkoutShipping: "儀式の目的地", chkName: "定命の者の名前", chkAddress: "住所（現世）", checkoutPayment: "交換の供物", chkCard: "カードのルーン（16桁）", chkExp: "有効期限 (MM/YY)", chkSubmit: "召喚を確認する", successTitle: "契約完了", successText: "精霊たちがあなたの供物を受け入れました。ご注文はポータルを通って向かっています。", backToRealm: "レルムに戻る", returnStore: "← 魔導書に戻る", selectZone: "領域を選択...", summaryTitle: "召喚の概要", summarySub: "小計", summaryShip: "送料（ポータル）", summaryTotal: "儀式の合計", yokaiClass: "守護霊:", allergenLabel: "アレルギー物質:", unit: "/ 個", botName: "化け猫の精霊", botStatus: "魔導書の守護者", ftBio: "世界の間の甘さ。化け猫に導かれ、和菓子の伝統とアバンギャルドを融合させています。", ftQuickLinks: "クイックリンク", ftShop: "魔導書（ショップ）", ftFAQ: "よくある質問", ftTrack: "供物の追跡", ftLegal: "法的情報と透明性", ftPrivacy: "プライバシーポリシー", ftTerms: "契約条件（TOS）", ftAllergensInfo: "アレルギーガイド", ftContactAcc: "サポートとアカウント", ftContactUs: "📞 僧侶と話す", ftMyAccount: "👤 マイアカウント / ログイン", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "理念", navSocial: "縁", enterShop: "魔導書へ入る", vLabelEssence: "本質", vLabelConcept: "理念", introWhoTitle: "異世界の職人技", introWhoText: "化け猫ベーカリーは、単なる菓子店ではありません。千年の歴史を持つ和菓子の技術と神秘主義が融合する場所です。一つひとつが、日本の神話とあなたの味覚を繋ぐために手作りされた供物なのです。"
+            cart: "カート", pretitle: "妖怪のレルムへの入り口", subtitle: "甘い精霊の聖域", cta: "ポータルに入る", introTitle: "世界の間の甘さ", introText: "私たちは体の飢えのためではなく、魂の渇望のために焼きます。化け猫に導かれ、私たちのスイーツは現代の慌ただしさと古代の静けさの間の架け橋となります。", collectionTitle: "コレクション", addToCart: "カートに追加", oracleTitle: "化け猫の神託", oracleDesc: "迷っていますか？今日あなたの魂が必要とする精霊を運命に選ばせましょう。", oracleBtn: "神託を伺う", tabAll: "完全な魔導書", tabDesserts: "妖怪のスイーツ", tabWines: "霊的なワイン", collabSub: "特別コラボレーション", collabDesc: "伝統的な和菓子と高級ワインの完璧なバランス。精霊を目覚めさせるためにデザインされた伝説のペアリング。", collabMarquee: "✦ 化け猫 × SYRA COFFEE × KIZUNAワイナリー ✦ 六つの領域の魔導書 ✦ ", cartTitle: "あなたの選択", cartEmpty: "魔導書は空です。", cartTotal: "儀式の合計:", cartCheckout: "召喚を完了する", cartAdded: "追加されました！", checkoutTitle: "契約を結ぶ", checkoutSub: "お供え物を準備して、霊薬と和菓子を受け取ります。", checkoutShipping: "儀式の目的地", chkName: "定命の者の名前", chkAddress: "住所（現世）", checkoutPayment: "交換の供物", chkCard: "カードのルーン（16桁）", chkExp: "有効期限 (MM/YY)", chkSubmit: "召喚を確認する", successTitle: "契約完了", successText: "精霊たちがあなたの供物を受け入れました。ご注文はポータルを通って向かっています。", backToRealm: "レルムに戻る", returnStore: "← 魔導書に戻る", selectZone: "領域を選択...", summaryTitle: "召喚の概要", summarySub: "小計", summaryShip: "送料（ポータル）", summaryTotal: "儀式の合計", yokaiClass: "守護霊:", allergenLabel: "アレルギー物質:", unit: "/ 個", botName: "化け猫の精霊", botStatus: "魔導書の守護者", ftBio: "世界の間の甘さ。化け猫に導かれ、和菓子の伝統とアバンギャルドを融合させています。", ftQuickLinks: "クイックリンク", ftShop: "魔導書（ショップ）", ftFAQ: "よくある質問", ftTrack: "供物の追跡", ftLegal: "法的情報と透明性", ftPrivacy: "プライバシーポリシー", ftTerms: "契約条件（TOS）", ftAllergensInfo: "アレルギーガイド", ftContactAcc: "サポートとアカウント", ftContactUs: "📞 僧侶と話す", ftMyAccount: "👤 マイアカウント / ログイン", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "理念", navSocial: "縁", enterShop: "魔導書へ入る", vLabelEssence: "本質", vLabelConcept: "理念", introWhoTitle: "異世界の職人技", introWhoText: "化け猫ベーカリーは、単なる菓子店ではありません。千年の歴史を持つ和菓子の技術と神秘主義が融合する場所です。一つひとつが、日本の神話とあなたの味覚を繋ぐために手作りされた供物なのです。"
         }
     };
 
@@ -167,6 +167,10 @@ document.addEventListener("DOMContentLoaded", () => {
     /* =========================================
        2. SCROLL & ANIMATION (GSAP)
        ========================================= */
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+    }
+
     if (typeof Lenis !== 'undefined') {
         window.lenis = new Lenis({ 
             duration: 1.2,
@@ -174,8 +178,30 @@ document.addEventListener("DOMContentLoaded", () => {
             direction: 'vertical',
             smooth: true
         });
-        function raf(time) { window.lenis.raf(time); requestAnimationFrame(raf); }
-        requestAnimationFrame(raf);
+
+        // 1. Le decimos a Lenis que avise a GSAP cada vez que se mueve la rueda
+        window.lenis.on('scroll', ScrollTrigger.update);
+
+        // 2. Le decimos a GSAP que controle el reloj de Lenis
+        gsap.ticker.add((time) => {
+            window.lenis.raf(time * 1000);
+        });
+
+        // 3. Apagamos el suavizado de lag de GSAP para que no pelee con Lenis
+        gsap.ticker.lagSmoothing(0);
+    }
+    // --- EFECTO PARALLAX PARA EL VÍDEO CINEMATOGRÁFICO ---
+    if (typeof gsap !== 'undefined' && document.querySelector('.cinematic-video')) {
+        gsap.to(".cinematic-video", {
+            yPercent: 20, // El vídeo se desliza hacia abajo un 20% mientras tú haces scroll
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".cinematic-window",
+                start: "top top",
+                end: "bottom top",
+                scrub: true // Sincronizado perfectamente con la rueda del ratón
+            }
+        });
     }
 
     if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
@@ -198,6 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 );
             }
         });
+        
     }
 
     /* =========================================
@@ -280,12 +307,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // --- EL TRAGAPERRAS MÁGICO (OMIKUJI) ---
-    const spinBtn = document.getElementById('spin-btn');
+    const oracleTrigger = document.getElementById('spin-btn'); 
     const strip = document.getElementById('rune-strip');
+    const instructionText = document.querySelector('.oracle-instruction'); // Solo seleccionamos el texto
     const runasBase = ["火", "水", "木", "金", "土"];
     let isSpinning = false;
 
-    if (strip && spinBtn) {
+    if (strip && oracleTrigger) {
         const totalLoops = 8;
         let stripHTML = "";
         for (let i = 0; i < totalLoops; i++) {
@@ -295,19 +323,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         strip.innerHTML = stripHTML;
 
-        spinBtn.addEventListener('click', () => {
+        oracleTrigger.addEventListener('click', () => {
             if (isSpinning) return;
             isSpinning = true;
 
-            spinBtn.disabled = true;
-            const originalText = spinBtn.innerText;
-            spinBtn.innerText = "...";
+            // Guardamos el texto original y ponemos los puntos suspensivos SOLO en la etiqueta
+            const originalText = instructionText.innerText;
+            instructionText.innerText = "..."; 
 
             const keys = Object.keys(productsDB);
             const randomProductKey = keys[Math.floor(Math.random() * keys.length)];
             const winnerRuneIndex = Math.floor(Math.random() * runasBase.length);
 
-            const itemHeight = 120;
+            const itemHeight = 120; // Esto coincide perfectamente con tus 120px de CSS
             const itemsPerLoop = runasBase.length;
             const targetItemPos = ((totalLoops - 1) * itemsPerLoop) + winnerRuneIndex;
             const targetY = -(targetItemPos * itemHeight);
@@ -318,7 +346,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 y: targetY,
                 duration: 3.5,
                 ease: "power4.inOut",
-                onStart: () => gsap.to(strip, { filter: "blur(4px)", duration: 0.5 }),
+                onStart: () => gsap.to(strip, { filter: "blur(4px)", duration: 0.5 }), // El desenfoque de velocidad
                 onComplete: () => {
                     gsap.to(strip, { filter: "blur(0px)", duration: 0.2 });
                     
@@ -328,8 +356,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         document.body.style.overflow = 'hidden';
                         if (window.lenis) window.lenis.stop();
 
-                        spinBtn.disabled = false;
-                        spinBtn.innerText = originalText;
+                        // Restauramos el texto sutil
+                        instructionText.innerText = originalText;
                         isSpinning = false;
                     }, 500);
                 }
@@ -648,7 +676,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let isRetracting = false; 
 
         const IDLE_TIME = 8000; 
-        const PROBABILITY = 0.30; 
+        const PROBABILITY = 0.20; 
         const COOLDOWN = 120000; 
         let lastPawTime = 0; 
         const allProducts = document.querySelectorAll('.product-card');
@@ -726,22 +754,57 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function ejecutarTravesuraScroll() {
             const isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 200;
-            const scrollAmount = isAtBottom ? -450 : 450; 
-            const centerY = (window.innerHeight / 2) - (paw.offsetHeight / 2);
+            
+            // ==========================================
+            // 🛠️ PANEL DE CONTROL DE LA ZARPA
+            // Ajusta estos valores hasta que quede perfecto
+            // ==========================================
+            
+            // 1. Distancias (Píxeles)
+            const distanciaScroll = isAtBottom ? -450 : 450; // Lo que baja la página
+            const distanciaPata   = isAtBottom ? 450 : -450; // Lo que baja la zarpa
+            
+            // 2. Tiempos (Segundos)
+            const tiempoScroll = 1.2; // Lo que tarda la página en hacer el recorrido
+            const tiempoPata   = 1.2; // Lo que tarda la pata (a veces poner 1.1 o 1.3 ayuda a compensar)
+            
+            // 3. Físicas (Easing)
+            // Opciones comunes para probar: 
+            // "power2.inOut" (suave), "power3.out" (frena rápido al final), "power4.inOut" (muy brusco), "none" (lineal)
+            const curvaPata = "power3.out"; 
+            
+            // ==========================================
 
+            const centerY = (window.innerHeight / 2) - (paw.offsetHeight / 2);
             const pawTimeline = gsap.timeline({ onComplete: () => { paw.style.display = 'none'; isPawActive = false; } });
 
             gsap.set(paw, { y: centerY, x: 0, rotation: 0, scale: 1 });
 
-            pawTimeline.to(paw, { x: -120, duration: 2, ease: "power1.inOut" }) 
+            // 1. La pata entra en pantalla
+            pawTimeline.to(paw, { x: -120, duration: 1.5, ease: "power1.inOut" }) 
                        .add(() => { isAutoScrolling = true; }) 
+                       
+                       // 2. La pata tira hacia abajo
                        .to(paw, { 
-                           y: centerY + (isAtBottom ? -100 : 100), rotation: isAtBottom ? 30 : -30, duration: 0.8, ease: "power2.in",
+                           y: centerY + distanciaPata,
+                           rotation: isAtBottom ? 30 : -30, 
+                           duration: tiempoPata, 
+                           ease: curvaPata, // <- Usamos la curva que definiste arriba
                            onStart: () => {
-                               if (window.lenis) { window.lenis.scrollTo(window.scrollY + scrollAmount, { duration: 1.5, onComplete: () => { isAutoScrolling = false; } }); } 
-                               else { window.scrollBy({ top: scrollAmount, behavior: 'smooth' }); setTimeout(() => { isAutoScrolling = false; }, 1000); }
+                               if (window.lenis) { 
+                                   window.lenis.scrollTo(window.scrollY + distanciaScroll, { 
+                                       duration: tiempoScroll, 
+                                       onComplete: () => { isAutoScrolling = false; } 
+                                   }); 
+                               } 
+                               else { 
+                                   window.scrollBy({ top: distanciaScroll, behavior: 'smooth' }); 
+                                   setTimeout(() => { isAutoScrolling = false; }, tiempoScroll * 1000); 
+                               }
                            }
                        })
+                       
+                       // 3. La pata se retira
                        .to(paw, { x: 150, duration: 1.2, ease: "power2.in" });
         }
 
@@ -817,7 +880,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* =========================================
-       ANIMACIÓN DE CLARIFICACIÓN DE TINTA
+       ANIMACIÓN DE TINTA QUE SE UNE Y PAUSA
        ========================================= */
     if (typeof gsap !== 'undefined' && document.getElementById('ink-displacement')) {
         const displacement = document.getElementById('ink-displacement');
@@ -826,24 +889,27 @@ document.addEventListener("DOMContentLoaded", () => {
             scrollTrigger: {
                 trigger: "#concepto",
                 start: "center center",
-                end: "+=600",
+                end: "+=1200", 
                 pin: true,
-                scrub: 1,
-                anticipatePin: 1
+                pinType: "transform", // ⬅️ LA SOLUCIÓN DEFINITIVA: Evita el salto del scrollbar
+                scrub: 1
             }
         });
 
-        // Animamos el atributo 'scale' del filtro de 60 (muy deforme) a 0 (perfecto)
-        inkTl.to(displacement, {
-            attr: { scale: 0 },
-            duration: 2,
-            ease: "power1.inOut"
+        // 1. Aparece de la nada (opacidad) muy rápido, sin difuminados
+        inkTl.to(".reveal-ink-wrapper", {
+            opacity: 1,
+            duration: 0.5,
+            ease: "power1.in"
         })
-        // Al mismo tiempo, quitamos el pequeño desenfoque del contenedor
-        .to(".reveal-ink-wrapper", {
-            filter: "blur(0px)",
-            duration: 1
-        }, 0);
+        // 2. Las salpicaduras de tinta (escala 250) se juntan de golpe formando las letras (escala 0)
+        .fromTo(displacement,
+            { attr: { scale: 250 } }, 
+            { attr: { scale: 0 }, duration: 2.5, ease: "power2.out" },
+            "<" 
+        )
+        // 3. LA PAUSA MÁGICA
+        .to({}, { duration: 0.8 });
     }
 
 });

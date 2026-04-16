@@ -27,6 +27,13 @@
 
         <main id="smooth-wrapper">
 
+            <section class="cinematic-window">
+                <video autoplay muted loop playsinline class="cinematic-video">
+                    <source src="assets/video/Mochi.mp4" type="video/mp4">
+                </video>
+                <div class="cinematic-fade"></div>
+            </section>
+
             <section id="concepto" class="intro-minimal">
                 <div class="intro-staggered">
                     
@@ -60,31 +67,14 @@
 
                     <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
                         <filter id="sumie-filter">
-                            <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="3" result="noise" />
-                            <feDisplacementMap id="ink-displacement" in="SourceGraphic" in2="noise" scale="60" xChannelSelector="R" yChannelSelector="G" />
+                            <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" result="noise" />
+                            <feDisplacementMap id="ink-displacement" in="SourceGraphic" in2="noise" scale="250" xChannelSelector="R" yChannelSelector="G" />
                         </filter>
                     </svg>
 
                 </div>
             </section>
 
-            <section class="oracle-compact-section">
-                <div class="oracle-mini-box">
-                    <div class="oracle-header-mini">
-                        <span class="v-label-gold">OMIKUJI</span>
-                        <h2 class="tiny-title-gold">El Oráculo</h2>
-                    </div>
-                    
-                    <div class="omikuji-stage">
-                        <div class="omikuji-window-small">
-                            <div class="rune-strip" id="rune-strip"></div>
-                        </div>
-                        <button id="spin-btn" class="spin-btn-minimal">Consultar</button>
-                    </div>
-                    
-                    <p class="oracle-tip">Deja que el destino elija tu espíritu</p>
-                </div>
-            </section>
         <div class="collab-marquee-wrapper" id="collab-banner">
                 <button class="close-collab" id="close-collab" aria-label="Cerrar banner">×</button>
                 <div class="collab-marquee">
@@ -109,43 +99,25 @@
                         <button class="tab-btn" data-filter="cafe" data-i18n="tabCoffee">Cafés del Grimorio</button>
                     </div>
                     
-                    <div class="product-grid">
+                    <div class="products-grid">
                         <article class="product-card" data-id="p1" data-category="postre">
-
-                            <div class="card-visual">
-
+                            <div class="visual-inner">
                                 <div class="ink-mask"><img src="assets/images/dorayaki.2.webp" alt="Dorayaki" class="product-img"></div>
-
                                 <div class="stamp-seal">狸</div>
-
-                               
-
                                 <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
-
-                               
-
                             </div>
-
                             <div class="card-info"><h4 data-i18n-product="name">Dorayaki</h4><span class="type">Tanuki</span></div>
-
                         </article>
 
 
 
                         <article class="product-card" data-id="p2" data-category="postre">
-
                             <div class="card-visual">
-
                                 <div class="ink-mask"><img src="assets/images/Mochi.2.webp" alt="Mochi" class="product-img"></div>
-
                                 <div class="stamp-seal">狐</div>
-
                                 <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
-
                             </div>
-
                             <div class="card-info"><h4 data-i18n-product="name">Mochi Daifuku</h4><span class="type">Kitsune</span></div>
-
                         </article>
 
 
@@ -155,123 +127,65 @@
                             <div class="card-visual">
 
                                 <div class="ink-mask"><img src="assets/images/Dangos.2.webp" alt="Dango" class="product-img"></div>
-
                                 <div class="stamp-seal">猫</div>
-
                                 <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
-
                             </div>
-
                             <div class="card-info"><h4 data-i18n-product="name">Dango Tricolor</h4><span class="type">Bakeneko</span></div>
 
                         </article>
 
-
-
                         <article class="product-card" data-id="p4" data-category="postre">
-
                             <div class="card-visual">
-
                                 <div class="ink-mask"><img src="assets/images/Kuzumochi.2.webp" alt="Kuzumochi" class="product-img"></div>
-
                                 <div class="stamp-seal">河</div>
-
                                 <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
-
                             </div>
-
                             <div class="card-info"><h4 data-i18n-product="name">Kuzumochi</h4><span class="type">Kappa</span></div>
-
                         </article>
-
-
 
                         <article class="product-card" data-id="p5" data-category="postre">
-
                             <div class="card-visual">
-
                                 <div class="ink-mask"><img src="assets/images/Yokan.2.webp" alt="Yokan" class="product-img"></div>
-
                                 <div class="stamp-seal">海</div>
-
                                 <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
-
                             </div>
-
                             <div class="card-info"><h4 data-i18n-product="name">Yokan Nocturno</h4><span class="type">Umibozu</span></div>
-
                         </article>
-
-
 
                         <article class="product-card" data-id="p6" data-category="postre">
-
                             <div class="card-visual">
-
                                 <div class="ink-mask"><img src="assets/images/Nerikiri.2.webp" alt="Nerikiri" class="product-img"></div>
-
                                 <div class="stamp-seal">雪</div>
-
                                 <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
-
                             </div>
-
                             <div class="card-info"><h4 data-i18n-product="name">Nerikiri de Camelia</h4><span class="type">Yuki-Onna</span></div>
-
                         </article>
-
-
 
                         <article class="product-card" data-id="p7" data-category="vino">
-
                             <div class="card-visual">
-
                                 <div class="ink-mask"><img src="assets/images/vino-theraw.jpg" alt="Vino Blanco" class="product-img"></div>
-
                                 <div class="stamp-seal">魚</div>
-
                                 <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
-
                             </div>
-
                             <div class="card-info"><h4 data-i18n-product="name">Sauvignon Blanc 'The Raw'</h4><span class="type">Ningyo</span></div>
-
                         </article>
-
-
 
                         <article class="product-card" data-id="p8" data-category="vino">
-
                             <div class="card-visual">
-
                                 <div class="ink-mask"><img src="assets/images/vino-thegrill.jpg" alt="Vino Tinto" class="product-img"></div>
-
                                 <div class="stamp-seal">鬼</div>
-
                                 <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
-
                             </div>
-
                             <div class="card-info"><h4 data-i18n-product="name">Garnacha Tinta 'The Grill'</h4><span class="type">Shuten-Dōji</span></div>
-
                         </article>
 
-
-
                         <article class="product-card" data-id="p9" data-category="vino">
-
                             <div class="card-visual">
-
                                 <div class="ink-mask"><img src="assets/images/vino-theumami.jpg" alt="Cava" class="product-img"></div>
-
                                 <div class="stamp-seal">狐</div>
-
                                 <button class="quick-add-btn" aria-label="Añadir rápido">+</button>
-
                             </div>
-
                             <div class="card-info"><h4 data-i18n-product="name">Cava Brut Nature 'The Umami'</h4><span class="type">Kitsune</span></div>
-
                         </article>
 
 
@@ -328,6 +242,23 @@
                             </div>
                             <div class="card-info"><h4 data-i18n-product="name">Yuki-Onna Geisha</h4><span class="type">Panamá / Geisha</span></div>
                         </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="oraculo" class="oracle-minimal">
+                <div class="oracle-container">
+                    <div class="oracle-text">
+                        <h2 class="tiny-title" data-i18n="oracleTitle">El Oráculo del Bakeneko</h2>
+                        <p class="compact-p" data-i18n="oracleDesc">¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.</p>
+                    </div>
+                    <div class="oracle-interactive" id="spin-btn">
+                        <div class="rune-window">
+                            <div id="rune-strip" class="rune-strip">
+                                </div>
+                            <div class="window-overlay"></div>
+                        </div>
+                        <span class="oracle-instruction" data-i18n="oracleBtn">Consultar al Oráculo</span>
                     </div>
                 </div>
             </section>
