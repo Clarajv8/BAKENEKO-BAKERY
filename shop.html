@@ -43,18 +43,27 @@
                         </div>
                     </div>
 
-                    <div class="intro-block block-concept">
-                        <div class="block-content align-right">
-                            <h2 class="tiny-title" data-i18n="introTitle">Dulzura entre mundos</h2>
-                            <p class="compact-p" data-i18n="introText">
-                                No horneamos para el hambre del cuerpo, sino para los antojos del alma. Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna y la quietud antigua.
-                            </p>
+                    <div class="intro-block block-concept" id="trigger-ink">
+                        <div class="block-content align-right reveal-ink-wrapper">
+                            <div class="ink-content-to-reveal">
+                                <h2 class="tiny-title" data-i18n="introTitle">Dulzura entre mundos</h2>
+                                <p class="compact-p" data-i18n="introText">
+                                    No horneamos para el hambre del cuerpo, sino para los antojos del alma. Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna y la quietud antigua.
+                                </p>
+                            </div>
                         </div>
                         <div class="vertical-marker marker-right">
                             <span class="v-kanji">甘味</span>
                             <span class="v-label" data-i18n="vLabelConcept">CONCEPTO</span>
                         </div>
                     </div>
+
+                    <svg style="position: absolute; width: 0; height: 0;" aria-hidden="true">
+                        <filter id="sumie-filter">
+                            <feTurbulence type="fractalNoise" baseFrequency="0.08" numOctaves="3" result="noise" />
+                            <feDisplacementMap id="ink-displacement" in="SourceGraphic" in2="noise" scale="60" xChannelSelector="R" yChannelSelector="G" />
+                        </filter>
+                    </svg>
 
                 </div>
             </section>

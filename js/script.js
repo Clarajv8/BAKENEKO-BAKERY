@@ -816,4 +816,34 @@ document.addEventListener("DOMContentLoaded", () => {
     ScrollTrigger.refresh();
 });
 
+/* =========================================
+       ANIMACIÓN DE CLARIFICACIÓN DE TINTA
+       ========================================= */
+    if (typeof gsap !== 'undefined' && document.getElementById('ink-displacement')) {
+        const displacement = document.getElementById('ink-displacement');
+
+        const inkTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: "#concepto",
+                start: "center center",
+                end: "+=600",
+                pin: true,
+                scrub: 1,
+                anticipatePin: 1
+            }
+        });
+
+        // Animamos el atributo 'scale' del filtro de 60 (muy deforme) a 0 (perfecto)
+        inkTl.to(displacement, {
+            attr: { scale: 0 },
+            duration: 2,
+            ease: "power1.inOut"
+        })
+        // Al mismo tiempo, quitamos el pequeño desenfoque del contenedor
+        .to(".reveal-ink-wrapper", {
+            filter: "blur(0px)",
+            duration: 1
+        }, 0);
+    }
+
 });

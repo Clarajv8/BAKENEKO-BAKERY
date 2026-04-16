@@ -317,6 +317,21 @@ body {
     text-transform: uppercase;
 }
 
+
+/* --- Texto en Estado de Tinta --- */
+.ink-content-to-reveal {
+    opacity: 1; /* Siempre visible */
+    filter: url(#sumie-filter); /* Aplicamos la deformación inicial */
+    transition: none;
+    will-change: filter; /* Optimización para que vaya fluido */
+}
+
+/* Opcional: un poco de desenfoque inicial que también quitaremos */
+.reveal-ink-wrapper {
+    filter: blur(2px); 
+    transition: filter 0.5s ease;
+}
+
 /* --- 2D Modal (Reemplaza al 3D) --- */
 .modal-overlay {
     position: fixed;
