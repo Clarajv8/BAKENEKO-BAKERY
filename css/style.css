@@ -240,7 +240,6 @@ body {
     .products-grid { grid-template-columns: 1fr; gap: 3rem 0; }
 }
 
-/* --- 2. La Tarjeta (Artículo) --- */
 .product-card {
     background: transparent;
     display: flex;
@@ -249,6 +248,29 @@ body {
     text-align: center;
     cursor: pointer;
     width: 100%;
+    /* Hemos quitado el 'transition' global para que no pelee con las animaciones */
+}
+
+/* Estado de salida: Se hunde en la niebla */
+.product-card.hiding {
+    animation: fade-out-yokai 0.4s forwards;
+    pointer-events: none;
+}
+
+/* Estado de entrada: Emerge suavemente */
+.product-card.showing {
+    opacity: 0; /* CRÍTICO: Los mantiene invisibles hasta que les toque su turno */
+    animation: fade-in-yokai 0.6s cubic-bezier(0.2, 1, 0.3, 1) both;
+}
+
+@keyframes fade-out-yokai {
+    0% { opacity: 1; transform: translateY(0) scale(1); }
+    100% { opacity: 0; transform: translateY(15px) scale(0.98); }
+}
+
+@keyframes fade-in-yokai {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
 
 /* --- 3. Contenedor Visual (Limitado para no dejar vacíos) --- */

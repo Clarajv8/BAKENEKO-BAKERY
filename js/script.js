@@ -284,27 +284,66 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================
-       4. PESTAÑAS Y TRAGAPERRAS OMIKUJI
-       ========================================= */
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const productCards = document.querySelectorAll('.product-card');
+   4. PESTAÑAS (FILTRADO EN CASCADA PERFECTA)
+   ========================================= */
+const tabBtns = document.querySelectorAll('.tab-btn');
+const productCards = document.querySelectorAll('.product-card');
 
-    tabBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            tabBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            
-            const filter = btn.getAttribute('data-filter');
+tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        if (btn.classList.contains('active')) return;
+
+        // 1. Cambiamos la clase 'active'
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filter = btn.getAttribute('data-filter');
+        
+        // 2. FASE 1: Ocultamos suavemente SOLO los que están visibles
+        productCards.forEach(card => {
+            if (card.style.display !== 'none') {
+                card.classList.remove('showing');
+                card.classList.add('hiding');
+            }
+        });
+
+        // 3. FASE 2: Esperamos a que termine la animación de salida (400ms)
+        setTimeout(() => {
+            let delayIndex = 0;
+
             productCards.forEach(card => {
-                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                const category = card.getAttribute('data-category');
+                
+                // Limpiamos la clase hiding
+                card.classList.remove('hiding');
+                
+                if (filter === 'all' || category === filter) {
+                    // RED DE SEGURIDAD: Lo hacemos invisible antes de mostrarlo
+                    card.style.opacity = '0'; 
                     card.style.display = 'flex';
+                    
+                    // Asignamos el retraso
+                    card.style.animationDelay = `${delayIndex * 0.1}s`;
+                    
+                    // Quitamos la opacidad en línea para que la animación CSS tome el control
+                    requestAnimationFrame(() => {
+                        card.style.opacity = '';
+                        card.classList.add('showing');
+                    });
+                    
+                    delayIndex++;
                 } else {
                     card.style.display = 'none';
+                    card.classList.remove('showing');
+                    card.style.animationDelay = '0s'; 
                 }
             });
+
             if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
-        });
+
+        }, 400); 
     });
+});
 
     // --- EL TRAGAPERRAS MÁGICO (OMIKUJI) ---
     const oracleTrigger = document.getElementById('spin-btn'); 
