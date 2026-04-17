@@ -94,11 +94,32 @@ document.addEventListener("DOMContentLoaded", () => {
     // Traducir al cargar la página por primera vez
     translateInfoPage();
 
-    // 3. Smooth Scroll (Lenis) para esta página
+    // 3. Smooth Scroll (Lenis) para esta página y Enlaces del Índice
     if (typeof Lenis !== 'undefined') {
         const lenis = new Lenis({ duration: 1.2, smooth: true });
         function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
+
+        // --- MAGIA PARA EL ÍNDICE ---
+        // Buscamos todos los enlaces que empiecen por "#" (las anclas de tu índice)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault(); // Evitamos el salto instantáneo y brusco
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    // Le decimos a Lenis que nos lleve allí con un deslizamiento súper suave.
+                    // offset: -100 es el truco para que la cabecera fija no tape el título al llegar.
+                    lenis.scrollTo(targetElement, { 
+                        offset: -100, 
+                        duration: 1.5, 
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) // Curva de aceleración súper lujosa
+                    }); 
+                }
+            });
+        });
     }
 
     /* =========================================

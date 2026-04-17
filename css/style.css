@@ -213,52 +213,34 @@ body {
 
 .section-header h3 {
     font-size: 3rem;
-    border-bottom: 2px solid var(--c-vermilion);
+    border-bottom: 1px solid var(--c-vermilion);
     display: inline-block;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 /* =========================================
-   GALERÍA DE PRODUCTOS (ESTILO BOUTIQUE MÍSTICA)
+   GALERÍA DE PRODUCTOS (ORDEN Y LIMPIEZA)
    ========================================= */
 
-/* --- La Cuadrícula (Mucho más aire y asimetría extrema) --- */
+/* --- 1. La Cuadrícula Base --- */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 12rem 4rem; /* Separación vertical bestial para que parezcan expositores únicos */
-    width: 100%;
-    max-width: 1200px; /* Más estrecho para estilizar el conjunto */
+    gap: 4rem 2rem; /* Cuadrícula perfecta y alineada, sin saltos */
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 8rem 0;
+    padding: 5rem 5%;
 }
 
-/* El de en medio baja drásticamente, creando un ritmo de "zigzag" muy premium */
-@media (min-width: 1024px) {
-    .product-card:nth-child(3n + 2) {
-        transform: translateY(10rem);
-    }
-}
-
-@media (max-width: 1023px) {
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8rem 3rem;
-    }
-    .product-card:nth-child(3n + 2) { transform: translateY(0); }
-    .product-card:nth-child(even) { transform: translateY(6rem); }
+@media (max-width: 900px) {
+    .products-grid { grid-template-columns: repeat(2, 1fr); gap: 3rem 2rem; }
 }
 
 @media (max-width: 600px) {
-    .products-grid {
-        grid-template-columns: 1fr;
-        gap: 6rem 0;
-        padding: 2rem 5%;
-    }
-    .product-card:nth-child(even) { transform: translateY(0); }
+    .products-grid { grid-template-columns: 1fr; gap: 3rem 0; }
 }
 
-/* --- La Tarjeta --- */
+/* --- 2. La Tarjeta (Artículo) --- */
 .product-card {
     background: transparent;
     display: flex;
@@ -267,54 +249,51 @@ body {
     text-align: center;
     cursor: pointer;
     width: 100%;
-    max-width: 300px; /* Tarjetas muy esbeltas y contenidas */
+}
+
+/* --- 3. Contenedor Visual (Limitado para no dejar vacíos) --- */
+.visual-inner {
+    position: relative;
+    width: 100%;
+    max-width: 260px; /* Límite de ancho para que no crezca demasiado en pantallas grandes */
+    aspect-ratio: 1 / 1; /* Cuadrado perfecto */
     margin: 0 auto;
 }
 
-/* --- El Lienzo: FORMA DE ARCO / PORTAL --- */
-.card-visual {
-    position: relative;
-    width: 100%;
-    aspect-ratio: 2 / 3; /* Proporción muy alta, como un cuadro de galería */
-    overflow: visible; 
-}
-
-.visual-inner {
+/* --- 4. La Máscara de Tinta --- */
+.ink-mask {
     width: 100%;
     height: 100%;
-    /* AQUÍ ESTÁ LA MAGIA: Borde superior muy redondeado, inferior plano */
-    border-radius: 10rem 10rem 0 0; 
     overflow: hidden;
-    position: relative;
-    background-color: rgba(26, 38, 57, 0.03);
-    /* Una sombra larguísima y difuminada que da sensación de levitación */
-    box-shadow: 0 30px 60px rgba(26, 38, 57, 0.08);
-    transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1), box-shadow 0.8s ease;
+    border-radius: 50%; /* Círculo inicial */
+    background: var(--c-cream); 
+    transition: border-radius 0.8s ease-in-out, box-shadow 0.6s ease, transform 0.6s ease;
+    box-shadow: 0 10px 25px rgba(26, 38, 57, 0.05);
 }
 
 .product-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 1.5s cubic-bezier(0.2, 1, 0.3, 1); /* Zoom ultra lento */
+    transition: transform 0.8s ease;
 }
 
-/* El Hover: El portal se eleva y la imagen hace un zoom lento */
-.product-card:hover .visual-inner {
-    transform: translateY(-15px);
-    box-shadow: 0 40px 80px rgba(26, 38, 57, 0.12);
+/* Animación Hover */
+.product-card:hover .ink-mask {
+    border-radius: 42% 58% 45% 55% / 55% 45% 58% 42%; /* Forma orgánica */
+    box-shadow: 0 15px 35px rgba(26, 38, 57, 0.12);
+    transform: translateY(-8px);
 }
 
 .product-card:hover .product-img {
-    transform: scale(1.05); 
+    transform: scale(1.1);
 }
 
-/* --- El Sello Hanko (Rompiendo el borde) --- */
+/* --- 5. El Sello Hanko --- */
 .stamp-seal {
     position: absolute;
-    /* Colocado justo en el corte donde empieza el arco, rompiendo la geometría */
-    top: 60%; 
-    right: -15px; 
+    top: 0;
+    right: 0;
     z-index: 2;
     width: 45px;
     height: 45px;
@@ -323,24 +302,23 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4px;
+    border-radius: 50%;
     font-size: 1.2rem;
     font-family: var(--f-jp);
-    box-shadow: 2px 4px 15px rgba(214, 64, 69, 0.3);
-    transform: rotate(8deg); 
+    box-shadow: 2px 4px 10px rgba(214, 64, 69, 0.2);
     transition: transform 0.5s ease;
 }
 
 .product-card:hover .stamp-seal {
-    transform: rotate(-5deg) scale(1.1); /* El sello reacciona al pasar el ratón */
+    transform: scale(1.1) rotate(-10deg);
 }
 
-/* --- Botón Quick-Add --- */
+/* --- 6. El Botón Añadir Integrado --- */
 .quick-add-btn {
     position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%) translateY(20px);
+    bottom: 0;
+    right: 0;
+    z-index: 3;
     width: 40px;
     height: 40px;
     background: var(--c-indigo);
@@ -350,53 +328,45 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
-    opacity: 0;
+    opacity: 0; /* Oculto por defecto */
+    transform: scale(0.8);
     transition: all 0.4s ease;
-    z-index: 3;
 }
 
 .product-card:hover .quick-add-btn {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
+    opacity: 1; /* Aparece al hacer hover */
+    transform: scale(1);
 }
 
 .quick-add-btn:hover {
     background: var(--c-gold);
     color: var(--c-indigo);
-    transform: translateX(-50%) scale(1.1);
 }
 
-/* --- Tipografía (Con un poco de aire para respirar) --- */
-.product-info {
-    margin-top: 2.5rem; 
+/* --- 7. Info del Producto (Sin vacíos) --- */
+.card-info {
+    margin-top: 1rem; /* Muy poco margen para que el texto abrace la imagen */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Apila el h4 y el span */
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.2rem; /* Espacio mínimo entre nombre y tipo */
 }
 
-.yokai-class {
-    font-size: 0.65rem;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    color: var(--c-gold);
-}
-
-.product-card h3 {
+.card-info h4 {
     font-family: var(--f-serif);
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: var(--c-indigo);
     margin: 0;
     font-weight: 400;
 }
 
-.price {
-    font-size: 0.85rem;
-    letter-spacing: 2px;
-    color: rgba(26, 38, 57, 0.5);
-    margin-top: 0.5rem;
+.card-info .type {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--c-gold);
 }
 
 
@@ -547,32 +517,34 @@ body {
 }
 
 /* =========================================
-   FOOTER 
+   FOOTER (SILENCIO EDITORIAL DE LUJO)
    ========================================= */
 .main-footer {
     background-color: var(--c-indigo);
     color: var(--c-cream);
-    padding: 5rem 2rem 2rem;
-    border-top: 2px solid var(--c-gold);
-    font-family: var(--f-sans);
+    padding: 8rem 5% 2rem;
+    /* Sin borde superior grueso. Se funde con el fondo de la web si es oscuro, 
+       o usa un contraste limpio si vienes del fondo crema */
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 3rem;
-    padding-bottom: 4rem;
-    border-bottom: 1px solid rgba(244, 241, 234, 0.1); /* Línea sutil crema */
+    /* Solo 3 columnas, dándole la mitad del espacio a la marca/newsletter */
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 4rem;
+    padding-bottom: 6rem;
 }
 
+/* --- Títulos (Etiquetas Técnicas) --- */
 .footer-col h4 {
-    font-family: var(--f-serif);
-    font-size: 1.2rem;
-    color: var(--c-gold);
-    margin-bottom: 1.5rem;
-    letter-spacing: 1px;
+    font-family: var(--f-sans);
+    font-size: 0.65rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(244, 241, 234, 0.4); /* Muy difuminado, no compite con los enlaces */
+    margin-bottom: 2rem;
 }
 
 .footer-col ul {
@@ -581,88 +553,121 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 0.8rem;
+    gap: 1rem;
 }
 
+/* Enlaces (Serif, elegantes y sobrios) */
 .footer-col a {
-    color: #ccc;
+    color: var(--c-cream);
     text-decoration: none;
-    font-size: 0.95rem;
-    transition: color 0.3s ease;
+    font-size: 0.9rem;
+    font-family: var(--f-serif);
+    transition: opacity 0.3s ease;
+    opacity: 0.8;
 }
 
 .footer-col a:hover {
-    color: var(--c-vermilion);
-}
-
-/* Columna de Marca */
-.footer-logo {
-    font-family: var(--f-sans);
-    font-size: 1.8rem;
-    font-weight: 700;
+    opacity: 1;
     color: var(--c-gold);
-    margin-bottom: 1rem;
-}
-.footer-logo span { font-weight: 300; color: var(--c-cream); }
-
-.footer-bio {
-    font-size: 0.9rem;
-    color: #aaa;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-    max-width: 300px;
 }
 
-.social-links {
-    display: flex;
-    gap: 1rem;
-}
-.social-links a {
-    border: 1px solid rgba(244, 241, 234, 0.3);
-    padding: 0.4rem 1rem;
-    border-radius: 50px;
-    font-size: 0.8rem;
+/* Enlaces Sociales (Los diferenciamos con Sans-serif) */
+.social-link {
+    font-family: var(--f-sans) !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    letter-spacing: 1px;
-}
-.social-links a:hover {
-    border-color: var(--c-gold);
-    color: var(--c-gold);
+    margin-top: 0.5rem;
 }
 
-/* Columna Destacada (Cuenta y Contacto) */
-.highlight-col .contact-link,
-.highlight-col .account-link {
-    display: inline-block;
+/* --- La Firma (Logo) --- */
+.footer-logo {
+    font-family: var(--f-serif);
+    font-size: 1.8rem;
     color: var(--c-cream);
-    font-weight: bold;
-    border-bottom: 1px dashed var(--c-gold);
-    padding-bottom: 2px;
-}
-.highlight-col .account-link { color: var(--c-gold); border-bottom-color: var(--c-cream); }
-
-.payment-methods {
-    margin-top: 2rem;
+    margin-bottom: 3rem;
     display: flex;
+    align-items: center;
     gap: 1rem;
-    font-size: 0.85rem;
-    color: #888;
 }
 
-/* Base del Footer */
+.footer-logo span {
+    font-family: var(--f-jp);
+    font-size: 1.5rem;
+    color: var(--c-gold);
+    opacity: 0.7;
+}
+
+/* --- Newsletter Hiper-Minimalista --- */
+.newsletter-minimal {
+    position: relative;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(244, 241, 234, 0.3);
+    padding-bottom: 0.5rem;
+    transition: border-color 0.4s ease;
+}
+
+.newsletter-minimal:focus-within {
+    border-color: var(--c-gold); /* Se ilumina al escribir */
+}
+
+.newsletter-minimal input {
+    background: transparent;
+    border: none;
+    color: var(--c-cream);
+    font-family: var(--f-sans);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    width: 100%;
+    outline: none;
+}
+
+.newsletter-minimal input::placeholder {
+    color: rgba(244, 241, 234, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.7rem;
+}
+
+.newsletter-minimal button {
+    background: transparent;
+    border: none;
+    color: var(--c-cream);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.newsletter-minimal button:hover {
+    color: var(--c-gold);
+    transform: translateX(5px); /* La flecha se mueve al pasar el ratón */
+}
+
+/* --- Base del Footer --- */
 .footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(244, 241, 234, 0.1);
     padding-top: 2rem;
-    text-align: center;
-    font-size: 0.85rem;
-    color: #666;
 }
 
-/* Responsividad para móviles */
+.footer-bottom p {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    color: rgba(244, 241, 234, 0.4);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* --- Responsividad --- */
 @media (max-width: 900px) {
     .footer-container {
         grid-template-columns: 1fr 1fr;
+        gap: 4rem 2rem;
     }
     .brand-col {
         grid-column: span 2;
@@ -672,7 +677,7 @@ body {
 @media (max-width: 600px) {
     .footer-container {
         grid-template-columns: 1fr;
-        gap: 2.5rem;
+        gap: 4rem;
     }
     .brand-col {
         grid-column: span 1;
@@ -680,37 +685,95 @@ body {
 }
 
 
-/* --- Tabs (Filtros) --- */
+
+
+/* =========================================
+   CABECERA DE LA TIENDA Y FILTROS (TABS)
+   ========================================= */
+
+/* --- El Título Principal de la Colección --- */
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-header h3 {
+    font-family: var(--f-serif); /* Letra clásica y elegante */
+    font-size: 3rem; /* Grande y majestuoso */
+    color: var(--c-indigo);
+    font-weight: 300; /* Fino, nada de negritas gruesas */
+    margin: 0;
+    position: relative;
+}
+
+/* El punto de anclaje visual (Punto dorado debajo del título) */
+.section-header h3::after {
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    background-color: var(--c-gold);
+    border-radius: 50%;
+    margin: 1.5rem auto 0;
+}
+
+/* --- Filtros (Tabs Estilo Revista) --- */
 .tabs {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 4rem;
+    flex-wrap: wrap; /* CRÍTICO: Permite que salten de línea en móviles sin aplastarse */
+    gap: 3rem; /* Muchísimo aire entre las opciones */
+    margin-bottom: 6rem; /* Separación enorme con los postres para dar respiro */
 }
 
+/* Botones como texto desnudo (Adiós a las píldoras) */
 .tab-btn {
-    padding: 0.8rem 2rem;
     background: transparent;
-    border: 1px solid var(--c-indigo);
-    color: var(--c-indigo);
-    border-radius: 50px;
+    border: none;
+    padding: 0 0 8px 0; /* Espacio solo abajo para separar la línea del subrayado */
+    color: rgba(26, 38, 57, 0.4); /* Índigo muy apagado para los que no están seleccionados */
     font-family: var(--f-sans);
-    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent; /* Oculto, preparado para animarse */
+    transition: all 0.4s ease;
 }
 
-.tab-btn.active, .tab-btn:hover {
-    background: var(--c-indigo);
-    color: var(--c-cream);
+/* Hover: El texto cobra vida y sube un poquito */
+.tab-btn:hover {
+    color: var(--c-indigo);
+    transform: translateY(-2px);
 }
 
-/* --- Oráculo Evolucionado (Artefacto Flotante) --- */
+/* Estado Activo: La línea de lujo */
+.tab-btn.active {
+    color: var(--c-indigo);
+    border-bottom: 1px solid var(--c-gold); 
+}
+
+/* --- Responsividad para mantener la elegancia en móviles --- */
+@media (max-width: 600px) {
+    .section-header h3 {
+        font-size: 2.2rem;
+    }
+    .tabs {
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+    }
+    .tab-btn {
+        font-size: 0.65rem;
+        letter-spacing: 2px;
+    }
+}
+
+/* =========================================
+   ORÁCULO (MINIMALISMO PURO)
+   ========================================= */
 .oracle-minimal {
-    padding: 15rem 0; /* Más espacio para separar el catálogo del footer */
-    /* Un fondo radial que da la sensación de un foco iluminando el amuleto */
-    background: radial-gradient(circle at center, #1a2639 0%, var(--c-indigo) 100%);
-    color: var(--c-cream);
+    padding: 8rem 0; /* Menos espacio exagerado, más equilibrado */
+    background-color: transparent; /* Hereda el color crema de la web. Cero bloques de color. */
     display: flex;
     justify-content: center;
 }
@@ -719,67 +782,58 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4rem;
+    gap: 3rem;
     text-align: center;
 }
 
+/* Textos sutiles y elegantes */
 .oracle-text .tiny-title {
     color: var(--c-gold);
+    font-size: 0.85rem; /* Un pelín más grande */
+    letter-spacing: 5px;
+    font-weight: 600; /* Más peso para que atrape la vista */
+    text-transform: uppercase;
 }
 
 .oracle-text .compact-p {
-    color: rgba(244, 241, 234, 0.7);
+    color: var(--c-indigo); /* Color sólido, sin transparencias que lo apaguen */
     margin: 0 auto;
+    font-family: var(--f-serif);
+    font-size: 1.25rem; /* Aumentamos el tamaño para facilitar la lectura */
+    line-height: 1.4;
 }
 
+/* --- El Artefacto (Líneas finas, sin cajas pesadas) --- */
 .oracle-interactive {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
-    padding: 40px; 
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(197, 163, 101, 0.1);
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-    
-    animation: glow-gold 4s ease-in-out infinite; 
+    padding: 20px;
+    transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1);
 }
 
 .oracle-interactive:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 50px rgba(197, 163, 101, 0.25);
-    animation: none; 
+    transform: scale(1.05); /* Solo un pequeño acercamiento, sin brillos locos */
 }
 
-@keyframes glow-gold {
-    0% { 
-        box-shadow: 0 0 15px rgba(197, 163, 101, 0.02); 
-    }
-    50% { 
-        /* box-shadow: 0 0 60px #2d4161;  */
-        box-shadow: 0 0 60px var(--c-gold); 
-    }
-    100% { 
-        box-shadow: 0 0 15px rgba(197, 163, 101, 0.02); 
-    }
-}
-
+/* La Ventana del Destino (Marco minimalista) */
 .rune-window {
     width: 90px;
     height: 120px; 
-    border: 2px solid rgba(197, 163, 101, 0.4); /* Borde dorado más sólido */
+    border: 1px solid rgba(26, 38, 57, 0.2); /* Borde índigo muy fino, como trazado a lápiz */
     border-radius: 60px;
     overflow: hidden;
     position: relative;
-    background: rgba(255, 255, 255, 0.02);
-    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    background: transparent;
 }
 
+/* El degradado ahora funde hacia CREMA, no hacia azul */
 .window-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, var(--c-indigo) 0%, transparent 25%, transparent 75%, var(--c-indigo) 100%);
+    background: linear-gradient(to bottom, var(--c-cream) 0%, transparent 20%, transparent 80%, var(--c-cream) 100%);
     pointer-events: none;
 }
 
@@ -790,6 +844,7 @@ body {
     will-change: transform, filter;
 }
 
+/* Las runas en Índigo oscuro, puro contraste */
 .rune-item {
     height: 120px; 
     display: flex;
@@ -797,116 +852,125 @@ body {
     justify-content: center;
     font-size: 3rem;
     font-family: var(--f-jp);
-    color: var(--c-gold);
+    color: var(--c-indigo); 
 }
 
-/* Instrucción Sutil (El nuevo Ghost Button Integrado) */
+/* --- Instrucción Sutil (Sin botones gruesos) --- */
 .oracle-instruction {
-    margin-top: 1.5rem;
-    padding: 10px 25px;
-    border: 1px solid rgba(197, 163, 101, 0.4);
-    border-radius: 30px;
+    margin-top: 2rem;
+    padding: 12px 28px; /* Le damos cuerpo para que parezca un botón real */
     font-size: 0.75rem;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     text-transform: uppercase;
-    color: var(--c-gold);
-    transition: all 0.3s ease;
-}
-
-/* Cuando pasas el ratón por el artefacto, el botón se ilumina */
-.oracle-interactive:hover .oracle-instruction {
-    background: var(--c-gold);
     color: var(--c-indigo);
-    border-color: var(--c-gold);
-    letter-spacing: 5px;
+    border: 1px solid rgba(26, 38, 57, 0.4); /* Borde fino y elegante */
+    border-radius: 40px; /* Forma de píldora redondeada */
+    opacity: 1; /* NADA de ocultarlo, 100% visible */
+    transition: all 0.4s ease;
+}
+
+.oracle-interactive:hover .oracle-instruction {
+    background: var(--c-indigo);
+    color: var(--c-cream);
+    border-color: var(--c-indigo);
+    transform: translateY(-2px); /* Un levísimo salto para dar respuesta táctil */
 }
 
 
-/* --- Banner Colaboración (Estilo Street / Marquee) --- */
+/* =========================================
+   BANNER DE COLABORACIÓN (ESTILO EMAKIMONO)
+   ========================================= */
+
+/* El contenedor principal da el espacio necesario (Ma) */
 .collab-marquee-wrapper {
     position: relative;
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
-    background: var(--c-indigo); /* Cambiado a Índigo para más elegancia */
-    color: var(--c-gold); /* Texto en Oro */
-    padding: 12px 0;
-    margin-bottom: 5rem;
-    display: flex;
-    align-items: center;
-    border-top: 1px solid var(--c-gold); /* Borde fino dorado */
-    border-bottom: 1px solid var(--c-gold);
-    transform: rotate(-2deg); 
-    z-index: 50;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    transition: opacity 0.4s ease, transform 0.4s ease;
+    width: 100%;
+    margin: 6rem 0; 
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Cuando se cierra, desaparece suavemente */
+/* Animación sutil de desaparición al cerrarlo */
 .collab-marquee-wrapper.hidden {
     opacity: 0;
-    transform: translateY(-20px) rotate(-2deg);
+    transform: translateY(-10px);
     pointer-events: none;
 }
 
+/* El Pergamino */
 .collab-marquee {
-    display: flex;
-    white-space: nowrap;
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    padding: 2rem 0; /* Un marco vertical delgado */
     overflow: hidden;
-    width: 100%;
+    background: transparent;
+    
+    /* Líneas índigo muy suaves arriba y abajo */
+    border-top: 1px solid rgba(26, 38, 57, 0.1); 
+    border-bottom: 1px solid rgba(26, 38, 57, 0.1);
+    
+    /* Efecto de niebla: el texto se desvanece suavemente al llegar a los bordes */
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 
+/* La pista que se mueve */
 .marquee-content {
     display: flex;
-    animation: scroll-marquee 15s linear infinite; 
-    font-family: var(--f-sans);
-    font-weight: 700;
-    font-size: 1.2rem;
-    letter-spacing: 3px;
+    white-space: nowrap;
+    width: max-content;
+    
+    /* Animación lentísima y fluida */
+    animation: scroll-emakimono 35s linear infinite; 
+    
+    /* Tipografía de lujo */
+    font-family: var(--f-serif);
+    font-weight: 300; /* Fina y delicada */
+    font-size: 1.1rem;
+    letter-spacing: 5px; /* Mucho aire entre letras */
+    color: rgba(26, 38, 57, 0.7); /* Índigo ligeramente transparente */
 }
 
+/* Mucho espacio entre cada repetición de la frase */
 .marquee-content span {
-    padding: 0 2rem;
+    padding: 0 4rem;
 }
 
-@keyframes scroll-marquee {
+/* Animación del movimiento continuo */
+@keyframes scroll-emakimono {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Se mueve al 50% para hacer el bucle perfecto */
+    100% { transform: translateX(-50%); } 
 }
 
-/* Botón de cerrar la cinta */
+/* --- Botón de cerrar (Sutil y sin cajas) --- */
 .close-collab {
     position: absolute;
-    right: 5%;
+    right: 3%;
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
-    color: var(--c-gold);
-    border: 1px solid var(--c-gold);
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    font-size: 1.5rem;
+    border: none; /* Adiós al borde redondo corporativo */
+    color: rgba(26, 38, 57, 0.3); /* Casi invisible por defecto */
+    font-size: 2rem; /* Tamaño grande pero trazo fino */
+    font-weight: 300;
     line-height: 1;
     cursor: pointer;
-    z-index: 60;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.3s ease;
+    z-index: 10;
+    transition: all 0.4s ease;
 }
 
+/* Al pasar el ratón, se tiñe del rojo vermellón (tu color de sello) */
 .close-collab:hover {
-    background: var(--c-gold);
-    color: var(--c-indigo);
+    color: var(--c-vermilion);
     transform: translateY(-50%) scale(1.1);
 }
 
 
 
-@keyframes flash {
-    0% { opacity: 0.2; transform: scale(1); }
-    100% { opacity: 1; transform: scale(1.2); text-shadow: 0 0 15px var(--c-vermilion); }
-}
+
+
+
+
 
 .oracle-btn {
     border-color: var(--c-gold);
