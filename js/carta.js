@@ -7,42 +7,42 @@ document.addEventListener("DOMContentLoaded", () => {
             name: "Bakeneko",
             title: "El Felino Metamorfo",
             desc: "Has invocado al Bakeneko. Un gato que ha vivido lo suficiente para ganar poder espiritual, caminar sobre dos patas y dominar las ilusiones. Lúdico y misterioso, es el anfitrión de nuestro Grimorio. Representado por la dulzura tricolor del Hanami Dango.",
-            imagePath: "assets/images/card-bakeneko.jpg" // Asegúrate de tener una imagen vertical de la carta
+            imagePath: "assets/images/card-bakeneko.webp" // Asegúrate de tener una imagen vertical de la carta
         },
         "kitsune": {
             kanji: "狐",
             name: "Kitsune",
             title: "El Zorro de Nueve Colas",
             desc: "Has descubierto al Kitsune. Maestro del engaño y poseedor de la sabiduría antigua. Un exterior blanco e inmaculado que oculta una complejidad abrumadora en su interior, como el Mochi Daifuku que custodia.",
-            imagePath: "assets/images/card-kitsune.jpg"
+            imagePath: "assets/images/card-kitsune.webp"
         },
         "tanuki": {
             kanji: "狸",
             name: "Tanuki",
             title: "El Guardián del Bosque",
             desc: "Has encontrado al Tanuki. Símbolo de prosperidad, jovialidad y abundancia. Su carácter afable, rústico y terrenal se manifiesta perfectamente en los bizcochos reconfortantes del Dorayaki.",
-            imagePath: "assets/images/card-tanuki.jpg"
+            imagePath: "assets/images/card-tanuki.webp"
         },
         "yuki-onna": {
             kanji: "雪",
             name: "Yuki-Onna",
             title: "La Dama de las Nieves",
             desc: "Un escalofrío recorre la estancia. Has invocado a la Yuki-Onna. Una belleza letal, gélida y efímera. Su espíritu se materializa en el delicado e hiperdetallado arte del Nerikiri de Camelia.",
-            imagePath: "assets/images/card-yukionna.jpg"
+            imagePath: "assets/images/card-yukionna.webp"
         },
         "kappa": {
             kanji: "河",
             name: "Kappa",
             title: "El Espíritu del Río",
             desc: "Las aguas se agitan. Has despertado al Kappa. Un guardián de los estanques dulces y frescos. Su esencia translúcida y resbaladiza habita en el refrescante Kuzumochi.",
-            imagePath: "assets/images/card-kappa.jpg"
+            imagePath: "assets/images/card-kappa.webp"
         },
         "umibozu": {
             kanji: "海",
             name: "Umibozu",
             title: "El Monolito Abisal",
             desc: "Una sombra gigante emerge en la noche. Es el Umibozu. Denso, oscuro, misterioso y monolítico. Su poder se concentra en la pureza geométrica del Yokan nocturno.",
-            imagePath: "assets/images/card-umibozu.jpg"
+            imagePath: "assets/images/card-umibozu.webp"
         }
     };
 
