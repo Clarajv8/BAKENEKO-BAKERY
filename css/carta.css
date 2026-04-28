@@ -1,0 +1,152 @@
+/* --- Base Oscura (El Vacío) --- */
+body.card-reveal-page {
+    background-color: var(--c-indigo);
+    color: var(--c-cream);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.minimal-nav {
+    position: absolute;
+    mix-blend-mode: normal;
+}
+
+.reveal-stage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 8rem 2rem 4rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10;
+}
+
+/* --- Cabecera del Descubrimiento --- */
+.reveal-header {
+    margin-bottom: 3rem;
+    opacity: 0; /* Para animar con GSAP */
+    transform: translateY(20px);
+}
+
+.reveal-header .tiny-title {
+    color: var(--c-gold);
+    font-size: 1.2rem;
+    letter-spacing: 6px;
+    margin-bottom: 0.5rem;
+}
+
+.magic-seal {
+    font-family: var(--f-jp);
+    font-size: 3rem;
+    color: var(--c-vermilion);
+    display: block;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+/* --- El Escaparate 3D de la Carta --- */
+.card-showcase {
+    perspective: 1000px;
+    margin-bottom: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.card-3d-wrapper {
+    position: relative;
+    width: 300px;
+    height: 450px; /* Proporción típica de carta de tarot/colección */
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: transform 0.1s ease; /* Para el efecto de seguimiento del ratón */
+    opacity: 0;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5), 0 0 40px rgba(197, 163, 101, 0.2);
+}
+
+.yokai-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 1px solid rgba(197, 163, 101, 0.5); /* Borde dorado fino */
+    z-index: 2;
+    position: relative;
+}
+
+.yokai-card-img.hidden {
+    display: none;
+}
+
+/* El brillo místico detrás de la carta */
+.card-glow {
+    position: absolute;
+    inset: -20px;
+    background: radial-gradient(circle at center, rgba(197, 163, 101, 0.4) 0%, transparent 70%);
+    z-index: 1;
+    filter: blur(20px);
+    opacity: 0.6;
+    animation: pulseGlow 4s infinite alternate;
+}
+
+@keyframes pulseGlow {
+    0% { opacity: 0.4; transform: scale(0.95); }
+    100% { opacity: 0.8; transform: scale(1.05); }
+}
+
+/* --- El Lore (Texto explicativo) --- */
+.yokai-lore {
+    opacity: 0;
+    max-width: 500px;
+}
+
+.lore-title {
+    font-family: var(--f-serif);
+    font-size: 3rem;
+    color: var(--c-cream);
+    margin-bottom: 0.2rem;
+    line-height: 1;
+}
+
+.lore-subtitle {
+    font-family: var(--f-sans);
+    font-size: 0.8rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--c-vermilion);
+    margin-bottom: 2rem;
+}
+
+.lore-text {
+    font-family: var(--f-serif);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: rgba(244, 241, 234, 0.8); /* Crema atenuado */
+}
+
+/* --- Botón Volver --- */
+.reveal-actions {
+    margin-top: 4rem;
+    opacity: 0;
+}
+
+.return-btn {
+    background: var(--c-cream);
+    color: var(--c-indigo);
+    border-color: var(--c-cream);
+}
+.return-btn:hover {
+    background: transparent;
+    color: var(--c-cream);
+}
+
+@media (max-width: 600px) {
+    .card-3d-wrapper {
+        width: 250px;
+        height: 375px;
+    }
+}
