@@ -32,13 +32,46 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: var(--gutter);
+    padding: 1rem var(--gutter);
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    mix-blend-mode: difference;
+    
+    /* 1. El efecto Cristal REAL */
+    background: rgba#c5a465bd; /* Opacidad bajada al 25% para que pase la luz */
+    backdrop-filter: blur(16px); /* Desenfoque más fuerte y sedoso */
+    -webkit-backdrop-filter: blur(16px); 
+    
+    /* 2. La línea de separación elegante */
+    border-bottom: 1px solid rgba(197, 163, 101, 0.4); /* Línea Oro Kintsugi semi-transparente */
+    
+    /* 3. El degradado de sombra para matar el corte duro */
+    box-shadow: 0 15px 35px rgba(26, 38, 57, 0.1); 
+    
     color: var(--c-cream);
+    transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1), background 0.3s ease;
+}
+
+.main-nav.nav-hidden {
+    transform: translateY(-100%);
+}
+
+.logo {
+    text-decoration: none; 
+    display: flex;        
+    align-items: center;
+}
+
+.logo img {
+    height: 35px; /* Altura perfecta y elegante para una barra de navegación */
+    width: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.05); /* Pequeño efecto al pasar el ratón */
 }
 
 .lang-btn {

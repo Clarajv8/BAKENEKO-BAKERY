@@ -162,6 +162,30 @@ document.addEventListener("DOMContentLoaded", () => {
             updateCartUI();
         }
     }
+
+
+    /* =========================================
+       SMART NAV (Ocultar al hacer scroll hacia abajo)
+       ========================================= */
+    const mainNav = document.querySelector('.main-nav');
+    let lastScrollY = window.scrollY;
+
+    if (mainNav) {
+        window.addEventListener('scroll', () => {
+            const currentScrollY = window.scrollY;
+
+            // Si bajamos el scroll y ya hemos pasado los primeros 100px (para no esconderla nada más empezar)
+            if (currentScrollY > lastScrollY && currentScrollY > 100) {
+                mainNav.classList.add('nav-hidden');
+            } 
+            // Si subimos el scroll, la volvemos a mostrar
+            else if (currentScrollY < lastScrollY) {
+                mainNav.classList.remove('nav-hidden');
+            }
+
+            lastScrollY = currentScrollY;
+        });
+    }
     
 
     /* =========================================
