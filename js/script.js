@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const translations = {
         es: {
             cart: "Cesta", pretitle: "Portal al Reino Yokai", subtitle: "El Refugio de los Espíritus Dulces", cta: "Entrar al Portal", mainTagline: "El sabor de lo oculto, servido en tu mesa.", introTitle: "Dulzura entre mundos", introText: "No horneamos para el hambre del cuerpo, sino para los antojos del alma. Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna y la quietud antigua.", collectionTitle: "La Colección", addToCart: "Añadir a la Cesta", oracleTitle: "El Oráculo del Bakeneko", oracleDesc: "¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.", oracleBtn: "Consultar al Oráculo", tabAll: "El Grimorio Completo", tabDesserts: "Postres Yokai", tabWines: "Vinos Espirituales", collabSub: "Colaboración Exclusiva", collabDesc: "El equilibrio perfecto entre el Wagashi tradicional y la enología premium. Un maridaje de leyenda diseñado para despertar a los espíritus.", tabCoffee: "Cafés del Grimorio", collabMarquee: "BAKENEKO × SYRA COFFEE × BODEGAS KIZUNA ・ EL GRIMORIO DE LOS 6 REINOS ・ ", cartTitle: "Tu Selección", cartEmpty: "El grimorio está vacío.", cartTotal: "Total Ritual:", cartCheckout: "Completar Invocación", cartAdded: "¡Añadido!", checkoutTitle: "Sellar el Pacto", checkoutSub: "Prepara tu ofrenda para recibir los elixires y wagashi.", checkoutShipping: "Destino del Ritual", chkName: "Nombre del Mortal", chkAddress: "Dirección (Plano Terrenal)", checkoutPayment: "Ofrenda de Intercambio", chkCard: "Runas de la Tarjeta (16 dígitos)", chkExp: "Caducidad (MM/AA)", chkSubmit: "Confirmar Invocación", successTitle: "Pacto Sellado", successText: "Los espíritus han aceptado tu ofrenda. Tu pedido está en camino a través del portal.", backToRealm: "Volver al Reino", returnStore: "← Volver al Grimorio", selectZone: "Selecciona tu Reino...", summaryTitle: "Resumen de Invocación", summarySub: "Subtotal", summaryShip: "Envío (Portal)", summaryTotal: "Total Ritual", yokaiClass: "Espíritu Guardián:", allergenLabel: "Alérgenos:", unit: "/ ud", botName: "Espíritu Bakeneko", botStatus: "Guardián del Grimorio", ftBio: "Dulzura entre mundos. Unimos la tradición del wagashi con la vanguardia, guiados por el Bakeneko.",
-            ftQuickLinks: "Enlaces Rápidos", ftShop: "El Grimorio (Tienda)", ftFAQ: "Preguntas Frecuentes", ftTrack: "Rastrear Ofrenda", ftLegal: "Legal y Transparencia", ftPrivacy: "Política de Privacidad", ftTerms: "Términos del Pacto (TOS)", ftAllergensInfo: "Guía de Alérgenos", ftContactAcc: "Atención y Cuenta", ftContactUs: "📞 Habla con un Monje", ftMyAccount: "👤 Mi Cuenta / Iniciar Sesión", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "CONCEPTO", navSocial: "REDES", enterShop: "ENTRAR AL GRIMORIO", vLabelEssence: "ESENCIA", vLabelConcept: "CONCEPTO", introWhoTitle: "Artesanía de otro mundo", introWhoText: "Bakeneko Bakery no es una pastelería convencional. Somos un espacio donde la técnica milenaria del Wagashi se encuentra con el misticismo. Cada pieza es una ofrenda esculpida a mano para conectar el paladar con la mitología japonesa."
+            ftQuickLinks: "Enlaces Rápidos", ftShop: "El Grimorio (Tienda)", ftFAQ: "Preguntas Frecuentes", ftTrack: "Rastrear Ofrenda", ftLegal: "Legal y Transparencia", ftPrivacy: "Política de Privacidad", ftTerms: "Términos del Pacto (TOS)", ftAllergensInfo: "Guía de Alérgenos", ftContactAcc: "Atención y Cuenta", ftContactUs: "📞 Habla con un Monje", ftMyAccount: "👤 Mi Cuenta / Iniciar Sesión", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "CONCEPTO", navSocial: "REDES", enterShop: "ENTRAR AL GRIMORIO", vLabelEssence: "ESENCIA", vLabelConcept: "CONCEPTO", introWhoTitle: "Artesanía de otro mundo", introWhoText: "Bakeneko Bakery no es una pastelería convencional. Somos un espacio donde la técnica milenaria del Wagashi se encuentra con el misticismo. Cada pieza es una ofrenda esculpida a mano para conectar el paladar con la mitología japonesa.", loadMore: "Ver más", showLess: "Ocultar"
         },
         en: {
             cart: "Cart", pretitle: "Gateway to the Yokai Realm", subtitle: "Sanctuary of Sweet Spirits", cta: "Enter the Portal", mainTagline: "The taste of the hidden, served at your table.", introTitle: "Sweetness between worlds", introText: "We do not bake for the body's hunger, but for the soul's cravings. Guided by the Bakeneko, our sweets bridge the gap between modern rush and ancient stillness.", collectionTitle: "The Collection", addToCart: "Add to Cart", oracleTitle: "The Bakeneko Oracle", oracleDesc: "In doubt? Let fate choose the spirit your soul needs today.", oracleBtn: "Consult the Oracle", tabAll: "The Complete Grimoire", tabDesserts: "Yokai Sweets", tabWines: "Spiritual Wines", collabSub: "Exclusive Collaboration", collabDesc: "The perfect balance between traditional Wagashi and premium oenology. A legendary pairing designed to awaken the spirits.", tabCoffee: "Grimoire Coffees", collabMarquee: " BAKENEKO × SYRA COFFEE × BODEGAS KIZUNA ・ THE GRIMOIRE OF THE 6 REALMS ・ ", cartTitle: "Your Selection", cartEmpty: "The grimoire is empty.", cartTotal: "Ritual Total:", cartCheckout: "Complete Invocation", cartAdded: "Added!", checkoutTitle: "Seal the Pact", checkoutSub: "Prepare your offering to receive the elixirs and wagashi.", checkoutShipping: "Ritual Destination", chkName: "Mortal's Name", 
-            chkAddress: "Address (Earthly Plane)", checkoutPayment: "Exchange Offering", chkCard: "Card Runes (16 digits)", chkExp: "Expiry (MM/YY)", chkSubmit: "Confirm Invocation", successTitle: "Pact Sealed", successText: "The spirits have accepted your offering. Your order is on its way through the portal.", backToRealm: "Return to Realm", returnStore: "← Return to Grimoire", selectZone: "Select your Realm...", summaryTitle: "Invocation Summary", summarySub: "Subtotal", summaryShip: "Shipping (Portal)", summaryTotal: "Ritual Total", yokaiClass: "Guardian Spirit:", allergenLabel: "Allergens:", unit: "/ ea", botName: "Bakeneko Spirit", botStatus: "Grimoire Guardian", ftBio: "Sweetness between worlds. We blend wagashi tradition with the avant-garde, guided by the Bakeneko.", ftQuickLinks: "Quick Links", ftShop: "The Grimoire (Shop)", ftFAQ: "Frequently Asked Questions",  ftTrack: "Track Offering",  ftLegal: "Legal & Transparency", ftPrivacy: "Privacy Policy", ftTerms: "Terms of the Pact (TOS)", ftAllergensInfo: "Allergen Guide", ftContactAcc: "Support & Account", ftContactUs: "📞 Speak with a Monk", ftMyAccount: "👤 My Account / Login", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "CONCEPT", navSocial: "SOCIALS", enterShop: "ENTER THE GRIMOIRE", vLabelEssence: "ESSENCE", vLabelConcept: "CONCEPT", introWhoTitle: "Otherworldly Craft", introWhoText: "Bakeneko Bakery is not a conventional pastry shop. We are a space where ancient Wagashi techniques meet mysticism. Each piece is a hand-sculpted offering to connect your palate with Japanese mythology."
+            chkAddress: "Address (Earthly Plane)", checkoutPayment: "Exchange Offering", chkCard: "Card Runes (16 digits)", chkExp: "Expiry (MM/YY)", chkSubmit: "Confirm Invocation", successTitle: "Pact Sealed", successText: "The spirits have accepted your offering. Your order is on its way through the portal.", backToRealm: "Return to Realm", returnStore: "← Return to Grimoire", selectZone: "Select your Realm...", summaryTitle: "Invocation Summary", summarySub: "Subtotal", summaryShip: "Shipping (Portal)", summaryTotal: "Ritual Total", yokaiClass: "Guardian Spirit:", allergenLabel: "Allergens:", unit: "/ ea", botName: "Bakeneko Spirit", botStatus: "Grimoire Guardian", ftBio: "Sweetness between worlds. We blend wagashi tradition with the avant-garde, guided by the Bakeneko.", ftQuickLinks: "Quick Links", ftShop: "The Grimoire (Shop)", ftFAQ: "Frequently Asked Questions",  ftTrack: "Track Offering",  ftLegal: "Legal & Transparency", ftPrivacy: "Privacy Policy", ftTerms: "Terms of the Pact (TOS)", ftAllergensInfo: "Allergen Guide", ftContactAcc: "Support & Account", ftContactUs: "📞 Speak with a Monk", ftMyAccount: "👤 My Account / Login", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "CONCEPT", navSocial: "SOCIALS", enterShop: "ENTER THE GRIMOIRE", vLabelEssence: "ESSENCE", vLabelConcept: "CONCEPT", introWhoTitle: "Otherworldly Craft", introWhoText: "Bakeneko Bakery is not a conventional pastry shop. We are a space where ancient Wagashi techniques meet mysticism. Each piece is a hand-sculpted offering to connect your palate with Japanese mythology.", loadMore: "Load more", showLess: "Show less"
         },
         jp: {
-            cart: "カート", pretitle: "妖怪のレルムへの入り口", subtitle: "甘い精霊の聖域", cta: "ポータルに入る", mainTagline: "隠された味わいを、あなたの食卓へ。", introTitle: "世界の間の甘み", introText: "私たちは体の飢えのためではなく、魂の渇望のために焼きます。化け猫に導かれ、私たちのスイーツは現代の慌ただしさと古代の静けさの間の架け橋となります。", collectionTitle: "コレクション", addToCart: "カートに追加", oracleTitle: "化け猫の神託", oracleDesc: "迷っていますか？今日あなたの魂が必要とする精霊を運命に選ばせましょう。", oracleBtn: "神託を伺う", tabAll: "完全な魔導書", tabDesserts: "妖怪のスイーツ", tabWines: "霊的なワイン", collabSub: "特別コラボレーション", collabDesc: "伝統的な和菓子と高級ワインの完璧なバランス。精霊を目覚めさせるためにデザインされた伝説のペアリング。", tabCoffee: "魔導書のコーヒー", collabMarquee: "化け猫 × SYRA COFFEE × KIZUNAワイナリー ・ 六つの領域の魔導書 ・ ", cartTitle: "あなたの選択", cartEmpty: "魔導書は空です。", cartTotal: "儀式の合計:", cartCheckout: "召喚を完了する", cartAdded: "追加されました！", checkoutTitle: "契約を結ぶ", checkoutSub: "お供え物を準備して、霊薬と和菓子を受け取ります。", checkoutShipping: "儀式の目的地", chkName: "定命の者の名前", chkAddress: "住所（現世）", checkoutPayment: "交換の供物", chkCard: "カードのルーン（16桁）", chkExp: "有効期限 (MM/YY)", chkSubmit: "召喚を確認する", successTitle: "契約完了", successText: "精霊たちがあなたの供物を受け入れました。ご注文はポータルを通って向かっています。", backToRealm: "レルムに戻る", returnStore: "← 魔導書に戻る", selectZone: "領域を選択...", summaryTitle: "召喚の概要", summarySub: "小計", summaryShip: "送料（ポータル）", summaryTotal: "儀式の合計", yokaiClass: "守護霊:", allergenLabel: "アレルギー物質:", unit: "/ 個", botName: "化け猫の精霊", botStatus: "魔導書の守護者", ftBio: "世界の間の甘さ。化け猫に導かれ、和菓子の伝統とアバンギャルドを融合させています。", ftQuickLinks: "クイックリンク", ftShop: "魔導書（ショップ）", ftFAQ: "よくある質問", ftTrack: "供物の追跡", ftLegal: "法的情報と透明性", ftPrivacy: "プライバシーポリシー", ftTerms: "契約条件（TOS）", ftAllergensInfo: "アレルギーガイド", ftContactAcc: "サポートとアカウント", ftContactUs: "📞 僧侶と話す", ftMyAccount: "👤 マイアカウント / ログイン", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "理念", navSocial: "縁", enterShop: "魔導書へ入る", vLabelEssence: "本質", vLabelConcept: "理念", introWhoTitle: "異世界の職人技", introWhoText: "化け猫ベーカリーは、単なる菓子店ではありません。千年の歴史を持つ和菓子の技術と神秘主義が融合する場所です。一つひとつが、日本の神話とあなたの味覚を繋ぐために手作りされた供物なのです。"
+            cart: "カート", pretitle: "妖怪のレルムへの入り口", subtitle: "甘い精霊の聖域", cta: "ポータルに入る", mainTagline: "隠された味わいを、あなたの食卓へ。", introTitle: "世界の間の甘み", introText: "私たちは体の飢えのためではなく、魂の渇望のために焼きます。化け猫に導かれ、私たちのスイーツは現代の慌ただしさと古代の静けさの間の架け橋となります。", collectionTitle: "コレクション", addToCart: "カートに追加", oracleTitle: "化け猫の神託", oracleDesc: "迷っていますか？今日あなたの魂が必要とする精霊を運命に選ばせましょう。", oracleBtn: "神託を伺う", tabAll: "完全な魔導書", tabDesserts: "妖怪のスイーツ", tabWines: "霊的なワイン", collabSub: "特別コラボレーション", collabDesc: "伝統的な和菓子と高級ワインの完璧なバランス。精霊を目覚めさせるためにデザインされた伝説のペアリング。", tabCoffee: "魔導書のコーヒー", collabMarquee: "化け猫 × SYRA COFFEE × KIZUNAワイナリー ・ 六つの領域の魔導書 ・ ", cartTitle: "あなたの選択", cartEmpty: "魔導書は空です。", cartTotal: "儀式の合計:", cartCheckout: "召喚を完了する", cartAdded: "追加されました！", checkoutTitle: "契約を結ぶ", checkoutSub: "お供え物を準備して、霊薬と和菓子を受け取ります。", checkoutShipping: "儀式の目的地", chkName: "定命の者の名前", chkAddress: "住所（現世）", checkoutPayment: "交換の供物", chkCard: "カードのルーン（16桁）", chkExp: "有効期限 (MM/YY)", chkSubmit: "召喚を確認する", successTitle: "契約完了", successText: "精霊たちがあなたの供物を受け入れました。ご注文はポータルを通って向かっています。", backToRealm: "レルムに戻る", returnStore: "← 魔導書に戻る", selectZone: "領域を選択...", summaryTitle: "召喚の概要", summarySub: "小計", summaryShip: "送料（ポータル）", summaryTotal: "儀式の合計", yokaiClass: "守護霊:", allergenLabel: "アレルギー物質:", unit: "/ 個", botName: "化け猫の精霊", botStatus: "魔導書の守護者", ftBio: "世界の間の甘さ。化け猫に導かれ、和菓子の伝統とアバンギャルドを融合させています。", ftQuickLinks: "クイックリンク", ftShop: "魔導書（ショップ）", ftFAQ: "よくある質問", ftTrack: "供物の追跡", ftLegal: "法的情報と透明性", ftPrivacy: "プライバシーポリシー", ftTerms: "契約条件（TOS）", ftAllergensInfo: "アレルギーガイド", ftContactAcc: "サポートとアカウント", ftContactUs: "📞 僧侶と話す", ftMyAccount: "👤 マイアカウント / ログイン", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "理念", navSocial: "縁", enterShop: "魔導書へ入る", vLabelEssence: "本質", vLabelConcept: "理念", introWhoTitle: "異世界の職人技", introWhoText: "化け猫ベーカリーは、単なる菓子店ではありません。千年の歴史を持つ和菓子の技術と神秘主義が融合する場所です。一つひとつが、日本の神話とあなたの味覚を繋ぐために手作りされた供物なのです。", loadMore: "もっと見る", showLess: "閉じる"
         }
     };
 
@@ -328,126 +328,137 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    /* =========================================
-   4. PESTAÑAS (FILTRADO EN CASCADA PERFECTA)
-   ========================================= */
-const tabBtns = document.querySelectorAll('.tab-btn');
-const productCards = document.querySelectorAll('.product-card');
+   /* =========================================
+       4. PESTAÑAS Y BOTÓN "VER MÁS / OCULTAR" (MÓVIL)
+       ========================================= */
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const productCards = document.querySelectorAll('.product-card');
+    const loadMoreBtn = document.getElementById('load-more-btn');
+    const loadMoreWrapper = document.getElementById('load-more-wrapper');
+    let currentLimit = 6; // Límite inicial en móvil
 
-tabBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        if (btn.classList.contains('active')) return;
+    function runFilter(filter, resetLimit = true) {
+        if (resetLimit) currentLimit = 6;
+        let delayIndex = 0;
+        let visibleMatchCount = 0;
+        const isMobile = window.innerWidth <= 600;
+        const lang = langs[currentLangIndex]; // Para coger la traducción correcta
 
-        // 1. Cambiamos la clase 'active'
-        tabBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        
-        const filter = btn.getAttribute('data-filter');
-        
-        // 2. FASE 1: Ocultamos suavemente SOLO los que están visibles
         productCards.forEach(card => {
-            if (card.style.display !== 'none') {
+            const category = card.getAttribute('data-category');
+            
+            card.classList.remove('hiding');
+            card.classList.remove('hidden-mobile');
+            
+            if (filter === 'all' || category === filter) {
+                visibleMatchCount++;
+                
+                if (isMobile && visibleMatchCount > currentLimit) {
+                    card.style.display = 'none';
+                    card.classList.add('hidden-mobile');
+                    card.classList.remove('showing');
+                } else {
+                    card.style.display = 'flex';
+                    card.style.opacity = '1'; 
+                    card.style.animationDelay = `${delayIndex * 0.1}s`;
+                    card.classList.add('showing');
+                    delayIndex++;
+                }
+            } else {
+                card.style.display = 'none';
                 card.classList.remove('showing');
-                card.classList.add('hiding');
+                card.style.animationDelay = '0s'; 
             }
         });
 
-        // 3. FASE 2: Esperamos a que termine la animación de salida (400ms)
-        setTimeout(() => {
-            let delayIndex = 0;
-
-            productCards.forEach(card => {
-                const category = card.getAttribute('data-category');
+        // Lógica del interruptor Ver Más / Ocultar
+        if (loadMoreWrapper) {
+            // Solo mostramos el botón si en esta pestaña hay más de 6 productos en total
+            if (isMobile && visibleMatchCount > 6) {
+                loadMoreWrapper.style.display = 'block';
                 
-                // Limpiamos la clase hiding
-                card.classList.remove('hiding');
-                
-                if (filter === 'all' || category === filter) {
-                    // RED DE SEGURIDAD: Lo hacemos invisible antes de mostrarlo
-                    card.style.opacity = '0'; 
-                    card.style.display = 'flex';
-                    
-                    // Asignamos el retraso
-                    card.style.animationDelay = `${delayIndex * 0.1}s`;
-                    
-                    // Quitamos la opacidad en línea para que la animación CSS tome el control
-                    requestAnimationFrame(() => {
-                        card.style.opacity = '';
-                        card.classList.add('showing');
-                    });
-                    
-                    delayIndex++;
-                } else {
-                    card.style.display = 'none';
-                    card.classList.remove('showing');
-                    card.style.animationDelay = '0s'; 
+                // Si el límite está en 6, mostramos "Ver más"
+                if (currentLimit === 6) {
+                    loadMoreBtn.setAttribute('data-i18n', 'loadMore');
+                    loadMoreBtn.innerText = translations[lang].loadMore;
+                } 
+                // Si el límite se ha expandido, mostramos "Ocultar"
+                else {
+                    loadMoreBtn.setAttribute('data-i18n', 'showLess');
+                    loadMoreBtn.innerText = translations[lang].showLess;
                 }
-            });
-
-            if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
-
-        }, 400); 
-    });
-});
-
-    // --- EL TRAGAPERRAS MÁGICO (OMIKUJI) ---
-    const oracleTrigger = document.getElementById('spin-btn'); 
-    const strip = document.getElementById('rune-strip');
-    const instructionText = document.querySelector('.oracle-instruction'); // Solo seleccionamos el texto
-    const runasBase = ["火", "水", "木", "金", "土"];
-    let isSpinning = false;
-
-    if (strip && oracleTrigger) {
-        const totalLoops = 8;
-        let stripHTML = "";
-        for (let i = 0; i < totalLoops; i++) {
-            runasBase.forEach(runa => {
-                stripHTML += `<div class="rune-item">${runa}</div>`;
-            });
+            } else {
+                loadMoreWrapper.style.display = 'none';
+            }
         }
-        strip.innerHTML = stripHTML;
+        
+        if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
+    }
 
-        oracleTrigger.addEventListener('click', () => {
-            if (isSpinning) return;
-            isSpinning = true;
+    // Inicializamos el filtro al cargar la web
+    runFilter('all', true);
 
-            // Guardamos el texto original y ponemos los puntos suspensivos SOLO en la etiqueta
-            const originalText = instructionText.innerText;
-            instructionText.innerText = "..."; 
-
-            const keys = Object.keys(productsDB);
-            const randomProductKey = keys[Math.floor(Math.random() * keys.length)];
-            const winnerRuneIndex = Math.floor(Math.random() * runasBase.length);
-
-            const itemHeight = 120; // Esto coincide perfectamente con tus 120px de CSS
-            const itemsPerLoop = runasBase.length;
-            const targetItemPos = ((totalLoops - 1) * itemsPerLoop) + winnerRuneIndex;
-            const targetY = -(targetItemPos * itemHeight);
-
-            gsap.set(strip, { y: 0 });
-
-            gsap.to(strip, {
-                y: targetY,
-                duration: 3.5,
-                ease: "power4.inOut",
-                onStart: () => gsap.to(strip, { filter: "blur(4px)", duration: 0.5 }), // El desenfoque de velocidad
-                onComplete: () => {
-                    gsap.to(strip, { filter: "blur(0px)", duration: 0.2 });
-                    
-                    setTimeout(() => {
-                        fillModal(randomProductKey);
-                        modalOverlay.classList.add('active');
-                        document.body.style.overflow = 'hidden';
-                        if (window.lenis) window.lenis.stop();
-
-                        // Restauramos el texto sutil
-                        instructionText.innerText = originalText;
-                        isSpinning = false;
-                    }, 500);
+    tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            if (btn.classList.contains('active')) return;
+            tabBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            
+            const filter = btn.getAttribute('data-filter');
+            
+            productCards.forEach(card => {
+                if (card.style.display !== 'none') {
+                    card.classList.remove('showing');
+                    card.classList.add('hiding');
                 }
             });
+
+            setTimeout(() => {
+                runFilter(filter, true);
+            }, 400); 
+        });
+    });
+
+    // Evento del botón "Ver Más / Ocultar"
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => {
+            const activeTab = document.querySelector('.tab-btn.active');
+            const filter = activeTab ? activeTab.getAttribute('data-filter') : 'all';
+            
+            if (currentLimit === 6) {
+                // ABRIR: Expandimos el límite a infinito y mostramos de inmediato
+                currentLimit = 999; 
+                runFilter(filter, false); 
+            } else {
+                // CERRAR: 1. Scroll de lujo con curva Ease-In-Out
+                if (window.lenis) {
+                    window.lenis.scrollTo('.tabs', { 
+                        offset: -100, 
+                        duration: 2.0, // <-- 2 Segundos exactos (movimiento más pausado y majestuoso)
+                        
+                        // Curva EaseInOutCubic: Empieza muy suave, acelera en el medio, frena como una pluma
+                        easing: (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
+                    });
+                } else {
+                    const tabsSection = document.querySelector('.tabs');
+                    if (tabsSection) tabsSection.scrollIntoView({ behavior: 'smooth' });
+                }
+                
+                // CERRAR: 2. Sincronizamos el corte con el nuevo tiempo (1.6 segundos)
+                // Corta justo cuando el scroll ya ha pasado los postres de abajo y está frenando
+                setTimeout(() => {
+                    currentLimit = 6; 
+                    runFilter(filter, false); 
+                }, 1600); 
+            }
         });
     }
+
+    window.addEventListener('resize', () => {
+        const activeTab = document.querySelector('.tab-btn.active');
+        const filter = activeTab ? activeTab.getAttribute('data-filter') : 'all';
+        runFilter(filter, false);
+    });
 
     /* =========================================
        5. BANNER COLABORACIÓN

@@ -1622,6 +1622,26 @@ p, h1, h2, h3, h4, span {
 
 
 
+/* Contenedor del botón Ver Más (Por defecto oculto en escritorio) */
+.load-more-wrapper {
+    display: none; 
+    text-align: center;
+    width: 100%;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+}
+
+@media (max-width: 600px) {
+    /* El JavaScript cambiará el display a 'block' cuando sea necesario,
+       aquí solo controlamos los márgenes en móvil */
+    .load-more-wrapper {
+        margin-top: 0;
+    }
+}
+
+
+
+
 
 
 
