@@ -123,30 +123,36 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================
-       CURSOR CIRCULAR DINÁMICO (Para páginas secundarias)
+       SISTEMA UNIVERSAL DEL CURSOR NEO-UKIYO-E
        ========================================= */
     const cursor = document.getElementById('neo-cursor');
+    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
 
-    if (cursor) {
-        gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+    if (cursor && typeof gsap !== 'undefined') {
+        if (isTouchDevice) {
+            // Si es un móvil/tablet, destruye el cursor falso para no dar problemas
+            cursor.style.display = 'none';
+        } else {
+            // Si es ordenador, inicia el motor de GSAP
+            gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+            const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
+            const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
 
-        const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
-        const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
+            window.addEventListener("mousemove", (e) => { 
+                xTo(e.clientX); 
+                yTo(e.clientY); 
+            });
 
-        window.addEventListener("mousemove", (e) => {
-            xTo(e.clientX);
-            yTo(e.clientY);
-        });
+            window.addEventListener('mousedown', () => cursor.classList.add('click'));
+            window.addEventListener('mouseup', () => cursor.classList.remove('click'));
 
-        window.addEventListener('mousedown', () => cursor.classList.add('click'));
-        window.addEventListener('mouseup', () => cursor.classList.remove('click'));
-
-        // Seleccionamos todo lo que sea clicable en esta página
-        const interactables = document.querySelectorAll('a, button, input, select');
-
-        interactables.forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-        });
+            // Detecta todo lo clickeable de cualquier página (Tienda, Info, Checkout)
+            const interactables = document.querySelectorAll('a, button, input, select, .product-card, .cart-trigger, .oracle-interactive');
+            
+            interactables.forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+            });
+        }
     }
 });

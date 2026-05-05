@@ -1,3 +1,11 @@
+Un recordatorio rápido para asegurar que todo funciona:
+Para que el cursor universal se active, asegúrate de que todos tus archivos .html (info.html, checkout.html, carta.html) tengan estas dos cosas al final del documento (justo antes de cerrar </body>):
+
+El div del cursor: <div id="neo-cursor"></div>
+
+El script de GSAP: <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+
 Colaboración TFG Con PACKAGING VINOS:
 
 "Se aplicó el uso de endónimos en el selector de idiomas para mejorar la accesibilidad e internacionalización (i18n) de la interfaz"

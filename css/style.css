@@ -1652,7 +1652,7 @@ p, h1, h2, h3, h4, span {
    ========================================= */
 .info-page-wrapper {
     max-width: 1200px;
-    margin: 4rem auto 6rem;
+    margin: 8rem auto 6rem;
     display: grid;
     grid-template-columns: 250px 1fr;
     gap: 4rem;
