@@ -1840,3 +1840,98 @@ p, h1, h2, h3, h4, span {
 [data-id="p13"] .stamp-seal { background: #4A7C82; } /* Color Kappa */
 [data-id="p14"] .stamp-seal { background: var(--c-ink); }
 [data-id="p15"] .stamp-seal { background: #e0e0e0; color: var(--c-indigo); }
+
+
+
+
+/* =========================================
+   RESPONSIVIDAD Y ADAPTACIÓN MÓVIL (UX/UI)
+   ========================================= */
+
+/* --- TABLETS (Pantallas medianas) --- */
+@media (max-width: 900px) {
+    .products-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 3rem 2rem; 
+    }
+}
+
+/* --- MÓVILES (Pantallas pequeñas) --- */
+@media (max-width: 600px) {
+    /* 1. Catálogo a 2 columnas (Evita el scroll infinito) */
+    .products-grid { 
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 2.5rem 1rem; /* Reducimos el hueco para aprovechar la pantalla */
+        padding: 3rem 5%;
+    }
+
+    /* 2. Textos de los productos más finos para que no salten de línea */
+    .card-info h4 {
+        font-size: 1.1rem;
+    }
+    .card-info .type {
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+    }
+
+    /* 3. ¡Vital para UX táctil! El botón (+) debe estar siempre visible en móvil */
+    .quick-add-btn {
+        opacity: 1; /* Siempre visible */
+        transform: translateY(0);
+        width: 35px; /* Ligeramente más pequeño para no tapar el postre */
+        height: 35px;
+        font-size: 1.4rem;
+        bottom: 0px;
+        right: 0px;
+        background: rgba(244, 241, 234, 0.85); /* Un poco translúcido */
+        backdrop-filter: blur(4px);
+    }
+
+    /* 4. Ajustes de la cabecera de la tienda */
+    .section-header {
+        margin-bottom: 2rem;
+    }
+    .section-header h3 {
+        font-size: 2rem; /* Título principal más equilibrado */
+    }
+    
+    /* 5. Filtros (Tabs) más compactos para que quepan todos */
+    .tabs {
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+    .tab-btn {
+        font-size: 0.6rem;
+        letter-spacing: 2px;
+    }
+
+    /* 6. Ajuste del Modal (Ventana emergente) para que la foto no aplaste al texto */
+    .modal-content {
+        grid-template-columns: 1fr; /* Pasa de 2 columnas a 1 sola */
+        grid-template-rows: 40% 60%; /* Arriba la foto, abajo el texto */
+        height: 85vh;
+        overflow-y: auto;
+    }
+    .modal-text {
+        padding: 2rem;
+    }
+    .modal-title {
+        font-size: 2rem;
+    }
+    
+}
+
+/* =========================================
+   DESACTIVAR CURSOR NEO-UKIYO-E EN TÁCTIL
+   ========================================= */
+@media (hover: none) and (pointer: coarse) {
+    /* 1. Ocultamos el anillo dorado por completo */
+    #neo-cursor {
+        display: none !important;
+    }
+    
+    /* 2. Devolvemos el comportamiento natural al dedo (quitamos el cursor: none) */
+    body, * {
+        cursor: auto !important;
+    }
+}
