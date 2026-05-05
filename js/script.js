@@ -968,32 +968,53 @@ tabBtns.forEach(btn => {
        ========================================= */
     if (typeof gsap !== 'undefined' && document.getElementById('ink-displacement')) {
         const displacement = document.getElementById('ink-displacement');
+        
+        // Creamos un controlador de medios (Media Queries para JavaScript)
+        let mm = gsap.matchMedia();
 
-        const inkTl = gsap.timeline({
-            scrollTrigger: {
-                trigger: "#concepto",
-                start: "center center",
-                end: "+=1200", 
-                pin: true,
-                pinType: "transform", // ⬅️ LA SOLUCIÓN DEFINITIVA: Evita el salto del scrollbar
-                scrub: 1
-            }
+        // 1. VERSIÓN ESCRITORIO (Más de 900px): La animación completa con pin y scrub
+        mm.add("(min-width: 901px)", () => {
+            const inkTl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: "#concepto",
+                    start: "center center",
+                    end: "+=1200", 
+                    pin: true,          // Clavamos la pantalla
+                    pinType: "transform",
+                    scrub: 1            // Sincronizado con la rueda
+                }
+            });
+
+            inkTl.to(".reveal-ink-wrapper", {
+                opacity: 1,
+                duration: 0.5,
+                ease: "power1.in"
+            })
+            .fromTo(displacement,
+                { attr: { scale: 250 } }, 
+                { attr: { scale: 0 }, duration: 2.5, ease: "power2.out" },
+                "<" 
+            )
+            .to({}, { duration: 0.8 }); // Pausa mágica
         });
 
-        // 1. Aparece de la nada (opacidad) muy rápido, sin difuminados
-        inkTl.to(".reveal-ink-wrapper", {
-            opacity: 1,
-            duration: 0.5,
-            ease: "power1.in"
-        })
-        // 2. Las salpicaduras de tinta (escala 250) se juntan de golpe formando las letras (escala 0)
-        .fromTo(displacement,
-            { attr: { scale: 250 } }, 
-            { attr: { scale: 0 }, duration: 2.5, ease: "power2.out" },
-            "<" 
-        )
-        // 3. LA PAUSA MÁGICA
-        .to({}, { duration: 0.8 });
+        // 2. VERSIÓN MÓVIL/TABLET (900px o menos): Scroll natural sin atascos
+        mm.add("(max-width: 900px)", () => {
+            // Ponemos el filtro a 0 desde el principio para que el texto sea legible
+            gsap.set(displacement, { attr: { scale: 0 } });
+            
+            // Simplemente hacemos que aparezca con un fundido suave al pasar por ahí
+            gsap.to(".reveal-ink-wrapper", {
+                scrollTrigger: {
+                    trigger: "#concepto",
+                    start: "top 75%", // Cuando la sección asoma en la pantalla
+                    // Fíjate que AQUÍ NO HAY PIN NI SCRUB. El scroll fluye libremente.
+                },
+                opacity: 1,
+                duration: 1.2,
+                ease: "power2.out"
+            });
+        });
     }
 
 });
