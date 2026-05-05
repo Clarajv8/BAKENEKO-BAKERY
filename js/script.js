@@ -921,23 +921,33 @@ tabBtns.forEach(btn => {
     }
 
     /* =========================================
-       11. CURSOR CIRCULAR
+       11. CURSOR CIRCULAR (A PRUEBA DE MÓVILES)
        ========================================= */
     const cursor = document.getElementById('neo-cursor');
+    
+    // Detección táctil a prueba de balas (detecta móviles reales, tablets y pantallas táctiles)
+    const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
+
     if (cursor) {
-        gsap.set(cursor, { xPercent: -50, yPercent: -50 });
-        const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
-        const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
+        if (isTouchDevice) {
+            // Si es un móvil o tablet, apagamos y ocultamos el cursor para siempre
+            cursor.style.display = 'none';
+        } else {
+            // Solo si es un ordenador con ratón ejecutamos las animaciones
+            gsap.set(cursor, { xPercent: -50, yPercent: -50 });
+            const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
+            const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
 
-        window.addEventListener("mousemove", (e) => { xTo(e.clientX); yTo(e.clientY); });
-        window.addEventListener('mousedown', () => cursor.classList.add('click'));
-        window.addEventListener('mouseup', () => cursor.classList.remove('click'));
+            window.addEventListener("mousemove", (e) => { xTo(e.clientX); yTo(e.clientY); });
+            window.addEventListener('mousedown', () => cursor.classList.add('click'));
+            window.addEventListener('mouseup', () => cursor.classList.remove('click'));
 
-        const interactables = document.querySelectorAll('a, button, .product-card, .cart-trigger, input, select');
-        interactables.forEach(el => {
-            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-        });
+            const interactables = document.querySelectorAll('a, button, .product-card, .cart-trigger, input, select');
+            interactables.forEach(el => {
+                el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+                el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+            });
+        }
     }
 
     /* =========================================
