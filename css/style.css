@@ -22,7 +22,11 @@ body {
     background-color: var(--c-cream);
     color: var(--c-indigo);
     font-family: var(--f-sans);
-    overflow-x: hidden;
+    
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden; 
+    position: relative;
 }
 
 
