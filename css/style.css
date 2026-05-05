@@ -1,7 +1,7 @@
 /* --- Variables & Reset --- */
 :root {
     --c-indigo:    #1a2639;
-    --c-cream:     #f4f1ea;
+    --c-cream:     #f4f0ea;
     --c-vermilion: #d64045;
     --c-gold:      #c5a365;
     --c-ink:       #0d0d0d;
@@ -38,16 +38,14 @@ body {
     align-items: center;
     z-index: 100;
     
-    /* 1. El efecto Cristal REAL */
-    background: rgba#c5a465bd; /* Opacidad bajada al 25% para que pase la luz */
-    backdrop-filter: blur(16px); /* Desenfoque más fuerte y sedoso */
-    -webkit-backdrop-filter: blur(16px); 
+    /* 1. El cristal ahumado (Corregido) */
+    background: rgba(26, 38, 57, 0.45); /* Índigo al 45% para dar contraste */
+    backdrop-filter: blur(12px); 
+    -webkit-backdrop-filter: blur(12px); 
     
-    /* 2. La línea de separación elegante */
-    border-bottom: 1px solid rgba(197, 163, 101, 0.4); /* Línea Oro Kintsugi semi-transparente */
-    
-    /* 3. El degradado de sombra para matar el corte duro */
-    box-shadow: 0 15px 35px rgba(26, 38, 57, 0.1); 
+    /* 2. Línea sutil dorada */
+    border-bottom: 1px solid rgba(197, 163, 101, 0.2); 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     
     color: var(--c-cream);
     transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1), background 0.3s ease;
@@ -64,10 +62,12 @@ body {
 }
 
 .logo img {
-    height: 35px; /* Altura perfecta y elegante para una barra de navegación */
+    height: 35px;
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
+    /* Sombra protectora para el logo */
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5)); 
 }
 
 .logo:hover img {
@@ -1134,7 +1134,16 @@ body {
 .checkout-btn:hover { background: var(--c-gold); color: var(--c-indigo); border-color: var(--c-gold); }
 
 /* Notificación visual (Puntito rojo) en el menú principal */
-.cart-trigger { cursor: pointer; display: flex; align-items: center; gap: 0.5rem; position: relative; }
+.cart-trigger { 
+    cursor: pointer; 
+    display: flex; 
+    align-items: center; 
+    gap: 0.5rem; 
+    position: relative; 
+    color: var(--c-cream);
+    /* Sombra protectora para el texto */
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+}
 .cart-dot {
     position: absolute; top: -8px; right: -20px; background: var(--c-vermilion); color: white; font-size: 0.8rem; font-weight: bold; width: 22px; height: 22px; border-radius: 50%; display: flex; justify-content: center; align-items: center; opacity: 0; transition: all 0.3s ease; transform: scale(0);
 }
