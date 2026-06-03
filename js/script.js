@@ -771,7 +771,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let isRetracting = false; 
 
         const IDLE_TIME = 8000; 
-        const PROBABILITY = 0.15; 
+        const PROBABILITY = 0.05; 
         const COOLDOWN = 120000; 
         let lastPawTime = 0; 
         const allProducts = document.querySelectorAll('.product-card');
