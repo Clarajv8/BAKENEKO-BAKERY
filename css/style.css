@@ -506,7 +506,10 @@ body {
     position: relative;
     transform: translateY(50px);
     transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+    overflow-y: auto !important; 
+    overscroll-behavior: contain;
 }
+
 
 .modal-overlay.active .modal-content {
     transform: translateY(0);
