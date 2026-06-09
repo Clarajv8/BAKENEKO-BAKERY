@@ -1,6 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
-    // 1. Diccionario exclusivo para la página de Info / Legal
     const infoTexts = {
         es: {
             backStore: "← Volver a la Tienda", infoIndex: "Índice del Grimorio", infoFAQ: "Preguntas Frecuentes", 
@@ -9,11 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
             faqA1: "Todos nuestros postres viajan en arcas refrigeradas mágicas para garantizar que lleguen tan frescos como cuando salieron de nuestro obrador en el plano espiritual.",
             faqQ2: "¿Dónde está mi pedido?",
             faqA2: "Al sellar el pacto (comprar), recibes un pergamino electrónico (email) con un Código de Invocación. Puedes usar ese número en el portal de nuestro transportista para ver por dónde va.",
+            
+            faqQ3: "¿Qué son las Drip Bags?",
+            faqA3Text: "Las Drip Bags son filtros individuales de café de especialidad sellados con nitrógeno para conservar todo su aroma. Es la forma más pura y rápida de preparar un café de filtro ritual en cualquier parte, sin necesidad de cafetera. Solo necesitas abrir el sobre, anclar el filtro a tu taza y verter agua caliente lentamente.",
+            faqA3ImgCaption: "Guía visual de invocación",
+
             allTitle: "Guía de Alérgenos por Postre",
             allIntro: "En la Bakeneko Bakery procesamos ingredientes en un obrador compartido. Aunque usamos harina de arroz glutinoso (libre de gluten por naturaleza), no podemos garantizar la ausencia de trazas cruzadas.",
             allList: "<li><strong>Dorayaki (Tanuki):</strong> Trigo, Huevo, Soja.</li><li><strong>Mochi Daifuku (Kitsune):</strong> Soja (Polvo Kinako). Sin gluten.</li><li><strong>Dango Tricolor (Bakeneko):</strong> Sésamo, Soja.</li><li><strong>Kuzumochi (Kappa):</strong> Soja. Sin gluten.</li><li><strong>Yokan Nocturno (Umibozu):</strong> Libre de alérgenos principales (Vegano).</li><li><strong>Nerikiri de Camelia (Yuki-Onna):</strong> Frutos de cáscara (Nueces), Soja.</li><li><strong>Vinos Espirituales (Bodegas Kizuna):</strong> Contienen Sulfitos.</li>",
             priv1: "En Bakeneko Bakery, nos tomamos muy en serio la privacidad y seguridad de sus datos personales. Toda la información proporcionada durante el proceso de compra (nombre, dirección de envío y datos de pago) es procesada mediante protocolos de encriptación de alta seguridad (SSL/TLS), cumpliendo estrictamente con las normativas vigentes de protección de datos (RGPD).",
-            priv2: "Nos comprometemos a no vender, ceder ni compartir su información personal con terceros bajo ninguna circunstancia, salvo para fines estrictamente logísticos (empresas de mensajería). Su correo electrónico será utilizado de manera exclusiva para enviarle actualizaciones sobre el estado de su pedido y notificaciones operativas vitales.",
+            priv2: "Nos comprometemos a no vender, ceder ni compartir su información personal con terceros bajo ninguna circunstancia, salvo para fines estrictamente logísticos (empresas de mensajería). Su correo electrónico será utilizado de manera exclusiva para enviarle actualizaciones sobre el estado de tu pedido y notificaciones operativas vitales.",
             tos1: "Al realizar una transacción en nuestro sitio web, el cliente acepta expresamente los presentes Términos de Servicio. Todos los pedidos están sujetos a disponibilidad de los ingredientes y confirmación del pago. Los precios mostrados incluyen los impuestos aplicables.",
             tos2: "<strong>Política de Devoluciones y Reembolsos:</strong> Dada la naturaleza perecedera de nuestros productos artesanales (alimentos frescos), no aplica el derecho de desistimiento ni se aceptan devoluciones estándar por motivos de seguridad alimentaria. Las sustituciones o reembolsos íntegros solo procederán en caso de que el producto llegue dañado, en mal estado, o si ha ocurrido un error logístico demostrable. En tales casos, el cliente deberá contactar con nuestro equipo de soporte en un plazo máximo de 24 horas tras la recepción del pedido, aportando pruebas fotográficas del estado del envío.",
             soc1: "Síguenos en nuestros portales de comunicación para descubrir nuevos postres antes que nadie y ver el proceso de creación en nuestro obrador."
@@ -25,6 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
             faqA1: "All our sweets travel in magical refrigerated arks to ensure they arrive as fresh as when they left our spiritual bakery.",
             faqQ2: "Where is my order?",
             faqA2: "Upon sealing the pact (purchasing), you receive an electronic scroll (email) with an Invocation Code. You can use that number on our courier's portal to track it.",
+            faqQ3: "What are Drip Bags?",
+            faqA3Text: "Drip Bags are individual specialty coffee filters sealed with nitrogen to preserve all their aroma. It is the purest and fastest way to prepare a ritual pour-over coffee anywhere, without a coffee maker. You just need to open the envelope, anchor the filter to your cup, and pour hot water slowly.",
+            faqA3ImgCaption: "Visual invocation guide",
             allTitle: "Allergen Guide per Dessert",
             allIntro: "At Bakeneko Bakery we process ingredients in a shared facility. Although we use glutinous rice flour (naturally gluten-free), we cannot guarantee the absence of cross-contamination.",
             allList: "<li><strong>Dorayaki (Tanuki):</strong> Wheat, Egg, Soy.</li><li><strong>Mochi Daifuku (Kitsune):</strong> Soy (Kinako dust). Gluten-free.</li><li><strong>Tricolor Dango (Bakeneko):</strong> Sesame, Soy.</li><li><strong>Kuzumochi (Kappa):</strong> Soy. Gluten-free.</li><li><strong>Night Yokan (Umibozu):</strong> Free of major allergens (Vegan).</li><li><strong>Camellia Nerikiri (Yuki-Onna):</strong> Tree Nuts (Walnuts), Soy.</li><li><strong>Spiritual Wines:</strong> Contain Sulfites.</li>",
@@ -41,6 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
             faqA1: "すべてのスイーツは、霊的な工房を出た時と同じ新鮮さを保つため、魔法の冷蔵箱に入れて配送されます。",
             faqQ2: "注文はどこですか？",
             faqA2: "契約（購入）が完了すると、召喚コードが記載された電子の巻物（メール）が届きます。その番号を使って配送業者のポータルで追跡できます。",
+            faqQ3: "ドリップバッグとは何ですか？",
+            faqA3Text: "ドリップバッグは、アロマを保つために窒素充填された特別な個包装コーヒーフィルターです。コーヒーメーカーがなくても、どこでも本格的なハンドドリップを最も純粋かつ迅速に楽しむ儀式です。封を開け、フィルターをカップに固定し、お湯をゆっくり注ぐだけです。",
+            faqA3ImgCaption: "抽出のビジュアルガイド",
             allTitle: "デザート別アレルギーガイド",
             allIntro: "化け猫ベーカリーでは、共有の工房で材料を加工しています。もち米粉（自然なグルテンフリー）を使用していますが、交差汚染がないことを保証することはできません。",
             allList: "<li><strong>どら焼き（タヌキ）:</strong> 小麦、卵、大豆</li><li><strong>大福餅（キツネ）:</strong> 大豆（きな粉）。グルテンフリー。</li><li><strong>三色団子（化け猫）:</strong> ごま、大豆。</li><li><strong>葛餅（カッパ）:</strong> 大豆。グルテンフリー。</li><li><strong>夜の羊羹（海坊主）:</strong> 主要なアレルゲンなし（ヴィーガン）。</li><li><strong>椿の練り切り（雪女）:</strong> 木の実（クルミ）、大豆。</li><li><strong>霊的なワイン:</strong> 亜硫酸塩を含む</li>",
@@ -52,13 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // 2. Lógica de Memoria y Cambio de Idioma
     const langs = ['es', 'en', 'jp'];
     const langDisplayNames = { es: 'ES', en: 'EN', jp: '日本語' };
     let currentLangIndex = 0;
     const langBtn = document.getElementById('lang-toggle');
 
-    // Recuperar idioma de la memoria
     const savedLang = localStorage.getItem('bakenekoLang');
     if (savedLang && langs.includes(savedLang)) {
         currentLangIndex = langs.indexOf(savedLang);
@@ -66,56 +73,54 @@ document.addEventListener("DOMContentLoaded", () => {
         localStorage.setItem('bakenekoLang', langs[currentLangIndex]);
     }
 
-    // Función para traducir toda la página
     function translateInfoPage() {
         const currentLang = langs[currentLangIndex];
         const t = infoTexts[currentLang];
         
-        // Actualizar el botón
         langBtn.innerText = langs.map(l => langDisplayNames[l]).join(' / ');
         
-        // Inyectar textos
         document.querySelectorAll('[data-i18n]').forEach(el => {
             const key = el.getAttribute('data-i18n');
             if (t[key]) {
-                // Usamos innerHTML porque hay etiquetas <strong> y <li> en los textos legales
                 el.innerHTML = t[key]; 
             }
         });
+
+        const navLogo = document.querySelector('.main-nav .logo img');
+        if (navLogo) {
+            if (currentLang === 'jp') {
+                navLogo.src = 'assets/images/Logo-j-negativo.svg';
+            } else {
+                navLogo.src = 'assets/images/logo-negativo.svg';
+            }
+        }
     }
 
-    // Evento de clic en el botón de idioma
     langBtn.addEventListener('click', () => {
         currentLangIndex = (currentLangIndex + 1) % langs.length;
         localStorage.setItem('bakenekoLang', langs[currentLangIndex]);
         translateInfoPage();
     });
 
-    // Traducir al cargar la página por primera vez
     translateInfoPage();
 
-    // 3. Smooth Scroll (Lenis) para esta página y Enlaces del Índice
     if (typeof Lenis !== 'undefined') {
         const lenis = new Lenis({ duration: 1.2, smooth: true });
         function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
 
-        // --- MAGIA PARA EL ÍNDICE ---
-        // Buscamos todos los enlaces que empiecen por "#" (las anclas de tu índice)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault(); // Evitamos el salto instantáneo y brusco
+                e.preventDefault(); 
                 
                 const targetId = this.getAttribute('href');
                 const targetElement = document.querySelector(targetId);
                 
                 if (targetElement) {
-                    // Le decimos a Lenis que nos lleve allí con un deslizamiento súper suave.
-                    // offset: -100 es el truco para que la cabecera fija no tape el título al llegar.
                     lenis.scrollTo(targetElement, { 
                         offset: -100, 
                         duration: 1.5, 
-                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) // Curva de aceleración súper lujosa
+                        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) 
                     }); 
                 }
             });
@@ -130,10 +135,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (cursor && typeof gsap !== 'undefined') {
         if (isTouchDevice) {
-            // Si es un móvil/tablet, destruye el cursor falso para no dar problemas
             cursor.style.display = 'none';
         } else {
-            // Si es ordenador, inicia el motor de GSAP
             gsap.set(cursor, { xPercent: -50, yPercent: -50 });
             const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
             const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
@@ -146,7 +149,6 @@ document.addEventListener("DOMContentLoaded", () => {
             window.addEventListener('mousedown', () => cursor.classList.add('click'));
             window.addEventListener('mouseup', () => cursor.classList.remove('click'));
 
-            // Detecta todo lo clickeable de cualquier página (Tienda, Info, Checkout)
             const interactables = document.querySelectorAll('a, button, input, select, .product-card, .cart-trigger, .oracle-interactive');
             
             interactables.forEach(el => {
@@ -154,5 +156,29 @@ document.addEventListener("DOMContentLoaded", () => {
                 el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
             });
         }
+    }
+
+    /* =========================================
+       ÍNDICE DESPLEGABLE EN MÓVILES (UX ACORDEÓN)
+       ========================================= */
+    const infoSidebar = document.querySelector('.info-sidebar');
+    if (infoSidebar) {
+        const sidebarTitle = infoSidebar.querySelector('h3');
+        
+        if (sidebarTitle) {
+            sidebarTitle.addEventListener('click', () => {
+                if (window.innerWidth <= 600) {
+                    infoSidebar.classList.toggle('expanded');
+                }
+            });
+        }
+        const sidebarLinks = infoSidebar.querySelectorAll('a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 600) {
+                    infoSidebar.classList.remove('expanded');
+                }
+            });
+        });
     }
 });

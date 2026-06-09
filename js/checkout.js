@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     // 1. Recuperar datos del localStorage
     const savedCart = localStorage.getItem('bakenekoCart');
-    const savedLang = localStorage.getItem('bakenekoLang') || 'es';
+    let savedLang = localStorage.getItem('bakenekoLang') || 'es';
     let cart = savedCart ? JSON.parse(savedCart) : [];
 
     // Si entran aquí sin carrito, los devolvemos a la tienda
@@ -10,194 +10,200 @@ document.addEventListener("DOMContentLoaded", () => {
         return;
     }
 
-    // Traducciones básicas para el checkout
+    // 2. Base de datos de traducciones del Checkout
     const texts = {
         es: { 
-            title: "Sellar el Pacto", sub: "Prepara tu ofrenda para recibir los elixires y wagashi.", ship: "1. Destino del Ritual", name: "Nombre", email: "Correo Electrónico (Para el Pergamino)", zip: "Código Postal", cardName: "Titular de la Tarjeta", addr: "Dirección Completa (Calle, Número, Piso)", zone: "Selecciona tu tipo de envío...", shipOpt1: "Envío Frío Estándar (48-72h) - +5.00€", shipOpt2: "Envío Frío Exprés (24h) - +8.00€", shipOpt3: "Islas e Int. (Frío) - +15.00€", pay: "2. Pago Seguro", card: "Número de Tarjeta", exp: "Caducidad (MM/AA)", btn: "Confirmar Pago", sumTitle: "Resumen del Pedido", subTotal: "Subtotal", shipping: "Envío", grandTotal: "Total", succTitle: "Pacto Sellado", succDesc: "Los espíritus han aceptado tu ofrenda. Tu pedido está en camino y el pergamino con el código de rastreo acaba de llegar a tu correo.", returnStore: "← Volver al Grimorio", unit: "/ ud", backToRealm: "Volver al Reino"
+            title: "Finalizar Compra", sub: "Completa tus datos de envío y pago de forma segura.", ship: "1. Dirección de Envío", name: "Nombre Completo", email: "Correo Electrónico (Para el recibo)", zip: "Código Postal", cardName: "Titular de la Tarjeta", addr: "Dirección Completa (Calle, Número, Piso)", zone: "Selecciona tu zona de envío...", shipOpt1: "Envío Frío Estándar (48-72h) - +5.00€", shipOpt2: "Envío Frío Exprés (24h) - +8.00€", shipOpt3: "Islas e Internacional (Frío) - +15.00€", pay: "2. Pago Seguro", card: "Número de Tarjeta", exp: "Caducidad (MM/AA)", btn: "Confirmar Pago", sumTitle: "Resumen de tu Pedido", subTotal: "Subtotal", shipping: "Envío", grandTotal: "Total", succTitle: "Pedido Confirmado", succDesc: "Tu pago se ha procesado con éxito. En breve recibirás un correo con la confirmación y tu número de seguimiento.", returnStore: "← Volver a la Tienda", unit: "/ ud", backToRealm: "Volver al Inicio", qtyLabel: "Cant."
         },
         en: { 
-            title: "Seal the Pact", sub: "Prepare your offering to receive the elixirs and wagashi.", ship: "1. Shipping Destination", name: "Full Name",   email: "Email Address (For the Scroll)", zip: "Postal Code", cardName: "Cardholder Name", addr: "Full Address (Street, Number, Floor)", zone: "Select shipping method...",  shipOpt1: "Cold Standard (48-72h) - +5.00€", shipOpt2: "Cold Express (24h) - +8.00€", shipOpt3: "Islands & Int. (Cold) - +15.00€", pay: "2. Secure Payment", card: "Card Number", exp: "Expiry (MM/YY)", btn: "Confirm Payment", sumTitle: "Order Summary", subTotal: "Subtotal", shipping: "Shipping", grandTotal: "Total",  succTitle: "Pact Sealed", succDesc: "The spirits have accepted your offering. Your order is on its way and the scroll with the tracking code has been sent to your email.", qtyLabel: "Qty.", returnStore: "← Back to Grimoire", unit: "/ ea", backToRealm: "Return to Realm"
+            title: "Checkout", sub: "Complete your shipping and payment details securely.", ship: "1. Shipping Address", name: "Full Name", email: "Email Address (For receipt)", zip: "Postal Code", cardName: "Cardholder Name", addr: "Full Address (Street, Number, Floor)", zone: "Select shipping zone...", shipOpt1: "Cold Standard (48-72h) - +5.00€", shipOpt2: "Cold Express (24h) - +8.00€", shipOpt3: "Islands & Int. (Cold) - +15.00€", pay: "2. Secure Payment", card: "Card Number", exp: "Expiry (MM/YY)", btn: "Confirm Payment", sumTitle: "Order Summary", subTotal: "Subtotal", shipping: "Shipping", grandTotal: "Total", succTitle: "Order Confirmed", succDesc: "Your payment has been successfully processed. You will shortly receive an email with your confirmation and tracking number.", returnStore: "← Back to Store", unit: "/ ea", backToRealm: "Return to Home", qtyLabel: "Qty."
         },
         jp: { 
-            title: "契約を結ぶ", sub: "お供え物を準備して、霊薬と和菓子を受け取ります。", ship: "1. お届け先", name: "氏名", email: "メールアドレス", zip: "郵便番号", cardName: "カード名義人", addr: "完全な住所（通り、番地、階）", zone: "配送方法を選択...", shipOpt1: "通常クール便（48〜72時間）- +5.00€", shipOpt2: "お急ぎクール便（24時間）- +8.00€", shipOpt3: "離島・国際クール便 - +15.00€", pay: "2. 安全な支払い", card: "カード番号", exp: "有効期限 (MM/YY)", btn: "支払いを確認する", sumTitle: "注文の概要", subTotal: "小計", shipping: "送料", grandTotal: "合計", succTitle: "契約完了", succDesc: "精霊たちがあなたの供物を受け入れました。ご注文は発送され、追跡コードの巻物がメールに送信されました。", qtyLabel: "数量", returnStore: "← 魔導書に戻る", unit: "/ 個", backToRealm: "レルムに戻る"
+            title: "チェックアウト", sub: "配送と支払いの詳細を安全に入力してください。", ship: "1. 配送先住所", name: "氏名", email: "メールアドレス（領収書用）", zip: "郵便番号", cardName: "カード名義人", addr: "完全な住所（通り、番地、階）", zone: "配送エリアを選択...", shipOpt1: "通常クール便（48〜72時間）- +5.00€", shipOpt2: "お急ぎクール便（24時間）- +8.00€", shipOpt3: "離島・国際クール便 - +15.00€", pay: "2. 安全な支払い", card: "カード番号", exp: "有効期限 (MM/YY)", btn: "支払いを確認する", sumTitle: "注文の概要", subTotal: "小計", shipping: "送料", grandTotal: "合計", succTitle: "注文完了", succDesc: "支払いが正常に処理されました。まもなく確認と追跡番号が記載されたメールが届きます。", returnStore: "← ストアに戻る", unit: "/ 個", backToRealm: "ホームに戻る", qtyLabel: "数量"
         }
     };
 
-    // Aplicar traducciones al HTML
-    const t = texts[savedLang];
-    document.getElementById('txt-title').innerText = t.title;
-    document.getElementById('txt-subtitle').innerText = t.sub;
-    document.getElementById('txt-ship-title').innerText = t.ship;
-    document.getElementById('txt-name').innerText = t.name;
-    document.getElementById('txt-email').innerText = t.email;
-    document.getElementById('txt-zip').innerText = t.zip;
-    document.getElementById('txt-card-name').innerText = t.cardName;
-    document.getElementById('txt-address').innerText = t.addr;
-    document.getElementById('txt-zone').innerText = t.zone;
-    document.getElementById('txt-ship-opt1').innerText = t.shipOpt1;
-    document.getElementById('txt-ship-opt2').innerText = t.shipOpt2;
-    document.getElementById('txt-ship-opt3').innerText = t.shipOpt3;
-    document.getElementById('txt-pay-title').innerText = t.pay;
-    document.getElementById('txt-card').innerText = t.card;
-    document.getElementById('txt-exp').innerText = t.exp;
-    document.getElementById('txt-submit').innerText = t.btn;
-    document.getElementById('txt-summary-title').innerText = t.sumTitle;
-    document.getElementById('txt-subtotal').innerText = t.subTotal;
-    document.getElementById('txt-shipping').innerText = t.shipping;
-    document.getElementById('txt-total').innerText = t.grandTotal;
-    document.getElementById('txt-success-title').innerText = t.succTitle;
-    document.getElementById('txt-success-desc').innerText = t.succDesc;
-    document.getElementById('txt-return').innerText = t.returnStore;
-    document.getElementById('back-to-realm').innerText = t.backToRealm;
+    const langs = ['es', 'en', 'jp'];
+    const langDisplayNames = { es: 'ES', en: 'EN', jp: '日本語' };
+    let currentLangIndex = langs.indexOf(savedLang);
+    if (currentLangIndex === -1) currentLangIndex = 0;
 
-    // Elementos del DOM
+    const langBtn = document.getElementById('lang-toggle');
+    if (langBtn) {
+        langBtn.innerText = langs.map(l => langDisplayNames[l]).join(' / ');
+        
+        langBtn.addEventListener('click', () => {
+            currentLangIndex = (currentLangIndex + 1) % langs.length;
+            const currentLang = langs[currentLangIndex];
+            langBtn.innerText = langs.map(l => langDisplayNames[l]).join(' / ');
+            localStorage.setItem('bakenekoLang', currentLang);
+            updateLanguage(currentLang);
+        });
+    }
+
     const summaryItems = document.getElementById('summary-items');
     const chkZone = document.getElementById('chk-zone');
     const chkAddress = document.getElementById('chk-address');
     let subtotalCost = 0;
     let shippingCost = 0;
 
-    // Renderizar carrito
-    // Renderizar carrito en el resumen
-    cart.forEach(item => {
-        const itemTotal = item.price * item.quantity; // Subtotal de este postre
-        subtotalCost += itemTotal;
+    function updateLanguage(lang) {
+        const t = texts[lang];
         
-        // CONDICIONAL: Solo mostramos el texto de "X€ / ud" si hay más de 1 cantidad
-        const unitPriceBreakdown = item.quantity > 1 
-            ? `<span style="opacity: 0.6; font-size: 0.9em; margin-left: 4px;">(${item.price.toFixed(2)}€ ${t.unit})</span>` 
-            : ''; // Si es 1, lo deja vacío ('')
-        
-        summaryItems.innerHTML += `
-            <div class="summary-item">
-                <img src="${item.img}" class="summary-img" alt="${item.name}">
-                <div class="summary-details">
-                    <div class="summary-name">${item.name}</div>
-                    <div class="summary-qty">
-                        ${t.qtyLabel}: ${item.quantity} ${unitPriceBreakdown}
+        const el = (id, text) => { if(document.getElementById(id)) document.getElementById(id).innerText = text; };
+        el('txt-title', t.title); el('txt-subtitle', t.sub); el('txt-ship-title', t.ship);
+        el('txt-name', t.name); el('txt-email', t.email); el('txt-zip', t.zip);
+        el('txt-card-name', t.cardName); el('txt-address', t.addr); el('txt-zone', t.zone);
+        el('txt-ship-opt1', t.shipOpt1); el('txt-ship-opt2', t.shipOpt2); el('txt-ship-opt3', t.shipOpt3);
+        el('txt-pay-title', t.pay); el('txt-card', t.card); el('txt-exp', t.exp);
+        el('txt-submit', t.btn); el('txt-summary-title', t.sumTitle); el('txt-subtotal', t.subTotal);
+        el('txt-shipping', t.shipping); el('txt-total', t.grandTotal); el('txt-success-title', t.succTitle);
+        el('txt-success-desc', t.succDesc); el('txt-return', t.returnStore); el('back-to-realm', t.backToRealm);
+
+        subtotalCost = 0;
+        if(summaryItems) {
+            summaryItems.innerHTML = '';
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                subtotalCost += itemTotal;
+                
+                const unitPriceBreakdown = item.quantity > 1 
+                    ? `<span style="opacity: 0.6; font-size: 0.9em; margin-left: 4px;">(${item.price.toFixed(2)}€ ${t.unit})</span>` 
+                    : ''; 
+                
+                summaryItems.innerHTML += `
+                    <div class="summary-item">
+                        <img src="${item.img}" class="summary-img" alt="${item.name}">
+                        <div class="summary-details">
+                            <div class="summary-name">${item.name}</div>
+                            <div class="summary-qty">${t.qtyLabel}: ${item.quantity} ${unitPriceBreakdown}</div>
+                        </div>
+                        <div class="summary-price">${itemTotal.toFixed(2)}€</div>
                     </div>
-                </div>
-                <div class="summary-price">${itemTotal.toFixed(2)}€</div>
-            </div>
-        `;
-    });
+                `;
+            });
+            updateTotals();
+        }
+    }
 
     function updateTotals() {
-        document.getElementById('summary-subtotal').innerText = `${subtotalCost.toFixed(2)}€`;
-        document.getElementById('summary-shipping').innerText = shippingCost === 0 && chkZone.value === "" ? '--' : (shippingCost === 0 ? 'Gratis' : `+${shippingCost.toFixed(2)}€`);
+        if(document.getElementById('summary-subtotal')) document.getElementById('summary-subtotal').innerText = `${subtotalCost.toFixed(2)}€`;
+        if(document.getElementById('summary-shipping')) document.getElementById('summary-shipping').innerText = shippingCost === 0 && chkZone.value === "" ? '--' : (shippingCost === 0 ? 'Gratis' : `+${shippingCost.toFixed(2)}€`);
         const final = subtotalCost + shippingCost;
-        document.getElementById('summary-total').innerText = `${final.toFixed(2)}€`;
-        document.getElementById('chk-btn-total').innerText = `${final.toFixed(2)}€`;
+        if(document.getElementById('summary-total')) document.getElementById('summary-total').innerText = `${final.toFixed(2)}€`;
+        if(document.getElementById('chk-btn-total')) document.getElementById('chk-btn-total').innerText = `${final.toFixed(2)}€`;
     }
-    updateTotals();
 
-    chkZone.addEventListener('change', (e) => {
-        shippingCost = parseFloat(e.target.value);
-        updateTotals();
-    });
+    updateLanguage(langs[currentLangIndex]);
 
-    // Validaciones de Regex Automáticas
-    document.getElementById('chk-card').addEventListener('input', e => {
-        let val = e.target.value.replace(/\D/g, '');
-        val = val.replace(/(.{4})/g, '$1 ').trim();
-        e.target.value = val;
-    });
+    if(chkZone) {
+        chkZone.addEventListener('change', (e) => {
+            shippingCost = parseFloat(e.target.value);
+            updateTotals();
+        });
+    }
 
-    document.getElementById('chk-exp').addEventListener('input', e => {
-        let val = e.target.value.replace(/\D/g, '');
-        if (val.length > 2) val = val.substring(0, 2) + '/' + val.substring(2, 4);
-        e.target.value = val;
-    });
+    const chkCard = document.getElementById('chk-card');
+    if(chkCard) {
+        chkCard.addEventListener('input', e => {
+            let val = e.target.value.replace(/\D/g, '');
+            val = val.replace(/(.{4})/g, '$1 ').trim();
+            e.target.value = val;
+        });
+    }
 
-    document.getElementById('chk-cvv').addEventListener('input', e => {
-        e.target.value = e.target.value.replace(/\D/g, '');
-    });
+    const chkExp = document.getElementById('chk-exp');
+    if(chkExp) {
+        chkExp.addEventListener('input', e => {
+            let val = e.target.value.replace(/\D/g, '');
+            if (val.length > 2) val = val.substring(0, 2) + '/' + val.substring(2, 4);
+            e.target.value = val;
+        });
+    }
 
-// Enviar el formulario y Sello Animado
-    document.getElementById('checkout-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        const chkAddress = document.getElementById('chk-address');
-        const chkEmail = document.getElementById('chk-email');
-        let formIsValid = true;
-        
-        // 1. Validar dirección (Debe tener números y cierta longitud)
-        const addrVal = chkAddress.value.trim();
-        const hasNumbers = /\d/.test(addrVal);
-        if (addrVal.length < 10 || !hasNumbers) {
-            chkAddress.parentElement.classList.add('invalid');
-            formIsValid = false;
-        }
+    const chkCvv = document.getElementById('chk-cvv');
+    if(chkCvv) {
+        chkCvv.addEventListener('input', e => {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+    }
 
-        // 2. Validar Email estricto mediante Regex (Debe contener @ y un punto seguido de letras al final)
-        const emailVal = chkEmail.value.trim();
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-        if (!emailRegex.test(emailVal)) {
-            chkEmail.parentElement.classList.add('invalid');
-            formIsValid = false;
-        }
-
-        // 3. Validar Caducidad de Tarjeta (MM/AA)
-        const chkExp = document.getElementById('chk-exp');
-        const expVal = chkExp.value.trim();
-        const expParts = expVal.split('/');
-        
-        if (expParts.length === 2) {
-            const month = parseInt(expParts[0], 10);
-            const year = parseInt("20" + expParts[1], 10); // Convertimos "26" a 2026
-            const currentDate = new Date();
-            const currentMonth = currentDate.getMonth() + 1; // Enero es 0, sumamos 1
-            const currentYear = currentDate.getFullYear();
+    const checkoutForm = document.getElementById('checkout-form');
+    if(checkoutForm) {
+        checkoutForm.addEventListener('submit', (e) => {
+            e.preventDefault();
             
-            // Si el mes no existe (13) o el año es pasado, o es el año actual pero un mes anterior...
-            if (month < 1 || month > 12 || year < currentYear || (year === currentYear && month < currentMonth)) {
+            const chkEmail = document.getElementById('chk-email');
+            let formIsValid = true;
+            
+            const addrVal = chkAddress.value.trim();
+            const hasNumbers = /\d/.test(addrVal);
+            if (addrVal.length < 10 || !hasNumbers) {
+                chkAddress.parentElement.classList.add('invalid');
+                formIsValid = false;
+            }
+
+            const emailVal = chkEmail.value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+            if (!emailRegex.test(emailVal)) {
+                chkEmail.parentElement.classList.add('invalid');
+                formIsValid = false;
+            }
+
+            const expVal = chkExp.value.trim();
+            const expParts = expVal.split('/');
+            if (expParts.length === 2) {
+                const month = parseInt(expParts[0], 10);
+                const year = parseInt("20" + expParts[1], 10); 
+                const currentDate = new Date();
+                const currentMonth = currentDate.getMonth() + 1; 
+                const currentYear = currentDate.getFullYear();
+                
+                if (month < 1 || month > 12 || year < currentYear || (year === currentYear && month < currentMonth)) {
+                    chkExp.parentElement.classList.add('invalid');
+                    formIsValid = false;
+                }
+            } else {
                 chkExp.parentElement.classList.add('invalid');
                 formIsValid = false;
             }
-        } else {
-            chkExp.parentElement.classList.add('invalid');
-            formIsValid = false;
-        }
 
-        // Si falla alguna de las dos validaciones, cortamos el proceso
-        if (!formIsValid) {
-            return;
-        }
+            if (!formIsValid) return;
 
-        const submitBtn = document.getElementById('submit-checkout');
-        submitBtn.innerText = "Invocando...";
-        submitBtn.style.opacity = "0.7";
-        
-        setTimeout(() => {
-            // Limpiamos carrito porque la compra ha sido un éxito
-            localStorage.removeItem('bakenekoCart');
+            const submitBtn = document.getElementById('submit-checkout');
+            submitBtn.innerText = "Invocando...";
+            submitBtn.style.opacity = "0.7";
             
-            // Pantalla final dramática
-            document.getElementById('checkout-success').classList.add('active');
-        }, 1500);
-    });
+            setTimeout(() => {
+                localStorage.removeItem('bakenekoCart');
+                const successOverlay = document.getElementById('checkout-success');
+                if(successOverlay) successOverlay.classList.add('active');
+            }, 1500);
+        });
+    }
 
-// Limpiar alertas de error al escribir de nuevo
-    document.getElementById('chk-address').addEventListener('input', (e) => e.target.parentElement.classList.remove('invalid'));
-    document.getElementById('chk-email').addEventListener('input', (e) => e.target.parentElement.classList.remove('invalid'));
-    chkAddress.addEventListener('input', () => chkAddress.parentElement.classList.remove('invalid'));
+    if(chkAddress) chkAddress.addEventListener('input', () => chkAddress.parentElement.classList.remove('invalid'));
+    const chkEmail = document.getElementById('chk-email');
+    if(chkEmail) chkEmail.addEventListener('input', (e) => e.target.parentElement.classList.remove('invalid'));
+    if(chkExp) chkExp.addEventListener('input', (e) => e.target.parentElement.classList.remove('invalid'));
 
-    document.getElementById('back-to-realm').addEventListener('click', () => {
-        window.location.href = 'index.html';
-    });
+    const backToRealm = document.getElementById('back-to-realm');
+    if(backToRealm) {
+        backToRealm.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    }
 
     /* =========================================
-       SISTEMA UNIVERSAL DEL CURSOR NEO-UKIYO-E
+       6. SISTEMA UNIVERSAL DEL CURSOR NEO-UKIYO-E
        ========================================= */
     const cursor = document.getElementById('neo-cursor');
     const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
 
     if (cursor && typeof gsap !== 'undefined') {
         if (isTouchDevice) {
-            // Si es un móvil/tablet, destruye el cursor falso para no dar problemas
             cursor.style.display = 'none';
         } else {
-            // Si es ordenador, inicia el motor de GSAP
             gsap.set(cursor, { xPercent: -50, yPercent: -50 });
             const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
             const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
@@ -210,9 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
             window.addEventListener('mousedown', () => cursor.classList.add('click'));
             window.addEventListener('mouseup', () => cursor.classList.remove('click'));
 
-            // Detecta todo lo clickeable de cualquier página (Tienda, Info, Checkout)
-            const interactables = document.querySelectorAll('a, button, input, select, .product-card, .cart-trigger, .oracle-interactive');
-            
+            const interactables = document.querySelectorAll('a, button, input, select');
             interactables.forEach(el => {
                 el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
                 el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));

@@ -1,14 +1,11 @@
-/* --- Variables & Reset --- */
 :root {
     --c-indigo:    #1a2639;
     --c-cream:     #f4f0ea;
     --c-vermilion: #d64045;
     --c-gold:      #c5a365;
     --c-ink:       #0d0d0d;
-
     --f-serif: 'Cormorant Garamond', serif;
     --f-sans:  'Zen Kaku Gothic New', sans-serif;
-
     --gutter: 2rem;
 }
 
@@ -18,19 +15,30 @@
     padding: 0;
 }
 
+/* =========================================
+   OCULTAR BARRA DE SCROLL GLOBAL (LUJO SILENCIOSO)
+   ========================================= */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+html, body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+
 body {
     background-color: var(--c-cream);
     color: var(--c-indigo);
     font-family: var(--f-sans);
-    
     width: 100%;
     max-width: 100%;
     overflow-x: hidden; 
     position: relative;
 }
 
-
-/* --- Fixed Elements --- */
 .main-nav {
     position: fixed;
     top: 0;
@@ -41,16 +49,11 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    
-    /* 1. El cristal ahumado (Corregido) */
-    background: rgba(26, 38, 57, 0.45); /* Índigo al 45% para dar contraste */
+    background: rgba(26, 38, 57, 0.45); 
     backdrop-filter: blur(12px); 
     -webkit-backdrop-filter: blur(12px); 
-    
-    /* 2. Línea sutil dorada */
     border-bottom: 1px solid rgba(197, 163, 101, 0.2); 
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    
     color: var(--c-cream);
     transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1), background 0.3s ease;
 }
@@ -70,18 +73,17 @@ body {
     width: auto;
     object-fit: contain;
     transition: transform 0.3s ease;
-    /* Sombra protectora para el logo */
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5)); 
 }
 
 .logo:hover img {
-    transform: scale(1.05); /* Pequeño efecto al pasar el ratón */
+    transform: scale(1.05); 
 }
 
 .lang-btn {
     position: fixed;
     bottom: 2rem;
-    left: 2rem; /* ¡Cambiado de right a left! */
+    left: 2rem; 
     z-index: 9100;
     background: var(--c-indigo);
     color: var(--c-gold);
@@ -119,10 +121,47 @@ body {
     color: var(--c-indigo);
 }
 
-/* --- Tipografía Compacta y Premium --- */
+/* =========================================
+   CESTA FLOTANTE (SMART NAV)
+   ========================================= */
+.floating-cart-btn {
+    position: fixed;
+    top: -80px; 
+    right: 2rem;
+    width: 55px;
+    height: 55px;
+    background: rgba(26, 38, 57, 0.85);
+    backdrop-filter: blur(8px);
+    color: var(--c-gold);
+    border: 1px solid rgba(197, 163, 101, 0.4);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9400; 
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.2, 1, 0.3, 1), top 0.5s ease, background 0.3s ease;
+}
+
+.floating-cart-btn.visible {
+    top: 2rem; 
+}
+
+.floating-cart-btn:hover {
+    transform: scale(1.1);
+    background: var(--c-indigo);
+    border-color: var(--c-gold);
+}
+
+.floating-dot {
+    top: -2px !important;
+    right: -2px !important;
+}
+
 .tiny-title {
     font-family: var(--f-serif);
-    font-size: 1.8rem; /* Mucho más pequeña que antes */
+    font-size: 1.8rem; 
     letter-spacing: 5px;
     text-transform: uppercase;
     color: var(--c-indigo);
@@ -130,14 +169,13 @@ body {
 }
 
 .compact-p {
-    font-size: 0.9rem; /* Letra pequeña y compacta */
+    font-size: 0.9rem;
     line-height: 1.8;
     letter-spacing: 1px;
-    max-width: 400px; /* Forzamos que el texto sea un bloque estrecho */
+    max-width: 400px;
     color: #666;
 }
 
-/* --- Intro Staggered (Layout Premium) --- */
 .intro-minimal {
     padding: 12rem 10%;
     background-color: var(--c-cream);
@@ -146,7 +184,7 @@ body {
 .intro-staggered {
     display: flex;
     flex-direction: column;
-    gap: 10rem; /* Gran espacio entre los dos bloques */
+    gap: 10rem;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -157,12 +195,10 @@ body {
     align-items: flex-start;
 }
 
-/* Bloque Identidad (Izquierda) */
 .block-who {
     align-self: flex-start;
 }
 
-/* Bloque Filosofía (Derecha) */
 .block-concept {
     align-self: flex-end;
 }
@@ -190,7 +226,6 @@ body {
     align-items: flex-end;
 }
 
-/* Reutilizamos tus estilos existentes para títulos y párrafos */
 .tiny-title {
     font-family: var(--f-serif);
     font-size: 1.8rem;
@@ -236,7 +271,6 @@ body {
     color: var(--c-vermilion);
 }
 
-/* --- Collection & Organic Cards --- */
 .collection-section {
     padding: 5rem var(--gutter);
     background-color: var(--c-cream);
@@ -259,11 +293,10 @@ body {
    GALERÍA DE PRODUCTOS (ORDEN Y LIMPIEZA)
    ========================================= */
 
-/* --- 1. La Cuadrícula Base --- */
 .products-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 4rem 2rem; /* Cuadrícula perfecta y alineada, sin saltos */
+    gap: 4rem 2rem; 
     max-width: 1100px;
     margin: 0 auto;
     padding: 5rem 5%;
@@ -285,16 +318,13 @@ body {
     text-align: center;
     cursor: pointer;
     width: 100%;
-    /* Hemos quitado el 'transition' global para que no pelee con las animaciones */
 }
 
-/* Estado de salida: Se hunde en la niebla */
 .product-card.hiding {
     animation: fade-out-yokai 0.4s forwards;
     pointer-events: none;
 }
 
-/* Estado de entrada: Emerge suavemente */
 .product-card.showing {
     opacity: 0; /* CRÍTICO: Los mantiene invisibles hasta que les toque su turno */
     animation: fade-in-yokai 0.6s cubic-bezier(0.2, 1, 0.3, 1) both;
@@ -310,23 +340,19 @@ body {
     100% { opacity: 1; transform: translateY(0); }
 }
 
-
-
-/* --- 3. Contenedor Visual (Limitado para no dejar vacíos) --- */
 .visual-inner {
     position: relative;
     width: 100%;
-    max-width: 260px; /* Límite de ancho para que no crezca demasiado en pantallas grandes */
-    aspect-ratio: 1 / 1; /* Cuadrado perfecto */
+    max-width: 260px;
+    aspect-ratio: 1 / 1; 
     margin: 0 auto;
 }
 
-/* --- 4. La Máscara de Tinta --- */
 .ink-mask {
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border-radius: 50%; /* Círculo inicial */
+    border-radius: 50%;
     background: var(--c-cream); 
     transition: border-radius 0.8s ease-in-out, box-shadow 0.6s ease, transform 0.6s ease;
     box-shadow: 0 10px 25px rgba(26, 38, 57, 0.05);
@@ -339,7 +365,6 @@ body {
     transition: transform 0.8s ease;
 }
 
-/* Animación Hover */
 .product-card:hover .ink-mask {
     border-radius: 42% 58% 45% 55% / 55% 45% 58% 42%; /* Forma orgánica */
     box-shadow: 0 15px 35px rgba(26, 38, 57, 0.12);
@@ -350,7 +375,6 @@ body {
     transform: scale(1.1);
 }
 
-/* --- 5. El Sello Hanko --- */
 .stamp-seal {
     position: absolute;
     top: 0;
@@ -374,7 +398,6 @@ body {
     transform: scale(1.1) rotate(-10deg);
 }
 
-/* --- 6. El Botón Añadir Integrado --- */
 .quick-add-btn {
     position: absolute;
     bottom: 0;
@@ -391,13 +414,13 @@ body {
     align-items: center;
     font-size: 1.5rem;
     cursor: pointer;
-    opacity: 0; /* Oculto por defecto */
+    opacity: 0; 
     transform: scale(0.8);
     transition: all 0.4s ease;
 }
 
 .product-card:hover .quick-add-btn {
-    opacity: 1; /* Aparece al hacer hover */
+    opacity: 1; 
     transform: scale(1);
 }
 
@@ -406,13 +429,12 @@ body {
     color: var(--c-indigo);
 }
 
-/* --- 7. Info del Producto (Sin vacíos) --- */
 .card-info {
-    margin-top: 1rem; /* Muy poco margen para que el texto abrace la imagen */
+    margin-top: 1rem;
     display: flex;
-    flex-direction: column; /* Apila el h4 y el span */
+    flex-direction: column;
     align-items: center;
-    gap: 0.2rem; /* Espacio mínimo entre nombre y tipo */
+    gap: 0.2rem;
 }
 
 .card-info h4 {
@@ -430,10 +452,6 @@ body {
     color: var(--c-gold);
 }
 
-
-
-
-/* --- Ventana Cinematográfica (Editorial) --- */
 .cinematic-window {
     position: relative;
     width: 100vw;
@@ -444,37 +462,33 @@ body {
 
 .cinematic-video {
     width: 100%;
-    height: 120%; /* Más alto que su contenedor para permitir el efecto Parallax */
+    height: 120%; 
     object-fit: cover;
-    opacity: 0.85; /* Un poco translúcido para que sea elegante */
+    opacity: 0.85; 
 }
 
-/* El fundido mágico hacia la sección crema */
 .cinematic-fade {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 25vh;
-    /* Degradado optimizado para fundir al 100% con el fondo de la web sin cortes */
     background: linear-gradient(to bottom, transparent 0%, var(--c-cream) 95%, var(--c-cream) 100%);
     pointer-events: none;
 }
 
 
-/* --- Texto en Estado de Tinta Fragmentada --- */
 .reveal-ink-wrapper {
-    opacity: 0; /* Empieza invisible */
+    opacity: 0;
     transition: none;
 }
 
 .ink-content-to-reveal {
     opacity: 1; 
-    filter: url(#sumie-filter); /* Aplica la deformación masiva inicial */
+    filter: url(#sumie-filter);
     will-change: filter; 
 }
 
-/* --- 2D Modal (Reemplaza al 3D) --- */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -502,14 +516,11 @@ body {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     border-radius: 20px;
-    overflow: hidden;
+    overflow: hidden !important; 
     position: relative;
     transform: translateY(50px);
     transition: transform 0.5s cubic-bezier(0.2, 1, 0.3, 1);
-    overflow-y: auto !important; 
-    overscroll-behavior: contain;
 }
-
 
 .modal-overlay.active .modal-content {
     transform: translateY(0);
@@ -521,20 +532,28 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; /* Para que la imagen no se salga */
+    overflow: hidden;
 }
 
 .modal-main-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Hace que la imagen llene el espacio elegantemente */
+    object-fit: cover;
 }
 
 .modal-text {
     padding: 3rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; 
+    overflow-y: auto; 
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.modal-text::-webkit-scrollbar {
+    display: none;
 }
 
 .modal-title {
@@ -581,33 +600,36 @@ body {
 }
 
 /* =========================================
-   FOOTER (SILENCIO EDITORIAL DE LUJO)
+   FOOTER 
    ========================================= */
 .main-footer {
     background-color: var(--c-indigo);
     color: var(--c-cream);
-    padding: 8rem 5% 2rem;
-    /* Sin borde superior grueso. Se funde con el fondo de la web si es oscuro, 
-       o usa un contraste limpio si vienes del fondo crema */
+    padding: 6rem 5% 8rem;
+}
+
+.logo-ampliado {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.5));
+    margin-bottom: 2rem;
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    /* Solo 3 columnas, dándole la mitad del espacio a la marca/newsletter */
     grid-template-columns: 2fr 1fr 1fr;
     gap: 4rem;
-    padding-bottom: 6rem;
 }
 
-/* --- Títulos (Etiquetas Técnicas) --- */
 .footer-col h4 {
     font-family: var(--f-sans);
-    font-size: 0.65rem;
+    font-size: 0.85rem; 
     letter-spacing: 4px;
     text-transform: uppercase;
-    color: rgba(244, 241, 234, 0.4); /* Muy difuminado, no compite con los enlaces */
+    color: rgba(244, 241, 234, 0.5); 
     margin-bottom: 2rem;
 }
 
@@ -617,14 +639,13 @@ body {
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
-/* Enlaces (Serif, elegantes y sobrios) */
 .footer-col a {
     color: var(--c-cream);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.1rem; 
     font-family: var(--f-serif);
     transition: opacity 0.3s ease;
     opacity: 0.8;
@@ -635,16 +656,13 @@ body {
     color: var(--c-gold);
 }
 
-/* Enlaces Sociales (Los diferenciamos con Sans-serif) */
 .social-link {
     font-family: var(--f-sans) !important;
-    font-size: 0.75rem !important;
+    font-size: 0.85rem !important;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-top: 0.5rem;
 }
 
-/* --- La Firma (Logo) --- */
 .footer-logo {
     font-family: var(--f-serif);
     font-size: 1.8rem;
@@ -662,7 +680,6 @@ body {
     opacity: 0.7;
 }
 
-/* --- Newsletter Hiper-Minimalista --- */
 .newsletter-minimal {
     position: relative;
     max-width: 300px;
@@ -674,7 +691,7 @@ body {
 }
 
 .newsletter-minimal:focus-within {
-    border-color: var(--c-gold); /* Se ilumina al escribir */
+    border-color: var(--c-gold); 
 }
 
 .newsletter-minimal input {
@@ -707,16 +724,33 @@ body {
 
 .newsletter-minimal button:hover {
     color: var(--c-gold);
-    transform: translateX(5px); /* La flecha se mueve al pasar el ratón */
+    transform: translateX(5px); 
 }
 
-/* --- Base del Footer --- */
+.newsletter-benefits {
+    font-size: 0.85rem; 
+    color: rgba(244, 241, 234, 0.6); 
+    margin-top: 1.5rem;
+    line-height: 1.6;
+    max-width: 300px;
+    font-family: var(--f-sans);
+}
+
+.newsletter-msg {
+    display: block;
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+    font-weight: bold;
+    font-family: var(--f-sans);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.newsletter-msg.success { color: var(--c-gold); opacity: 1; }
+.newsletter-msg.error { color: var(--c-vermilion); opacity: 1; }
+
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid rgba(244, 241, 234, 0.1);
-    padding-top: 2rem;
+    display: none !important;
 }
 
 .footer-bottom p {
@@ -727,7 +761,6 @@ body {
     margin: 0;
 }
 
-/* --- Responsividad --- */
 @media (max-width: 900px) {
     .footer-container {
         grid-template-columns: 1fr 1fr;
@@ -748,29 +781,24 @@ body {
     }
 }
 
-
-
-
 /* =========================================
    CABECERA DE LA TIENDA Y FILTROS (TABS)
    ========================================= */
 
-/* --- El Título Principal de la Colección --- */
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
 }
 
 .section-header h3 {
-    font-family: var(--f-serif); /* Letra clásica y elegante */
-    font-size: 3rem; /* Grande y majestuoso */
+    font-family: var(--f-serif);
+    font-size: 3rem;
     color: var(--c-indigo);
-    font-weight: 300; /* Fino, nada de negritas gruesas */
+    font-weight: 300; 
     margin: 0;
     position: relative;
 }
 
-/* El punto de anclaje visual (Punto dorado debajo del título) */
 .section-header h3::after {
     content: '';
     display: block;
@@ -781,43 +809,38 @@ body {
     margin: 1.5rem auto 0;
 }
 
-/* --- Filtros (Tabs Estilo Revista) --- */
 .tabs {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* CRÍTICO: Permite que salten de línea en móviles sin aplastarse */
-    gap: 3rem; /* Muchísimo aire entre las opciones */
-    margin-bottom: 6rem; /* Separación enorme con los postres para dar respiro */
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 6rem;
 }
 
-/* Botones como texto desnudo (Adiós a las píldoras) */
 .tab-btn {
     background: transparent;
     border: none;
-    padding: 0 0 8px 0; /* Espacio solo abajo para separar la línea del subrayado */
-    color: rgba(26, 38, 57, 0.4); /* Índigo muy apagado para los que no están seleccionados */
+    padding: 0 0 8px 0; 
+    color: rgba(26, 38, 57, 0.4); 
     font-family: var(--f-sans);
     font-size: 0.75rem;
     letter-spacing: 4px;
     text-transform: uppercase;
     cursor: pointer;
-    border-bottom: 1px solid transparent; /* Oculto, preparado para animarse */
+    border-bottom: 1px solid transparent;
     transition: all 0.4s ease;
 }
 
-/* Hover: El texto cobra vida y sube un poquito */
 .tab-btn:hover {
     color: var(--c-indigo);
     transform: translateY(-2px);
 }
 
-/* Estado Activo: La línea de lujo */
 .tab-btn.active {
     color: var(--c-indigo);
     border-bottom: 1px solid var(--c-gold); 
 }
 
-/* --- Responsividad para mantener la elegancia en móviles --- */
 @media (max-width: 600px) {
     .section-header h3 {
         font-size: 2.2rem;
@@ -835,9 +858,10 @@ body {
 /* =========================================
    ORÁCULO (MINIMALISMO PURO)
    ========================================= */
+
 .oracle-minimal {
-    padding: 8rem 0; /* Menos espacio exagerado, más equilibrado */
-    background-color: transparent; /* Hereda el color crema de la web. Cero bloques de color. */
+    padding: 2rem 0 6rem; 
+    background-color: transparent; 
     display: flex;
     justify-content: center;
 }
@@ -850,24 +874,22 @@ body {
     text-align: center;
 }
 
-/* Textos sutiles y elegantes */
 .oracle-text .tiny-title {
     color: var(--c-gold);
-    font-size: 0.85rem; /* Un pelín más grande */
+    font-size: 0.85rem; 
     letter-spacing: 5px;
-    font-weight: 600; /* Más peso para que atrape la vista */
+    font-weight: 600; 
     text-transform: uppercase;
 }
 
 .oracle-text .compact-p {
-    color: var(--c-indigo); /* Color sólido, sin transparencias que lo apaguen */
+    color: var(--c-indigo); 
     margin: 0 auto;
     font-family: var(--f-serif);
-    font-size: 1.25rem; /* Aumentamos el tamaño para facilitar la lectura */
+    font-size: 1.25rem; 
     line-height: 1.4;
 }
 
-/* --- El Artefacto (Líneas finas, sin cajas pesadas) --- */
 .oracle-interactive {
     cursor: pointer;
     display: flex;
@@ -879,21 +901,19 @@ body {
 }
 
 .oracle-interactive:hover {
-    transform: scale(1.05); /* Solo un pequeño acercamiento, sin brillos locos */
+    transform: scale(1.05); 
 }
 
-/* La Ventana del Destino (Marco minimalista) */
 .rune-window {
     width: 90px;
     height: 120px; 
-    border: 1px solid rgba(26, 38, 57, 0.2); /* Borde índigo muy fino, como trazado a lápiz */
+    border: 1px solid rgba(26, 38, 57, 0.2); 
     border-radius: 60px;
     overflow: hidden;
     position: relative;
     background: transparent;
 }
 
-/* El degradado ahora funde hacia CREMA, no hacia azul */
 .window-overlay {
     position: absolute;
     inset: 0;
@@ -908,7 +928,6 @@ body {
     will-change: transform, filter;
 }
 
-/* Las runas en Índigo oscuro, puro contraste */
 .rune-item {
     height: 120px; 
     display: flex;
@@ -919,17 +938,16 @@ body {
     color: var(--c-indigo); 
 }
 
-/* --- Instrucción Sutil (Sin botones gruesos) --- */
 .oracle-instruction {
     margin-top: 2rem;
-    padding: 12px 28px; /* Le damos cuerpo para que parezca un botón real */
+    padding: 12px 28px; 
     font-size: 0.75rem;
     letter-spacing: 3px;
     text-transform: uppercase;
     color: var(--c-indigo);
-    border: 1px solid rgba(26, 38, 57, 0.4); /* Borde fino y elegante */
-    border-radius: 40px; /* Forma de píldora redondeada */
-    opacity: 1; /* NADA de ocultarlo, 100% visible */
+    border: 1px solid rgba(26, 38, 57, 0.4); 
+    border-radius: 40px; 
+    opacity: 1; 
     transition: all 0.4s ease;
 }
 
@@ -937,15 +955,13 @@ body {
     background: var(--c-indigo);
     color: var(--c-cream);
     border-color: var(--c-indigo);
-    transform: translateY(-2px); /* Un levísimo salto para dar respuesta táctil */
+    transform: translateY(-2px);
 }
-
 
 /* =========================================
    BANNER DE COLABORACIÓN (ESTILO EMAKIMONO)
    ========================================= */
 
-/* El contenedor principal da el espacio necesario (Ma) */
 .collab-marquee-wrapper {
     position: relative;
     width: 100%;
@@ -953,69 +969,55 @@ body {
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Animación sutil de desaparición al cerrarlo */
 .collab-marquee-wrapper.hidden {
     opacity: 0;
     transform: translateY(-10px);
     pointer-events: none;
 }
 
-/* El Pergamino */
 .collab-marquee {
     position: relative;
     width: 100vw;
     max-width: 100%;
-    padding: 2rem 0; /* Un marco vertical delgado */
+    padding: 2rem 0; 
     overflow: hidden;
     background: transparent;
-    
-    /* Líneas índigo muy suaves arriba y abajo */
     border-top: 1px solid rgba(26, 38, 57, 0.1); 
     border-bottom: 1px solid rgba(26, 38, 57, 0.1);
-    
-    /* Efecto de niebla: el texto se desvanece suavemente al llegar a los bordes */
     mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
     -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
 }
 
-/* La pista que se mueve */
 .marquee-content {
     display: flex;
     white-space: nowrap;
     width: max-content;
-    
-    /* Animación lentísima y fluida */
     animation: scroll-emakimono 35s linear infinite; 
-    
-    /* Tipografía de lujo */
     font-family: var(--f-serif);
-    font-weight: 300; /* Fina y delicada */
+    font-weight: 300; 
     font-size: 1.1rem;
-    letter-spacing: 5px; /* Mucho aire entre letras */
-    color: rgba(26, 38, 57, 0.7); /* Índigo ligeramente transparente */
+    letter-spacing: 5px; 
+    color: rgba(26, 38, 57, 0.7); 
 }
 
-/* Mucho espacio entre cada repetición de la frase */
 .marquee-content span {
     padding: 0 4rem;
 }
 
-/* Animación del movimiento continuo */
 @keyframes scroll-emakimono {
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); } 
 }
 
-/* --- Botón de cerrar (Sutil y sin cajas) --- */
 .close-collab {
     position: absolute;
     right: 3%;
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
-    border: none; /* Adiós al borde redondo corporativo */
-    color: rgba(26, 38, 57, 0.3); /* Casi invisible por defecto */
-    font-size: 2rem; /* Tamaño grande pero trazo fino */
+    border: none; 
+    color: rgba(26, 38, 57, 0.3);
+    font-size: 2rem; 
     font-weight: 300;
     line-height: 1;
     cursor: pointer;
@@ -1023,18 +1025,10 @@ body {
     transition: all 0.4s ease;
 }
 
-/* Al pasar el ratón, se tiñe del rojo vermellón (tu color de sello) */
 .close-collab:hover {
     color: var(--c-vermilion);
     transform: translateY(-50%) scale(1.1);
 }
-
-
-
-
-
-
-
 
 .oracle-btn {
     border-color: var(--c-gold);
@@ -1045,12 +1039,10 @@ body {
     color: var(--c-indigo);
 }
 
-
-/* --- Cesta Lateral (Luxury Drawer) --- */
 .cart-overlay {
     position: fixed;
     top: 0; left: 0; width: 100vw; height: 100vh;
-    background: rgba(26, 38, 57, 0.6); /* Color índigo translúcido */
+    background: rgba(26, 38, 57, 0.6);
     backdrop-filter: blur(5px);
     z-index: 9800;
     opacity: 0; 
@@ -1140,7 +1132,6 @@ body {
 }
 .checkout-btn:hover { background: var(--c-gold); color: var(--c-indigo); border-color: var(--c-gold); }
 
-/* Notificación visual (Puntito rojo) en el menú principal */
 .cart-trigger { 
     cursor: pointer; 
     display: flex; 
@@ -1156,7 +1147,6 @@ body {
 }
 .cart-dot.active { opacity: 1; transform: scale(1); }
 
-/* --- Controles de Cantidad en la Cesta --- */
 .cart-item {
     align-items: flex-start; 
 }
@@ -1210,7 +1200,7 @@ body {
     font-family: var(--f-sans);
     font-weight: 700;
     color: var(--c-indigo);
-    margin-top: auto; /* Empuja el precio total del item hacia abajo */
+    margin-top: auto;
 }
 
 .cart-item-right {
@@ -1221,8 +1211,6 @@ body {
     height: 100%;
 }
 
-
-/* --- Página de Checkout a Pantalla Completa --- */
 .checkout-page {
     position: fixed; inset: 0; background: var(--c-cream);
     z-index: 10000; overflow-y: auto; opacity: 1; transition: opacity 0.4s ease;
@@ -1244,7 +1232,6 @@ body {
     display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem;
 }
 
-/* Columna Izquierda (Formulario) */
 .checkout-form-col h2 { font-family: var(--f-serif); font-size: 3rem; color: var(--c-indigo); line-height: 1; }
 .checkout-subtitle { color: #666; margin-bottom: 3rem; font-family: var(--f-serif); font-size: 1.2rem; }
 
@@ -1279,7 +1266,6 @@ body {
 
 .submit-btn { width: 100%; background: var(--c-indigo); color: var(--c-gold); margin-top: 1rem; padding: 1.5rem; font-size: 1.2rem; }
 
-/* Columna Derecha (Resumen) */
 .checkout-summary-col {
     background: #fff; padding: 2.5rem; border-radius: 15px; border: 1px solid rgba(0,0,0,0.05);
     box-shadow: 0 10px 30px rgba(0,0,0,0.03); height: fit-content; position: sticky; top: 2rem;
@@ -1298,7 +1284,6 @@ body {
 .total-line { display: flex; justify-content: space-between; font-family: var(--f-sans); color: #555; }
 .grand-total { font-family: var(--f-serif); font-size: 1.8rem; color: var(--c-indigo); font-weight: bold; margin-top: 0.5rem; border-top: 2px solid var(--c-indigo); padding-top: 1rem; }
 
-/* Éxito */
 .checkout-success { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
 .checkout-success.hidden { display: none; }
 .success-seal { font-size: 5rem; color: var(--c-vermilion); width: 120px; height: 120px; border: 4px solid var(--c-vermilion); border-radius: 50%; display: flex; justify-content: center; align-items: center; margin-bottom: 2rem; font-family: serif; animation: stamp 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
@@ -1306,11 +1291,14 @@ body {
 @keyframes stamp { 0% { transform: scale(3) rotate(20deg); opacity: 0; } 100% { transform: scale(1) rotate(0deg); opacity: 1; } }
 
 @media (max-width: 900px) {
-    .checkout-container { grid-template-columns: 1fr; padding: 2rem 1rem; }
-    .checkout-summary-col { order: -1; position: static; } /* En móvil el resumen va arriba */
+    .checkout-container {
+        grid-template-columns: 1fr; padding: 2rem 1rem;
+    }
+    .checkout-summary-col {
+        order: -1; position: static;
+    } 
 }
 
-/* --- Botón Quick Add (Añadir rápido) --- */
 .quick-add-btn {
     position: absolute;
     bottom: 5px;
@@ -1327,14 +1315,13 @@ body {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    opacity: 0; /* Oculto por defecto */
+    opacity: 0; 
     transform: translateY(15px);
     transition: all 0.3s cubic-bezier(0.2, 1, 0.3, 1);
     z-index: 15;
     box-shadow: 0 5px 15px rgba(26, 38, 57, 0.15);
 }
 
-/* Aparece al pasar el ratón por la tarjeta */
 .product-card:hover .quick-add-btn {
     opacity: 1;
     transform: translateY(0);
@@ -1346,7 +1333,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Clase dinámica para cuando se hace clic (Feedback de éxito) */
 .quick-add-btn.added {
     background: var(--c-indigo);
     color: var(--c-gold);
@@ -1354,35 +1340,10 @@ body {
     transform: scale(1.1);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================
    ASISTENTE YOKAI (CHATBOT SIMULADO)
    ========================================= */
 
-/* Burbuja Flotante */
 .chatbot-trigger {
     position: fixed;
     bottom: 2rem;
@@ -1404,7 +1365,6 @@ body {
 }
 .chatbot-trigger:hover { transform: scale(1.1) translateY(-5px); }
 
-/* Ventana del Chat */
 .chatbot-window {
     position: fixed;
     bottom: 6rem;
@@ -1427,7 +1387,6 @@ body {
 }
 .chatbot-window.active { opacity: 1; pointer-events: auto; transform: translateY(0); }
 
-/* Cabecera del Chat */
 .chat-header {
     background: var(--c-indigo);
     padding: 1rem 1.5rem;
@@ -1451,19 +1410,15 @@ body {
     flex-direction: column;
     gap: 1rem;
     background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h20v20H0V0zm10 10l10 10H0L10 10z' fill='%231a2639' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-    
-    /* --- NUEVO: Evitar rebote y ocultar barra de scroll --- */
-    overscroll-behavior: contain; /* Evita que el scroll salte al fondo al llegar al límite */
-    scrollbar-width: none; /* Oculta la barra en Firefox */
-    -ms-overflow-style: none; /* Oculta la barra en Internet Explorer/Edge antiguo */
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+    -ms-overflow-style: none; 
 }
 
-/* Oculta la barra en Chrome, Safari y el nuevo Edge */
 .chat-messages::-webkit-scrollbar {
     display: none;
 }
 
-/* Burbujas de Diálogo */
 .chat-bubble {
     max-width: 85%;
     padding: 0.8rem 1rem;
@@ -1501,65 +1456,40 @@ body {
 }
 .chat-opt-btn:hover { background: var(--c-indigo); color: var(--c-cream); }
 
-/* Ocultar el botón de idiomas si choca */
 @media (max-width: 768px) {
     .chatbot-window { width: 90%; right: 5%; bottom: 5rem; }
 }
 
-
-
-
-
-
-
 /* =========================================
    EASTER EGG: ZARPA DEL BAKENEKO (EXTERNA)
    ========================================= */
+
 #bakeneko-paw {
     position: fixed;
-    /* Importante: top 0 para que el JS calcule la posición exacta */
     top: 0; 
-    right: -220px; /* Escondida según el ancho de tu SVG (ajústalo si es necesario) */
-    width: 200px;  /* Ancho de tu zarpa */
-    height: 200px; /* Alto de tu zarpa */
-    z-index: 8500; /* Por debajo del modal (z-index 9000), para que la cubra al abrirse */
-    pointer-events: none; /* No interfiere con clics reales del usuario */
-    
-    /* Referencia a tu archivo externo */
+    right: -220px; 
+    width: 200px; 
+    height: 200px;
+    z-index: 8500; 
+    pointer-events: none;
     background-image: url('../assets/images/paw.svg');
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    
-    /* Brillo espectral sutil */
     filter: drop-shadow(0 0 15px rgba(197, 163, 101, 0.4));
-    
-    /* Punto de rotación en la base de la pata (derecha), para que gire natural */
     transform-origin: center right; 
-    display: none; /* Oculta por defecto hasta que el JS la active */
+    display: none; 
 }
-
-
-
-
-
-
-
-
-
-
 
 /* =========================================
    11. NUEVO CURSOR CIRCULAR (NEO-UKIYO-E)
    ========================================= */
-/* Ocultamos el cursor por defecto del sistema operativo para mayor inmersión */
+
 body, * {
     cursor: none !important; 
 }
 
-/* Excepción: Si quieres que al seleccionar texto aparezca la barrita de escribir, descomenta esto: */
-
-p, h1, h2, h3, h4, span {
+input, textarea, .legal-block p, .legal-block li {
     cursor: text !important;
 }
 
@@ -1572,22 +1502,17 @@ p, h1, h2, h3, h4, span {
     border: 2px solid var(--c-gold);
     border-radius: 50%;
     pointer-events: none;
-    
-    /* CAMBIA ESTO A UN NÚMERO GIGANTE */
     z-index: 999999 !important; 
-    
     transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* ESTADO 1: Hover (Al pasar sobre botones, postres o enlaces) */
 #neo-cursor.hover {
     width: 60px;
     height: 60px;
-    background-color: rgba(197, 163, 101, 0.1); /* Fondo dorado muy sutil */
-    border-color: var(--c-vermilion); /* El borde cambia a rojo Yokai */
+    background-color: rgba(197, 163, 101, 0.1); 
+    border-color: var(--c-vermilion); 
 }
 
-/* ESTADO 2: Clic (Al pulsar el ratón) */
 #neo-cursor.click {
     width: 15px;
     height: 15px;
@@ -1595,12 +1520,12 @@ p, h1, h2, h3, h4, span {
     border-color: var(--c-gold);
 }
 
-
 /* =========================================
    12. SELLOS HANKO DINÁMICOS
    ========================================= */
+
 .hanko-stamp {
-    position: absolute; /* <--- ANTES ERA FIXED */
+    position: absolute; 
     color: var(--c-vermilion);
     border: 3px solid var(--c-vermilion);
     border-radius: 4px;
@@ -1609,7 +1534,7 @@ p, h1, h2, h3, h4, span {
     font-size: 1.8rem;
     font-weight: 700;
     pointer-events: none; 
-    z-index: 5; /* Como ahora es absoluto, se quedará pegado al fondo real de la web */
+    z-index: 5; 
     
     animation: stampFade 4s forwards ease-out;
 }
@@ -1617,15 +1542,11 @@ p, h1, h2, h3, h4, span {
 @keyframes stampFade {
     0% { opacity: 0; transform: translate(-50%, -50%) scale(2) rotate(var(--rot)); }
     5% { opacity: 0.8; transform: translate(-50%, -50%) scale(1) rotate(var(--rot)); }
-    70% { opacity: 0.6; } /* Tarda en secarse */
+    70% { opacity: 0.6; } 
     100% { opacity: 0; transform: translate(-50%, -50%) scale(1) rotate(var(--rot)); }
 }
 
 
-
-
-
-/* Contenedor del botón Ver Más (Por defecto oculto en escritorio) */
 .load-more-wrapper {
     display: none; 
     text-align: center;
@@ -1635,24 +1556,15 @@ p, h1, h2, h3, h4, span {
 }
 
 @media (max-width: 600px) {
-    /* El JavaScript cambiará el display a 'block' cuando sea necesario,
-       aquí solo controlamos los márgenes en móvil */
     .load-more-wrapper {
         margin-top: 0;
     }
 }
 
-
-
-
-
-
-
-
-
 /* =========================================
    PÁGINA DE INFO Y LEGAL (info.html)
    ========================================= */
+
 .info-page-wrapper {
     max-width: 1200px;
     margin: 8rem auto 6rem;
@@ -1662,10 +1574,9 @@ p, h1, h2, h3, h4, span {
     padding: 0 2rem;
 }
 
-/* Índice lateral Sticky */
 .info-sidebar {
     position: sticky;
-    top: 100px; /* Se queda pegado a 100px del techo */
+    top: 100px;
     height: fit-content;
     background: #fff;
     padding: 2rem;
@@ -1696,18 +1607,17 @@ p, h1, h2, h3, h4, span {
     color: var(--c-indigo);
     font-family: var(--f-sans);
     font-weight: 500;
-    transition: all 0.3s;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block; 
 }
 
 .info-sidebar a:hover {
     color: var(--c-vermilion);
-    padding-left: 5px; /* Pequeño empujón al hacer hover */
+    transform: translateX(5px); 
 }
 
-/* Contenido Principal */
 .info-content section {
     margin-bottom: 5rem;
-    /* ESTO ES MAGIA PURA: Evita que al hacer clic en el índice, el título quede tapado por la cabecera */
     scroll-margin-top: 100px; 
 }
 
@@ -1740,7 +1650,6 @@ p, h1, h2, h3, h4, span {
     margin-bottom: 2rem;
 }
 
-/* Responsive para móvil */
 @media (max-width: 900px) {
     .info-page-wrapper {
         grid-template-columns: 1fr;
@@ -1753,25 +1662,6 @@ p, h1, h2, h3, h4, span {
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================================
    PÁGINA DE CHECKOUT (checkout.html)
    ========================================= */
@@ -1783,7 +1673,6 @@ p, h1, h2, h3, h4, span {
 .text-btn:hover { color: var(--c-vermilion); }
 .checkout-container { max-width: 1200px; margin: 0 auto; padding: 4rem 2rem; display: grid; grid-template-columns: 1.5fr 1fr; gap: 4rem; }
 
-/* Formulario Checkout */
 .checkout-form-col h2 { font-family: var(--f-serif); font-size: 3rem; color: var(--c-indigo); line-height: 1; }
 .checkout-subtitle { color: #666; margin-bottom: 3rem; font-family: var(--f-serif); font-size: 1.2rem; }
 .form-section { margin-bottom: 3rem; }
@@ -1802,7 +1691,6 @@ p, h1, h2, h3, h4, span {
 .submit-btn { width: 100%; background: var(--c-indigo); color: var(--c-gold); margin-top: 1rem; padding: 1.5rem; font-size: 1.2rem; border-radius: 50px; cursor: pointer; border: none; transition: 0.3s;}
 .submit-btn:hover { background: var(--c-gold); color: var(--c-indigo); }
 
-/* Resumen Checkout */
 .checkout-summary-col { background: #fff; padding: 2.5rem; border-radius: 15px; border: 1px solid rgba(0,0,0,0.05); box-shadow: 0 10px 30px rgba(0,0,0,0.03); height: fit-content; position: sticky; top: 2rem; }
 .checkout-summary-col h3 { font-family: var(--f-serif); font-size: 1.8rem; border-bottom: 1px solid #eee; padding-bottom: 1rem; margin-bottom: 1.5rem; }
 .summary-items { display: flex; flex-direction: column; gap: 1.5rem; max-height: 40vh; overflow-y: auto; margin-bottom: 2rem; padding-right: 1rem; }
@@ -1816,7 +1704,6 @@ p, h1, h2, h3, h4, span {
 .total-line { display: flex; justify-content: space-between; font-family: var(--f-sans); color: #555; }
 .grand-total { font-family: var(--f-serif); font-size: 1.8rem; color: var(--c-indigo); font-weight: bold; margin-top: 0.5rem; border-top: 2px solid var(--c-indigo); padding-top: 1rem; }
 
-/* El Sello Dramático y Pantalla Final */
 .checkout-success-overlay {
     position: fixed; inset: 0; background: rgba(244, 241, 234, 0.95);
     z-index: 10000; display: flex; flex-direction: column; justify-content: center; align-items: center;
@@ -1841,7 +1728,6 @@ p, h1, h2, h3, h4, span {
 .checkout-success-overlay h2 { font-family: var(--f-serif); font-size: 3.5rem; color: var(--c-indigo); margin-bottom: 1rem; opacity: 0; transform: translateY(20px); }
 .checkout-success-overlay p { font-family: var(--f-sans); font-size: 1.2rem; color: #555; margin-bottom: 3rem; opacity: 0; transform: translateY(20px); }
 
-/* Botón Final Limpio */
 .checkout-back-btn {
     border: 1px solid var(--c-indigo); color: var(--c-indigo); padding: 1rem 3rem; 
     border-radius: 50px; background: transparent; cursor: pointer; text-decoration: none; 
@@ -1855,27 +1741,21 @@ p, h1, h2, h3, h4, span {
 }
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
-/* Modo móvil del checkout */
 @media (max-width: 900px) {
     .checkout-container { grid-template-columns: 1fr; padding: 2rem 1rem; }
     .checkout-summary-col { order: -1; position: static; }
 }
 
-/* Colores específicos para los sellos de café */
 [data-id="p10"] .stamp-seal { background: var(--c-gold); color: var(--c-indigo); }
 [data-id="p11"] .stamp-seal { background: var(--c-indigo); color: var(--c-cream); }
-[data-id="p13"] .stamp-seal { background: #4A7C82; } /* Color Kappa */
+[data-id="p13"] .stamp-seal { background: #4A7C82; } 
 [data-id="p14"] .stamp-seal { background: var(--c-ink); }
 [data-id="p15"] .stamp-seal { background: #e0e0e0; color: var(--c-indigo); }
-
-
-
 
 /* =========================================
    RESPONSIVIDAD Y ADAPTACIÓN MÓVIL (UX/UI)
    ========================================= */
 
-/* --- TABLETS (Pantallas medianas) --- */
 @media (max-width: 900px) {
     .products-grid { 
         grid-template-columns: repeat(2, 1fr); 
@@ -1883,16 +1763,13 @@ p, h1, h2, h3, h4, span {
     }
 }
 
-/* --- MÓVILES (Pantallas pequeñas) --- */
 @media (max-width: 600px) {
-    /* 1. Catálogo a 2 columnas (Evita el scroll infinito) */
     .products-grid { 
         grid-template-columns: repeat(2, 1fr); 
-        gap: 2.5rem 1rem; /* Reducimos el hueco para aprovechar la pantalla */
+        gap: 2.5rem 1rem; 
         padding: 3rem 5%;
     }
 
-    /* 2. Textos de los productos más finos para que no salten de línea */
     .card-info h4 {
         font-size: 1.1rem;
     }
@@ -1901,28 +1778,25 @@ p, h1, h2, h3, h4, span {
         letter-spacing: 2px;
     }
 
-    /* 3. ¡Vital para UX táctil! El botón (+) debe estar siempre visible en móvil */
     .quick-add-btn {
-        opacity: 1; /* Siempre visible */
+        opacity: 1; 
         transform: translateY(0);
-        width: 35px; /* Ligeramente más pequeño para no tapar el postre */
+        width: 35px;
         height: 35px;
         font-size: 1.4rem;
         bottom: 0px;
         right: 0px;
-        background: rgba(244, 241, 234, 0.85); /* Un poco translúcido */
+        background: rgba(244, 241, 234, 0.85); 
         backdrop-filter: blur(4px);
     }
 
-    /* 4. Ajustes de la cabecera de la tienda */
     .section-header {
         margin-bottom: 2rem;
     }
     .section-header h3 {
-        font-size: 2rem; /* Título principal más equilibrado */
+        font-size: 2rem; 
     }
     
-    /* 5. Filtros (Tabs) más compactos para que quepan todos */
     .tabs {
         gap: 1rem;
         margin-bottom: 3rem;
@@ -1932,18 +1806,113 @@ p, h1, h2, h3, h4, span {
         letter-spacing: 2px;
     }
 
-    /* 6. Ajuste del Modal (Ventana emergente) para que la foto no aplaste al texto */
     .modal-content {
-        grid-template-columns: 1fr; /* Pasa de 2 columnas a 1 sola */
-        grid-template-rows: 40% 60%; /* Arriba la foto, abajo el texto */
+        grid-template-columns: 1fr; 
+        grid-template-rows: 40% 60%; 
         height: 85vh;
-        overflow-y: auto;
+        overflow: hidden !important;
     }
     .modal-text {
-        padding: 2rem;
+        padding: 1.5rem; 
+        overflow-y: auto;
     }
     .modal-title {
         font-size: 2rem;
+    }
+
+    .lang-btn {
+        bottom: 1.5rem !important;
+        left: 1.5rem !important;
+        width: 50px !important;
+        height: 50px !important;
+        padding: 0 !important;
+        border-radius: 50% !important;
+        font-size: 0 !important;
+        color: transparent !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        background-color: var(--c-indigo) !important;
+        border: 1px solid var(--c-gold) !important;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3) !important;
+        z-index: 9999 !important;
+    }
+
+    .lang-btn::after {
+        content: '';
+        width: 22px;
+        height: 22px;
+        display: block;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23c5a365' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cline x1='2' y1='12' x2='22' y2='12'/%3E%3Cpath d='M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z'/%3E%3C/svg%3E");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .lang-btn:active {
+        transform: scale(0.92);
+    }
+
+    .info-page-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .info-sidebar {
+        position: sticky !important;
+        top: 70px;
+        z-index: 90;
+        background: var(--c-cream) !important;
+        border: 1px solid rgba(197, 163, 101, 0.4) !important;
+        padding: 1rem !important;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 8px 25px rgba(26, 38, 57, 0.08);
+    }
+
+    .info-sidebar h3 {
+        margin-bottom: 0 !important;
+        font-size: 1rem !important;
+        border-bottom: none !important;
+        padding-bottom: 0 !important;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: var(--c-indigo);
+    }
+
+    .info-sidebar h3::after {
+        content: '▼';
+        font-size: 0.65rem;
+        color: var(--c-gold);
+        transition: transform 0.3s ease;
+    }
+
+    .info-sidebar.expanded h3::after {
+        transform: rotate(180deg);
+    }
+
+    .info-sidebar ul {
+        max-height: 0;
+        overflow: hidden;
+        gap: 0.8rem !important;
+        transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        margin-top: 0;
+    }
+
+    .info-sidebar.expanded ul {
+        max-height: 300px;
+        margin-top: 1rem;
+        padding-top: 0.8rem;
+        border-top: 1px dashed rgba(197, 163, 101, 0.3);
+    }
+    
+    .info-sidebar a {
+        font-size: 1rem !important;
+        display: block;
+        width: 100%;
     }
     
 }
@@ -1954,12 +1923,10 @@ p, h1, h2, h3, h4, span {
    DESACTIVAR CURSOR NEO-UKIYO-E EN TÁCTIL
    ========================================= */
 @media (hover: none) and (pointer: coarse) {
-    /* 1. Ocultamos el anillo dorado por completo */
     #neo-cursor {
         display: none !important;
     }
     
-    /* 2. Devolvemos el comportamiento natural al dedo (quitamos el cursor: none) */
     body, * {
         cursor: auto !important;
     }

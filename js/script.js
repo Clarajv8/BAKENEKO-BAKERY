@@ -7,20 +7,26 @@ document.addEventListener("DOMContentLoaded", () => {
         es: {
             cart: "Cesta", pretitle: "Portal al Reino Yokai", subtitle: "El Refugio de los Espíritus Dulces", cta: "Entrar al Portal", mainTagline: "El sabor de lo oculto, servido en tu mesa.", introTitle: "Dulzura entre mundos", introText: "No horneamos para el hambre del cuerpo, sino para los antojos del alma. Guiados por el Bakeneko, nuestros dulces cierran la brecha entre la prisa moderna y la quietud antigua.", collectionTitle: "La Colección", addToCart: "Añadir a la Cesta", oracleTitle: "El Oráculo del Bakeneko", oracleDesc: "¿Dudas? Deja que el destino elija el espíritu que tu alma necesita hoy.", oracleBtn: "Consultar al Oráculo", tabAll: "El Grimorio Completo", tabDesserts: "Postres Yokai", tabWines: "Vinos Espirituales", collabSub: "Colaboración Exclusiva", collabDesc: "El equilibrio perfecto entre el Wagashi tradicional y la enología premium. Un maridaje de leyenda diseñado para despertar a los espíritus.", tabCoffee: "Cafés del Grimorio", collabMarquee: "BAKENEKO × SYRA COFFEE × BODEGAS KIZUNA ・ EL GRIMORIO DE LOS 6 REINOS ・ ", cartTitle: "Tu Selección", cartEmpty: "El grimorio está vacío.", cartTotal: "Total Ritual:", cartCheckout: "Completar Invocación", cartAdded: "¡Añadido!", checkoutTitle: "Sellar el Pacto", checkoutSub: "Prepara tu ofrenda para recibir los elixires y wagashi.", checkoutShipping: "Destino del Ritual", chkName: "Nombre del Mortal", chkAddress: "Dirección (Plano Terrenal)", checkoutPayment: "Ofrenda de Intercambio", chkCard: "Runas de la Tarjeta (16 dígitos)", chkExp: "Caducidad (MM/AA)", chkSubmit: "Confirmar Invocación", successTitle: "Pacto Sellado", successText: "Los espíritus han aceptado tu ofrenda. Tu pedido está en camino a través del portal.", backToRealm: "Volver al Reino", returnStore: "← Volver al Grimorio", selectZone: "Selecciona tu Reino...", summaryTitle: "Resumen de Invocación", summarySub: "Subtotal", summaryShip: "Envío (Portal)", summaryTotal: "Total Ritual", yokaiClass: "Espíritu Guardián:", allergenLabel: "Alérgenos:", unit: "/ ud", botName: "Espíritu Bakeneko", botStatus: "Guardián del Grimorio", ftBio: "Dulzura entre mundos. Unimos la tradición del wagashi con la vanguardia, guiados por el Bakeneko.",
             ftQuickLinks: "Enlaces Rápidos", ftShop: "El Grimorio (Tienda)", ftFAQ: "Preguntas Frecuentes", ftTrack: "Rastrear Ofrenda", ftLegal: "Legal y Transparencia", ftPrivacy: "Política de Privacidad", ftTerms: "Términos del Pacto (TOS)", ftAllergensInfo: "Guía de Alérgenos", ftContactAcc: "Atención y Cuenta", ftContactUs: "📞 Habla con un Monje", ftMyAccount: "👤 Mi Cuenta / Iniciar Sesión", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "CONCEPTO", navSocial: "REDES", enterShop: "ENTRAR AL GRIMORIO", vLabelEssence: "ESENCIA", vLabelConcept: "CONCEPTO", introWhoTitle: "Artesanía de otro mundo", introWhoText: "Bakeneko Bakery no es una pastelería convencional. Somos un espacio donde la técnica milenaria del Wagashi se encuentra con el misticismo. Cada pieza es una ofrenda esculpida a mano para conectar el paladar con la mitología japonesa.", loadMore: "Ver más", showLess: "Ocultar", formatLabel: "Formato:", packFormatLabel: "Tipo de Pack:", grain: "Grano entero (Caja Rectangular 250g)", ground: "Café Molido (Caja Rectangular 250g)", dripBagBox: "Caja 10x Drip Bags (De este mismo café - 12g/ud)", dripBagPack: "6x Drip Bags (1 de cada Reino)", grainPack: "6x Packs de Grano Completo", dripTriggerText: "¿Qué son las Drip Bags?", dripBotIntro: "🐾 ¡Miau! Excelente pregunta. Las <b>Drip Bags</b> son filtros individuales de café de especialidad sellados con nitrógeno para conservar todo su aroma. Es la forma más pura y rápida de preparar un café de filtro ritual en cualquier parte, sin necesidad de cafetera.", dripBotSteps: "<b>El Ritual en 3 pasos:</b><br>1. Abre el sobre rúnico y rasga la parte superior del filtro.<br>2. Despliega las zarpas de cartón y ánclalas en los bordes de tu taza.<br>3. Vierte agua caliente lentamente (92°C) en 2 o 3 tandas. ¡Y listo! 🌸", dripBotImgCaption: "Guía visual de invocación", dripOptMenu: "Volver al menú del Grimorio", dripOptTrivia: "Datos interesantes de las Drip Bags",
-            dripBotTrivia: "☕ <b>Un poco de historia:</b> Las Drip Bags nacieron en Japón a principios de los años 90. El primer diseño fue patentado por Yamanaka Sangyo en 1990 y revolucionó la forma de disfrutar el café fuera de casa. Inspiradas en la experiencia del pour-over, estas bolsas monodosis evolucionaron hasta el icónico diseño de 'orejas colgantes' que conocemos hoy, combinando la calidad del café filtrado con la comodidad de una preparación rápida y portátil. Hoy son una de las formas más sencillas de llevar la experiencia del café de especialidad a cualquier parte.",
+            dripBotTrivia: "☕ <b>Un poco de historia:</b> Las Drip Bags nacieron en Japón a principios de los años 90. El primer diseño fue patentado por Yamanaka Sangyo en 1990 y revolucionó la forma de disfrutar el café fuera de casa. Inspiradas en la experiencia del pour-over, estas bolsas monodosis evolucionaron hasta el icónico diseño de 'orejas colgantes' que conocemos hoy, combinando la calidad del café filtrado con la comodidad de una preparación rápida y portátil. Hoy son una de las formas más sencillas de llevar la experiencia del café de especialidad a cualquier parte.", nlPlaceholder: "Suscribirse al Grimorio", nlBenefits: "Únete para recibir acceso anticipado a nuestras ofrendas, invitaciones a catas secretas y un 10% de gracia en tu primer ritual.", nlSuccess: "¡Pacto sellado! Revisa tu correo.", nlError: "Las runas son incorrectas. Escribe un email válido.",
         },
         en: {
             cart: "Cart", pretitle: "Gateway to the Yokai Realm", subtitle: "Sanctuary of Sweet Spirits", cta: "Enter the Portal", mainTagline: "The taste of the hidden, served at your table.", introTitle: "Sweetness between worlds", introText: "We do not bake for the body's hunger, but for the soul's cravings. Guided by the Bakeneko, our sweets bridge the gap between modern rush and ancient stillness.", collectionTitle: "The Collection", addToCart: "Add to Cart", oracleTitle: "The Bakeneko Oracle", oracleDesc: "In doubt? Let fate choose the spirit your soul needs today.", oracleBtn: "Consult the Oracle", tabAll: "The Complete Grimoire", tabDesserts: "Yokai Sweets", tabWines: "Spiritual Wines", collabSub: "Exclusive Collaboration", collabDesc: "The perfect balance between traditional Wagashi and premium oenology. A legendary pairing designed to awaken the spirits.", tabCoffee: "Grimoire Coffees", collabMarquee: " BAKENEKO × SYRA COFFEE × BODEGAS KIZUNA ・ THE GRIMOIRE OF THE 6 REALMS ・ ", cartTitle: "Your Selection", cartEmpty: "The grimoire is empty.", cartTotal: "Ritual Total:", cartCheckout: "Complete Invocation", cartAdded: "Added!", checkoutTitle: "Seal the Pact", checkoutSub: "Prepare your offering to receive the elixirs and wagashi.", checkoutShipping: "Ritual Destination", chkName: "Mortal's Name", 
             chkAddress: "Address (Earthly Plane)", checkoutPayment: "Exchange Offering", chkCard: "Card Runes (16 digits)", chkExp: "Expiry (MM/YY)", chkSubmit: "Confirm Invocation", successTitle: "Pact Sealed", successText: "The spirits have accepted your offering. Your order is on its way through the portal.", backToRealm: "Return to Realm", returnStore: "← Return to Grimoire", selectZone: "Select your Realm...", summaryTitle: "Invocation Summary", summarySub: "Subtotal", summaryShip: "Shipping (Portal)", summaryTotal: "Ritual Total", yokaiClass: "Guardian Spirit:", allergenLabel: "Allergens:", unit: "/ ea", botName: "Bakeneko Spirit", botStatus: "Grimoire Guardian", ftBio: "Sweetness between worlds. We blend wagashi tradition with the avant-garde, guided by the Bakeneko.", ftQuickLinks: "Quick Links", ftShop: "The Grimoire (Shop)", ftFAQ: "Frequently Asked Questions",  ftTrack: "Track Offering",  ftLegal: "Legal & Transparency", ftPrivacy: "Privacy Policy", ftTerms: "Terms of the Pact (TOS)", ftAllergensInfo: "Allergen Guide", ftContactAcc: "Support & Account", ftContactUs: "📞 Speak with a Monk", ftMyAccount: "👤 My Account / Login", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "CONCEPT", navSocial: "SOCIALS", enterShop: "ENTER THE GRIMOIRE", vLabelEssence: "ESSENCE", vLabelConcept: "CONCEPT", introWhoTitle: "Otherworldly Craft", introWhoText: "Bakeneko Bakery is not a conventional pastry shop. We are a space where ancient Wagashi techniques meet mysticism. Each piece is a hand-sculpted offering to connect your palate with Japanese mythology.", loadMore: "Load more", showLess: "Show less", formatLabel: "Format:", packFormatLabel: "Pack Type:", grain: "Whole Bean (Rectangular Box 250g)", ground: "Ground Coffee (Rectangular Box 250g)", dripBagBox: "Box 10x Drip Bags (Of this specific coffee - 12g/ea)", dripBagPack: "6x Drip Bags (1 of each Realm)", grainPack: "6x Whole Bean Packs", dripTriggerText: "What are Drip Bags?",
-            dripBotIntro: "🐾 Meow! Excellent question. <b>Drip Bags</b> are individual specialty coffee filters sealed with nitrogen to preserve all their aroma. It is the purest and fastest way to prepare a ritual pour-over coffee anywhere, without a coffee maker.", dripBotSteps: "<b>The Ritual in 3 steps:</b><br>1. Open the runic envelope and tear off the top of the filter.<br>2. Unfold the cardboard hangers and anchor them to the rim of your cup.<br>3. Pour hot water slowly (92°C) in 2 or 3 pours. And it's ready! 🌸", dripBotImgCaption: "Visual invocation guide", dripOptMenu: "Return to Grimoire menu", dripOptTrivia: "Interesting facts about Drip Bags", dripBotTrivia: "☕ <b>A bit of history:</b> Drip Bags were born in Japan in the early 1990s. The first design was patented by Yamanaka Sangyo in 1990 and revolutionized the way coffee is enjoyed on the go. Inspired by the pour-over experience, these single-serve bags evolved into the iconic 'hanging ear' design we know today, combining the quality of filter coffee with the convenience of a quick, portable brew. Today, they are one of the easiest ways to take the specialty coffee experience anywhere.",
+            dripBotIntro: "🐾 Meow! Excellent question. <b>Drip Bags</b> are individual specialty coffee filters sealed with nitrogen to preserve all their aroma. It is the purest and fastest way to prepare a ritual pour-over coffee anywhere, without a coffee maker.", dripBotSteps: "<b>The Ritual in 3 steps:</b><br>1. Open the runic envelope and tear off the top of the filter.<br>2. Unfold the cardboard hangers and anchor them to the rim of your cup.<br>3. Pour hot water slowly (92°C) in 2 or 3 pours. And it's ready! 🌸", dripBotImgCaption: "Visual invocation guide", dripOptMenu: "Return to Grimoire menu", dripOptTrivia: "Interesting facts about Drip Bags", dripBotTrivia: "☕ <b>A bit of history:</b> Drip Bags were born in Japan in the early 1990s. The first design was patented by Yamanaka Sangyo in 1990 and revolutionized the way coffee is enjoyed on the go. Inspired by the pour-over experience, these single-serve bags evolved into the iconic 'hanging ear' design we know today, combining the quality of filter coffee with the convenience of a quick, portable brew. Today, they are one of the easiest ways to take the specialty coffee experience anywhere.", nlPlaceholder: "Subscribe to the Grimoire", nlBenefits: "Join to receive early access to limited offerings, secret tasting invitations, and a 10% grace on your first ritual.", nlSuccess: "Pact sealed! Check your inbox.", nlError: "Incorrect runes. Please enter a valid email.",
         },
         jp: {
             cart: "カート", pretitle: "妖怪のレルムへの入り口", subtitle: "甘い精霊の聖域", cta: "ポータルに入る", mainTagline: "隠された味わいを、あなたの食卓へ。", introTitle: "世界の間の甘み", introText: "私たちは体の飢えのためではなく、魂の渇望のために焼きます。化け猫に導かれ、私たちのスイーツは現代の慌ただしさと古代の静けさの間の架け橋となります。", collectionTitle: "コレクション", addToCart: "カートに追加", oracleTitle: "化け猫の神託", oracleDesc: "迷っていますか？今日あなたの魂が必要とする精霊を運命に選ばせましょう。", oracleBtn: "神託を伺う", tabAll: "完全な魔導書", tabDesserts: "妖怪のスイーツ", tabWines: "霊的なワイン", collabSub: "特別コラボレーション", collabDesc: "伝統的な和菓子と高級ワインの完璧なバランス。精霊を目覚めさせるためにデザインされた伝説のペアリング。", tabCoffee: "魔導書のコーヒー", collabMarquee: "化け猫 × SYRA COFFEE × KIZUNAワイナリー ・ 六つの領域の魔導書 ・ ", cartTitle: "あなたの選択", cartEmpty: "魔導書は空です。", cartTotal: "儀式の合計:", cartCheckout: "召喚を完了する", cartAdded: "追加されました！", checkoutTitle: "契約を結ぶ", checkoutSub: "お供え物を準備して、霊薬と和菓子を受け取ります。", checkoutShipping: "儀式の目的地", chkName: "定命の者の名前", chkAddress: "住所（現世）", checkoutPayment: "交換の供物", chkCard: "カードのルーン（16桁）", chkExp: "有効期限 (MM/YY)", chkSubmit: "召喚を確認する", successTitle: "契約完了", successText: "精霊たちがあなたの供物を受け入れました。ご注文はポータルを通って向かっています。", backToRealm: "レルムに戻る", returnStore: "← 魔導書に戻る", selectZone: "領域を選択...", summaryTitle: "召喚の概要", summarySub: "小計", summaryShip: "送料（ポータル）", summaryTotal: "儀式の合計", yokaiClass: "守護霊:", allergenLabel: "アレルギー物質:", unit: "/ 個", botName: "化け猫の精霊", botStatus: "魔導書の守護者", ftBio: "世界の間の甘さ。化け猫に導かれ、和菓子の伝統とアバンギャルドを融合させています。", ftQuickLinks: "クイックリンク", ftShop: "魔導書（ショップ）", ftFAQ: "よくある質問", ftTrack: "供物の追跡", ftLegal: "法的情報と透明性", ftPrivacy: "プライバシーポリシー", ftTerms: "契約条件（TOS）", ftAllergensInfo: "アレルギーガイド", ftContactAcc: "サポートとアカウント", ftContactUs: "📞 僧侶と話す", ftMyAccount: "👤 マイアカウント / ログイン", ftRights: "© 2026 Bakeneko Bakery.", navConcept: "理念", navSocial: "縁", enterShop: "魔導書へ入る", vLabelEssence: "本質", vLabelConcept: "理念", introWhoTitle: "異世界の職人技", introWhoText: "化け猫ベーカリーは、単なる菓子店ではありません。千年の歴史を持つ和菓子の技術と神秘主義が融合する場所です。一つひとつが、日本の神話とあなたの味覚を繋ぐために手作りされた供物なのです。", loadMore: "もっと見る", showLess: "閉じる", formatLabel: "形式:", packFormatLabel: "パックタイプ:", grain: "豆のまま (長方形ボックス 250g)", ground: "粉 (長方形ボックス 250g)", dripBagBox: "10x ドリップバッグ箱 (このコーヒー専用 - 12g/個)", dripBagPack: "6x ドリップバッグ (各レルム1個)", grainPack: "6x 豆のままパック", dripTriggerText: "ドリップバッグとは何ですか？",
-            dripBotIntro: "🐾 ニャー！素晴らしい質問です。<b>ドリップバッグ</b>は、アロマを保つために窒素充填された特別な個包装コーヒーフィルターです。コーヒーメーカーがなくても、どこでも本格的なハンドドリップを最も純粋かつ迅速に楽しむ儀式です。", dripBotSteps: "<b>3つのステップの儀式：</b><br>1. 封筒を開け、フィルターの上部を切り取ります。<br>2. 紙のフックを広げ、カップの縁に固定します。<br>3. 熱湯（92°C）を2〜3回に分けてゆっくり注ぎます。これで完成です！🌸", dripBotImgCaption: "抽出のビジュアルガイド", dripOptMenu: "魔導書メニューに戻る", dripOptTrivia: "ドリップバッグの豆知識", dripBotTrivia: "☕ <b>少し歴史を：</b> ドリップバッグは1990年代初頭に日本で生まれました。最初のデザインは1990年に山中産業によって特許取得され、外出先でのコーヒーの楽しみ方に革命をもたらしました。プアオーバーの体験にインスパイアされたこの1杯用のバッグは、今日私たちが知っている象徴的な「フック（耳）」デザインへと進化し、フィルターコーヒーの品質と、素早く持ち運び可能な抽出の利便性を兼ね備えています。現在では、スペシャルティコーヒーの体験をどこへでも持ち運べる最も簡単な方法の一つとなっています。",
+            dripBotIntro: "🐾 ニャー！素晴らしい質問です。<b>ドリップバッグ</b>は、アロマを保つために窒素充填された特別な個包装コーヒーフィルターです。コーヒーメーカーがなくても、どこでも本格的なハンドドリップを最も純粋かつ迅速に楽しむ儀式です。", dripBotSteps: "<b>3つのステップの儀式：</b><br>1. 封筒を開け、フィルターの上部を切り取ります。<br>2. 紙のフックを広げ、カップの縁に固定します。<br>3. 熱湯（92°C）を2〜3回に分けてゆっくり注ぎます。これで完成です！🌸", dripBotImgCaption: "抽出のビジュアルガイド", dripOptMenu: "魔導書メニューに戻る", dripOptTrivia: "ドリップバッグの豆知識", dripBotTrivia: "☕ <b>少し歴史を：</b> ドリップバッグは1990年代初頭に日本で生まれました。最初のデザインは1990年に山中産業によって特許取得され、外出先でのコーヒーの楽しみ方に革命をもたらしました。プアオーバーの体験にインスパイアされたこの1杯用のバッグは、今日私たちが知っている象徴的な「フック（耳）」デザインへと進化し、フィルターコーヒーの品質と、素早く持ち運び可能な抽出の利便性を兼ね備えています。現在では、スペシャルティコーヒーの体験をどこへでも持ち運べる最も簡単な方法の一つとなっています。", nlPlaceholder: "魔導書を購読する", nlBenefits: "限定供物への早期アクセス、秘密の試食会への招待、そして最初の儀式での10%の恩恵を受けるためにご登録ください。", nlSuccess: "契約完了！メールをご確認ください。", nlError: "ルーンが間違っています。有効なメールアドレスを入力してください。",
         }
     };
 
     const productsDB = {
+        p_pack_postres: {
+            es: { name: "Caja Degustación: 6 Espíritus", desc: "La experiencia Wagashi definitiva. Una caja premium de bambú oscuro que contiene una ofrenda de cada Yokai de la colección (Dorayaki, Mochi, Dango, Kuzumochi, Yokan y Nerikiri). La ofrenda mayor para los paladares más curiosos.", allergens: "Contiene todos los alérgenos de la colección individual." },
+            en: { name: "Tasting Box: 6 Spirits", desc: "The ultimate Wagashi experience. A premium dark bamboo box containing one offering from each Yokai in the collection. The ultimate offering for curious palates.", allergens: "Contains all allergens from the individual collection." },
+            jp: { name: "テイスティングボックス：6つの精霊", desc: "究極の和菓子体験。コレクションの各妖怪からの供物が1つずつ入った、高級な黒竹の箱。好奇心旺盛な味覚のための最高の供物。", allergens: "個別のコレクションのすべてのアレルゲンが含まれています。" },
+            class: "Colección Completa", price: 24.00, img: "assets/images/pack-postres.webp"
+        },
         p1: {
             es: { name: "Dorayaki", desc: "El Tanuki es un espíritu del bosque famoso por su gran barriga y su amor por los festines. Este dulce redondo rinde homenaje a su apetito insaciable.", allergens: "Trigo, Huevo, Soja." },
             en: { name: "Dorayaki", desc: "The Tanuki is a forest spirit famous for its big belly and love of feasts. This round sweet pays homage to its insatiable appetite.", allergens: "Wheat, Egg, Soy." },
@@ -56,6 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
             en: { name: "Camellia Nerikiri", desc: "Edible art. As beautiful, pale, and delicate as the Yuki-Onna. It captures a cold, ephemeral beauty.", allergens: "Tree Nuts (Walnuts), Soy." },
             jp: { name: "椿の練り切り", desc: "食べられる芸術。雪女のように美しく、青白く、繊細です。冷たく儚い美しさを捉えています。", allergens: "木の実（クルミ）、大豆。" },
             class: "Yuki-Onna", price: 5.50, img: "assets/images/nerikiri.webp"
+        },
+        p_pack_vinos: {
+            es: { name: "Trilogía Kizuna", desc: "El maridaje espiritual al completo. Una elegante caja que custodia las tres obras de Bodegas Kizuna: el frescor de 'The Raw', el fuego de 'The Grill' y la complejidad de 'The Umami'.", allergens: "Contiene Sulfitos." },
+            en: { name: "Kizuna Trilogy", desc: "The complete spiritual pairing. An elegant box guarding the three works of Kizuna Wineries: the freshness of 'The Raw', the fire of 'The Grill', and the complexity of 'The Umami'.", allergens: "Contains Sulfites." },
+            jp: { name: "Kizuna トリロジー", desc: "完全な霊的ペアリング。Kizunaワイナリーの3つの作品、「The Raw」の新鮮さ、「The Grill」の炎、「The Umami」の複雑さを守るエレガントな箱。", allergens: "亜硫酸塩が含まれています。" },
+            class: "Trilogía Enológica", price: 55.00, img: "assets/images/pack-vinos.webp"
         },
         p7: {
             es: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 6°C. El elixir de la Ningyo (Sirena), ideal para acompañar cortes de pescado crudo.", allergens: "Contiene Sulfitos." },
@@ -119,7 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    // Language Logic
     const langs = ['es', 'en', 'jp'];
     const langDisplayNames = { es: 'ES', en: 'EN', jp: '日本語' };
     
@@ -175,7 +186,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
 
-        // 2. Cambiamos el logo del NAV / TIENDA (Versión Negativa Crema)
         const navLogo = document.querySelector('.main-nav .logo img');
         if (navLogo) {
             if (lang === 'jp') {
@@ -189,27 +199,23 @@ document.addEventListener("DOMContentLoaded", () => {
         if(activeId) fillModal(activeId);
 
         document.querySelectorAll('.chat-bubble').forEach(bubble => {
-            // Traducir mensajes normales del Bot
             const botNode = bubble.getAttribute('data-chat-node');
             if (botNode && botDialogues[lang][botNode]) {
                 bubble.innerHTML = botDialogues[lang][botNode].msg;
             }
             
-            // Traducir mensajes normales del Usuario
             const userNode = bubble.getAttribute('data-user-node');
             const optIndex = bubble.getAttribute('data-opt-index');
             if (userNode && botDialogues[lang][userNode] && botDialogues[lang][userNode].options[optIndex]) {
                 bubble.innerText = botDialogues[lang][userNode].options[optIndex].text;
             }
 
-            // Traducir botones pulsados de Drip Bags
             const userDrip = bubble.getAttribute('data-user-drip');
             if (userDrip !== null) {
                 if (userDrip == 0) bubble.innerText = translations[lang].dripOptTrivia;
                 if (userDrip == 1) bubble.innerText = translations[lang].dripOptMenu;
             }
 
-            // Traducir los mensajes especiales de las Drip Bags
             const dripNode = bubble.getAttribute('data-drip-node');
             if (dripNode === 'intro') bubble.innerHTML = translations[lang].dripBotIntro;
             if (dripNode === 'steps') bubble.innerHTML = translations[lang].dripBotSteps;
@@ -218,11 +224,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     <img src="assets/images/como-hacer-dripbag.webp" alt="Drip Bag Guide" style="width:100%; border-radius:10px; display:block; margin-bottom:0.3rem;">
                     <span style="font-size:0.75rem; opacity:0.6; display:block; text-align:center;">${translations[lang].dripBotImgCaption}</span>
                  `;
+                 bubble.querySelector('img').onload = () => {
+                      document.getElementById('chat-messages').scrollTop = document.getElementById('chat-messages').scrollHeight;
+                 };
             }
             if (dripNode === 'trivia') bubble.innerHTML = translations[lang].dripBotTrivia;
         });
 
-        // Traducir los botones de opciones actualmente visibles
         const chatOptionsEl = document.getElementById('chat-options');
         if (chatOptionsEl) {
             const currentOptionsNode = chatOptionsEl.getAttribute('data-current-options-node');
@@ -243,29 +251,44 @@ document.addEventListener("DOMContentLoaded", () => {
         if (typeof updateCartUI === 'function') {
             updateCartUI();
         }
+
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+            const key = el.getAttribute('data-i18n-placeholder');
+            if(t[key]) el.placeholder = t[key];
+        });
+
+        const footerLogo = document.getElementById('footer-logo-img');
+        if (footerLogo) {
+            footerLogo.src = lang === 'jp' ? 'assets/images/Logo-j-premium.svg' : 'assets/images/logo-premium.svg';
+        }
     }
 
-
     /* =========================================
-       SMART NAV (Ocultar al hacer scroll hacia abajo)
+       SMART NAV Y CESTA FLOTANTE
        ========================================= */
     const mainNav = document.querySelector('.main-nav');
+    const floatingCart = document.getElementById('floating-cart-btn');
     let lastScrollY = window.scrollY;
 
     if (mainNav) {
         window.addEventListener('scroll', () => {
             const currentScrollY = window.scrollY;
 
-            // Si bajamos el scroll y ya hemos pasado los primeros 100px (para no esconderla nada más empezar)
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
                 mainNav.classList.add('nav-hidden');
+                if (floatingCart) floatingCart.classList.add('visible'); // Baja la cesta
             } 
-            // Si subimos el scroll, la volvemos a mostrar
             else if (currentScrollY < lastScrollY) {
                 mainNav.classList.remove('nav-hidden');
+                if (floatingCart) floatingCart.classList.remove('visible'); // Sube la cesta
             }
-
             lastScrollY = currentScrollY;
+        });
+    }
+
+    if (floatingCart) {
+        floatingCart.addEventListener('click', () => {
+            if (typeof openCart === 'function') openCart();
         });
     }
     
@@ -285,27 +308,24 @@ document.addEventListener("DOMContentLoaded", () => {
             smooth: true
         });
 
-        // 1. Le decimos a Lenis que avise a GSAP cada vez que se mueve la rueda
         window.lenis.on('scroll', ScrollTrigger.update);
 
-        // 2. Le decimos a GSAP que controle el reloj de Lenis
         gsap.ticker.add((time) => {
             window.lenis.raf(time * 1000);
         });
 
-        // 3. Apagamos el suavizado de lag de GSAP para que no pelee con Lenis
         gsap.ticker.lagSmoothing(0);
     }
     // --- EFECTO PARALLAX PARA EL VÍDEO CINEMATOGRÁFICO ---
     if (typeof gsap !== 'undefined' && document.querySelector('.cinematic-video')) {
         gsap.to(".cinematic-video", {
-            yPercent: 20, // El vídeo se desliza hacia abajo un 20% mientras tú haces scroll
+            yPercent: 20, 
             ease: "none",
             scrollTrigger: {
                 trigger: ".cinematic-window",
                 start: "top top",
                 end: "bottom top",
-                scrub: true // Sincronizado perfectamente con la rueda del ratón
+                scrub: true 
             }
         });
     }
@@ -319,7 +339,7 @@ document.addEventListener("DOMContentLoaded", () => {
             once: true, 
             onEnter: (batch) => {
                 gsap.fromTo(batch,
-                    { y: 50, opacity: 0 }, // He bajado el salto de 80 a 50 para que sea más sutil
+                    { y: 50, opacity: 0 },
                     {
                         y: 0, 
                         opacity: 1,
@@ -334,7 +354,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================
-       3. MODAL DE PRODUCTO (2D)
+       3. MODAL DE PRODUCTO (2D) - COMPLETADO Y SIN ERRORES
        ========================================= */
     const modalOverlay = document.querySelector('.modal-overlay');
     const modalContent = document.querySelector('.modal-content');
@@ -359,25 +379,30 @@ document.addEventListener("DOMContentLoaded", () => {
         activeImage.src = data.img;
         modalContent.setAttribute('data-active-id', id);
 
-        // Reseteamos el estado del botón de añadir (desactivado hasta que elijan una caja)
-        addCartBtn.disabled = true;
-        addCartBtn.style.opacity = "0.5";
-
-        // Limpiamos selectores de formato anteriores si existen
         const oldSelector = document.getElementById('coffee-format-selector');
         if (oldSelector) oldSelector.remove();
 
-        const modalInfoContainer = document.querySelector('.modal-info');
-        
-        // Verificamos si el producto es el PACK o un CAFÉ INDIVIDUAL
         const isPack = (id === 'p_pack_coffee');
         const isIndividualCoffee = (id.startsWith('p') && parseInt(id.replace('p', '')) >= 10);
 
+        // --- CORRECCIÓN DE SEGURIDAD PARA EL BOTÓN CESTA ---
+        if (isPack || isIndividualCoffee) {
+            addCartBtn.disabled = true;
+            addCartBtn.style.opacity = "0.5";
+        } else {
+            addCartBtn.disabled = false;
+            addCartBtn.style.opacity = "1";
+            modalContent.removeAttribute('data-selected-value');
+            modalContent.removeAttribute('data-selected-price');
+            modalContent.removeAttribute('data-selected-text');
+        }
+
+        const modalInfoContainer = document.querySelector('.modal-info');
+        
         if (modalInfoContainer && (isPack || isIndividualCoffee)) {
             let optionsHTML = '';
 
             if (isPack) {
-                // Estructura de cajas para el PACK COMPLETO
                 optionsHTML = `
                     <div id="coffee-format-selector" class="coffee-options-grid" style="margin: 1.5rem 0;">
                         <span style="font-size:0.75rem; color:var(--c-gold); font-weight:bold; text-transform:uppercase; letter-spacing:2px; display:block; margin-bottom:0.8rem;">
@@ -392,37 +417,37 @@ document.addEventListener("DOMContentLoaded", () => {
                                 <span style="font-family:var(--f-sans); font-size:0.9rem; font-weight:500;">${translations[lang].dripBagPack}</span>
                                 <span style="font-weight:700; color:var(--c-gold);">42.00€</span>
                             </div>
+                            
+                            <div id="dripbag-explain-trigger" style="display:none; text-align:left; padding-left:0.5rem; margin-top:-0.2rem; margin-bottom:0.4rem;">
+                                <span class="drip-link-premium" style="font-size:0.85rem; color:var(--c-gold); text-decoration:underline; cursor:none !important; font-family:var(--f-sans); font-weight:500; display:inline-block; transition:transform 0.3s ease;">
+                                    ${translations[lang].dripTriggerText}
+                                </span>
+                            </div>
                         </div>
                     </div>
                 `;
             } else {
-                // Estructura de cajas para el CAFÉ INDIVIDUAL
                 optionsHTML = `
                     <div id="coffee-format-selector" class="coffee-options-grid" style="margin: 1.5rem 0;">
                         <span style="font-size:0.75rem; color:var(--c-gold); font-weight:bold; text-transform:uppercase; letter-spacing:2px; display:block; margin-bottom:0.8rem;">
                             ${translations[lang].formatLabel}
                         </span>
                         <div style="display:flex; flex-direction:column; gap:0.8rem;">
-                            
-                            <!-- Opción Drip Bag con imagen genérica de la caja -->
                             <div class="coffee-box-option" data-value="dripbag" data-price="${data.price}" data-img="assets/images/universal-dripbox.webp" style="border:1px solid rgba(26,38,57,0.2); padding:1rem; border-radius:12px; cursor:pointer; transition:all 0.3s ease; display:flex; justify-content:space-between; align-items:center;">
                                 <span style="font-family:var(--f-sans); font-size:0.9rem; font-weight:500;">${translations[lang].dripBagBox}</span>
                                 <span style="font-weight:700; color:var(--c-gold);">${data.price.toFixed(2)}€</span>
                             </div>
                             
-                            <!-- Enlace explicativo -->
                             <div id="dripbag-explain-trigger" style="display:none; text-align:left; padding-left:0.5rem; margin-top:-0.2rem; margin-bottom:0.4rem;">
                                 <span class="drip-link-premium" style="font-size:0.85rem; color:var(--c-gold); text-decoration:underline; cursor:none !important; font-family:var(--f-sans); font-weight:500; display:inline-block; transition:transform 0.3s ease;">
                                     ${translations[lang].dripTriggerText}
                                 </span>
                             </div>
 
-                            <!-- Opciones de Grano y Molido con la misma imagen genérica de la bolsa -->
                             <div class="coffee-box-option" data-value="grain" data-price="${(data.price + 2.5)}" data-img="assets/images/universal-bolsa.webp" style="border:1px solid rgba(26,38,57,0.2); padding:1rem; border-radius:12px; cursor:pointer; transition:all 0.3s ease; display:flex; justify-content:space-between; align-items:center;">
                                 <span style="font-family:var(--f-sans); font-size:0.9rem; font-weight:500;">${translations[lang].grain}</span>
                                 <span style="font-weight:700; color:var(--c-gold);">${(data.price + 2.5).toFixed(2)}€</span>
                             </div>
-                            
                             <div class="coffee-box-option" data-value="ground" data-price="${(data.price + 2.5)}" data-img="assets/images/universal-bolsa.webp" style="border:1px solid rgba(26,38,57,0.2); padding:1rem; border-radius:12px; cursor:pointer; transition:all 0.3s ease; display:flex; justify-content:space-between; align-items:center;">
                                 <span style="font-family:var(--f-sans); font-size:0.9rem; font-weight:500;">${translations[lang].ground}</span>
                                 <span style="font-weight:700; color:var(--c-gold);">${(data.price + 2.5).toFixed(2)}€</span>
@@ -437,7 +462,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const boxes = document.querySelectorAll('.coffee-box-option');
             const explainTrigger = document.getElementById('dripbag-explain-trigger');
 
-            // Efectos visuales de Hover mediante JS para saltarnos el forzado del cursor texto
             if (explainTrigger) {
                 const linkSpan = explainTrigger.querySelector('.drip-link-premium');
                 explainTrigger.addEventListener('mouseenter', () => {
@@ -462,9 +486,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     box.style.opacity = "1";
                     box.style.borderColor = "var(--c-gold)";
                     box.style.background = "rgba(197, 163, 101, 0.05)"; 
+                    box.classList.add('selected-variant');
 
                     if (explainTrigger) {
-                        if (box.getAttribute('data-value') === 'dripbag') {
+                        const val = box.getAttribute('data-value');
+                        if (val === 'dripbag' || val === 'dripbag_pack') {
                             explainTrigger.style.display = 'block';
                         } else {
                             explainTrigger.style.display = 'none';
@@ -472,7 +498,19 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
 
                     const newImgPath = box.getAttribute('data-img');
-                    activeImage.src = newImgPath;
+                    if (!activeImage.src.includes(newImgPath)) {
+                        gsap.to(activeImage, {
+                            opacity: 0, 
+                            duration: 0.2, 
+                            ease: "power2.inOut",
+                            onComplete: () => {
+                                activeImage.src = newImgPath;
+                                activeImage.onload = () => {
+                                    gsap.to(activeImage, { opacity: 1, duration: 0.3, ease: "power2.inOut" });
+                                };
+                            }
+                        });
+                    }
 
                     modalContent.setAttribute('data-selected-value', box.getAttribute('data-value'));
                     modalContent.setAttribute('data-selected-price', box.getAttribute('data-price'));
@@ -496,6 +534,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // --- ESCUCHADORES DE EVENTO: ABRIR EL MODAL ---
     document.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('click', (e) => {
             if (e.target.closest('.quick-add-btn')) return; 
@@ -505,17 +544,22 @@ document.addEventListener("DOMContentLoaded", () => {
             fillModal(id);
             modalOverlay.classList.add('active');
             
-            modalContent.setAttribute('data-lenis-prevent', ''); // Fuerza a Lenis a soltar el control aquí
+            modalContent.setAttribute('data-lenis-prevent', ''); 
+            
             document.body.style.overflow = 'hidden';
             if (window.lenis) window.lenis.stop();
         });
     });
 
+    // --- ESCUCHADORES DE EVENTO: CERRAR EL MODAL ---
     function closeModal() {
         if(!modalOverlay) return;
         modalOverlay.classList.remove('active');
+        
+        // Devolvemos la movilidad
         document.body.style.overflow = '';
         if (window.lenis) window.lenis.start(); 
+        
         clearImageTimer = setTimeout(() => { if(activeImage) activeImage.src = ""; }, 500); 
     }
 
@@ -533,14 +577,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const productCards = document.querySelectorAll('.product-card');
     const loadMoreBtn = document.getElementById('load-more-btn');
     const loadMoreWrapper = document.getElementById('load-more-wrapper');
-    let currentLimit = 6; // Límite inicial en móvil
+    let currentLimit = 6;
 
     function runFilter(filter, resetLimit = true) {
         if (resetLimit) currentLimit = 6;
         let delayIndex = 0;
         let visibleMatchCount = 0;
         const isMobile = window.innerWidth <= 600;
-        const lang = langs[currentLangIndex]; // Para coger la traducción correcta
+        const lang = langs[currentLangIndex]; 
 
         productCards.forEach(card => {
             const category = card.getAttribute('data-category');
@@ -569,18 +613,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Lógica del interruptor Ver Más / Ocultar
         if (loadMoreWrapper) {
-            // Solo mostramos el botón si en esta pestaña hay más de 6 productos en total
             if (isMobile && visibleMatchCount > 6) {
                 loadMoreWrapper.style.display = 'block';
                 
-                // Si el límite está en 6, mostramos "Ver más"
                 if (currentLimit === 6) {
                     loadMoreBtn.setAttribute('data-i18n', 'loadMore');
                     loadMoreBtn.innerText = translations[lang].loadMore;
                 } 
-                // Si el límite se ha expandido, mostramos "Ocultar"
                 else {
                     loadMoreBtn.setAttribute('data-i18n', 'showLess');
                     loadMoreBtn.innerText = translations[lang].showLess;
@@ -593,7 +633,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if(typeof ScrollTrigger !== 'undefined') ScrollTrigger.refresh();
     }
 
-    // Inicializamos el filtro al cargar la web
     runFilter('all', true);
 
     tabBtns.forEach(btn => {
@@ -617,24 +656,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Evento del botón "Ver Más / Ocultar"
     if (loadMoreBtn) {
         loadMoreBtn.addEventListener('click', () => {
             const activeTab = document.querySelector('.tab-btn.active');
             const filter = activeTab ? activeTab.getAttribute('data-filter') : 'all';
             
             if (currentLimit === 6) {
-                // ABRIR: Expandimos el límite a infinito y mostramos de inmediato
                 currentLimit = 999; 
                 runFilter(filter, false); 
             } else {
-                // CERRAR: 1. Scroll de lujo con curva Ease-In-Out
                 if (window.lenis) {
                     window.lenis.scrollTo('.tabs', { 
                         offset: -100, 
-                        duration: 2.0, // <-- 2 Segundos exactos (movimiento más pausado y majestuoso)
-                        
-                        // Curva EaseInOutCubic: Empieza muy suave, acelera en el medio, frena como una pluma
+                        duration: 2.0, 
+
                         easing: (t) => t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2
                     });
                 } else {
@@ -642,8 +677,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (tabsSection) tabsSection.scrollIntoView({ behavior: 'smooth' });
                 }
                 
-                // CERRAR: 2. Sincronizamos el corte con el nuevo tiempo (1.6 segundos)
-                // Corta justo cuando el scroll ya ha pasado los postres de abajo y está frenando
                 setTimeout(() => {
                     currentLimit = 6; 
                     runFilter(filter, false); 
@@ -713,9 +746,9 @@ document.addEventListener("DOMContentLoaded", () => {
             const activeId = document.querySelector('.modal-content').getAttribute('data-active-id');
             if(activeId) {
                 const product = productsDB[activeId];
+                if (!product) return; // Paracaídas extra de seguridad
                 const lang = langs[currentLangIndex];
                 
-                // Leemos los datos de la caja que está actualmente iluminada
                 const selectedValue = modalContent.getAttribute('data-selected-value');
                 const selectedPrice = modalContent.getAttribute('data-selected-price');
                 const selectedText = modalContent.getAttribute('data-selected-text');
@@ -724,7 +757,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 let itemFinalName = product[lang].name;
                 let finalPrice = product.price;
 
-                // Si es un café o un pack con variantes, modificamos los datos
                 if (selectedValue) {
                     itemUniqueId = `${activeId}_${selectedValue}`;
                     itemFinalName = `${product[lang].name} (${selectedText})`;
@@ -739,7 +771,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         id: itemUniqueId, 
                         name: itemFinalName, 
                         price: finalPrice, 
-                        img: activeImage.src, // Guarda la variante de imagen exacta elegida
+                        img: activeImage.src, 
                         quantity: 1 
                     });
                 }
@@ -770,6 +802,21 @@ document.addEventListener("DOMContentLoaded", () => {
             const card = btn.closest('.product-card');
             const activeId = card.getAttribute('data-id');
             if(!activeId) return;
+
+            // --- NUEVA LÓGICA DE INTERCEPCIÓN ---
+            const isPack = (activeId === 'p_pack_coffee');
+            const isIndividualCoffee = (activeId.startsWith('p') && parseInt(activeId.replace('p', '')) >= 10);
+
+            if (isPack || isIndividualCoffee) {
+                clearTimeout(clearImageTimer); 
+                fillModal(activeId);
+                modalOverlay.classList.add('active');
+                modalContent.setAttribute('data-lenis-prevent', ''); 
+                document.body.style.overflow = 'hidden';
+                if (window.lenis) window.lenis.stop();
+                return; 
+            }
+            // --- FIN DE LA INTERCEPCIÓN ---
 
             const product = productsDB[activeId];
             const lang = langs[currentLangIndex];
@@ -811,7 +858,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     window.updateCartUI = function() {
+        const cartItemsContainer = document.getElementById('cart-items');
+        const cartTotalEl = document.getElementById('cart-total');
+        const cartDots = document.querySelectorAll('.cart-dot');
+        
         if(!cartItemsContainer) return;
+
         cartItemsContainer.innerHTML = ''; 
         let total = 0;
         let totalItemsCount = 0;
@@ -819,13 +871,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(cart.length === 0) {
             cartItemsContainer.innerHTML = `<div class="empty-cart-msg" data-i18n="cartEmpty">${translations[lang].cartEmpty}</div>`;
-            if(cartDot) cartDot.classList.remove('active');
+            // Apagamos todos los puntos rojos
+            cartDots.forEach(dot => dot.classList.remove('active'));
         } else {
             cart.forEach((item, index) => {
                 const itemTotal = item.price * item.quantity;
                 total += itemTotal;
                 totalItemsCount += item.quantity;
-                const translatedName = productsDB[item.id][lang].name;
+                
+                // --- MAGIA PARA RECONOCER VARIANTES Y TRADUCIRLAS ---
+                let baseId = item.id;
+                let variantSuffix = "";
+
+                if (!productsDB[baseId]) {
+                    if (baseId.startsWith('p_pack_coffee_')) {
+                        baseId = 'p_pack_coffee';
+                        variantSuffix = item.id.replace('p_pack_coffee_', '');
+                    } else if (baseId.includes('_')) {
+                        const parts = baseId.split('_');
+                        baseId = parts[0]; 
+                        variantSuffix = parts[1];
+                    }
+                }
+
+                const dbProduct = productsDB[baseId];
+                let translatedName = dbProduct ? dbProduct[lang].name : item.name;
+
+                if (variantSuffix) {
+                    let formatText = "";
+                    if (variantSuffix === 'dripbag_pack') formatText = translations[lang].dripBagPack;
+                    else if (variantSuffix === 'grain_pack') formatText = translations[lang].grainPack;
+                    else if (variantSuffix === 'dripbag') formatText = translations[lang].dripBagBox;
+                    else if (variantSuffix === 'grain') formatText = translations[lang].grain;
+                    else if (variantSuffix === 'ground') formatText = translations[lang].ground;
+                    
+                    if (formatText) translatedName += ` (${formatText})`;
+                }
                 
                 const itemEl = document.createElement('div');
                 itemEl.classList.add('cart-item');
@@ -847,10 +928,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 `;
                 cartItemsContainer.appendChild(itemEl);
             });
-            if(cartDot) {
-                cartDot.innerText = totalItemsCount;
-                cartDot.classList.add('active');
-            }
+            
+            cartDots.forEach(dot => {
+                dot.innerText = totalItemsCount;
+                dot.classList.add('active');
+            });
         }
         if(cartTotalEl) cartTotalEl.innerText = `${total.toFixed(2)}€`;
         localStorage.setItem('bakenekoCart', JSON.stringify(cart));
@@ -871,22 +953,13 @@ document.addEventListener("DOMContentLoaded", () => {
     
     updateCartUI();
 
-    const checkoutBtn = document.querySelector('.checkout-btn');
-    if(checkoutBtn) {
-        checkoutBtn.addEventListener('click', () => {
+   /* =========================================
+       7. IR A PÁGINA DE PAGO REAL
+       ========================================= */
+    const goToCheckoutBtn = document.querySelector('.checkout-btn');
+    if(goToCheckoutBtn) {
+        goToCheckoutBtn.addEventListener('click', () => {
             if (cart.length > 0) {
-                const currentLang = langs[currentLangIndex];
-                const cartTranslated = cart.map(item => {
-                    return {
-                        id: item.id,
-                        name: productsDB[item.id][currentLang].name, 
-                        price: item.price,
-                        img: item.img,
-                        quantity: item.quantity
-                    };
-                });
-                localStorage.setItem('bakenekoCart', JSON.stringify(cartTranslated));
-                localStorage.setItem('bakenekoLang', currentLang);
                 window.location.href = 'checkout.html';
             }
         });
@@ -947,13 +1020,12 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderBotMessage(nodeKey) {
         const lang = langs[currentLangIndex];
         
-        // Manejo especial para la Trivia sin romper el flujo del resto del chatbot
         if (nodeKey === "TRIVIA_DISPARADA") {
             chatOptions.innerHTML = '';
             setTimeout(() => {
                 const triviaEl = document.createElement('div');
                 triviaEl.className = 'chat-bubble msg-bot';
-                triviaEl.setAttribute('data-drip-node', 'trivia'); // Memoria de la trivia
+                triviaEl.setAttribute('data-drip-node', 'trivia'); 
                 triviaEl.innerHTML = translations[lang].dripBotTrivia;
                 chatMessages.appendChild(triviaEl);
                 chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -963,13 +1035,12 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // Lógica para el resto de mensajes normales del chatbot (Envíos, Alergias, etc.)
         const node = botDialogues[lang][nodeKey];
         chatOptions.innerHTML = ''; 
         setTimeout(() => {
             const msgEl = document.createElement('div');
             msgEl.className = 'chat-bubble msg-bot';
-            msgEl.setAttribute('data-chat-node', nodeKey); // <-- ESTA LÍNEA APLICA LA MEMORIA A TODO EL CHAT
+            msgEl.setAttribute('data-chat-node', nodeKey); 
             msgEl.innerHTML = node.msg;
             chatMessages.appendChild(msgEl);
             chatMessages.scrollTop = chatMessages.scrollHeight;
@@ -984,7 +1055,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function renderOptions(optionsArray, parentNodeKey = "") {
         chatOptions.innerHTML = '';
-        chatOptions.setAttribute('data-current-options-node', parentNodeKey); // Memoria del menú visible
+        chatOptions.setAttribute('data-current-options-node', parentNodeKey);
         optionsArray.forEach((opt, index) => {
             const btn = document.createElement('button');
             btn.className = 'chat-opt-btn';
@@ -998,7 +1069,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const msgEl = document.createElement('div');
         msgEl.className = 'chat-bubble msg-user';
         
-        // Etiquetamos las opciones del usuario para que se traduzcan
         if (parentNodeKey.startsWith("DRIP_BAG_OPTIONS")) {
              msgEl.setAttribute('data-user-drip', optIndex); 
         } else {
@@ -1049,6 +1119,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 <span style="font-size:0.75rem; opacity:0.6; display:block; text-align:center;">${translations[lang].dripBotImgCaption}</span>
             `;
             chatMessages.appendChild(msgImg);
+            
+            const loadedImg = msgImg.querySelector('img');
+            loadedImg.onload = () => {
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            };
             chatMessages.scrollTop = chatMessages.scrollHeight;
             
             renderOptions([
@@ -1153,39 +1228,28 @@ document.addEventListener("DOMContentLoaded", () => {
             
             // ==========================================
             // 🛠️ PANEL DE CONTROL DE LA ZARPA
-            // Ajusta estos valores hasta que quede perfecto
             // ==========================================
             
-            // 1. Distancias (Píxeles)
-            const distanciaScroll = isAtBottom ? -450 : 450; // Lo que baja la página
-            const distanciaPata   = isAtBottom ? 450 : -450; // Lo que baja la zarpa
+            const distanciaScroll = isAtBottom ? -450 : 450; 
+            const distanciaPata   = isAtBottom ? 450 : -450;
             
-            // 2. Tiempos (Segundos)
-            const tiempoScroll = 1.2; // Lo que tarda la página en hacer el recorrido
-            const tiempoPata   = 1.2; // Lo que tarda la pata (a veces poner 1.1 o 1.3 ayuda a compensar)
+            const tiempoScroll = 1.2; 
+            const tiempoPata   = 1.2; 
             
-            // 3. Físicas (Easing)
-            // Opciones comunes para probar: 
-            // "power2.inOut" (suave), "power3.out" (frena rápido al final), "power4.inOut" (muy brusco), "none" (lineal)
             const curvaPata = "power3.out"; 
-            
-            // ==========================================
-
             const centerY = (window.innerHeight / 2) - (paw.offsetHeight / 2);
             const pawTimeline = gsap.timeline({ onComplete: () => { paw.style.display = 'none'; isPawActive = false; } });
 
             gsap.set(paw, { y: centerY, x: 0, rotation: 0, scale: 1 });
 
-            // 1. La pata entra en pantalla
             pawTimeline.to(paw, { x: -120, duration: 1.5, ease: "power1.inOut" }) 
                        .add(() => { isAutoScrolling = true; }) 
                        
-                       // 2. La pata tira hacia abajo
                        .to(paw, { 
                            y: centerY + distanciaPata,
                            rotation: isAtBottom ? 30 : -30, 
                            duration: tiempoPata, 
-                           ease: curvaPata, // <- Usamos la curva que definiste arriba
+                           ease: curvaPata, 
                            onStart: () => {
                                if (window.lenis) { 
                                    window.lenis.scrollTo(window.scrollY + distanciaScroll, { 
@@ -1200,7 +1264,6 @@ document.addEventListener("DOMContentLoaded", () => {
                            }
                        })
                        
-                       // 3. La pata se retira
                        .to(paw, { x: 150, duration: 1.2, ease: "power2.in" });
         }
 
@@ -1237,15 +1300,12 @@ document.addEventListener("DOMContentLoaded", () => {
        ========================================= */
     const cursor = document.getElementById('neo-cursor');
     
-    // Detección táctil a prueba de balas (detecta móviles reales, tablets y pantallas táctiles)
     const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
 
     if (cursor) {
         if (isTouchDevice) {
-            // Si es un móvil o tablet, apagamos y ocultamos el cursor para siempre
             cursor.style.display = 'none';
         } else {
-            // Solo si es un ordenador con ratón ejecutamos las animaciones
             gsap.set(cursor, { xPercent: -50, yPercent: -50 });
             const xTo = gsap.quickTo(cursor, "x", { duration: 0.15, ease: "power3" });
             const yTo = gsap.quickTo(cursor, "y", { duration: 0.15, ease: "power3" });
@@ -1267,7 +1327,8 @@ document.addEventListener("DOMContentLoaded", () => {
        ========================================= */
     const kanjis = ["猫", "霊", "契", "甘", "狐"]; 
     document.addEventListener('click', (e) => {
-        const clicValido = !e.target.closest('button, a, input, select, .product-card, .modal-content, .cart-drawer, .chatbot-window, .main-nav, .hero-content, .omikuji-window');
+        // AÑADIDO: '.main-footer' para que no se puedan poner sellos abajo
+        const clicValido = !e.target.closest('button, a, input, select, .product-card, .modal-content, .cart-drawer, .chatbot-window, .main-nav, .hero-content, .omikuji-window, #concepto, .main-footer');
         if (!clicValido) return;
 
         const stamp = document.createElement('div');
@@ -1281,29 +1342,23 @@ document.addEventListener("DOMContentLoaded", () => {
         setTimeout(() => stamp.remove(), 4000);
     });
 
-    window.addEventListener('load', () => {
-    ScrollTrigger.refresh();
-});
-
-/* =========================================
+    /* =========================================
        ANIMACIÓN DE TINTA QUE SE UNE Y PAUSA
        ========================================= */
     if (typeof gsap !== 'undefined' && document.getElementById('ink-displacement')) {
         const displacement = document.getElementById('ink-displacement');
         
-        // Creamos un controlador de medios (Media Queries para JavaScript)
         let mm = gsap.matchMedia();
 
-        // 1. VERSIÓN ESCRITORIO (Más de 900px): La animación completa con pin y scrub
         mm.add("(min-width: 901px)", () => {
             const inkTl = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#concepto",
                     start: "center center",
                     end: "+=1200", 
-                    pin: true,          // Clavamos la pantalla
+                    pin: true,   
                     pinType: "transform",
-                    scrub: 1            // Sincronizado con la rueda
+                    scrub: 1          
                 }
             });
 
@@ -1317,25 +1372,116 @@ document.addEventListener("DOMContentLoaded", () => {
                 { attr: { scale: 0 }, duration: 2.5, ease: "power2.out" },
                 "<" 
             )
-            .to({}, { duration: 0.8 }); // Pausa mágica
+            .to({}, { duration: 0.8 }); 
         });
 
-        // 2. VERSIÓN MÓVIL/TABLET (900px o menos): Scroll natural sin atascos
         mm.add("(max-width: 900px)", () => {
-            // Ponemos el filtro a 0 desde el principio para que el texto sea legible
             gsap.set(displacement, { attr: { scale: 0 } });
             
-            // Simplemente hacemos que aparezca con un fundido suave al pasar por ahí
             gsap.to(".reveal-ink-wrapper", {
                 scrollTrigger: {
                     trigger: "#concepto",
-                    start: "top 75%", // Cuando la sección asoma en la pantalla
-                    // Fíjate que AQUÍ NO HAY PIN NI SCRUB. El scroll fluye libremente.
+                    start: "top 75%", 
                 },
                 opacity: 1,
                 duration: 1.2,
                 ease: "power2.out"
             });
+        });
+    }
+
+    /* =========================================
+       EL ORÁCULO DEL BAKENEKO (SLOT MACHINE)
+       ========================================= */
+    const spinBtn = document.getElementById('spin-btn');
+    const runeStrip = document.getElementById('rune-strip');
+    let isSpinning = false;
+
+    if (spinBtn && runeStrip) {
+        const oraculoYokais = [
+            { id: 'p1', kanji: '狸' }, // Tanuki (Dorayaki)
+            { id: 'p2', kanji: '狐' }, // Kitsune (Mochi)
+            { id: 'p3', kanji: '猫' }, // Bakeneko (Dango)
+            { id: 'p4', kanji: '河' }, // Kappa (Kuzumochi)
+            { id: 'p5', kanji: '海' }, // Umibozu (Yokan)
+            { id: 'p6', kanji: '雪' }  // Yuki-Onna (Nerikiri)
+        ];
+
+        let stripHTML = '';
+        const repeticiones = 5; 
+        for (let i = 0; i < repeticiones; i++) {
+            oraculoYokais.forEach(yokai => {
+                stripHTML += `<div class="rune-item">${yokai.kanji}</div>`;
+            });
+        }
+        runeStrip.innerHTML = stripHTML;
+
+        const runeHeight = 120;
+        
+        gsap.set(runeStrip, { y: 0 });
+
+        spinBtn.addEventListener('click', () => {
+            if (isSpinning) return; 
+            isSpinning = true;
+
+            const randomIndex = Math.floor(Math.random() * oraculoYokais.length);
+            const targetYokai = oraculoYokais[randomIndex];
+
+            const indexFinal = (oraculoYokais.length * (repeticiones - 1)) + randomIndex;
+            const targetY = -(indexFinal * runeHeight);
+
+            gsap.set(runeStrip, { y: 0 });
+
+            gsap.to(runeStrip, {
+                y: targetY,
+                duration: 3,
+                ease: "power4.inOut",
+                onComplete: () => {
+                    isSpinning = false;
+                    
+                    setTimeout(() => {
+                        fillModal(targetYokai.id);
+                        const modalOverlay = document.querySelector('.modal-overlay');
+                        const modalContent = document.querySelector('.modal-content');
+                        
+                        if (modalOverlay) modalOverlay.classList.add('active');
+                        if (modalContent) modalContent.setAttribute('data-lenis-prevent', '');
+                        
+                        document.body.style.overflow = 'hidden';
+                        if (window.lenis) window.lenis.stop();
+                    }, 500);
+                }
+            });
+        });
+    }
+
+    /* =========================================
+       13. NEWSLETTER FOOTER (VALIDACIÓN)
+       ========================================= */
+    const nlForm = document.getElementById('newsletter-form');
+    const nlEmail = document.getElementById('nl-email');
+    const nlMsg = document.getElementById('nl-msg');
+
+    if (nlForm) {
+        nlForm.addEventListener('submit', (e) => {
+            e.preventDefault(); 
+            
+            const email = nlEmail.value.trim();
+            const lang = langs[currentLangIndex];
+            
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (emailRegex.test(email)) {
+                nlMsg.className = 'newsletter-msg success';
+                nlMsg.innerText = translations[lang].nlSuccess;
+                nlEmail.value = ''; 
+                
+                setTimeout(() => { nlMsg.style.opacity = '0'; }, 5000);
+            } else {
+                // ERROR
+                nlMsg.className = 'newsletter-msg error';
+                nlMsg.innerText = translations[lang].nlError;
+            }
         });
     }
 
