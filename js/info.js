@@ -165,17 +165,14 @@ document.addEventListener("DOMContentLoaded", () => {
     if (infoSidebar) {
         const sidebarTitle = infoSidebar.querySelector('h3');
         
-        // 1. Al pulsar el título, abrimos o cerramos la persiana
         if (sidebarTitle) {
             sidebarTitle.addEventListener('click', () => {
-                // AHORA DETECTA HASTA TAMAÑO TABLET (900px)
                 if (window.innerWidth <= 900) { 
                     infoSidebar.classList.toggle('expanded');
                 }
             });
         }
 
-        // 2. Al pulsar cualquier enlace, cerramos la persiana automáticamente
         const sidebarLinks = infoSidebar.querySelectorAll('a');
         sidebarLinks.forEach(link => {
             link.addEventListener('click', () => {

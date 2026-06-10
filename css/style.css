@@ -26,7 +26,7 @@
 html {
     background-color: var(--c-indigo);
     width: 100vw;
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 
 html, body {
@@ -41,7 +41,7 @@ body {
     font-family: var(--f-sans);
     width: 100%;
     max-width: 100vw;
-    overflow-x: hidden; 
+    overflow-x: clip; 
     position: relative;
     overflow-wrap: break-word;
 }
@@ -333,7 +333,7 @@ body {
 }
 
 .product-card.showing {
-    opacity: 0; /* CRÍTICO: Los mantiene invisibles hasta que les toque su turno */
+    opacity: 0;  
     animation: fade-in-yokai 0.6s cubic-bezier(0.2, 1, 0.3, 1) both;
 }
 
@@ -373,7 +373,7 @@ body {
 }
 
 .product-card:hover .ink-mask {
-    border-radius: 42% 58% 45% 55% / 55% 45% 58% 42%; /* Forma orgánica */
+    border-radius: 42% 58% 45% 55% / 55% 45% 58% 42%; 
     box-shadow: 0 15px 35px rgba(26, 38, 57, 0.12);
     transform: translateY(-8px);
 }
@@ -1103,14 +1103,13 @@ body {
     display: flex; 
     flex-direction: column; 
     gap: 1.5rem;
-    overscroll-behavior: contain; /* <-- AÑADE SOLO ESTA LÍNEA */
+    overscroll-behavior: contain;  
 }
 
 .empty-cart-msg {
     text-align: center; color: #888; font-style: italic; margin-top: 2rem; font-family: var(--f-serif); font-size: 1.2rem;
 }
 
-/* Diseño de cada producto en la cesta */
 .cart-item {
     display: flex; align-items: center; gap: 1.2rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.05);
 }
@@ -1148,7 +1147,6 @@ body {
     gap: 0.5rem; 
     position: relative; 
     color: var(--c-cream);
-    /* Sombra protectora para el texto */
     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .cart-dot {
@@ -1442,7 +1440,6 @@ body {
 .msg-bot { background: #fff; color: var(--c-indigo); border: 1px solid rgba(0,0,0,0.05); align-self: flex-start; border-bottom-left-radius: 2px; }
 .msg-user { background: var(--c-indigo); color: var(--c-gold); align-self: flex-end; border-bottom-right-radius: 2px; }
 
-/* Botones de Opción */
 .chat-options {
     padding: 1rem;
     background: #fff;
@@ -1586,6 +1583,7 @@ input, textarea, .legal-block p, .legal-block li {
 .info-sidebar {
     position: sticky;
     top: 100px;
+    align-self: start;
     height: fit-content;
     background: #fff;
     padding: 2rem;
@@ -1856,8 +1854,7 @@ input, textarea, .legal-block p, .legal-block li {
     }
 
     .info-page-wrapper {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        display: block;
         padding: 0 5%;
     }
 
@@ -1876,6 +1873,7 @@ input, textarea, .legal-block p, .legal-block li {
         color: var(--c-cream) !important;
         padding: 1.2rem !important;
         border-radius: 12px;
+        border-bottom: none !important;
         font-size: 1.2rem !important;
         letter-spacing: 2px;
         text-align: center;
@@ -1901,21 +1899,24 @@ input, textarea, .legal-block p, .legal-block li {
 
     .info-sidebar ul {
         max-height: 0;
+        opacity: 0; 
         overflow: hidden;
+        background: #ffff; 
+        border: 1px solid transparent;
+        border-radius: 0 0 12px 12px;
+        padding: 0 1.5rem !important; 
+        margin-top: -15px !important; 
+        position: relative;
+        z-index: -1;
         gap: 0.8rem !important;
-        transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-        margin-top: 0;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .info-sidebar.expanded ul {
         max-height: 400px;
-        background: var(--c-cream) !important;
-        border: 1px solid rgba(197, 163, 101, 0.4);
-        border-radius: 0 0 12px 12px;
-        padding: 2.5rem 1.5rem 1.5rem !important; 
-        margin-top: -15px !important;
-        position: relative;
-        z-index: -1;
+        opacity: 1; 
+        border-color: rgba(197, 163, 101, 0.4); 
+        padding: 2.5rem 1.5rem 1.5rem !important;
     }
     
     .info-sidebar a {
@@ -1923,6 +1924,20 @@ input, textarea, .legal-block p, .legal-block li {
         display: block;
         width: 100%;
         text-align: center; 
+    }
+
+    .info-content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-content section {
+        margin-bottom: 4 !important; 
+        scroll-margin-top: 150px;
+    }
+
+    .collection-section {
+        padding: 0 5%;
     }
 }
 
@@ -2017,8 +2032,7 @@ input, textarea, .legal-block p, .legal-block li {
     }
 
     .info-page-wrapper {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        display: block;
         padding: 0 1rem;
     }
 

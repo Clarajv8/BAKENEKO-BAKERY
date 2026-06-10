@@ -276,11 +276,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (currentScrollY > lastScrollY && currentScrollY > 100) {
                 mainNav.classList.add('nav-hidden');
-                if (floatingCart) floatingCart.classList.add('visible'); // Baja la cesta
+                if (floatingCart) floatingCart.classList.add('visible'); 
             } 
             else if (currentScrollY < lastScrollY) {
                 mainNav.classList.remove('nav-hidden');
-                if (floatingCart) floatingCart.classList.remove('visible'); // Sube la cesta
+                if (floatingCart) floatingCart.classList.remove('visible'); 
             }
             lastScrollY = currentScrollY;
         });
@@ -316,7 +316,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         gsap.ticker.lagSmoothing(0);
     }
-    // --- EFECTO PARALLAX PARA EL VÍDEO CINEMATOGRÁFICO ---
+
     if (typeof gsap !== 'undefined' && document.querySelector('.cinematic-video')) {
         gsap.to(".cinematic-video", {
             yPercent: 20, 
@@ -385,7 +385,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const isPack = (id === 'p_pack_coffee');
         const isIndividualCoffee = (id.startsWith('p') && parseInt(id.replace('p', '')) >= 10);
 
-        // --- CORRECCIÓN DE SEGURIDAD PARA EL BOTÓN CESTA ---
         if (isPack || isIndividualCoffee) {
             addCartBtn.disabled = true;
             addCartBtn.style.opacity = "0.5";
@@ -534,7 +533,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // --- ESCUCHADORES DE EVENTO: ABRIR EL MODAL ---
     document.querySelectorAll('.product-card').forEach(card => {
         card.addEventListener('click', (e) => {
             if (e.target.closest('.quick-add-btn')) return; 
@@ -551,12 +549,10 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // --- ESCUCHADORES DE EVENTO: CERRAR EL MODAL ---
     function closeModal() {
         if(!modalOverlay) return;
         modalOverlay.classList.remove('active');
         
-        // Devolvemos la movilidad
         document.body.style.overflow = '';
         if (window.lenis) window.lenis.start(); 
         
@@ -746,7 +742,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const activeId = document.querySelector('.modal-content').getAttribute('data-active-id');
             if(activeId) {
                 const product = productsDB[activeId];
-                if (!product) return; // Paracaídas extra de seguridad
+                if (!product) return; 
                 const lang = langs[currentLangIndex];
                 
                 const selectedValue = modalContent.getAttribute('data-selected-value');
@@ -803,7 +799,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const activeId = card.getAttribute('data-id');
             if(!activeId) return;
 
-            // --- NUEVA LÓGICA DE INTERCEPCIÓN ---
             const isPack = (activeId === 'p_pack_coffee');
             const isIndividualCoffee = (activeId.startsWith('p') && parseInt(activeId.replace('p', '')) >= 10);
 
@@ -816,7 +811,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (window.lenis) window.lenis.stop();
                 return; 
             }
-            // --- FIN DE LA INTERCEPCIÓN ---
 
             const product = productsDB[activeId];
             const lang = langs[currentLangIndex];
@@ -871,7 +865,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if(cart.length === 0) {
             cartItemsContainer.innerHTML = `<div class="empty-cart-msg" data-i18n="cartEmpty">${translations[lang].cartEmpty}</div>`;
-            // Apagamos todos los puntos rojos
+
             cartDots.forEach(dot => dot.classList.remove('active'));
         } else {
             cart.forEach((item, index) => {
@@ -879,7 +873,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 total += itemTotal;
                 totalItemsCount += item.quantity;
                 
-                // --- MAGIA PARA RECONOCER VARIANTES Y TRADUCIRLAS ---
                 let baseId = item.id;
                 let variantSuffix = "";
 
@@ -1327,7 +1320,6 @@ document.addEventListener("DOMContentLoaded", () => {
        ========================================= */
     const kanjis = ["猫", "霊", "契", "甘", "狐"]; 
     document.addEventListener('click', (e) => {
-        // AÑADIDO: '.main-footer' para que no se puedan poner sellos abajo
         const clicValido = !e.target.closest('button, a, input, select, .product-card, .modal-content, .cart-drawer, .chatbot-window, .main-nav, .hero-content, .omikuji-window, #concepto, .main-footer');
         if (!clicValido) return;
 
@@ -1478,7 +1470,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 setTimeout(() => { nlMsg.style.opacity = '0'; }, 5000);
             } else {
-                // ERROR
                 nlMsg.className = 'newsletter-msg error';
                 nlMsg.innerText = translations[lang].nlError;
             }

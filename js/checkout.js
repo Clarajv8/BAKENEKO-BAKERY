@@ -1,16 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // 1. Recuperar datos del localStorage
     const savedCart = localStorage.getItem('bakenekoCart');
     let savedLang = localStorage.getItem('bakenekoLang') || 'es';
     let cart = savedCart ? JSON.parse(savedCart) : [];
 
-    // Si entran aquí sin carrito, los devolvemos a la tienda
     if (cart.length === 0) {
         window.location.href = 'index.html';
         return;
     }
 
-    // 2. Base de datos de traducciones del Checkout
     const texts = {
         es: { 
             title: "Finalizar Compra", sub: "Completa tus datos de envío y pago de forma segura.", ship: "1. Dirección de Envío", name: "Nombre Completo", email: "Correo Electrónico (Para el recibo)", zip: "Código Postal", cardName: "Titular de la Tarjeta", addr: "Dirección Completa (Calle, Número, Piso)", zone: "Selecciona tu zona de envío...", shipOpt1: "Envío Frío Estándar (48-72h) - +5.00€", shipOpt2: "Envío Frío Exprés (24h) - +8.00€", shipOpt3: "Islas e Internacional (Frío) - +15.00€", pay: "2. Pago Seguro", card: "Número de Tarjeta", exp: "Caducidad (MM/AA)", btn: "Confirmar Pago", sumTitle: "Resumen de tu Pedido", subTotal: "Subtotal", shipping: "Envío", grandTotal: "Total", succTitle: "Pedido Confirmado", succDesc: "Tu pago se ha procesado con éxito. En breve recibirás un correo con la confirmación y tu número de seguimiento.", returnStore: "← Volver a la Tienda", unit: "/ ud", backToRealm: "Volver al Inicio", qtyLabel: "Cant."
