@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const infoTexts = {
         es: {
-            backStore: "← Volver a la Tienda", infoIndex: "Índice del Grimorio", infoFAQ: "Preguntas Frecuentes", 
+            backStore: "← Volver a la Tienda", infoIndex: "ÍNDICE", infoFAQ: "Preguntas Frecuentes", 
             infoAllergens: "Guía de Alérgenos", infoPrivacy: "Política de Privacidad", infoTOS: "Términos del Pacto (TOS)", infoSocial: "Redes Espirituales",
             faqQ1: "¿Cómo se envían los wagashi?",
             faqA1: "Todos nuestros postres viajan en arcas refrigeradas mágicas para garantizar que lleguen tan frescos como cuando salieron de nuestro obrador en el plano espiritual.",
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             soc1: "Síguenos en nuestros portales de comunicación para descubrir nuevos postres antes que nadie y ver el proceso de creación en nuestro obrador."
         },
         en: {
-            backStore: "← Back to Store", infoIndex: "Grimoire Index", infoFAQ: "Frequently Asked Questions", 
+            backStore: "← Back to Store", infoIndex: "INDEX", infoFAQ: "Frequently Asked Questions", 
             infoAllergens: "Allergen Guide", infoPrivacy: "Privacy Policy", infoTOS: "Terms of the Pact (TOS)", infoSocial: "Spiritual Networks",
             faqQ1: "How are the wagashi shipped?",
             faqA1: "All our sweets travel in magical refrigerated arks to ensure they arrive as fresh as when they left our spiritual bakery.",
@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
             soc1: "Follow us on our communication portals to discover new desserts before anyone else and see the creation process in our bakery."
         },
         jp: {
-            backStore: "← ショップに戻る", infoIndex: "魔導書の目次", infoFAQ: "よくある質問", 
+            backStore: "← ショップに戻る", infoIndex: "目次", infoFAQ: "よくある質問", 
             infoAllergens: "アレルギーガイド", infoPrivacy: "プライバシーポリシー", infoTOS: "契約条件（TOS）", infoSocial: "霊的なネットワーク",
             faqQ1: "和菓子はどのように配送されますか？",
             faqA1: "すべてのスイーツは、霊的な工房を出た時と同じ新鮮さを保つため、魔法の冷蔵箱に入れて配送されます。",
@@ -159,26 +159,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================
-       ÍNDICE DESPLEGABLE EN MÓVILES (UX ACORDEÓN)
+       ÍNDICE DESPLEGABLE EN MÓVILES Y TABLETS (UX ACORDEÓN)
        ========================================= */
     const infoSidebar = document.querySelector('.info-sidebar');
     if (infoSidebar) {
         const sidebarTitle = infoSidebar.querySelector('h3');
         
+        // 1. Al pulsar el título, abrimos o cerramos la persiana
         if (sidebarTitle) {
             sidebarTitle.addEventListener('click', () => {
-                if (window.innerWidth <= 600) {
+                // AHORA DETECTA HASTA TAMAÑO TABLET (900px)
+                if (window.innerWidth <= 900) { 
                     infoSidebar.classList.toggle('expanded');
                 }
             });
         }
+
+        // 2. Al pulsar cualquier enlace, cerramos la persiana automáticamente
         const sidebarLinks = infoSidebar.querySelectorAll('a');
         sidebarLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth <= 600) {
+                if (window.innerWidth <= 900) { 
                     infoSidebar.classList.remove('expanded');
                 }
             });
         });
     }
+    
 });

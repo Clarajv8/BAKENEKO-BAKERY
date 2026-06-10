@@ -23,6 +23,12 @@
     display: none;
 }
 
+html {
+    background-color: var(--c-indigo);
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 html, body {
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -30,13 +36,14 @@ html, body {
 
 
 body {
-    background-color: var(--c-cream);
+   background-color: var(--c-cream);
     color: var(--c-indigo);
     font-family: var(--f-sans);
     width: 100%;
-    max-width: 100%;
+    max-width: 100vw;
     overflow-x: hidden; 
     position: relative;
+    overflow-wrap: break-word;
 }
 
 .main-nav {
@@ -455,7 +462,7 @@ body {
 .cinematic-window {
     position: relative;
     width: 100vw;
-    height: 70vh; 
+    height: 45vh; 
     overflow: hidden;
     background-color: var(--c-indigo);
 }
@@ -1048,6 +1055,7 @@ body {
     opacity: 0; 
     pointer-events: none;
     transition: opacity 0.4s ease;
+    height: 100dvh;
 }
 
 .cart-overlay.active {
@@ -1066,6 +1074,7 @@ body {
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.3, 1);
     display: flex; 
     flex-direction: column;
+    height: 100dvh;
 }
 
 .cart-drawer.active {
@@ -1120,7 +1129,7 @@ body {
 .remove-item:hover { transform: scale(1.2); }
 
 .cart-footer {
-    padding: 2rem; background: #fff; border-top: 1px solid rgba(26, 38, 57, 0.1);
+    padding: 2rem 2rem calc(2rem + env(safe-area-inset-bottom));
 }
 
 .cart-total-row {
@@ -1650,17 +1659,6 @@ input, textarea, .legal-block p, .legal-block li {
     margin-bottom: 2rem;
 }
 
-@media (max-width: 900px) {
-    .info-page-wrapper {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-    .info-sidebar {
-        position: relative;
-        top: 0;
-        margin-bottom: 2rem;
-    }
-}
 
 /* =========================================
    PÁGINA DE CHECKOUT (checkout.html)
@@ -1707,8 +1705,9 @@ input, textarea, .legal-block p, .legal-block li {
 .checkout-success-overlay {
     position: fixed; inset: 0; background: rgba(244, 241, 234, 0.95);
     z-index: 10000; display: flex; flex-direction: column; justify-content: center; align-items: center;
-    opacity: 0; pointer-events: none; transition: opacity 0.5s ease; backdrop-filter: blur(10px); text-align: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.5s ease; backdrop-filter: blur(10px); text-align: center; padding: 0 2rem;
 }
+
 .checkout-success-overlay.active { opacity: 1; pointer-events: auto; }
 .success-seal {
     font-size: 6rem; color: var(--c-vermilion); width: 160px; height: 160px;
@@ -1725,8 +1724,26 @@ input, textarea, .legal-block p, .legal-block li {
     0% { transform: scale(4) rotate(45deg); opacity: 0; }
     100% { transform: scale(1) rotate(0deg); opacity: 1; box-shadow: 0 0 50px rgba(214, 64, 69, 0.4); }
 }
-.checkout-success-overlay h2 { font-family: var(--f-serif); font-size: 3.5rem; color: var(--c-indigo); margin-bottom: 1rem; opacity: 0; transform: translateY(20px); }
-.checkout-success-overlay p { font-family: var(--f-sans); font-size: 1.2rem; color: #555; margin-bottom: 3rem; opacity: 0; transform: translateY(20px); }
+
+.checkout-success-overlay h2 {
+    font-family: var(--f-serif);
+    font-size: 3.5rem;
+    color: var(--c-indigo);
+    margin-bottom: 1rem;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.checkout-success-overlay p {
+    font-family: var(--f-sans);
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 3rem;
+    opacity: 0;
+    transform: translateY(20px);
+    max-width: 450px; 
+    margin: 0 auto 3rem;
+}
 
 .checkout-back-btn {
     border: 1px solid var(--c-indigo); color: var(--c-indigo); padding: 1rem 3rem; 
@@ -1760,6 +1777,152 @@ input, textarea, .legal-block p, .legal-block li {
     .products-grid { 
         grid-template-columns: repeat(2, 1fr); 
         gap: 3rem 2rem; 
+    }
+
+    .footer-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 4rem; 
+        padding: 0 1rem;
+    }
+
+    .main-footer .brand-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 450px; 
+        border-bottom: 1px solid rgba(244, 241, 234, 0.1);
+        padding-bottom: 3.5rem;
+    }
+
+    .main-footer .logo-ampliado {
+        width: 100%;
+        max-width: 240px;
+        height: auto;
+        margin: 0 auto 2rem auto;
+    }
+
+    .main-footer .newsletter-minimal {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .main-footer .newsletter-benefits {
+        text-align: center;
+        margin: 1.5rem auto 0 auto;
+        max-width: 300px;
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+
+    .main-footer .newsletter-msg {
+        text-align: center;
+        margin-top: 1rem;
+    }
+
+    .main-footer .footer-col {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-footer .footer-col h4 {
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+
+    .main-footer .footer-col ul {
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-footer .social-icons-row {
+        justify-content: center;
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+    
+    .main-footer .footer-col ul li style {
+        text-align: center;
+    }
+
+    .cinematic-window {
+    height: 35vh; 
+    }
+
+    .info-page-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 5%;
+    }
+
+    .info-sidebar {
+        top: 80px;
+        z-index: 90;
+        background: transparent !important; 
+        border: none !important;
+        padding: 0 !important;
+        margin-bottom: 2rem;
+        align-self: start;
+    }
+    
+    .info-sidebar h3 {
+        background: var(--c-indigo) !important;
+        color: var(--c-cream) !important;
+        padding: 1.2rem !important;
+        border-radius: 12px;
+        font-size: 1.2rem !important;
+        letter-spacing: 2px;
+        text-align: center;
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+        gap: 1rem;
+        box-shadow: 0 8px 25px rgba(26, 38, 57, 0.2);
+        margin-bottom: 0 !important;
+        cursor: pointer;
+    }
+
+    .info-sidebar h3::after {
+        content: '▼';
+        font-size: 0.7rem;
+        color: var(--c-gold);
+        transition: transform 0.3s ease;
+    }
+
+    .info-sidebar.expanded h3::after {
+        transform: rotate(180deg);
+    }
+
+    .info-sidebar ul {
+        max-height: 0;
+        overflow: hidden;
+        gap: 0.8rem !important;
+        transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        margin-top: 0;
+    }
+
+    .info-sidebar.expanded ul {
+        max-height: 400px;
+        background: var(--c-cream) !important;
+        border: 1px solid rgba(197, 163, 101, 0.4);
+        border-radius: 0 0 12px 12px;
+        padding: 2.5rem 1.5rem 1.5rem !important; 
+        margin-top: -15px !important;
+        position: relative;
+        z-index: -1;
+    }
+    
+    .info-sidebar a {
+        font-size: 1rem !important;
+        display: block;
+        width: 100%;
+        text-align: center; 
     }
 }
 
@@ -1859,62 +2022,9 @@ input, textarea, .legal-block p, .legal-block li {
         padding: 0 1rem;
     }
 
-    .info-sidebar {
-        position: sticky !important;
-        top: 70px;
-        z-index: 90;
-        background: var(--c-cream) !important;
-        border: 1px solid rgba(197, 163, 101, 0.4) !important;
-        padding: 1rem !important;
-        border-radius: 12px;
-        margin-bottom: 1.5rem;
-        box-shadow: 0 8px 25px rgba(26, 38, 57, 0.08);
+    .cinematic-window {
+    height: 25vh; 
     }
-
-    .info-sidebar h3 {
-        margin-bottom: 0 !important;
-        font-size: 1rem !important;
-        border-bottom: none !important;
-        padding-bottom: 0 !important;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: var(--c-indigo);
-    }
-
-    .info-sidebar h3::after {
-        content: '▼';
-        font-size: 0.65rem;
-        color: var(--c-gold);
-        transition: transform 0.3s ease;
-    }
-
-    .info-sidebar.expanded h3::after {
-        transform: rotate(180deg);
-    }
-
-    .info-sidebar ul {
-        max-height: 0;
-        overflow: hidden;
-        gap: 0.8rem !important;
-        transition: max-height 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-        margin-top: 0;
-    }
-
-    .info-sidebar.expanded ul {
-        max-height: 300px;
-        margin-top: 1rem;
-        padding-top: 0.8rem;
-        border-top: 1px dashed rgba(197, 163, 101, 0.3);
-    }
-    
-    .info-sidebar a {
-        font-size: 1rem !important;
-        display: block;
-        width: 100%;
-    }
-    
 }
 
 
