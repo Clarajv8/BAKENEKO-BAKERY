@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             es: { name: "Caja Degustación: 6 Espíritus", desc: "La experiencia Wagashi definitiva. Una caja premium de bambú oscuro que contiene una ofrenda de cada Yokai de la colección (Dorayaki, Mochi, Dango, Kuzumochi, Yokan y Nerikiri). La ofrenda mayor para los paladares más curiosos.", allergens: "Contiene todos los alérgenos de la colección individual." },
             en: { name: "Tasting Box: 6 Spirits", desc: "The ultimate Wagashi experience. A premium dark bamboo box containing one offering from each Yokai in the collection. The ultimate offering for curious palates.", allergens: "Contains all allergens from the individual collection." },
             jp: { name: "テイスティングボックス：6つの精霊", desc: "究極の和菓子体験。コレクションの各妖怪からの供物が1つずつ入った、高級な黒竹の箱。好奇心旺盛な味覚のための最高の供物。", allergens: "個別のコレクションのすべてのアレルゲンが含まれています。" },
-            class: "Colección Completa", price: 24.00, img: "assets/images/pack-postres.webp"
+            class: "Colección Completa", price: 24.00, img: "assets/images/postres.webp"
         },
         p1: {
             es: { name: "Dorayaki", desc: "El Tanuki es un espíritu del bosque famoso por su gran barriga y su amor por los festines. Este dulce redondo rinde homenaje a su apetito insaciable.", allergens: "Trigo, Huevo, Soja." },
