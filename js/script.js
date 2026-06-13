@@ -675,6 +675,8 @@ document.addEventListener("DOMContentLoaded", () => {
             modalContent.setAttribute('data-active-yokai', yokaiId);
             
             fillYokaiModal(yokaiId);
+            
+            modalContent.setAttribute('data-lenis-prevent', ''); 
 
             modalContent.classList.add('yokai-mode');
             modalOverlay.classList.add('active');

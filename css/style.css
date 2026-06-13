@@ -1802,7 +1802,7 @@ input, textarea, .legal-block p, .legal-block li {
    ========================================= */
 .modal-content.yokai-mode {
     grid-template-columns: 1fr; 
-    grid-template-rows: auto auto; 
+    grid-template-rows: auto minmax(0, 1fr); 
     max-width: 750px; 
     height: auto;
     max-height: 90vh;
@@ -1826,8 +1826,8 @@ input, textarea, .legal-block p, .legal-block li {
 .modal-content.yokai-mode .modal-text {
     align-items: center;
     text-align: center;
-    padding: 2.5rem 10% 3.5rem; 
-    height: auto;
+    padding: 2.5rem 10% 3.5rem;
+    min-height: 0;
 }
 
 .modal-content.yokai-mode .modal-info {
@@ -2170,8 +2170,8 @@ input, textarea, .legal-block p, .legal-block li {
         gap: 1.5rem;
     }
     .pantheon-icon { 
-        width: 65px;  
-        height: 65px; 
+        width: 85px;  
+        height: 85px; 
     }
     .modal-content.yokai-mode .modal-text {
         padding: 1.5rem 5% 2rem;
