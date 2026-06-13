@@ -653,11 +653,21 @@ document.addEventListener("DOMContentLoaded", () => {
         modalTitle.innerText = data[lang].name;
         modalClass.innerText = data[lang].class;
         modalDesc.innerHTML = data[lang].desc;
-        activeImage.src = data.modalImg; // Carga tu archivo .webp aquí
+        
+        if (activeImage.src.includes(data.modalImg)) return;
+
+        gsap.killTweensOf(activeImage); 
+        gsap.set(activeImage, { opacity: 0 }); 
+        
+        activeImage.src = data.modalImg; 
+        activeImage.onload = () => {
+            gsap.set(activeImage, { opacity: 1 });
+        };
     }
 
     pantheonItems.forEach(item => {
         item.addEventListener('click', () => {
+            clearTimeout(clearImageTimer); 
             pantheonItems.forEach(i => i.classList.remove('active'));
             item.classList.add('active');
 
@@ -678,15 +688,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if(!modalOverlay) return;
         modalOverlay.classList.remove('active');
         
-        setTimeout(() => {
-            modalContent.classList.remove('yokai-mode');
-            modalContent.removeAttribute('data-active-yokai');
-        }, 300); 
-        
         document.body.style.overflow = '';
         if (window.lenis) window.lenis.start(); 
-        
-        clearImageTimer = setTimeout(() => { if(activeImage) activeImage.src = ""; }, 500); 
+    
+        clearImageTimer = setTimeout(() => { 
+            modalContent.classList.remove('yokai-mode');
+            modalContent.removeAttribute('data-active-yokai');
+            if(activeImage) activeImage.src = ""; 
+        }, 500); 
     }
 
     if(closeBtn) closeBtn.addEventListener('click', closeModal);
