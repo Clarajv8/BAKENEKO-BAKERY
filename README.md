@@ -1,52 +1,28 @@
-Un recordatorio rápido para asegurar que todo funciona:
-Para que el cursor universal se active, asegúrate de que todos tus archivos .html (info.html, checkout.html, carta.html) tengan estas dos cosas al final del documento (justo antes de cerrar </body>):
+# 🐾 Bakeneko Bakery | TFG - Dirección de Arte y Desarrollo Web
 
-El div del cursor: <div id="neo-cursor"></div>
+![Bakeneko Bakery Banner](assets/images/TU-IMAGEN-AQUI.webp) 
 
-El script de GSAP: <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+[![Netlify Status](https://img.shields.io/badge/Netlify-Live_Demo-00C7B7?style=for-the-badge&logo=netlify)](https://bakenekobakery.netlify.app/)
+*(Haz clic en el botón de arriba para probar la experiencia en vivo).*
 
+## 📜 Sobre el Proyecto
+**Bakeneko Bakery** es el resultado de mi Trabajo de Fin de Grado (TFG). Se trata de una experiencia e-commerce inmersiva para una pastelería conceptual que fusiona la repostería tradicional japonesa (*Wagashi*) con la mitología y el misticismo de los espíritus *Yokai*. 
 
-Colaboración TFG Con PACKAGING VINOS:
+Más que una simple tienda, el proyecto se ha diseñado bajo el concepto de un **"Grimorio Mágico"**, donde cada dulce es una ofrenda ligada a una criatura mitológica, acompañada de maridajes de café de especialidad y vinos.
 
-"Se aplicó el uso de endónimos en el selector de idiomas para mejorar la accesibilidad e internacionalización (i18n) de la interfaz"
+## ✨ Características Principales y UX/UI
+- **Dirección de Arte Premium:** Uso de paletas de color sobrias (Índigo y Crema), tipografías Serif elegantes y motivos dorados para transmitir un "lujo silencioso" y místico.
+- **Narrativa Inmersiva (Storytelling):** Integración de un "Panteón Yokai" interactivo, donde las ilustraciones vectoriales explican el *lore* detrás de cada maridaje.
+- **Micro-interacciones y Animaciones:** Uso de la librería **GSAP** y **Lenis** para scroll suavizado, transiciones de tinta (*sumi-e*) y un cursor personalizado.
+- **Multi-idioma Dinámico:** Sistema programado desde cero en JavaScript para cambiar todo el contenido (ES / EN / JP) en tiempo real sin recargar la página.
+- **El Oráculo Yokai:** Una máquina tragaperras interactiva (Slot Machine) creada en JS para recomendar productos aleatorios al usuario.
+- **Asistente Virtual (Chatbot):** Flujo de atención al cliente programado en JS con respuestas dinámicas adaptadas al idioma activo.
 
+## 🛠️ Stack Tecnológico (Front-End)
+- **HTML5 & CSS3:** Flexbox, CSS Grid, variables nativas y animaciones Keyframes. Diseño 100% *Responsive*.
+- **Vanilla JavaScript (ES6):** Manipulación del DOM, gestión del carrito de compras vía `localStorage` y lógica multi-idioma nativa.
+- **Despliegue:** Netlify (CI/CD).
 
-
-
-
-invocarZarpa()
-
-
-
-
-
-1. El Omikuji (Aprovechando el Oráculo)
-En Japón, los Omikuji son papelitos de la fortuna que sacas en los templos.
-
-La mecánica: Convertimos tu sección del Oráculo en una especie de "tragamonedas espiritual". Al pulsar el botón, las runas (Fuego, Agua, Madera, Metal, Tierra) empiezan a girar rápidamente con un efecto de desenfoque.
-
-El resultado: Cuando se detiene en un elemento, la web te da una predicción mística de tu semana y te recomienda mágicamente un producto exacto que equilibre ese elemento (Ej: "Tu energía de fuego está alta. Necesitas la calma del agua: Kuzumochi").
-
-Por qué funciona: Transforma un simple recomendador de productos en una tirada de tarot interactiva.
-
-2. La Caza de los Espíritus (Scavenger Hunt)
-A los Yokais les encanta esconderse y hacer travesuras.
-
-La mecánica: Escondemos 3 pequeños Kodamas (espíritus del bosque) o sellos translúcidos en lugares aleatorios y sutiles de la web (por ejemplo, camuflado en la textura de ruido del fondo, asomando por una esquina del footer, o detrás de un producto).
-
-La interacción: Tu nuevo cursor geométrico brillará de forma especial si pasas cerca de uno. Si haces clic en los 3, los atrapas.
-
-El premio: Al atrapar el tercero, la pantalla hace un destello mágico y se revela un código de descuento secreto (ej. PACTO10) o se desbloquea un postre secreto que antes no estaba en la cuadrícula.
-
-Por qué funciona: Fomenta que el usuario explore cada rincón de tu diseño, aumentando el tiempo de permanencia en la web de forma divertidísima.
-
-3. La Ofrenda al Altar (Drag & Drop)
-En el folclore, para ver a un espíritu a veces tienes que dejarle comida.
-
-La mecánica: En el footer o en una sección vacía, dibujamos un pequeño altar Ukiyo-e minimalista.
-
-La interacción: El usuario puede "agarrar" uno de los postres de la cuadrícula de productos (Drag & Drop) y arrastrarlo hasta el altar.
-
-El resultado: Si dejas el postre en el altar, el Bakeneko (la zarpa o una animación nueva) aparece, se "come" el postre y te deja una propina (desbloquea el envío gratuito en tu carrito automáticamente).
-
-Por qué funciona: El Drag & Drop es una interacción táctil muy satisfactoria en web que rompe la monotonía de hacer simple scroll y clic.
+## ✒️ Autoría
+- **Dirección de Arte, Ilustración y Desarrollo Front-End:** [Clara Jiménez / Clarajv8]
+- **Trabajo de Fin de Grado** - [UDIT] - 2026
