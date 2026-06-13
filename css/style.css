@@ -1756,6 +1756,103 @@ input, textarea, .legal-block p, .legal-block li {
 }
 @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
 
+
+/* =========================================
+   EL PANTEÓN YOKAI (BESTIARIO)
+   ========================================= */
+.pantheon-section {
+    padding: 2rem var(--gutter) 8rem;
+    background-color: transparent;
+}
+
+.pantheon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.pantheon-item {
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pantheon-icon {
+    width: 120px;
+    height: 120px;
+    opacity: 0.35; 
+    transform: scale(1);
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.3, 1);
+    filter: drop-shadow(0 4px 6px rgba(197, 163, 101, 0));
+}
+
+.pantheon-item:hover .pantheon-icon,
+.pantheon-item.active .pantheon-icon {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: drop-shadow(0 10px 15px rgba(197, 163, 101, 0.3));
+}
+
+/* =========================================
+   MODAL: MODO LORE YOKAI 
+   ========================================= */
+.modal-content.yokai-mode {
+    grid-template-columns: 1fr; 
+    grid-template-rows: auto auto; 
+    max-width: 750px; 
+    height: auto;
+    max-height: 90vh;
+}
+
+.modal-content.yokai-mode .modal-image-stage {
+    background: var(--c-indigo); 
+    padding: 3rem 2rem 2rem;
+    min-height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content.yokai-mode .modal-main-img {
+    object-fit: contain; 
+    height: 220px; 
+    width: auto;
+}
+
+.modal-content.yokai-mode .modal-text {
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 10% 3.5rem; 
+    height: auto;
+}
+
+.modal-content.yokai-mode .modal-info {
+    display: none;
+}
+
+.modal-content.yokai-mode .close-modal {
+    color: var(--c-cream); 
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 15px;
+    right: 15px;
+    transition: background 0.3s ease;
+}
+
+.modal-content.yokai-mode .close-modal:hover {
+    background: var(--c-vermilion);
+}
+
+
 @media (max-width: 900px) {
     .checkout-container { grid-template-columns: 1fr; padding: 2rem 1rem; }
     .checkout-summary-col { order: -1; position: static; }
@@ -2063,12 +2160,24 @@ input, textarea, .legal-block p, .legal-block li {
         hyphens: auto; 
     }
 
-    /* =========================================
-       MÁS ESPACIO A LOS LADOS EN EL ORÁCULO
-       ========================================= */
     .oracle-text .compact-p {
         padding: 0 2rem; 
         font-size: 1.1rem;
+    }
+
+    .pantheon-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    .pantheon-icon { 
+        width: 65px;  
+        height: 65px; 
+    }
+    .modal-content.yokai-mode .modal-text {
+        padding: 1.5rem 5% 2rem;
+    }
+    .modal-content.yokai-mode .modal-main-img {
+        height: 160px; /
     }
 }
 

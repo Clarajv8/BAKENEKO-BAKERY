@@ -130,6 +130,98 @@ document.addEventListener("DOMContentLoaded", () => {
             class: "Yuki-Onna (Panamá)", price: 35.00, img: "assets/images/cafe-yukionna.webp"
         }
     };
+    const yokaiDB = {
+        tanuki: {
+            modalImg: "assets/images/ilus-tanuki.webp",
+            es: {
+                name: "El Espíritu Tanuki", class: "Guardián de la Abundancia",
+                desc: "La figura barrigona y bonachona del Tanuki es la inspiración directa de nuestro Dorayaki. Al igual que este espíritu del bosque engaña con su apariencia, la forma redonda de los bizcochos esconde en su interior un denso corazón de azuki. Su naturaleza terrenal lo vincula irremediablemente a nuestro Tanuki Blend de Brasil, cuyas notas a cacao abrazan la esponjosidad del postre."
+            },
+            en: {
+                name: "The Tanuki Spirit", class: "Guardian of Abundance",
+                desc: "The round, good-natured belly of the Tanuki is the direct inspiration for our Dorayaki. Just as this forest spirit deceives with its appearance, the round shape of the pancakes hides a dense azuki heart inside. Its earthy nature binds it irretrievably to our Brazil Tanuki Blend, whose cocoa notes perfectly embrace the fluffy dessert."
+            },
+            jp: {
+                name: "タヌキの精霊", class: "豊穣の守護者",
+                desc: "タヌキの丸くてぽっちゃりしたお腹は、私たちのどら焼きの直接のインスピレーションです。この森の精霊がその外見で人を騙すように、丸い生地はその中に濃厚な小豆の心を隠しています。その素朴な性質は、ブラジル産のタヌキブレンドと必然的に結びついており、ふっくらとしたデザートを完璧に引き立てます。"
+            }
+        },
+        kitsune: {
+            modalImg: "assets/images/ilus-kitsune.webp",
+            es: {
+                name: "El Espíritu Kitsune", class: "Maestro del Engaño",
+                desc: "El zorro de múltiples colas domina el arte de la transformación. Por eso su ofrenda es el Mochi Daifuku: una capa exterior pálida, pura y suave que oculta una textura elástica y un dulzor inesperado. Esta dualidad entre la inocencia visual y la sorpresa gustativa exige la brillantez floral del Kitsune Roast y las burbujas doradas de nuestro Cava."
+            },
+            en: {
+                name: "The Kitsune Spirit", class: "Master of Deception",
+                desc: "The multi-tailed fox masters the art of transformation. That's why its offering is the Mochi Daifuku: a pale, pure, soft outer layer hiding a chewy texture and unexpected sweetness. This duality demands the floral brilliance of the Kitsune Roast and the golden bubbles of our Cava."
+            },
+            jp: {
+                name: "キツネの精霊", class: "変化の達人",
+                desc: "九尾の狐は変身の術を極めています。だからこそ、その供物は大福餅なのです。青白く純粋で柔らかい外層が、予想外の甘さを隠しています。この二面性は、キツネローストの華やかな輝きとカヴァの黄金の泡を要求します。"
+            }
+        },
+        bakeneko: {
+            modalImg: "assets/images/ilus-bakeneko.webp",
+            es: {
+                name: "El Espíritu Bakeneko", class: "El Gato Cambiaformas",
+                desc: "El demonio felino es juguetón, ágil y misterioso. Su Dango Tricolor representa la transición de la primavera, con esferas coloridas en perfecto equilibrio. Un postre tan vibrante solo puede maridarse con el Bakeneko Sakura de Costa Rica, un café dulce que danza en el paladar con la misma gracia que un gato sobre los tejados."
+            },
+            en: {
+                name: "The Bakeneko Spirit", class: "The Shapeshifting Cat",
+                desc: "The feline demon is playful, agile, and mysterious. Its Tricolor Dango represents the transition of spring, with colorful spheres in perfect balance. Such a vibrant dessert can only be paired with the Costa Rican Bakeneko Sakura, a sweet coffee that dances on the palate."
+            },
+            jp: {
+                name: "化け猫の精霊", class: "変身する猫",
+                desc: "猫の悪魔は遊び心があり、機敏で神秘的です。三色団子は春の移り変わりを表し、カラフルな球体が完璧なバランスを保っています。この鮮やかなデザートは、コスタリカ産の化け猫サクラコーヒーと最高にマッチします。"
+            }
+        },
+        kappa: {
+            modalImg: "assets/images/ilus-kappa.webp",
+            es: {
+                name: "El Espíritu Kappa", class: "Morador de los Ríos",
+                desc: "Fluyendo con frescura y ligereza. El Kuzumochi translúcido se desliza en la boca evocando las aguas cristalinas donde habita el Kappa. Este postre puro y gelatinoso se destrozaría con un acompañamiento pesado, por lo que encuentra su reflejo perfecto en la suavidad acuática del Kappa Cold Brew."
+            },
+            en: {
+                name: "The Kappa Spirit", class: "River Dweller",
+                desc: "Flowing with freshness and lightness. The translucent Kuzumochi glides in the mouth evoking the crystal clear waters where the Kappa lives. This pure dessert finds its perfect reflection in the aquatic smoothness of the Kappa Cold Brew."
+            },
+            jp: {
+                name: "カッパの精霊", class: "川の住人",
+                desc: "新鮮さと軽やかさで流れます。透明な葛餅は、カッパが住む澄んだ水を思わせます。この純粋なデザートは、カッパコールドブリューの滑らかさと完璧に共鳴します。"
+            }
+        },
+        umibozu: {
+            modalImg: "assets/images/ilus-umibozu.webp",
+            es: {
+                name: "El Espíritu Umibozu", class: "El Gigante Oceánico",
+                desc: "El abismo del océano impone respeto. Su ofrenda es el Yokan Nocturno, un bloque denso, oscuro y de firmeza rotunda. Un postre con esta gravedad aplastaría cualquier bebida suave; necesita ser domado por el Umibozu Dark de Sumatra y por el cuerpo tánico de nuestro vino tinto."
+            },
+            en: {
+                name: "The Umibozu Spirit", class: "The Oceanic Giant",
+                desc: "The abyss of the ocean commands respect. Its offering is the Night Yokan, a dense, dark block of resounding firmness. A dessert with this gravity needs to be tamed by the Umibozu Dark from Sumatra and the tannic body of our red wine."
+            },
+            jp: {
+                name: "海坊主の精霊", class: "海の巨人",
+                desc: "深海の深淵は畏敬の念を抱かせます。その供物は夜の羊羹であり、圧倒的な硬さを持つ濃密で暗いブロックです。この重みのあるデザートは、スマトラ産の海坊主ダークローストと赤ワインのタンニンによってのみ飼いならされます。"
+            }
+        },
+        yukionna: {
+            modalImg: "assets/images/ilus-yukionna.webp",
+            es: {
+                name: "El Espíritu Yuki-Onna", class: "La Dama de las Nieves",
+                desc: "Hermosa, helada y efímera. El delicado Nerikiri de Camelia, esculpido en frío, se derrite en la boca dejando un rastro etéreo. Esta belleza blanca y fugaz se eleva al plano celestial junto al exclusivo café Geisha de Panamá y nuestro vino blanco crudo, tan florales y sutiles como un copo de nieve cayendo."
+            },
+            en: {
+                name: "The Yuki-Onna Spirit", class: "The Snow Woman",
+                desc: "Beautiful, freezing, and ephemeral. The delicate Camellia Nerikiri, cold-sculpted, melts in the mouth leaving an ethereal trail. This fleeting white beauty is elevated to the celestial plane alongside the exclusive Geisha coffee and our raw white wine."
+            },
+            jp: {
+                name: "雪女の精霊", class: "雪の乙女",
+                desc: "美しく、凍りつくようで、儚い。冷たく彫刻された繊細な椿の練り切りは、口の中で溶けて空気のような余韻を残します。この儚い白い美しさは、最高級のゲイシャコーヒーと白ワインと共に天の次元へと昇華します。"
+            }
+        }
+    };
 
     const langs = ['es', 'en', 'jp'];
     const langDisplayNames = { es: 'ES', en: 'EN', jp: '日本語' };
@@ -197,6 +289,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const activeId = document.querySelector('.modal-content')?.getAttribute('data-active-id');
         if(activeId) fillModal(activeId);
+
+        const activeYokai = document.querySelector('.modal-content')?.getAttribute('data-active-yokai');
+        if(activeYokai) fillYokaiModal(activeYokai);
 
         document.querySelectorAll('.chat-bubble').forEach(bubble => {
             const botNode = bubble.getAttribute('data-chat-node');
@@ -354,7 +449,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /* =========================================
-       3. MODAL DE PRODUCTO (2D) - COMPLETADO Y SIN ERRORES
+       3. MODAL DE PRODUCTO (2D)
        ========================================= */
     const modalOverlay = document.querySelector('.modal-overlay');
     const modalContent = document.querySelector('.modal-content');
@@ -549,9 +644,44 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+    const pantheonItems = document.querySelectorAll('.pantheon-item');
+    
+    function fillYokaiModal(yokaiId) {
+        const lang = langs[currentLangIndex];
+        const data = yokaiDB[yokaiId];
+        
+        modalTitle.innerText = data[lang].name;
+        modalClass.innerText = data[lang].class;
+        modalDesc.innerHTML = data[lang].desc;
+        activeImage.src = data.modalImg; // Carga tu archivo .webp aquí
+    }
+
+    pantheonItems.forEach(item => {
+        item.addEventListener('click', () => {
+            pantheonItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+
+            const yokaiId = item.getAttribute('data-yokai');
+            modalContent.setAttribute('data-active-yokai', yokaiId);
+            
+            fillYokaiModal(yokaiId);
+
+            modalContent.classList.add('yokai-mode');
+            modalOverlay.classList.add('active');
+            
+            document.body.style.overflow = 'hidden';
+            if (window.lenis) window.lenis.stop();
+        });
+    });
+
     function closeModal() {
         if(!modalOverlay) return;
         modalOverlay.classList.remove('active');
+        
+        setTimeout(() => {
+            modalContent.classList.remove('yokai-mode');
+            modalContent.removeAttribute('data-active-yokai');
+        }, 300); 
         
         document.body.style.overflow = '';
         if (window.lenis) window.lenis.start(); 
