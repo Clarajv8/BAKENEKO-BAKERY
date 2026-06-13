@@ -519,7 +519,6 @@ body {
     width: 90%;
     max-width: 1000px;
     height: 80vh;
-    background: var(--c-cream);
     display: grid;
     grid-template-columns: 1.5fr 1fr;
     border-radius: 20px;
@@ -557,6 +556,7 @@ body {
     overscroll-behavior: contain;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    background: var(--c-cream);
 }
 
 .modal-text::-webkit-scrollbar {
