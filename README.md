@@ -1,6 +1,6 @@
 # 🐾 Bakeneko Bakery | TFG - Dirección de Arte y Desarrollo Web
 
-![Bakeneko Bakery Banner](assets/images/TU-IMAGEN-AQUI.webp) 
+![Bakeneko Bakery Logo](assets/images/logo.svg) 
 
 [![Netlify Status](https://img.shields.io/badge/Netlify-Live_Demo-00C7B7?style=for-the-badge&logo=netlify)](https://bakenekobakery.netlify.app/)
 *(Haz clic en el botón de arriba para probar la experiencia en vivo).*
