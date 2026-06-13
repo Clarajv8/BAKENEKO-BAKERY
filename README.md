@@ -24,5 +24,5 @@ Más que una simple tienda, el proyecto se ha diseñado bajo el concepto de un *
 - **Despliegue:** Netlify (CI/CD).
 
 ## ✒️ Autoría
-- **Dirección de Arte, Ilustración y Desarrollo Front-End:** [Clara Jiménez / Clarajv8]
+- **Dirección de Arte, Ilustración y Desarrollo Front-End:** [Clara Jiménez / Clarajv8 / (https://clarajv8.github.io/)] 
 - **Trabajo de Fin de Grado** - [UDIT] - 2026
