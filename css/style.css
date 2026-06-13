@@ -2039,6 +2039,37 @@ input, textarea, .legal-block p, .legal-block li {
     .cinematic-window {
     height: 25vh; 
     }
+
+
+    .intro-minimal {
+        padding: 6rem 5%; /* Reducimos el padding gigante del escritorio */
+    }
+
+    .intro-block {
+        gap: 1.5rem; /* Acercamos un poco el texto al kanji vertical */
+        max-width: 100%;
+    }
+
+    .block-content {
+        min-width: 0; /* LA CLAVE MÁGICA: Obliga a Flexbox a encogerse si el texto es muy largo */
+        width: 100%;
+    }
+
+    .tiny-title {
+        font-size: 1.3rem; /* Título un poco más pequeño en móvil */
+        letter-spacing: 2px; /* Reducimos el espaciado entre letras para que quepa "Otherworldly" */
+        overflow-wrap: break-word; 
+        word-wrap: break-word;
+        hyphens: auto; /* Permite separar palabras largas con un guion si la pantalla es enana */
+    }
+
+    /* =========================================
+       MÁS ESPACIO A LOS LADOS EN EL ORÁCULO
+       ========================================= */
+    .oracle-text .compact-p {
+        padding: 0 2rem; /* Añade aire a izquierda y derecha */
+        font-size: 1.1rem; /* Lo hacemos un pelín más pequeño para que respire mejor */
+    }
 }
 
 

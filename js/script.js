@@ -28,39 +28,39 @@ document.addEventListener("DOMContentLoaded", () => {
             class: "Colección Completa", price: 24.00, img: "assets/images/postres.webp"
         },
         p1: {
-            es: { name: "Dorayaki", desc: "El Tanuki es un espíritu del bosque famoso por su gran barriga y su amor por los festines. Este dulce redondo rinde homenaje a su apetito insaciable.", allergens: "Trigo, Huevo, Soja." },
-            en: { name: "Dorayaki", desc: "The Tanuki is a forest spirit famous for its big belly and love of feasts. This round sweet pays homage to its insatiable appetite.", allergens: "Wheat, Egg, Soy." },
-            jp: { name: "どら焼き", desc: "タヌキは大きなお腹と宴会好きで有名な森の精霊です。この丸いお菓子は彼の飽くなき食欲に敬意を表しています。", allergens: "小麦、卵、大豆。" },
+            es: { name: "Dorayaki", desc: "El Tanuki es un espíritu del bosque famoso por su gran barriga y su amor por los festines. Este dulce redondo rinde homenaje a su apetito insaciable.<br><br>Dulzor: ★★★☆☆<br>Textura: Esponjosa<br>Intensidad: ★★☆☆☆", allergens: "Trigo, Huevo, Soja." },
+            en: { name: "Dorayaki", desc: "The Tanuki is a forest spirit famous for its big belly and love of feasts. This round sweet pays homage to its insatiable appetite.<br><br>Sweetness: ★★★☆☆<br>Texture: Fluffy<br>Intensity: ★★☆☆☆", allergens: "Wheat, Egg, Soy." },
+            jp: { name: "どら焼き", desc: "タヌキは大きなお腹と宴会好きで有名な森の精霊です。この丸いお菓子は彼の飽くなき食欲に敬意を表しています。<br><br>甘さ: ★★★☆☆<br>食感: ふわふわ<br>深み: ★★☆☆☆", allergens: "小麦、卵、大豆。" },
             class: "Tanuki", price: 3.50, img: "assets/images/dorayaki.webp"
         },
         p2: {
-            es: { name: "Mochi Daifuku", desc: "Se dice que el Kitsune cambia de forma para engañar a los viajeros. Este mochi, suave y pálido por fuera, esconde un corazón astuto.", allergens: "Soja (Polvo Kinako). Sin Gluten." },
-            en: { name: "Mochi Daifuku", desc: "It is said that the Kitsune shapeshifts to trick travelers. This mochi, soft and pale on the outside, hides a cunning heart.", allergens: "Soy (Kinako dust). Gluten-Free." },
-            jp: { name: "大福餅", desc: "キツネは旅人を騙すために姿を変えると言われています。外は柔らかく白いこの餅は、ずる賢い心を隠しています。", allergens: "大豆（きな粉）。グルテンフリー。" },
+            es: { name: "Mochi Daifuku", desc: "Se dice que el Kitsune cambia de forma para engañar a los viajeros. Este mochi, suave y pálido por fuera, esconde un corazón astuto.<br><br>Dulzor: ★★★★☆<br>Textura: Elástica y Suave<br>Intensidad: ★★★☆☆", allergens: "Soja (Polvo Kinako). Sin Gluten." },
+            en: { name: "Mochi Daifuku", desc: "It is said that the Kitsune shapeshifts to trick travelers. This mochi, soft and pale on the outside, hides a cunning heart.<br><br>Sweetness: ★★★★☆<br>Texture: Chewy and Soft<br>Intensity: ★★★☆☆", allergens: "Soy (Kinako dust). Gluten-Free." },
+            jp: { name: "大福餅", desc: "キツネは旅人を騙すために姿を変えると言われています。外は柔らかく白いこの餅は、ずる賢い心を隠しています。<br><br>甘さ: ★★★★☆<br>食感: もちもち<br>深み: ★★★☆☆", allergens: "大豆（きな粉）。グルテンフリー。" },
             class: "Kitsune", price: 3.80, img: "assets/images/mochi.webp"
         },
         p3: {
-            es: { name: "Dango Tricolor", desc: "Tres esferas perfectas que representan a tres pequeños gatos traviesos jugando en equilibrio bajo los cerezos.", allergens: "Sésamo, Soja." },
-            en: { name: "Tricolor Dango", desc: "Three perfect spheres representing three mischievous little cats playing in balance under the cherry trees.", allergens: "Sesame, Soy." },
-            jp: { name: "三色団子", desc: "桜の下でバランスを取りながら遊ぶ3匹のいたずら好きな子猫を表す3つの完璧な球体。", allergens: "ごま、大豆。" },
+            es: { name: "Dango Tricolor", desc: "Tres esferas perfectas que representan a tres pequeños gatos traviesos jugando en equilibrio bajo los cerezos.<br><br>Dulzor: ★★☆☆☆<br>Textura: Firme y Elástica<br>Intensidad: ★☆☆☆☆", allergens: "Sésamo, Soja." },
+            en: { name: "Tricolor Dango", desc: "Three perfect spheres representing three mischievous little cats playing in balance under the cherry trees.<br><br>Sweetness: ★★☆☆☆<br>Texture: Firm and Chewy<br>Intensity: ★☆☆☆☆", allergens: "Sesame, Soy." },
+            jp: { name: "三色団子", desc: "桜の下でバランスを取りながら遊ぶ3匹のいたずら好きな子猫を表す3つの完璧な球体。<br><br>甘さ: ★★☆☆☆<br>食感: しっかり<br>深み: ★☆☆☆☆", allergens: "ごま、大豆。" },
             class: "Bakeneko", price: 3.00, img: "assets/images/dangos.webp"
         },
         p4: {
-            es: { name: "Kuzumochi", desc: "Fresco, acuoso y transparente como el río donde habita el Kappa. Un postre que se desliza en el paladar.", allergens: "Soja. Sin Gluten." },
-            en: { name: "Kuzumochi", desc: "Fresh, watery, and transparent like the river where the Kappa lives. A dessert that glides on the palate.", allergens: "Soy. Gluten-Free." },
-            jp: { name: "葛餅", desc: "カッパが住む川のように新鮮で水っぽく透明です。口の中で滑るデザート。", allergens: "大豆。グルテンフリー。" },
+            es: { name: "Kuzumochi", desc: "Fresco, acuoso y transparente como el río donde habita el Kappa. Un postre que se desliza en el paladar.<br><br>Dulzor: ★☆☆☆☆<br>Textura: Gelatinosa y Fresca<br>Intensidad: ★☆☆☆☆", allergens: "Soja. Sin Gluten." },
+            en: { name: "Kuzumochi", desc: "Fresh, watery, and transparent like the river where the Kappa lives. A dessert that glides on the palate.<br><br>Sweetness: ★☆☆☆☆<br>Texture: Jelly and Fresh<br>Intensity: ★☆☆☆☆", allergens: "Soy. Gluten-Free." },
+            jp: { name: "葛餅", desc: "カッパが住む川のように新鮮で水っぽく透明です。口の中で滑るデザート。<br><br>甘さ: ★☆☆☆☆<br>食感: ぷるぷる<br>深み: ★☆☆☆☆", allergens: "大豆。グルテンフリー。" },
             class: "Kappa", price: 4.50, img: "assets/images/kuzumochi.webp"
         },
         p5: {
-            es: { name: "Yokan Nocturno", desc: "Oscuro, denso y profundo como el océano donde emerge el gigante Umibozu. Un sabor intenso para valientes.", allergens: "Libre de alérgenos principales (Vegano)." },
-            en: { name: "Night Yokan", desc: "Dark, dense, and deep like the ocean where the giant Umibozu emerges. An intense flavor for the brave.", allergens: "Free of major allergens (Vegan)." },
-            jp: { name: "夜の羊羹", desc: "巨大な海坊主が現れる海のように暗く、密度が濃く、深い。勇者のための強烈な風味。", allergens: "主要なアレルゲンなし（ヴィーガン）。" },
+            es: { name: "Yokan Nocturno", desc: "Oscuro, denso y profundo como el océano donde emerge el gigante Umibozu. Un sabor intenso para valientes.<br><br>Dulzor: ★★★★★<br>Textura: Densa y Sólida<br>Intensidad: ★★★★★", allergens: "Libre de alérgenos principales (Vegano)." },
+            en: { name: "Night Yokan", desc: "Dark, dense, and deep like the ocean where the giant Umibozu emerges. An intense flavor for the brave.<br><br>Sweetness: ★★★★★<br>Texture: Dense and Solid<br>Intensity: ★★★★★", allergens: "Free of major allergens (Vegan)." },
+            jp: { name: "夜の羊羹", desc: "巨大な海坊主が現れる海のように暗く、密度が濃く、深い。勇者のための強烈な風味。<br><br>甘さ: ★★★★★<br>食感: 濃厚<br>深み: ★★★★★", allergens: "主要なアレルゲンなし（ヴィーガン）。" },
             class: "Umibozu", price: 4.20, img: "assets/images/yokan.webp"
         },
         p6: {
-            es: { name: "Nerikiri de Camelia", desc: "Arte comestible. Tan bello, pálido y delicado como la Yuki-Onna. Captura una belleza fría y efímera.", allergens: "Frutos de cáscara (Nueces), Soja." },
-            en: { name: "Camellia Nerikiri", desc: "Edible art. As beautiful, pale, and delicate as the Yuki-Onna. It captures a cold, ephemeral beauty.", allergens: "Tree Nuts (Walnuts), Soy." },
-            jp: { name: "椿の練り切り", desc: "食べられる芸術。雪女のように美しく、青白く、繊細です。冷たく儚い美しさを捉えています。", allergens: "木の実（クルミ）、大豆。" },
+            es: { name: "Nerikiri de Camelia", desc: "Arte comestible. Tan bello, pálido y delicado como la Yuki-Onna. Captura una belleza fría y efímera.<br><br>Dulzor: ★★★☆☆<br>Textura: Sedosa y Fina<br>Intensidad: ★★★☆☆", allergens: "Frutos de cáscara (Nueces), Soja." },
+            en: { name: "Camellia Nerikiri", desc: "Edible art. As beautiful, pale, and delicate as the Yuki-Onna. It captures a cold, ephemeral beauty.<br><br>Sweetness: ★★★☆☆<br>Texture: Silky and Fine<br>Intensity: ★★★☆☆", allergens: "Tree Nuts (Walnuts), Soy." },
+            jp: { name: "椿の練り切り", desc: "食べられる芸術。雪女のように美しく、青白く、繊細です。冷たく儚い美しさを捉えています。<br><br>甘さ: ★★★☆☆<br>食感: なめらか<br>深み: ★★★☆☆", allergens: "木の実（クルミ）、大豆。" },
             class: "Yuki-Onna", price: 5.50, img: "assets/images/nerikiri.webp"
         },
         p_pack_vinos: {
@@ -70,63 +70,63 @@ document.addEventListener("DOMContentLoaded", () => {
             class: "Trilogía Enológica", price: 55.00, img: "assets/images/pack-vinos.webp"
         },
         p7: {
-            es: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 6°C. El elixir de la Ningyo (Sirena), ideal para acompañar cortes de pescado crudo.", allergens: "Contiene Sulfitos." },
-            en: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 6°C. The elixir of the Ningyo (Mermaid), ideal for raw fish.", allergens: "Contains Sulfites." },
-            jp: { name: "ソーヴィニヨン・ブラン 'The Raw'", desc: "ペネデス原産地呼称。Kizunaワイナリー。6°Cで提供。人魚の霊薬。刺身料理に最適です。", allergens: "亜硫酸塩が含まれています。" },
+            es: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 6°C. El elixir de la Ningyo (Sirena), ideal para acompañar cortes de pescado crudo.<br><br><b>Maridaje Japonés:</b> Sashimi de pescado blanco, Tataki de Atún, o nuestro delicado Kuzumochi.<br><br>Cuerpo: ★★☆☆☆<br>Acidez: ★★★★☆", allergens: "Contiene Sulfitos." },
+            en: { name: "Sauvignon Blanc 'The Raw'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 6°C. The elixir of the Ningyo (Mermaid), ideal for raw fish.<br><br><b>Japanese Pairing:</b> White fish Sashimi, Tuna Tataki, or our delicate Kuzumochi.<br><br>Body: ★★☆☆☆<br>Acidity: ★★★★☆", allergens: "Contains Sulfites." },
+            jp: { name: "ソーヴィニヨン・ブラン 'The Raw'", desc: "ペネデス原産地呼称。Kizunaワイナリー。6°Cで提供。人魚の霊薬。刺身料理に最適です。<br><br><b>日本のペアリング:</b> 白身魚の刺身、マグロのタタキ、または繊細な葛餅。<br><br>ボディ: ★★☆☆☆<br>酸味: ★★★★☆", allergens: "亜硫酸塩が含まれています。" },
             class: "Ningyo (Sirena)", price: 16.50, img: "assets/images/vino-theraw.webp"
         },
         p8: {
-            es: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 14°C. El fuego del Shuten-Dōji. Maridaje óptimo para carnes a la brasa y yakitori.", allergens: "Contiene Sulfitos." },
-            en: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 14°C. The fire of Shuten-Dōji. Optimal pairing for grilled meats and yakitori.", allergens: "Contains Sulfites." },
-            jp: { name: "ガルナッチャ・ティンタ 'The Grill'", desc: "ペネデス原産地呼称。Kizunaワイナリー。14°Cで提供。酒呑童子の炎。焼き鳥や肉料理に最適です。", allergens: "亜硫酸塩が含まれています。" },
+            es: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Servir a 14°C. El fuego del Shuten-Dōji. Maridaje óptimo para carnes a la brasa y yakitori.<br><br><b>Maridaje Japonés:</b> Yakitori de pollo, Wagyu a la brasa, o la profundidad de nuestro Yokan Nocturno.<br><br>Cuerpo: ★★★★★<br>Acidez: ★★☆☆☆", allergens: "Contiene Sulfitos." },
+            en: { name: "Garnacha Tinta 'The Grill'", desc: "D.O. Penedès. Bodegas Kizuna. Serve at 14°C. The fire of Shuten-Dōji. Optimal pairing for grilled meats and yakitori.<br><br><b>Japanese Pairing:</b> Chicken Yakitori, Grilled Wagyu, or the depth of our Night Yokan.<br><br>Body: ★★★★★<br>Acidity: ★★☆☆☆", allergens: "Contains Sulfites." },
+            jp: { name: "ガルナッチャ・ティンタ 'The Grill'", desc: "ペネデス原産地呼称。Kizunaワイナリー。14°Cで提供。酒呑童子の炎。焼き鳥や肉料理に最適です。<br><br><b>日本のペアリング:</b> 焼き鳥、和牛の炭火焼き、または深い夜の羊羹。<br><br>ボディ: ★★★★★<br>酸味: ★★☆☆☆", allergens: "亜硫酸塩が含まれています。" },
             class: "Shuten-Dōji (Oni)", price: 18.00, img: "assets/images/vino-thegrill.webp"
         },
         p9: {
-            es: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Método Tradicional. Bodegas Kizuna. Servir a 5°C. Estructura perfecta para Tempura y caldos ricos en Umami.", allergens: "Contiene Sulfitos." },
-            en: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Traditional Method. Kizuna Wineries. Serve at 5°C. Perfect structure for Tempura and Umami-rich broths.", allergens: "Contains Sulfites." },
-            jp: { name: "カヴァ・ブリュット 'The Umami'", desc: "カヴァ原産地呼称。伝統的製法。Kizunaワイナリー。5°Cで提供。天ぷらや旨味豊かなスープに最適です。", allergens: "亜硫酸塩が含まれています。" },
+            es: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Método Tradicional. Bodegas Kizuna. Servir a 5°C. Estructura perfecta para Tempura y caldos ricos en Umami.<br><br><b>Maridaje Japonés:</b> Tempura de verduras, Ramen ligero (Shio), o la textura esponjosa de nuestro Dorayaki.<br><br>Cuerpo: ★★★☆☆<br>Acidez: ★★★★☆", allergens: "Contiene Sulfitos." },
+            en: { name: "Cava Brut Nature 'The Umami'", desc: "Cava D.O. Traditional Method. Kizuna Wineries. Serve at 5°C. Perfect structure for Tempura and Umami-rich broths.<br><br><b>Japanese Pairing:</b> Vegetable Tempura, Light Ramen (Shio), or the fluffy texture of our Dorayaki.<br><br>Body: ★★★☆☆<br>Acidity: ★★★★☆", allergens: "Contains Sulfites." },
+            jp: { name: "カヴァ・ブリュット 'The Umami'", desc: "カヴァ原産地呼称。伝統的製法。Kizunaワイナリー。5°Cで提供。天ぷらや旨味豊かなスープに最適です。<br><br><b>日本のペアリング:</b> 野菜の天ぷら、塩ラーメン、またはふわふわのどら焼き。<br><br>ボディ: ★★★☆☆<br>酸味: ★★★★☆", allergens: "亜硫酸塩が含まれています。" },
             class: "Kitsune (Zorro)", price: 22.00, img: "assets/images/vino-theumami.webp"
         },
         p_pack_coffee: {
-            es: { name: "Pack Ritual: 6 Reinos", desc: "El grimorio completo de especialidad. Disfruta de una experiencia holística que reúne los 6 perfiles mitológicos (Tanuki, Kitsune, Bakeneko, Kappa, Umibozu y Yuki-Onna). Elige si prefieres recibir el pack en formato de cómodas Drip Bags individuales o en packs de grano entero.", allergens: "Contiene los 6 lotes de Café de Especialidad." },
-            en: { name: "Ritual Pack: 6 Realms", desc: "The complete specialty grimoire. Enjoy a holistic experience bringing together all 6 mythological profiles. Choose whether you prefer to receive the pack in comfortable individual Drip Bags or in whole bean packs.", allergens: "Contains all 6 Specialty Coffee lots." },
-            jp: { name: "儀式パック：六つの領域", desc: "完全なスペシャルティコーヒー魔導書。6つの神話的プロフィール（タヌキ、キツネ、化け猫、カッパ、海坊主、雪女）をすべて集めた体験をお楽しみください。", allergens: "6つのスペシャルティコーヒーロットがすべて含まれています。" },
-            class: "Grimorio Co-Branding", price: 42.00, img: "assets/images/pack-cafes.webp", isPack: true
+            es: { name: "Pack Ritual: 6 Reinos", desc: "El grimorio completo de especialidad. Disfruta de una experiencia holística que reúne los 6 perfiles mitológicos (Tanuki, Kitsune, Bakeneko, Kappa, Umibozu y Yuki-Onna). Elige si prefieres recibir el pack en formato de cómodas Drip Bags individuales o en mini-packs de grano entero (ambas opciones contienen un total de 600g de café).", allergens: "Contiene los 6 lotes de Café de Especialidad." },
+            en: { name: "Ritual Pack: 6 Realms", desc: "The complete specialty grimoire. Enjoy a holistic experience bringing together all 6 mythological profiles. Choose whether you prefer to receive the pack in comfortable individual Drip Bags or in whole bean mini-packs (both options contain a total of 600g of coffee).", allergens: "Contains all 6 Specialty Coffee lots." },
+            jp: { name: "儀式パック：六つの領域", desc: "完全なスペシャルティコーヒー魔導書。6つの神話的プロフィールをすべて集めた体験をお楽しみください。個別のドリップバッグか豆のままのミニパックかをお選びいただけます（どちらのオプションも合計600gのコーヒーが含まれています）。", allergens: "6つのスペシャルティコーヒーロットがすべて含まれています。" },
+            class: "Grimorio Co-Branding", price: 42.00, img: "assets/images/pack-coffees.webp", isPack: true
         },
         p10: {
-            es: { name: "Tanuki Blend", desc: "El Tanuki es glotón y terrenal. Este origen Brasil (Proceso Natural) aporta notas a chocolate que actúan como el complemento clásico para el bizcocho horneado del Dorayaki.<br><br><b>Notas:</b> Avellana, Cacao, Caramelo<br><b>Maridaje:</b> Dorayaki Clásico<br><br>Cuerpo: 🌕🌕🌕🌕🌕<br>Acidez: 🌕🌑🌑🌑🌑<br>Dulzor: 🌕🌕🌕🌕🌑", allergens: "Café de Especialidad 100% Arábica." },
-            en: { name: "Tanuki Blend", desc: "The Tanuki is gluttonous and earthy. This natural process Brazil origin brings chocolate notes that act as the classic complement to the Dorayaki.<br><br><b>Notes:</b> Hazelnut, Cocoa, Caramel<br><b>Pairing:</b> Classic Dorayaki<br><br>Body: 🌕🌕🌕🌕🌕<br>Acidity: 🌕🌑🌑🌑🌑<br>Sweetness: 🌕🌕🌕🌕🌑", allergens: "100% Arabica Specialty Coffee." },
-            jp: { name: "タヌキブレンド", desc: "タヌキは食いしん坊です。このブラジル産は、どら焼きを補完するチョコレートのノートをもたらします。<br><br><b>ノート:</b> ヘーゼルナッツ、カカオ<br><b>ペアリング:</b> どら焼き<br><br>ボディ: 🌕🌕🌕🌕🌕<br>酸味: 🌕🌑🌑🌑🌑<br>甘味: 🌕🌕🌕🌕🌑", allergens: "100%アラビカ種スペシャルティコーヒー。" },
+            es: { name: "Tanuki Blend", desc: "El Tanuki es glotón y terrenal. Este origen Brasil (Proceso Natural) aporta notas a chocolate que actúan como el complemento clásico para el bizcocho horneado del Dorayaki.<br><br><b>Notas:</b> Avellana, Cacao, Caramelo<br><b>Maridaje:</b> Dorayaki Clásico<br><br>Cuerpo: ★★★★★<br>Acidez: ★☆☆☆☆<br>Dulzor: ★★★★☆", allergens: "Café de Especialidad 100% Arábica." },
+            en: { name: "Tanuki Blend", desc: "The Tanuki is gluttonous and earthy. This natural process Brazil origin brings chocolate notes that act as the classic complement to the Dorayaki.<br><br><b>Notes:</b> Hazelnut, Cocoa, Caramel<br><b>Pairing:</b> Classic Dorayaki<br><br>Body: ★★★★★<br>Acidity: ★☆☆☆☆<br>Sweetness: ★★★★☆", allergens: "100% Arabica Specialty Coffee." },
+            jp: { name: "タヌキブレンド", desc: "タヌキは食いしん坊です。このブラジル産は、どら焼きを補完するチョコレートのノートをもたらします。<br><br><b>ノート:</b> ヘーゼルナッツ、カカオ<br><b>ペアリング:</b> どら焼き<br><br>ボディ: ★★★★★<br>酸味: ★☆☆☆☆<br>甘味: ★★★★☆", allergens: "100%アラビカ種スペシャルティコーヒー。" },
             class: "Tanuki (Brasil)", price: 12.00, img: "assets/images/cafe-tanuki.webp"
         },
         p11: {
-            es: { name: "Kitsune Roast", desc: "El Kitsune engaña a los sentidos. Este café etíope lavado parece un té ligero, pero explota con acidez brillante que limpia el paladar tras la densa dulzura del Mochi.<br><br><b>Notas:</b> Jazmín, Melocotón blanco, Miel<br><b>Maridaje:</b> Mochi Daifuku<br><br>Acidez floral: 🌕🌕🌕🌕🌕<br>Cuerpo: 🌕🌕🌑🌑🌑<br>Complejidad: 🌕🌕🌕🌕🌑", allergens: "Café de Especialidad 100% Arábica." },
-            en: { name: "Kitsune Roast", desc: "The Kitsune deceives the senses. This washed Ethiopian coffee looks like tea but explodes with bright acidity to cleanse the palate after the Mochi.<br><br><b>Notes:</b> Jasmine, White Peach, Honey<br><b>Pairing:</b> Mochi Daifuku", allergens: "100% Arabica Specialty Coffee." },
-            jp: { name: "キツネロースト", desc: "エチオピア産のこのコーヒーは、大福餅の甘さの後に口蓋をきれいにする明るい酸味で爆発します。<br><br><b>ノート:</b> ジャスミン、白桃<br><b>ペアリング:</b> 大福餅", allergens: "100%アラビカ種スペシャルティコーヒー。" },
+            es: { name: "Kitsune Roast", desc: "El Kitsune engaña a los sentidos. Este café etíope lavado parece un té ligero, pero explota con acidez brillante que limpia el paladar tras la densa dulzura del Mochi.<br><br><b>Notas:</b> Jazmín, Melocotón blanco, Miel<br><b>Maridaje:</b> Mochi Daifuku<br><br>Acidez floral: ★★★★★<br>Cuerpo: ★★☆☆☆<br>Complejidad: ★★★★☆", allergens: "Café de Especialidad 100% Arábica." },
+            en: { name: "Kitsune Roast", desc: "The Kitsune deceives the senses. This washed Ethiopian coffee looks like tea but explodes with bright acidity to cleanse the palate after the Mochi.<br><br><b>Notes:</b> Jasmine, White Peach, Honey<br><b>Pairing:</b> Mochi Daifuku<br><br>Floral Acidity: ★★★★★<br>Body: ★★☆☆☆<br>Complexity: ★★★★☆", allergens: "100% Arabica Specialty Coffee." },
+            jp: { name: "キツネロースト", desc: "エチオピア産のこのコーヒーは、大福餅の甘さの後に口蓋をきれいにする明るい酸味で爆発します。<br><br><b>ノート:</b> ジャスミン、白桃<br><b>ペアリング:</b> 大福餅<br><br>花の酸味: ★★★★★<br>ボディ: ★★☆☆☆<br>複雑さ: ★★★★☆", allergens: "100%アラビカ種スペシャルティコーヒー。" },
             class: "Kitsune (Etiopía)", price: 14.50, img: "assets/images/cafe-kitsune.webp"
         },
         p12: {
-            es: { name: "Bakeneko Sakura", desc: "El Bakeneko representa el juego primaveral. El proceso 'Honey' le da un dulzor frutal vibrante que enlaza maravillosamente con el Dango Tricolor.<br><br><b>Notas:</b> Cereza dulce, Frutos Rojos, Panela<br><b>Maridaje:</b> Dango Tricolor<br><br>Equilibrio: 🌕🌕🌕🌕🌕<br>Dulzor: 🌕🌕🌕🌕🌑<br>Intensidad: 🌕🌕🌕🌑🌑", allergens: "Café de Especialidad 100% Arábica." },
-            en: { name: "Bakeneko Sakura", desc: "The 'Honey' process gives it a vibrant fruity sweetness that links beautifully with the Tricolor Dango.<br><br><b>Notes:</b> Sweet Cherry, Red Berries, Panela<br><b>Pairing:</b> Tricolor Dango", allergens: "100% Arabica Specialty Coffee." },
-            jp: { name: "化け猫サクラ", desc: "ハニープロセスは、三色団子と美しくつながる活気に満ちたフルーティーな甘さを与えます。<br><br><b>ノート:</b> さくらんぼ、赤い果実<br><b>ペアリング:</b> 三色団子", allergens: "100%アラビカ種スペシャルティコーヒー。" },
+            es: { name: "Bakeneko Sakura", desc: "El Bakeneko representa el juego primaveral. El proceso 'Honey' le da un dulzor frutal vibrante que enlaza maravillosamente con el Dango Tricolor.<br><br><b>Notas:</b> Cereza dulce, Frutos Rojos, Panela<br><b>Maridaje:</b> Dango Tricolor<br><br>Equilibrio: ★★★★★<br>Dulzor: ★★★★☆<br>Intensidad: ★★★☆☆", allergens: "Café de Especialidad 100% Arábica." },
+            en: { name: "Bakeneko Sakura", desc: "The 'Honey' process gives it a vibrant fruity sweetness that links beautifully with the Tricolor Dango.<br><br><b>Notes:</b> Sweet Cherry, Red Berries, Panela<br><b>Pairing:</b> Tricolor Dango<br><br>Balance: ★★★★★<br>Sweetness: ★★★★☆<br>Intensity: ★★★☆☆", allergens: "100% Arabica Specialty Coffee." },
+            jp: { name: "化け猫サクラ", desc: "ハニープロセスは、三色団子と美しくつながる活気に満ちたフルーティーな甘さを与えます。<br><br><b>ノート:</b> さくらんぼ、赤い果実<br><b>ペアリング:</b> 三色団子<br><br>バランス: ★★★★★<br>甘さ: ★★★★☆<br>深み: ★★★☆☆", allergens: "100%アラビカ種スペシャルティコーヒー。" },
             class: "Bakeneko (Costa Rica)", price: 15.00, img: "assets/images/cafe-bakeneko.webp"
         },
         p13: {
-            es: { name: "Kappa Cold Brew", desc: "El Kappa requiere frescor acuático. Un Cold Brew elimina el amargor y resalta la frescura, siendo la única bebida lógica para el Kuzumochi traslúcido.<br><br><b>Notas:</b> Manzana verde, Té negro, Caña de azúcar<br><b>Maridaje:</b> Kuzumochi<br><br>Frescor: 🌕🌕🌕🌕🌕<br>Limpieza en boca: 🌕🌕🌕🌕🌕<br>Amargor: 🌕🌑🌑🌑🌑", allergens: "Café de Especialidad 100% Arábica." },
-            en: { name: "Kappa Cold Brew", desc: "A Cold Brew eliminates bitterness and highlights freshness, making it the only logical drink for translucent Kuzumochi.<br><br><b>Notes:</b> Green Apple, Black Tea<br><b>Pairing:</b> Kuzumochi", allergens: "100% Arabica Specialty Coffee." },
-            jp: { name: "カッパコールドブリュー", desc: "コールドブリューは苦味を排除し、新鮮さを強調します。<br><br><b>ノート:</b> 青リンゴ、紅茶<br><b>ペアリング:</b> 葛餅", allergens: "100%アラビカ種スペシャルティコーヒー。" },
+            es: { name: "Kappa Cold Brew", desc: "El Kappa requiere frescor acuático. Un Cold Brew elimina el amargor y resalta la frescura, siendo la única bebida lógica para el Kuzumochi traslúcido.<br><br><b>Notas:</b> Manzana verde, Té negro, Caña de azúcar<br><b>Maridaje:</b> Kuzumochi<br><br>Frescor: ★★★★★<br>Limpieza en boca: ★★★★★<br>Amargor: ★☆☆☆☆", allergens: "Café de Especialidad 100% Arábica." },
+            en: { name: "Kappa Cold Brew", desc: "A Cold Brew eliminates bitterness and highlights freshness, making it the only logical drink for translucent Kuzumochi.<br><br><b>Notes:</b> Green Apple, Black Tea<br><b>Pairing:</b> Kuzumochi<br><br>Freshness: ★★★★★<br>Cleanliness: ★★★★★<br>Bitterness: ★☆☆☆☆", allergens: "100% Arabica Specialty Coffee." },
+            jp: { name: "カッパコールドブリュー", desc: "コールドブリューは苦味を排除し、新鮮さを強調します。<br><br><b>ノート:</b> 青リンゴ、紅茶<br><b>ペアリング:</b> 葛餅<br><br>新鮮さ: ★★★★★<br>すっきり感: ★★★★★<br>苦味: ★☆☆☆☆", allergens: "100%アラビカ種スペシャルティコーヒー。" },
             class: "Kappa (Colombia)", price: 11.00, img: "assets/images/cafe-kappa.webp"
         },
         p14: {
-            es: { name: "Umibozu Dark", desc: "El Yokan es tan denso que aplastaría un café suave; requiere este origen de Sumatra con tueste oscuro y cuerpo muy pesado para sostener el pulso.<br><br><b>Notas:</b> Chocolate 90%, Tabaco, Especias<br><b>Maridaje:</b> Yokan Nocturno<br><br>Intensidad: 🌕🌕🌕🌕🌕<br>Cuerpo: 🌕🌕🌕🌕🌕<br>Acidez: 🌑🌑🌑🌑🌑", allergens: "Café de Especialidad 100% Arábica." },
-            en: { name: "Umibozu Dark", desc: "Requires this Sumatra origin with a dark roast and very heavy body to sustain the pulse against the Yokan.<br><br><b>Notes:</b> 90% Chocolate, Tobacco, Spices<br><b>Pairing:</b> Night Yokan", allergens: "100% Arabica Specialty Coffee." },
-            jp: { name: "海坊主ダーク", desc: "羊羹に負けない、非常に重いボディを持つスマトラ産のダークローストが必要です。<br><br><b>ノート:</b> 90%チョコレート、スパイス<br><b>ペアリング:</b> 夜の羊羹", allergens: "100%アラビカ種スペシャルティコーヒー。" },
+            es: { name: "Umibozu Dark", desc: "El Yokan es tan denso que aplastaría un café suave; requiere este origen de Sumatra con tueste oscuro y cuerpo muy pesado para sostener el pulso.<br><br><b>Notas:</b> Chocolate 90%, Tabaco, Especias<br><b>Maridaje:</b> Yokan Nocturno<br><br>Intensidad: ★★★★★<br>Cuerpo: ★★★★★<br>Acidez: ☆☆☆☆☆", allergens: "Café de Especialidad 100% Arábica." },
+            en: { name: "Umibozu Dark", desc: "Requires this Sumatra origin with a dark roast and very heavy body to sustain the pulse against the Yokan.<br><br><b>Notes:</b> 90% Chocolate, Tobacco, Spices<br><b>Pairing:</b> Night Yokan<br><br>Intensity: ★★★★★<br>Body: ★★★★★<br>Acidity: ☆☆☆☆☆", allergens: "100% Arabica Specialty Coffee." },
+            jp: { name: "海坊主ダーク", desc: "羊羹に負けない、非常に重いボディを持つスマトラ産のダークローストが必要です。<br><br><b>ノート:</b> 90%チョコレート、スパイス<br><b>ペアリング:</b> 夜の羊羹<br><br>深み: ★★★★★<br>ボディ: ★★★★★<br>酸味: ☆☆☆☆☆", allergens: "100%アラビカ種スペシャルティコーヒー。" },
             class: "Umibozu (Sumatra)", price: 13.50, img: "assets/images/cafe-umibozu.webp"
         },
         p15: {
-            es: { name: "Yuki-Onna Geisha", desc: "La belleza fría del Nerikiri merece el café más exclusivo del mundo (Variedad Geisha). Es tan floral y sutil que casi parece desvanecerse como la nieve.<br><br><b>Notas:</b> Flor de Azahar, Bergamota, Té blanco<br><b>Maridaje:</b> Nerikiri de Camelia<br><br>Elegancia: 🌕🌕🌕🌕🌕<br>Aroma: 🌕🌕🌕🌕🌕<br>Rareza: 🌕🌕🌕🌕🌕", allergens: "Lote Exclusivo (Variedad Geisha)." },
-            en: { name: "Yuki-Onna Geisha", desc: "The cold beauty of Nerikiri deserves the world's most exclusive coffee (Geisha variety). It is so floral it seems to fade like snow.<br><br><b>Notes:</b> Orange Blossom, Bergamot<br><b>Pairing:</b> Camellia Nerikiri", allergens: "Exclusive Lot (Geisha Variety)." },
-            jp: { name: "雪女ゲイシャ", desc: "練り切りの冷たい美しさは、世界で最も高級なコーヒー（ゲイシャ種）に値します。<br><br><b>ノート:</b> オレンジの花、ベルガモット<br><b>ペアリング:</b> 椿の練り切り", allergens: "エクスクルーシブロット（ゲイシャ種）。" },
+            es: { name: "Yuki-Onna Geisha", desc: "La belleza fría del Nerikiri merece el café más exclusivo del mundo (Variedad Geisha). Es tan floral y sutil que casi parece desvanecerse como la nieve.<br><br><b>Notas:</b> Flor de Azahar, Bergamota, Té blanco<br><b>Maridaje:</b> Nerikiri de Camelia<br><br>Elegancia: ★★★★★<br>Aroma: ★★★★★<br>Rareza: ★★★★★", allergens: "Lote Exclusivo (Variedad Geisha)." },
+            en: { name: "Yuki-Onna Geisha", desc: "The cold beauty of Nerikiri deserves the world's most exclusive coffee (Geisha variety). It is so floral it seems to fade like snow.<br><br><b>Notes:</b> Orange Blossom, Bergamot<br><b>Pairing:</b> Camellia Nerikiri<br><br>Elegance: ★★★★★<br>Aroma: ★★★★★<br>Rarity: ★★★★★", allergens: "Exclusive Lot (Geisha Variety)." },
+            jp: { name: "雪女ゲイシャ", desc: "練り切りの冷たい美しさは、世界で最も高級なコーヒー（ゲイシャ種）に値します。<br><br><b>ノート:</b> オレンジの花、ベルガモット<br><b>ペアリング:</b> 椿の練り切り<br><br>エレガンス: ★★★★★<br>香り: ★★★★★<br>希少性: ★★★★★", allergens: "エクスクルーシブロット（ゲイシャ種）。" },
             class: "Yuki-Onna (Panamá)", price: 35.00, img: "assets/images/cafe-yukionna.webp"
         }
     };
@@ -968,12 +968,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const chatOptions = document.getElementById('chat-options');
 
     const botDialogues = {
-        es: {
+       es: {
             start: { msg: "¡Miau! 🐾 Soy el espíritu Bakeneko. ¿En qué te puedo ayudar hoy?", options: [{ text: "📍 ¿Dónde está mi pedido?", next: "rastrear" }, { text: "📦 Tiempos de envío", next: "envio" }, { text: "🌾 Alergias", next: "alergenos" }, { text: "👤 Contacto", next: "contacto" }] },
             rastrear: { msg: "Busca tu <b>Número de Pacto</b> en el email de confirmación.", options: [{ text: "Menú", next: "start" }] },
             contacto: { msg: "Llámanos al <b>+34 900 000 000</b> o escribe a ayuda@bakeneko.com.", options: [{ text: "Menú", next: "start" }, { text: "Cerrar", next: "fin" }] },
             envio: { msg: "Todo viaja en frío mágico. Estándar (48-72h) o Exprés (24h).", options: [{ text: "Menú", next: "start" }] },
-            alergenos: { msg: "Usamos arroz sin gluten, pero hay trazas de soja, leche y nueces.", options: [{ text: "Menú", next: "start" }] },
+            alergenos: { msg: "Usamos arroz sin gluten, pero hay trazas de soja, leche y nueces.<br><br><a href='info.html#allergens' style='color: var(--c-vermilion); text-decoration: underline; font-weight: bold;'>Ver Guía de Alérgenos →</a>", options: [{ text: "Menú", next: "start" }] },
             fin: { msg: "¡Que los espíritus te acompañen! 🌸", options: [] }
         },
         en: {
@@ -981,7 +981,7 @@ document.addEventListener("DOMContentLoaded", () => {
             rastrear: { msg: "Check your email for the <b>Pact Number</b>.", options: [{ text: "Menu", next: "start" }] },
             contacto: { msg: "Call <b>+34 900 000 000</b> or email help@bakeneko.com.", options: [{ text: "Menu", next: "start" }, { text: "Close", next: "fin" }] },
             envio: { msg: "Cold shipping always. Standard (48-72h) or Express (24h).", options: [{ text: "Menu", next: "start" }] },
-            alergenos: { msg: "We use gluten-free rice, but handle soy, milk, and nuts.", options: [{ text: "Menu", next: "start" }] },
+            alergenos: { msg: "We use gluten-free rice, but handle soy, milk, and nuts.<br><br><a href='info.html#allergens' style='color: var(--c-vermilion); text-decoration: underline; font-weight: bold;'>View Allergen Guide →</a>", options: [{ text: "Menu", next: "start" }] },
             fin: { msg: "May the spirits guide you! 🌸", options: [] }
         },
         jp: {
@@ -989,7 +989,7 @@ document.addEventListener("DOMContentLoaded", () => {
             rastrear: { msg: "確認メールの<b>契約番号</b>をご覧ください。", options: [{ text: "メニュー", next: "start" }] },
             contacto: { msg: "電話: <b>+34 900 000 000</b> または help@bakeneko.com まで。", options: [{ text: "メニュー", next: "start" }, { text: "閉じる", next: "fin" }] },
             envio: { msg: "クール便で発送します。通常便（48〜72時間）かお急ぎ便（24時間）。", options: [{ text: "メニュー", next: "start" }] },
-            alergenos: { msg: "グルテンフリーですが、大豆やナッツも扱っています。", options: [{ text: "メニュー", next: "start" }] },
+            alergenos: { msg: "グルテンフリーですが、大豆やナッツも扱っています。<br><br><a href='info.html#allergens' style='color: var(--c-vermilion); text-decoration: underline; font-weight: bold;'>アレルギーガイドを見る →</a>", options: [{ text: "メニュー", next: "start" }] },
             fin: { msg: "良い旅を！🌸", options: [] }
         }
     };
