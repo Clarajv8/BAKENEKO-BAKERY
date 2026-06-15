@@ -1476,7 +1476,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /* =========================================
-       ANIMACIÓN DE TINTA QUE SE UNE Y PAUSA
+       ANIMACIÓN DE TINTA
        ========================================= */
     if (typeof gsap !== 'undefined' && document.getElementById('ink-displacement')) {
         const displacement = document.getElementById('ink-displacement');
