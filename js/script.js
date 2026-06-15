@@ -1483,7 +1483,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         let mm = gsap.matchMedia();
 
-        mm.add("(min-width: 901px)", () => {
+        mm.add("(min-width: 1025px)", () => {
             const inkTl = gsap.timeline({
                 scrollTrigger: {
                     trigger: "#concepto",
@@ -1508,7 +1508,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .to({}, { duration: 0.8 }); 
         });
 
-        mm.add("(max-width: 900px)", () => {
+        mm.add("(max-width: 1024px)", () => {
             gsap.set(displacement, { attr: { scale: 0 } });
             
             gsap.to(".reveal-ink-wrapper", {
