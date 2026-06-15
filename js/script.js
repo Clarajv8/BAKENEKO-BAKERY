@@ -1617,4 +1617,20 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    /* =========================================
+       14. ENLACES DIRECTOS A PRODUCTOS (QR / URL)
+       ========================================= */
+    const urlParams = new URLSearchParams(window.location.search);
+    const productoQR = urlParams.get('producto');
+    if (productoQR && productsDB[productoQR]) {
+        setTimeout(() => {
+            fillModal(productoQR);
+            if (modalOverlay) modalOverlay.classList.add('active');
+            if (modalContent) modalContent.setAttribute('data-lenis-prevent', ''); 
+            
+            document.body.style.overflow = 'hidden';
+            if (window.lenis) window.lenis.stop();
+        }, 1000);
+    }
+
 });
