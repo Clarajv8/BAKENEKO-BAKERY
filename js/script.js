@@ -1622,6 +1622,7 @@ document.addEventListener("DOMContentLoaded", () => {
        ========================================= */
     const urlParams = new URLSearchParams(window.location.search);
     const productoQR = urlParams.get('producto');
+    
     if (productoQR && productsDB[productoQR]) {
         setTimeout(() => {
             fillModal(productoQR);
